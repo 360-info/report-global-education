@@ -1,36 +1,52 @@
 ---
-title: "Demo 360 Quarto analysis"
-subtitle: "With another comment on the thing here"
+title: "Global education"
+subtitle: ""
 author: "James Goldie, 360info"
-date: "2022-03-11"
+date: "2022-03-15"
 code-fold: true
 theme: style/article.scss
 ---
 
-This demo analyses some data on emissions of various pollutants from Our World in Data in R, then creates a chart in Observable JS. The [pollution-embed.qmd]() file is anb embeddable version of that chart.
+## Getting the data
 
-## The analysis
+This data comes from the [UNESCO Institute for Statistics (UIS)](http://data.uis.unesco.org/).
 
-This analysis is _really quick_: we download the OWID data, selecting a
-few columns and giving them tidier names, and we pass it immediately onto Observable JS.
+We'll use their [Bulk Data Download Service](https://apiportal.uis.unesco.org/bdds) to acquire the data quickly, but we're particularly interested in the indicators within the Education theme labelled `Number and rates of international mobile students (inbound and outbound)`.
 
 ```{r import}
-library(readr)
+library(tidyverse)
+library(pins)
+library(here)
 
-pollution <-
-  read_csv(
-    paste0(
-      "https://github.com/owid/owid-datasets/raw/",
-      "dd7a4ecbb249f98028e25c304ef7d68de8979ea9/datasets/",
-      "Air%20Pollutant%20Emissions%20-%20OECD/",
-      "Air%20Pollutant%20Emissions%20-%20OECD.csv"),
-    col_select =
-      c(Entity, Year, `Carbon Monoxide`, `Carbon Monoxide (Index)`))      
+data_cache <- here("data", ".cache")
+dir.create(data_cache)
 
-names(pollution) <- c("country", "year", "co_tpyr", "co_index")
-pollution
+# download the zip file (keeping it cached if we redo this)
+zipped_data <-
+  board_url(
+    c(opri = paste0(
+      "https://apimgmtstzgjpfeq2u763lag.blob.core.windows.net/",
+      "content/MediaLibrary/bdds/OPRI.zip")),
+    cache = data_cache) %>%
+  pin_download("opri")
+
+# unzip it 
+unzip(zipped_data, exdir = data_cache)
+
+# read the coding sheets in
+country_map <- read_csv(file.path(data_cache, "OPRI_COUNTRY.csv"))
+indicator_map <- read_csv(
+  file.path(data_cache, "OPRI_LABEL.csv"),
+  col_types = 'ic')
+region_map <- read_csv(file.path(data_cache, "OPRI_REGION.csv"))
+
+# read the data in
+national_data <- read_csv(
+  file.path(data_cache, "OPRI_DATA_NATIONAL.csv"),
+  col_types = 'icinc')
 ```
-Here's what the data looks like. To pass it on to Observable JS, we call `ojs_define`. We also pass a list of the countries in the data on separately so
+
+<!-- Here's what the data looks like. To pass it on to Observable JS, we call `ojs_define`. We also pass a list of the countries in the data on separately so
 that we can use it for a dropdown menu.
 
 ```{r inspect}
@@ -98,4 +114,4 @@ d3barchart = BarChart(filteredPollution, {
 });
 ```
 
-Note that the dropdown menu from the previous chart controls this one too! So we can use Observable Inputs with custom charts (although note there's no transition - that would be hadled using the chart's `update` method).
+Note that the dropdown menu from the previous chart controls this one too! So we can use Observable Inputs with custom charts (although note there's no transition - that would be hadled using the chart's `update` method). -->
