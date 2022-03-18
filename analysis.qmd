@@ -7,19 +7,29 @@ code-fold: true
 theme: style/article.scss
 ---
 
+## Setup 
+```{r}
+#| label: setup
+
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(here)
+})
+library(pins)
+library(countrycode)
+```
+
 ## Getting the data
 
-This data comes from the [UNESCO Institute for Statistics (UIS)](http://data.uis.unesco.org/).
+This data comes from the [UNESCO Institute for Statistics (UIS)](http://data.uis.unesco.org).
 
 We'll use their [Bulk Data Download Service](https://apiportal.uis.unesco.org/bdds) to acquire the data quickly, but we're particularly interested in the indicators within the Education theme labelled `Number and rates of international mobile students (inbound and outbound)`.
 
-```{r import}
-library(tidyverse)
-library(pins)
-library(here)
+```{r}
+#| label: import
 
 data_cache <- here("data", ".cache")
-dir.create(data_cache)
+dir.create(data_cache, showWarnings = FALSE)
 
 # download the zip file (keeping it cached if we redo this)
 zipped_data <-
@@ -34,84 +44,102 @@ zipped_data <-
 unzip(zipped_data, exdir = data_cache)
 
 # read the coding sheets in
-country_map <- read_csv(file.path(data_cache, "OPRI_COUNTRY.csv"))
+country_map <- read_csv(file.path(data_cache, "OPRI_COUNTRY.csv"), col_types = "cc")
 indicator_map <- read_csv(
   file.path(data_cache, "OPRI_LABEL.csv"),
-  col_types = 'ic')
-region_map <- read_csv(file.path(data_cache, "OPRI_REGION.csv"))
+  col_types = "cc")
+region_map <- read_csv(file.path(data_cache, "OPRI_REGION.csv"), col_types = "ccc")
 
 # read the data in
 national_data <- read_csv(
   file.path(data_cache, "OPRI_DATA_NATIONAL.csv"),
-  col_types = 'icinc')
+  col_types = "ccin-c")
 ```
 
-<!-- Here's what the data looks like. To pass it on to Observable JS, we call `ojs_define`. We also pass a list of the countries in the data on separately so
-that we can use it for a dropdown menu.
+## Tidying and joining the origin data
 
-```{r inspect}
-ojs_define(pollution = pollution)
-ojs_define(country_list = unique(pollution$country))
+This data is two dimensional, in a way: there's the country students go from (that is, the _origin_) and the country that go to (the _destination_). The way the data is organised into indicators by origin (`"[continent]: "Students from" [country], both sexes (number)"`), and within that indicator there's a row for each destination, each year.
+
+So you can easily look up where a country's students have gone. If you want to look up where a country's students have come from, though, you would need to tally up the destination row for a country in _every_ origin indicator. That's what we're going to do (with the implicit assumption that there are no countries missing).
+
+The national data already has a destination column. It also has an indicator number column, and we need to map that back to a country code using the label map and the country map.
+
+```{r}
+#| label: labelmap
+
+# first, isolate the continent and country of origin
+indicator_map %>%
+  filter(str_detect(INDICATOR_LABEL_EN, "Students from")) %>%
+  mutate(
+    INDICATOR_LABEL_EN = str_replace(INDICATOR_LABEL_EN,
+      fixed(", both sexes (number)"), ""),
+    INDICATOR_LABEL_EN = str_replace(INDICATOR_LABEL_EN,
+      fixed(" Students from "), "")) %>%
+  separate(INDICATOR_LABEL_EN, into = c("continent", "country"), sep = ":") %>%
+  # some indicators also preface country name with "the "
+  mutate(country = str_replace(country, "^the ", "")) ->
+tidy_origins
+
+# now match these to the country map
+tidy_origins %>%
+  left_join(country_map, by = c("country" = "COUNTRY_NAME_EN")) %>%
+  # we'll use {countrycode} as a backup for the un country list,
+  # since they aren't always entirely consistent
+  mutate(
+    countrycode_backup = countrycode(country,
+      origin = "country.name", destination = "iso3c"),
+    code = coalesce(COUNTRY_ID, countrycode_backup)) %>%
+  select(INDICATOR_ID,
+    continent,
+    country_name = country,
+    country_code = code) ->
+indicator_origin_map
 ```
 
-The names that we use in `ojs_define` are now available below.
+Note that we still have a few unmapped country codes: those cases where the origin _continent_ is known but not the _country_:
 
-## The visualisation
-
-Now, let's chart the data using
-[Observable Plot](https://observablehq.com/@observablehq/plot)! And to make things a little trickier, let's throw a dropdown menu for the country in,
-courtesy of [Observable Inputs](https://observablehq.com/@observablehq/inputs). 
-
-```{ojs pollutionplot}
-
-// here's our dropdown menu, using the country list from R
-viewof countrySelect = Inputs.select(country_list, {label: "Pick a country:"});
-
-// transpose() changes our data from column-major (in R/Python) to row-major for
-// Observable Plot. Then the filter function filters it based on the country
-// input above (hence it's reactive!)
-filteredPollution = transpose(pollution).filter(function(row) {
-  return row.country == countrySelect;
-})
-
-// finally, here's out chart
-pollutionChart = Plot.plot({
-  marks: [
-    // horizontal line at y = 0
-    Plot.ruleY([0]),
-    // bars of tonnes emitted per year, with a tooltip
-    Plot.barY(filteredPollution, {
-      x: "year",
-      y: "co_tpyr",
-      title: (d) => `${d.country} in ${d.year}: ${d.co_tpyr} tonnes`
-    })
-  ],
-  width: 1024
-});
+```{r}
+#| label: missingcountries
+#| column: page
+indicator_origin_map %>%
+  filter(is.na(origin_country_code)) %>%
+  knitr::kable()
 ```
 
-Nice! Now check out [`demo-embed.qmd`](demo-embed.html) for the embeddable version!
+That's okay! Now we're ready to map these codes back onto the national data:
 
-The above example shows that we can have 'reactive' plots at the language level: I can connect a dropdown or other input to the plot and have it respond very easily.
+```{r}
+#| label: nationaldata
 
-Newer versions of Observable Plot support tooltips and hover styling, although it seems that the version embedded with Quarto doesn't. Other kinds of interactivity don't seem to work.
+national_data %>%
+  select(INDICATOR_ID, dest_country_code = COUNTRY_ID, year = YEAR,
+    value = VALUE) %>%
+  # join the origin map in
+  filter(INDICATOR_ID %in% indicator_origin_map$INDICATOR_ID) %>%
+  left_join(indicator_origin_map, by = "INDICATOR_ID") %>%
+  rename(origin_continent = continent, origin_country_name = country_name,
+    origin_country_code = country_code) %>%
+  # now we're going to join it _again_, but this time to get  the _destination_
+  # name and continent
+  left_join(indicator_origin_map,
+    by = c("dest_country_code" = "INDICATOR_ID")) %>%
+  rename(dest_continent = continent, dest_country_name = country_name) %>%
+  select(-INDICATOR_ID, -country_code) ->
+national_data_joined
 
-That said, we can write any kind of JavaScript in an OJS cell, or even import and reuse a chart from a notebook published on <observablehq.com>, provided it's marked with an open source licence. We can even combine this approach with Observable Inputs.
-
-For example, [here's one from d3](https://observablehq.com/@d3/bar-chart-transitions), who are also the makers of Observable Plot:
-
-```{ojs d3barchart}
-import {BarChart} from "@d3/bar-chart-transitions"
-
-d3barchart = BarChart(filteredPollution, {
-  x: d => d.year,
-  y: d => d.co_tpyr,
-  yFormat: "",
-  yLabel: "↑ Carbon Monoxide",
-  width,
-  height: 350,
-  color: "#333"
-});
+ojs_define(flows = national_data_joined)
 ```
 
-Note that the dropdown menu from the previous chart controls this one too! So we can use Observable Inputs with custom charts (although note there's no transition - that would be hadled using the chart's `update` method). -->
+## Visualisation
+
+
+## Net flow indicators
+
+Also of interest are these two indicators:
+
+* `MENF.5T8`: "Net flow of internationally mobile students (inbound - outbound), both sexes (number)"
+* `MENFR.5T8`: "Net flow ratio of internationally mobile students (inbound - outbound), both sexes (%)"
+
+<!-- 
+# 26505: Inbound internationally mobile students from [continent], both sexes
+# xxxxx: [continent]: "Students from" [country], both sexes (number) -->
