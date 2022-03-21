@@ -1,0 +1,29 @@
+---
+title: "STUDENT FLOW BY COUNTRY"
+subtitle: "WHERE DO STUDENTS COME FROM, AND WHERE DO THEY GO?"
+page-layout: custom
+theme: none
+css: style/embed.css
+execute:
+  echo: false
+---
+
+```{ojs}
+import { viewof basisSelect, viewof yearSelect, popOriginPlot,
+  popDestinationPlot } from "./analysis.qmd"
+```
+
+```{ojs}
+//| panel: input
+//| layout-ncol: 2
+viewof basisSelect;
+viewof yearSelect;
+```
+
+::: {layout="[[1, 1]]"}
+
+```{ojs}
+popOriginPlot;
+popDestinationPlot;
+```
+:::

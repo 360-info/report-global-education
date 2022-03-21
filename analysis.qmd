@@ -5,6 +5,9 @@ author: "James Goldie, 360info"
 date: "2022-03-15"
 code-fold: true
 theme: style/article.scss
+format:
+  html:
+    self-contained: true
 ---
 
 ## Setup 
@@ -122,18 +125,11 @@ national_data %>%
   # now we're going to join it _again_, but this time to get  the _destination_
   # name and continent
   left_join(indicator_origin_map,
-    by = c("dest_country_code" = "INDICATOR_ID")) %>%
+    by = c("dest_country_code" = "country_code")) %>%
   rename(dest_continent = continent, dest_country_name = country_name) %>%
   select(starts_with("origin"), starts_with("dest"), year, value) %>%
   write_csv(here("data", "student-flows-tidy.csv")) ->
 national_data_joined
-
-# ojs_define(flows = national_data_joined)
-ojs_define(origins =
-  national_data_joined %>%
-  mutate(labels = paste0(origin_continent, ": ", origin_country_name)) %>%
-  pull(labels) %>%
-  unique())
 ```
 
 Before we start visualising, let's now break this back into data by origin and by destination. That way, we can [lump](https://forcats.tidyverse.org/reference/fct_lump.html) all the same values together and make a more compact statement about the main comings and goings for a given country.
@@ -145,16 +141,48 @@ Before we start visualising, let's now break this back into data by origin and b
 national_data_joined %>%
   filter(!is.na(value), value > 0) %>%
   group_by(year, origin_country_name) %>%
-  mutate(dest_country_lumped = fct_lump_n(f = dest_country_name, n = 10, w = value, other = "Other countries")) %>%
-  # FIXME - not working
-  select(origin_country_name, dest_country_name, year, value)
-  # now add up all the lumped ones
+  mutate(dest_country_lumped =
+    fct_lump_n(f = dest_country_name, n = 10, w = value,
+      other = "Other countries")) %>% 
   ungroup() %>% 
+  # now add up all the lumped ones
+  select(origin_country_name, dest_country_lumped, year, value) %>%
   group_by(year, origin_country_name, dest_country_lumped) %>%
-  summarise(value_lumped = sum(value, na.rm = TRUE)) ->
-lumped_origins
-  
+  summarise(value_lumped = sum(value, na.rm = TRUE)) %>%
+  ungroup() ->
+popular_destinations
 
+# most popular origins for each destination
+national_data_joined %>%
+  filter(!is.na(value), value > 0) %>%
+  group_by(year, dest_country_name) %>%
+  mutate(origin_country_lumped =
+    fct_lump_n(f = origin_country_name, n = 10, w = value,
+      other = "Other countries")) %>% 
+  ungroup() %>% 
+  # now add up all the lumped ones
+  select(dest_country_name, origin_country_lumped, year, value) %>%
+  group_by(year, dest_country_name, origin_country_lumped) %>%
+  summarise(value_lumped = sum(value, na.rm = TRUE)) %>%
+  ungroup() ->
+popular_origins
+```
+
+```{r}
+#| label: exportdata
+
+# list of countries
+c(
+  national_data_joined$origin_country_name,
+  national_data_joined$dest_country_name) %>%
+  unique() %>%
+  discard(is.na) %>%
+  ojs_define(country_list = .)
+
+# full, lumped datasets
+ojs_define(popDestinations = popular_destinations)
+ojs_define(popOrigins = popular_origins)
+ojs_define(yearRange = range(national_data_joined$year))
 ```
 
 ## Visualisation: single country flows
@@ -162,15 +190,111 @@ lumped_origins
 Let's start by looking at who comes _from_ and _to_ any given country.
 
 ```{ojs}
-viewof originSelect = Inputs.select(origins, {
-  label: "Select a country",
+//| label: controls
+viewof basisSelect = Inputs.select(country_list, {
+  label: "Country",
   sort: true
 });
+viewof yearSelect = Inputs.range([1998, 2021],
+  {step: 1, label: "Year"});
 
-// chart showing 
+// filter the popular origin and destination datasets based on selected country
+filteredPopularOrigins = transpose(popOrigins)
+  .filter(function(row) {
+    return row.dest_country_name == basisSelect && row.year == yearSelect;
+  });
+filteredPopularDestinations = transpose(popDestinations)
+  .filter(function(row) {
+    return row.origin_country_name == basisSelect && row.year == yearSelect;
+  });
+
+// comptue a fixed x range for a given country across all years
+countryOriginRange = d3.extent(
+  transpose(popOrigins).filter(function(row) {return row.dest_country_name;}),
+  d => d.value_lumped);
+countryDestinationRange = d3.extent(
+  transpose(popOrigins).filter(function(row) {return row.dest_country_name;}),
+  d => d.value_lumped);
+
+commaFormat = d3.format(",.0f");
+
+html`Origin range for ${basisSelect}: ${countryOriginRange}`
+html`Destination range for ${basisSelect}: ${countryDestinationRange}`
 ```
+```{ojs}
+//| label: popularorigins
 
+popOriginPlot = filteredPopularOrigins.length == 0 ?
+  html`No data for student flows <strong>into ${basisSelect}</strong> in <strong>${yearSelect}</strong>.` :
+  Plot.plot({
+    marks: [
+      Plot.barX(filteredPopularOrigins, {
+        y: "origin_country_lumped",
+        x: "value_lumped",
+        fill: "value_lumped",
+        sort: {y: "x", reverse: true}
+      }),
+      Plot.text(filteredPopularOrigins, {
+        y: "origin_country_lumped",
+        x: "value_lumped",
+        text: d => commaFormat(d.value_lumped),
+        dx: 25
+      })
+    ],
+    x: {
+      label: "Number of students →"//,
+      // domain: countryOriginRange
+    },
+    y: {
+      label: ""
+    },
+    color: {
+      scheme: "ylgnbu",
+      type: "sqrt",
+    },
+    marginLeft: 125,
+    marginRight: 50,
+    caption: html`Which countries send students here?`
+  })
+```
+Where do this country's students go?
 
+```{ojs}
+//| label: populardestinations
+popDestinationPlot = 
+  filteredPopularDestinations.length == 0 ?
+  html`No data for student flows <strong>out of ${basisSelect}</strong> in <strong>${yearSelect}</strong>.` :
+  Plot.plot({
+    marks: [
+      Plot.barX(filteredPopularDestinations, {
+        y: "dest_country_lumped",
+        x: "value_lumped",
+        fill: "value_lumped",
+        sort: {y: "x", reverse: true}
+      }),
+      Plot.text(filteredPopularDestinations, {
+        y: "dest_country_lumped",
+        x: "value_lumped",
+        text: d => commaFormat(d.value_lumped),
+        dx: 25
+      })
+    ],
+    x: {
+      label: "Number of students →"//,
+      //domain: countryDestinationRange
+    },
+    y: {
+      label: ""
+    },
+    color: {
+      scheme: "ylorrd",
+      type: "sqrt",
+    },
+    marginLeft: 125,
+    marginRight: 50,
+    caption: html`Where do this country's students go?`
+  });
+```
 
 ## Net flow indicators
 
