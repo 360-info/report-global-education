@@ -20,10 +20,9 @@ viewof basisSelect;
 viewof yearSelect;
 ```
 
-::: {layout="[[1, 1]]"}
-
 ```{ojs}
+//| panel: input
+//| layout-ncol: 2
 popOriginPlot;
 popDestinationPlot;
 ```
-:::

@@ -5,15 +5,11 @@ author: "James Goldie, 360info"
 date: "2022-03-15"
 code-fold: true
 theme: style/article.scss
-format:
-  html:
-    self-contained: true
 ---
 
 ## Setup 
 ```{r}
 #| label: setup
-
 suppressPackageStartupMessages({
   library(tidyverse)
   library(here)
@@ -190,40 +186,54 @@ ojs_define(yearRange = range(national_data_joined$year))
 Let's start by looking at who comes _from_ and _to_ any given country.
 
 ```{ojs}
-//| label: controls
+//| label: bycountrycontrols
 viewof basisSelect = Inputs.select(country_list, {
   label: "Country",
   sort: true
 });
 viewof yearSelect = Inputs.range([1998, 2021],
   {step: 1, label: "Year"});
+```
 
+```{ojs}
+//| label:bycountrypreprocessing
 // filter the popular origin and destination datasets based on selected country
-filteredPopularOrigins = transpose(popOrigins)
-  .filter(function(row) {
-    return row.dest_country_name == basisSelect && row.year == yearSelect;
-  });
-filteredPopularDestinations = transpose(popDestinations)
-  .filter(function(row) {
-    return row.origin_country_name == basisSelect && row.year == yearSelect;
-  });
+// filteredPopularOrigins = transpose(popOrigins)
+//   .filter(function(row) {
+//     return row.dest_country_name == basisSelect && row.year == yearSelect;
+//   });
+// filteredPopularDestinations = transpose(popDestinations)
+//   .filter(function(row) {
+//     return row.origin_country_name == basisSelect && row.year == yearSelect;
+//   });
 
-// comptue a fixed x range for a given country across all years
-countryOriginRange = d3.extent(
-  transpose(popOrigins).filter(function(row) {return row.dest_country_name;}),
-  d => d.value_lumped);
-countryDestinationRange = d3.extent(
-  transpose(popOrigins).filter(function(row) {return row.dest_country_name;}),
-  d => d.value_lumped);
+// first filter data by selected country
+originByCountry = transpose(popOrigins).filter(function(row) {
+  return row.dest_country_name == basisSelect;
+});
+destinationByCountry = transpose(popDestinations).filter(function(row) {
+  return row.origin_country_name == basisSelect;
+});
+
+// compute a fixed x range for a given country across all years, in and out
+countryMax = d3.max([
+  d3.max(originByCountry, d => d.value_lumped),
+  d3.max(destinationByCountry, d => d.value_lumped)
+]);
+
+// further filter data by selected year
+filteredPopularOrigins = originByCountry.filter(function(row) {
+  return row.year == yearSelect;
+})
+filteredPopularDestinations = destinationByCountry.filter(function(row) {
+  return row.year == yearSelect;
+})
 
 commaFormat = d3.format(",.0f");
-
-html`Origin range for ${basisSelect}: ${countryOriginRange}`
-html`Destination range for ${basisSelect}: ${countryDestinationRange}`
 ```
-```{ojs}
-//| label: popularorigins
 
+```{ojs}
+//| label: bycountryorigins
 popOriginPlot = filteredPopularOrigins.length == 0 ?
   html`No data for student flows <strong>into ${basisSelect}</strong> in <strong>${yearSelect}</strong>.` :
   Plot.plot({
@@ -238,29 +248,22 @@ popOriginPlot = filteredPopularOrigins.length == 0 ?
         y: "origin_country_lumped",
         x: "value_lumped",
         text: d => commaFormat(d.value_lumped),
-        dx: 25
+        dx: -25
       })
     ],
-    x: {
-      label: "Number of students →"//,
-      // domain: countryOriginRange
-    },
-    y: {
-      label: ""
-    },
-    color: {
-      scheme: "ylgnbu",
-      type: "sqrt",
-    },
-    marginLeft: 125,
-    marginRight: 50,
-    caption: html`Which countries send students here?`
-  })
+    x: { label: "Number of students →", domain: [0, countryMax], reverse: true },
+    y: { label: "", axis: "right" },
+    color: { scheme: "ylgnbu", type: "sqrt" },
+    width: 300,
+    marginLeft: 30,
+    marginRight: 100,
+    // caption: html`Which countries send students here?`
+  });
 ```
 Where do this country's students go?
 
 ```{ojs}
-//| label: populardestinations
+//| label: bycountrydestinations
 popDestinationPlot = 
   filteredPopularDestinations.length == 0 ?
   html`No data for student flows <strong>out of ${basisSelect}</strong> in <strong>${yearSelect}</strong>.` :
@@ -279,20 +282,13 @@ popDestinationPlot =
         dx: 25
       })
     ],
-    x: {
-      label: "Number of students →"//,
-      //domain: countryDestinationRange
-    },
-    y: {
-      label: ""
-    },
-    color: {
-      scheme: "ylorrd",
-      type: "sqrt",
-    },
-    marginLeft: 125,
-    marginRight: 50,
-    caption: html`Where do this country's students go?`
+    x: { label: "Number of students →", domain: [0, countryMax] },
+    y: { label: "" },
+    color: { scheme: "ylorrd", type: "sqrt" },
+    width: 300,
+    marginLeft: 100,
+    marginRight: 30,
+    // caption: html`Where do this country's students go?`
   });
 ```
 
