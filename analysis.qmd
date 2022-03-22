@@ -16,6 +16,7 @@ suppressPackageStartupMessages({
 })
 library(pins)
 library(countrycode)
+library(wbstats)
 ```
 
 ## Getting the data
@@ -226,6 +227,7 @@ c(
   ojs_define(country_list = .)
 
 # full, lumped datasets
+# TODO - load exported CSVs instead to reduce embed load
 ojs_define(popDestinations = popular_destinations)
 ojs_define(popOrigins = popular_origins)
 ```
@@ -379,15 +381,39 @@ Also of interest are these two indicators:
 * `MENF.5T8`: "Net flow of internationally mobile students (inbound - outbound), both sexes (number)"
 * `MENFR.5T8`: "Net flow ratio of internationally mobile students (inbound - outbound), both sexes (%)"
 
-Let's see whether countries that 
+Let's see whether countries that have a net flow one way or the other tend to rank highly or lowly on the Human Development Index.
 
+First we need to grab those two indicators and tidy them up:
 
 ```{r}
 #| label: netflow
-  # national_data %>%
-  #   filter(INDICATOR_ID %in% c("MENF.5T8", "MENFR.5T8")
+national_data %>%
+  filter(INDICATOR_ID %in% c("MENF.5T8", "MENFR.5T8")) %>%
+  left_join(indicator_origin_map, by = c("COUNTRY_ID" = "country_code")) %>%
+  mutate(indicator = recode(INDICATOR_ID.x,
+    "MENF.5T8" = "value",
+    "MENFR.5T8" = "ratio")) %>%
+  pivot_wider(names_from = indicator, values_from = VALUE) %>% 
+  select(year = YEAR, continent, country_code = COUNTRY_ID, country_name, value,
+  ratio, magnitude = MAGNITUDE, qualifier = QUALIFIER) ->
+netflows
 ```
 
-<!-- 
-# 26505: Inbound internationally mobile students from [continent], both sexes
-# xxxxx: [continent]: "Students from" [country], both sexes (number) -->
+Let's also bring Human Development Index data in to compare against. That's the `IDX.HDI` (or, using a "revised method", `IDX.HDI.REV`)
+
+```{r}
+# from https://hdr.undp.org/en/indicators/137506
+# but not iso3c codes!
+read_csv(here("data", "hdi.csv"), skip = 5) %>%
+  filter(!is.na(`HDI Rank`)) %>%
+  select(country = Country, starts_with("19"), starts_with("20")) %>%
+  pivot_longer(-country, names_to = "year", values_to = "hdi") %>%
+  mutate(year = as.integer(year)) ->
+hdi
+
+# need a better join key! iso3c?
+netflows %>%
+  left_join(hdi, by = c("country_name" = "country", "year" = "year")) %>%
+  select(year, continent, country_code, country_name, value, hdi)
+
+```
