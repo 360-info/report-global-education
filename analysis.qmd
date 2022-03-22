@@ -52,7 +52,7 @@ region_map <- read_csv(file.path(data_cache, "OPRI_REGION.csv"), col_types = "cc
 # read the data in
 national_data <- read_csv(
   file.path(data_cache, "OPRI_DATA_NATIONAL.csv"),
-  col_types = "ccin-c")
+  col_types = "ccincc")
 ```
 
 ## Tidying and joining the origin data
@@ -91,7 +91,28 @@ tidy_origins %>%
   select(INDICATOR_ID,
     continent,
     country_name = country,
-    country_code = code) ->
+    country_code = code) %>%
+  # finally, let's neaten a few country names up
+  # mutate(l = nchar(country_name)) %>% arrange(desc(l)) %>%
+  # select(country_name, country_code, l)
+  mutate(
+    country_name = case_when(
+      country_code == "HKG" ~ "Hong Kong",
+      country_code == "MAC" ~ "Macao",
+      country_code == "PRK" ~ "North Korea",
+      country_code == "COD" ~ "DR Congo",
+      country_code == "VCT" ~ "St Vincent/Grenadines",
+      country_code == "VEN" ~ "Venezuala",
+      country_code == "LAO" ~ "Laos",
+      country_code == "BOL" ~ "Bolivia",
+      country_code == "FSM" ~ "Micronesia",
+      country_code == "TZA" ~ "Tanzania",
+      country_code == "IRN" ~ "Iran",
+      country_code == "RUS" ~ "Russia",
+      country_code == "MDA" ~ "Moldova",
+      country_code == "SYR" ~ "Syria",
+      TRUE ~ country_name)) %>%
+  write_csv(here("data", "country-names.csv")) ->
 indicator_origin_map
 ```
 
@@ -112,7 +133,7 @@ That's okay! Now we're ready to map these codes back onto the national data:
 
 national_data %>%
   select(INDICATOR_ID, dest_country_code = COUNTRY_ID, year = YEAR,
-    value = VALUE) %>%
+    value = VALUE, magnitude = MAGNITUDE, qualifier = QUALIFIER) %>%
   # join the origin map in
   filter(INDICATOR_ID %in% indicator_origin_map$INDICATOR_ID) %>%
   left_join(indicator_origin_map, by = "INDICATOR_ID") %>%
@@ -123,7 +144,13 @@ national_data %>%
   left_join(indicator_origin_map,
     by = c("dest_country_code" = "country_code")) %>%
   rename(dest_continent = continent, dest_country_name = country_name) %>%
-  select(starts_with("origin"), starts_with("dest"), year, value) %>%
+  # add continent to "unknown countries" bins
+  mutate(
+    origin_country_name = if_else(
+      str_detect(origin_country_name, "unknown countries"),
+      paste0(origin_continent, ": unknown countries"),
+      origin_country_name)) %>%
+  select(starts_with("origin"), starts_with("dest"), year, value, magnitude, qualifier) %>%
   write_csv(here("data", "student-flows-tidy.csv")) ->
 national_data_joined
 ```
@@ -142,10 +169,22 @@ national_data_joined %>%
       other = "Other countries")) %>% 
   ungroup() %>% 
   # now add up all the lumped ones
-  select(origin_country_name, dest_country_lumped, year, value) %>%
+  select(origin_country_name, dest_country_lumped, year, value, magnitude,
+    qualifier) %>%
   group_by(year, origin_country_name, dest_country_lumped) %>%
-  summarise(value_lumped = sum(value, na.rm = TRUE)) %>%
-  ungroup() ->
+  summarise(
+    value_lumped = sum(value, na.rm = TRUE),
+    # also format labels for qualifiers
+    cond_includes = if_else(any(magnitude == "INCLUDES", na.rm = TRUE), "a", "-"),
+    cond_included = if_else(any(magnitude == "INCLUDED", na.rm = TRUE), "b", "-"),
+    cond_natest = if_else(any(qualifier == "NAT_EST", na.rm = TRUE), "c", "-"),
+    cond_uisest = if_else(any(qualifier == "UIS_EST", na.rm = TRUE), "d", "-"),
+    cond_all = str_trim(paste(cond_includes, cond_included, cond_natest,
+      cond_uisest, collapse = ","))) %>%
+  ungroup() %>%
+  select(year, origin_country_name, dest_country_lumped, value_lumped,
+    cond_all) %>%
+  write_csv(here("data", "popular-destinations-by-origin.csv")) ->
 popular_destinations
 
 # most popular origins for each destination
@@ -157,10 +196,21 @@ national_data_joined %>%
       other = "Other countries")) %>% 
   ungroup() %>% 
   # now add up all the lumped ones
-  select(dest_country_name, origin_country_lumped, year, value) %>%
+  select(dest_country_name, origin_country_lumped, year, value, magnitude, qualifier) %>%
   group_by(year, dest_country_name, origin_country_lumped) %>%
-  summarise(value_lumped = sum(value, na.rm = TRUE)) %>%
-  ungroup() ->
+  summarise(
+    value_lumped = sum(value, na.rm = TRUE),
+    # also format labels for qualifiers
+    cond_includes = if_else(any(magnitude == "INCLUDES", na.rm = TRUE), "a", "-"),
+    cond_included = if_else(any(magnitude == "INCLUDED", na.rm = TRUE), "b", "-"),
+    cond_natest = if_else(any(qualifier == "NAT_EST", na.rm = TRUE), "c", "-"),
+    cond_uisest = if_else(any(qualifier == "UIS_EST", na.rm = TRUE), "d", "-"),
+    cond_all = str_trim(paste(cond_includes, cond_included, cond_natest,
+      cond_uisest, collapse = ","))) %>%
+  ungroup() %>%
+  select(year, dest_country_name, origin_country_lumped, value_lumped,
+    cond_all) %>%
+  write_csv(here("data", "popular-origins-by-destination.csv")) ->
 popular_origins
 ```
 
@@ -178,7 +228,6 @@ c(
 # full, lumped datasets
 ojs_define(popDestinations = popular_destinations)
 ojs_define(popOrigins = popular_origins)
-ojs_define(yearRange = range(national_data_joined$year))
 ```
 
 ## Visualisation: single country flows
@@ -197,15 +246,6 @@ viewof yearSelect = Inputs.range([1998, 2021],
 
 ```{ojs}
 //| label:bycountrypreprocessing
-// filter the popular origin and destination datasets based on selected country
-// filteredPopularOrigins = transpose(popOrigins)
-//   .filter(function(row) {
-//     return row.dest_country_name == basisSelect && row.year == yearSelect;
-//   });
-// filteredPopularDestinations = transpose(popDestinations)
-//   .filter(function(row) {
-//     return row.origin_country_name == basisSelect && row.year == yearSelect;
-//   });
 
 // first filter data by selected country
 originByCountry = transpose(popOrigins).filter(function(row) {
@@ -224,18 +264,24 @@ countryMax = d3.max([
 // further filter data by selected year
 filteredPopularOrigins = originByCountry.filter(function(row) {
   return row.year == yearSelect;
-})
+});
 filteredPopularDestinations = destinationByCountry.filter(function(row) {
   return row.year == yearSelect;
-})
+});
+
+console.log(filteredPopularOrigins)
+console.log(filteredPopularDestinations)
 
 commaFormat = d3.format(",.0f");
+noDataInMessage = html`<div style="width:475px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>into ${basisSelect}</strong> in <strong>${yearSelect}</strong>.</p><div>`
+
+noDataOutMessage = html`<div style="width:475px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>out of ${basisSelect}</strong> in <strong>${yearSelect}</strong>.</p><div>`
 ```
 
 ```{ojs}
 //| label: bycountryorigins
 popOriginPlot = filteredPopularOrigins.length == 0 ?
-  html`No data for student flows <strong>into ${basisSelect}</strong> in <strong>${yearSelect}</strong>.` :
+  noDataInMessage :
   Plot.plot({
     marks: [
       Plot.barX(filteredPopularOrigins, {
@@ -244,19 +290,36 @@ popOriginPlot = filteredPopularOrigins.length == 0 ?
         fill: "value_lumped",
         sort: {y: "x", reverse: true}
       }),
+      // label for value on left
       Plot.text(filteredPopularOrigins, {
         y: "origin_country_lumped",
         x: "value_lumped",
-        text: d => commaFormat(d.value_lumped),
+        // add conditions to value label if required
+        text: d => {
+          if (d.cond_all == "----") { 
+            commaFormat(d.value_lumped)
+          } else {
+            commaFormat(d.value_lumped) + " (" + d.cond_all + ")"
+          }
+        },
         dx: -25
-      })
+      }),
     ],
-    x: { label: "Number of students →", domain: [0, countryMax], reverse: true },
+    x: {
+      label: "← Number of students from...",
+      labelOffset: 45,
+      domain: [0, countryMax],
+      reverse: true },
     y: { label: "", axis: "right" },
     color: { scheme: "ylgnbu", type: "sqrt" },
-    width: 300,
-    marginLeft: 30,
-    marginRight: 100,
+    width: 475,
+    marginLeft: 65,
+    marginRight: 140,
+    marginBottom: 40,
+    style: {
+      fontFamily: "'Libre Franklin'",
+      fontSize: "16px"
+    }
     // caption: html`Which countries send students here?`
   });
 ```
@@ -266,7 +329,7 @@ Where do this country's students go?
 //| label: bycountrydestinations
 popDestinationPlot = 
   filteredPopularDestinations.length == 0 ?
-  html`No data for student flows <strong>out of ${basisSelect}</strong> in <strong>${yearSelect}</strong>.` :
+  noDataOutMessage :
   Plot.plot({
     marks: [
       Plot.barX(filteredPopularDestinations, {
@@ -275,19 +338,36 @@ popDestinationPlot =
         fill: "value_lumped",
         sort: {y: "x", reverse: true}
       }),
+      // label for value on right
       Plot.text(filteredPopularDestinations, {
         y: "dest_country_lumped",
         x: "value_lumped",
-        text: d => commaFormat(d.value_lumped),
+        // add conditions to value label if required
+        text: d => {
+          if (d.cond_all == "----") { 
+            commaFormat(d.value_lumped)
+          } else {
+            commaFormat(d.value_lumped) + " (" + d.cond_all + ")"
+          }
+        },
         dx: 25
       })
     ],
-    x: { label: "Number of students →", domain: [0, countryMax] },
+    x: {
+      label: "Number of students going to →",
+      labelOffset: 45,
+      domain: [0, countryMax]
+    },
     y: { label: "" },
     color: { scheme: "ylorrd", type: "sqrt" },
-    width: 300,
-    marginLeft: 100,
-    marginRight: 30,
+    width: 475,
+    marginLeft: 140,
+    marginRight: 65,
+    marginBottom: 40,
+    style: {
+      fontFamily: "'Libre Franklin'",
+      fontSize: "16px"
+    }
     // caption: html`Where do this country's students go?`
   });
 ```
@@ -298,6 +378,15 @@ Also of interest are these two indicators:
 
 * `MENF.5T8`: "Net flow of internationally mobile students (inbound - outbound), both sexes (number)"
 * `MENFR.5T8`: "Net flow ratio of internationally mobile students (inbound - outbound), both sexes (%)"
+
+Let's see whether countries that 
+
+
+```{r}
+#| label: netflow
+  # national_data %>%
+  #   filter(INDICATOR_ID %in% c("MENF.5T8", "MENFR.5T8")
+```
 
 <!-- 
 # 26505: Inbound internationally mobile students from [continent], both sexes

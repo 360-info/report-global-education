@@ -98,9 +98,13 @@
 <h1 class="title">STUDENT FLOW BY COUNTRY</h1>
 <p class="subtitle">WHERE DO STUDENTS COME FROM, AND WHERE DO THEY GO?</p>
 </header>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Chart: James Goldie, 360info. Data: some other place</a></li><li><a href="#tabset-1-2">Use + Remix</a></li><li><a href="#tabset-1-3">Notes</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
 <div class="cell">
-<div class="sourceCode hidden" id="cb1" data-startfrom="12" data-source-offset="-0"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 11;"><span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { viewof basisSelect<span class="op">,</span> viewof yearSelect<span class="op">,</span> popOriginPlot<span class="op">,</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  popDestinationPlot } <span class="im">from</span> <span class="st">"./analysis.qmd"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode hidden" id="cb1" data-startfrom="16" data-source-offset="-0"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 15;"><span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { viewof basisSelect<span class="op">,</span> viewof yearSelect<span class="op">,</span> popOriginPlot<span class="op">,</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  popDestinationPlot } <span class="im">from</span> <span class="st">"./analysis.qmd"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -108,7 +112,7 @@
 </div>
 </div>
 <div class="cell panel-input" data-layout-ncol="2">
-<div class="sourceCode hidden" id="cb2" data-startfrom="19" data-source-offset="-0"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 18;"><span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>viewof basisSelect<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode hidden" id="cb2" data-startfrom="24" data-source-offset="-0"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 23;"><span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>viewof basisSelect<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="expression">
@@ -116,7 +120,7 @@
 </div>
 </div>
 </div>
-<div class="sourceCode hidden" id="cb3" data-startfrom="20" data-source-offset="-20"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 19;"><span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>viewof yearSelect<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode hidden" id="cb3" data-startfrom="25" data-source-offset="-20"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 24;"><span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>viewof yearSelect<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <div id="ojs-cell-2-2" data-nodetype="expression">
@@ -126,7 +130,7 @@
 </div>
 </div>
 <div class="cell panel-input" data-layout-ncol="2">
-<div class="sourceCode hidden" id="cb4" data-startfrom="26" data-source-offset="-0"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 25;"><span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>popOriginPlot<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode hidden" id="cb4" data-startfrom="31" data-source-offset="-0"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 30;"><span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>popOriginPlot<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <div id="ojs-cell-3-1" data-nodetype="expression">
@@ -134,12 +138,25 @@
 </div>
 </div>
 </div>
-<div class="sourceCode hidden" id="cb5" data-startfrom="27" data-source-offset="-15"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 26;"><span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>popDestinationPlot<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode hidden" id="cb5" data-startfrom="32" data-source-offset="-15"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 31;"><span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>popDestinationPlot<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <div id="ojs-cell-3-2" data-nodetype="expression">
 
 </div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<!-- TODO - 360 and CC logos here -->
+<h3 id="embed-this-chart-in-your-article" class="anchored">Embed this chart in your article</h3>
+<h3 id="get-the-code-and-data" class="anchored">Get the code and data</h3>
+<p>The data and analysis code underpinning this chart is available from <a href="https://github.com/360-info/report-global-education" class="uri">https://github.com/360-info/report-global-education</a>.</p>
+</div>
+<div id="tabset-1-3">
+<p>This data was originally sourced from the <a href="http://data.uis.unesco.org"><strong>UNESCO Institute of Statistics</strong></a>.</p>
+<p>Some figures include nationallly- or UNESCO-provided estimates, or</p>
 </div>
 </div>
 </div>

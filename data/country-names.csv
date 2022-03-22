@@ -1,0 +1,218 @@
+INDICATOR_ID,continent,country_name,country_code
+26421,Africa,Algeria,DZA
+26422,Africa,Angola,AGO
+26423,Africa,Benin,BEN
+26424,Africa,Botswana,BWA
+26425,Africa,Burkina Faso,BFA
+26426,Africa,Burundi,BDI
+26427,Africa,Cameroon,CMR
+26428,Africa,Cape Verde,CPV
+26429,Africa,Central African Republic,CAF
+26430,Africa,Chad,TCD
+26431,Africa,Comoros,COM
+26432,Africa,Congo,COG
+26433,Africa,Côte d'Ivoire,CIV
+26434,Africa,DR Congo,COD
+26435,Africa,Djibouti,DJI
+26436,Africa,Egypt,EGY
+26437,Africa,Equatorial Guinea,GNQ
+26438,Africa,Eritrea,ERI
+26439,Africa,Ethiopia,ETH
+26440,Africa,Gabon,GAB
+26441,Africa,Gambia,GMB
+26442,Africa,Ghana,GHA
+26443,Africa,Guinea,GIN
+26444,Africa,Guinea-Bissau,GNB
+26445,Africa,Kenya,KEN
+26446,Africa,Lesotho,LSO
+26447,Africa,Liberia,LBR
+26448,Africa,Libya,LBY
+26449,Africa,Madagascar,MDG
+26450,Africa,Malawi,MWI
+26451,Africa,Mali,MLI
+26452,Africa,Mauritania,MRT
+26453,Africa,Mauritius,MUS
+26454,Africa,Morocco,MAR
+26455,Africa,Mozambique,MOZ
+26456,Africa,Namibia,"NAM"
+26457,Africa,Niger,NER
+26458,Africa,Nigeria,NGA
+26459,Africa,Rwanda,RWA
+26460,Africa,Sao Tome and Principe,STP
+26461,Africa,Senegal,SEN
+26462,Africa,Seychelles,SYC
+26463,Africa,Sierra Leone,SLE
+26464,Africa,Somalia,SOM
+26465,Africa,South Africa,ZAF
+26466,Africa,Sudan (pre-secession),XDN
+26467,Africa,Eswatini,SWZ
+26468,Africa,Togo,TGO
+26469,Africa,Tunisia,TUN
+26470,Africa,Uganda,UGA
+26471,Africa,Tanzania,TZA
+26472,Africa,Zambia,ZMB
+26473,Africa,Zimbabwe,ZWE
+26474,Africa,unknown countries,NA
+26476,Caribbean and Central America,Antigua and Barbuda,ATG
+26477,Caribbean and Central America,Aruba,ABW
+26478,Caribbean and Central America,Bahamas,BHS
+26479,Caribbean and Central America,Barbados,BRB
+26480,Caribbean and Central America,Belize,BLZ
+26481,North America,Bermuda,BMU
+26482,Caribbean and Central America,British Virgin Islands,VGB
+26483,North America,Canada,CAN
+26484,Caribbean and Central America,Costa Rica,CRI
+26485,Caribbean and Central America,Cuba,CUB
+26486,Caribbean and Central America,Dominica,DMA
+26487,Caribbean and Central America,Dominican Republic,DOM
+26488,Caribbean and Central America,El Salvador,SLV
+26489,Caribbean and Central America,Grenada,GRD
+26490,Caribbean and Central America,Guatemala,GTM
+26491,Caribbean and Central America,Haiti,HTI
+26492,Caribbean and Central America,Honduras,HND
+26493,Caribbean and Central America,Jamaica,JAM
+26494,Caribbean and Central America,Mexico,MEX
+26495,Caribbean and Central America,Netherlands Antilles,ANT
+26496,Caribbean and Central America,Nicaragua,NIC
+26497,Caribbean and Central America,Panama,PAN
+26498,Caribbean and Central America,Saint Kitts and Nevis,KNA
+26499,Caribbean and Central America,Saint Lucia,LCA
+26500,Caribbean and Central America,St Vincent/Grenadines,VCT
+26501,Caribbean and Central America,Trinidad and Tobago,TTO
+26502,Caribbean and Central America,Turks and Caicos Islands,TCA
+26503,North America,United States,USA
+26504,North America,unknown countries,NA
+26506,South America,Argentina,ARG
+26507,South America,Bolivia,BOL
+26508,South America,Brazil,BRA
+26509,South America,Chile,CHL
+26510,South America,Colombia,COL
+26511,South America,Ecuador,ECU
+26512,South America,Guyana,GUY
+26513,South America,Paraguay,PRY
+26514,South America,Peru,PER
+26515,South America,Suriname,SUR
+26516,South America,Uruguay,URY
+26517,South America,Venezuala,VEN
+26518,South America,unknown countries,NA
+26520,Asia,Afghanistan,AFG
+26521,Asia,Armenia,ARM
+26522,Asia,Azerbaijan,AZE
+26523,Asia,Bahrain,BHR
+26524,Asia,Bangladesh,BGD
+26525,Asia,Bhutan,BTN
+26526,Asia,Brunei Darussalam,BRN
+26527,Asia,Cambodia,KHM
+26528,Asia,China,CHN
+26529,Asia,Cyprus,CYP
+26530,Asia,Timor-Leste,TLS
+26531,Asia,Georgia,GEO
+26532,Asia,Hong Kong,HKG
+26533,Asia,India,IND
+26534,Asia,Indonesia,IDN
+26535,Asia,Iran,IRN
+26536,Asia,Iraq,IRQ
+26537,Asia,Israel,ISR
+26538,Asia,Japan,JPN
+26539,Asia,Jordan,JOR
+26540,Asia,Kazakhstan,KAZ
+26541,Asia,North Korea,PRK
+26542,Asia,Republic of Korea,KOR
+26543,Asia,Kuwait,KWT
+26544,Asia,Kyrgyzstan,KGZ
+26545,Asia,Laos,LAO
+26546,Asia,Lebanon,LBN
+26547,Asia,Macao,MAC
+26548,Asia,Malaysia,MYS
+26549,Asia,Maldives,MDV
+26550,Asia,Mongolia,MNG
+26551,Asia,Myanmar,MMR
+26552,Asia,Nepal,NPL
+26553,Asia,Oman,OMN
+26554,Asia,Pakistan,PAK
+26555,Asia,Palestine,PSE
+26556,Asia,Philippines,PHL
+26557,Asia,Qatar,QAT
+26558,Asia,Saudi Arabia,SAU
+26559,Asia,Singapore,SGP
+26560,Asia,Sri Lanka,LKA
+26561,Asia,Syria,SYR
+26562,Asia,Tajikistan,TJK
+26563,Asia,Thailand,THA
+26564,Asia,Turkey,TUR
+26565,Asia,Turkmenistan,TKM
+26566,Asia,United Arab Emirates,ARE
+26567,Asia,Uzbekistan,UZB
+26568,Asia,Viet Nam,VNM
+26569,Asia,Yemen,YEM
+26570,Asia,unknown countries,NA
+26572,Europe,Albania,ALB
+26573,Europe,Andorra,AND
+26574,Europe,Austria,AUT
+26575,Europe,Belarus,BLR
+26576,Europe,Belgium,BEL
+26577,Europe,Bosnia and Herzegovina,BIH
+26578,Europe,Bulgaria,BGR
+26579,Europe,Croatia,HRV
+26580,Europe,Czechia,CZE
+26581,Europe,Denmark,DNK
+26582,Europe,Estonia,EST
+26583,Europe,Finland,FIN
+26584,Europe,France,FRA
+26585,Europe,Germany,DEU
+26586,Europe,Greece,GRC
+26587,Europe,Holy See,VAT
+26588,Europe,Hungary,HUN
+26589,Europe,Iceland,ISL
+26590,Europe,Ireland,IRL
+26591,Europe,Italy,ITA
+26592,Europe,Latvia,LVA
+26593,Europe,Liechtenstein,LIE
+26594,Europe,Lithuania,LTU
+26595,Europe,Luxembourg,LUX
+26596,Europe,Malta,MLT
+26597,Europe,Moldova,MDA
+26598,Europe,Monaco,MCO
+26599,Europe,Netherlands,NLD
+26600,Europe,Norway,NOR
+26601,Europe,Poland,POL
+26602,Europe,Portugal,PRT
+26603,Europe,Romania,ROU
+26604,Europe,Russia,RUS
+26605,Europe,San Marino,SMR
+26606,Europe,Slovakia,SVK
+26607,Europe,Slovenia,SVN
+26608,Europe,Spain,ESP
+26609,Europe,Sweden,SWE
+26610,Europe,Switzerland,CHE
+26611,Europe,North Macedonia,MKD
+26612,Europe,Ukraine,UKR
+26613,Europe,United Kingdom,GBR
+26614,Europe,Serbia,SRB
+26615,Europe,unknown countries,NA
+26617,Oceania,Australia,AUS
+26618,Oceania,Cook Islands,COK
+26619,Oceania,Fiji,FJI
+26620,Oceania,Kiribati,KIR
+26621,Oceania,New Zealand,NZL
+26622,Oceania,Niue,NIU
+26623,Oceania,Palau,PLW
+26624,Oceania,Papua New Guinea,PNG
+26625,Oceania,Samoa,WSM
+26626,Oceania,Solomon Islands,SLB
+26627,Oceania,Tonga,TON
+26628,Oceania,Tuvalu,TUV
+26629,Oceania,Vanuatu,VUT
+26630,Oceania,unknown countries,NA
+26640,Europe,Gibraltar,GIB
+26641,Caribbean and Central America,Anguilla,AIA
+26642,Caribbean and Central America,Cayman Islands,CYM
+26643,Caribbean and Central America,Montserrat,MSR
+26644,Oceania,Marshall Islands,MHL
+26645,Oceania,Micronesia,FSM
+26646,Oceania,Nauru,NRU
+26647,Oceania,Tokelau,TKL
+26651,Caribbean and Central America,unknown countries,NA
+26652,Europe,Montenegro,MNE
+901203,Africa,South Sudan,SSD
+901204,Africa,Sudan,SDN

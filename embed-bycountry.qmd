@@ -8,10 +8,15 @@ execute:
   echo: false
 ---
 
+::: {.panel-tabset}
+
+## Chart: James Goldie, 360info. Data: some other place
+
 ```{ojs}
 import { viewof basisSelect, viewof yearSelect, popOriginPlot,
   popDestinationPlot } from "./analysis.qmd"
 ```
+
 
 ```{ojs}
 //| panel: input
@@ -26,3 +31,21 @@ viewof yearSelect;
 popOriginPlot;
 popDestinationPlot;
 ```
+
+## Use + Remix
+
+<!-- TODO - 360 and CC logos here -->
+
+### Embed this chart in your article
+
+### Get the code and data
+
+The data and analysis code underpinning this chart is available from <https://github.com/360-info/report-global-education>.
+
+## Notes
+
+This data was originally sourced from the [**UNESCO Institute of Statistics**](http://data.uis.unesco.org).
+
+Some figures include nationallly- or UNESCO-provided estimates, or 
+
+:::
