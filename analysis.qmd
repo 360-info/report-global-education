@@ -5,6 +5,8 @@ author: "James Goldie, 360info"
 date: "2022-03-15"
 code-fold: true
 theme: style/article.scss
+execute: 
+  cache: true
 ---
 
 ## Setup 
@@ -17,6 +19,9 @@ suppressPackageStartupMessages({
 library(pins)
 library(countrycode)
 library(wbstats)
+library(themes360info)
+
+register_360fonts("libre")
 ```
 
 ## Getting the data
@@ -391,29 +396,111 @@ national_data %>%
   filter(INDICATOR_ID %in% c("MENF.5T8", "MENFR.5T8")) %>%
   left_join(indicator_origin_map, by = c("COUNTRY_ID" = "country_code")) %>%
   mutate(indicator = recode(INDICATOR_ID.x,
-    "MENF.5T8" = "value",
-    "MENFR.5T8" = "ratio")) %>%
+    "MENF.5T8" = "flow_value",
+    "MENFR.5T8" = "flow_ratio")) %>%
   pivot_wider(names_from = indicator, values_from = VALUE) %>% 
-  select(year = YEAR, continent, country_code = COUNTRY_ID, country_name, value,
-  ratio, magnitude = MAGNITUDE, qualifier = QUALIFIER) ->
+  select(year = YEAR, continent, country_code = COUNTRY_ID, country_name,
+    flow_value, flow_ratio, magnitude = MAGNITUDE, qualifier = QUALIFIER) ->
 netflows
 ```
 
 Let's also bring Human Development Index data in to compare against. That's the `IDX.HDI` (or, using a "revised method", `IDX.HDI.REV`)
 
 ```{r}
+#| label: hdijoin
 # from https://hdr.undp.org/en/indicators/137506
+# via https://ourworldindata.org/human-development-index
 # but not iso3c codes!
-read_csv(here("data", "hdi.csv"), skip = 5) %>%
-  filter(!is.na(`HDI Rank`)) %>%
-  select(country = Country, starts_with("19"), starts_with("20")) %>%
-  pivot_longer(-country, names_to = "year", values_to = "hdi") %>%
-  mutate(year = as.integer(year)) ->
+read_csv(here("data", "hdi-owid.csv")) %>%
+  set_names(c("country_name", "country_code", "year", "hdi")) ->
 hdi
 
-# need a better join key! iso3c?
+# join the net flow data with owid hdi data
 netflows %>%
-  left_join(hdi, by = c("country_name" = "country", "year" = "year")) %>%
-  select(year, continent, country_code, country_name, value, hdi)
-
+  left_join(hdi, by = c("country_code", "year"), suffix = c(".uis", ".owid")) %>%
+  mutate(country_name = coalesce(country_name.uis, country_name.owid)) %>%
+  select(year, continent, country_code, country_name, flow_value, flow_ratio,
+  hdi) ->
+netflows_hdi
 ```
+
+```{r}
+#| label: vishdi
+netflows_hdi %>%
+  filter(!is.na(flow_ratio), !is.na(hdi)) %>%
+  mutate(flow_sign = if_else(flow_ratio >= 0,
+    "Net gain of students",
+    "Net loss of students")) %>%
+  {
+    ggplot(.) +
+      aes(x = hdi, y = flow_ratio, colour = flow_sign) +
+      geom_hline(yintercept = 0) +
+      geom_point() +
+      scale_colour_manual(values = unname(colours_360("blues"))) +
+      facet_wrap(vars(year)) +
+      ylim(c(-100, 100)) +
+      theme_minimal() +
+      theme(
+        legend.position = "top",
+        legend.direction = "horizontal") +
+      labs(
+        x = "Human development index",
+        y = "Net student flow (%)",
+        colour = "Net flow")
+  }
+
+netflows_hdi %>%
+  # filter out missing data for ojs transpose()
+  filter(!is.na(flow_ratio), !is.na(hdi)) %>%
+  select(year, country_name, flow_ratio, hdi) %>%
+  write_csv(here("data", "netflows.csv")) %>%
+  ojs_define(netflows = .)
+```
+
+```{ojs}
+viewof flowYearSelect = Inputs.range([1998, 2017], {step: 1, label: "Year"});
+
+filteredNetFlows = transpose(netflows).filter(function(row) {
+  return row.year == flowYearSelect && row.flow_ratio > -100;
+});
+
+Plot.plot({
+  marks: [
+    // horizontal line at y = 0
+    Plot.ruleY([0]),
+    // labels for +ive/-ive
+    Plot.text([[0.5, 10]], {
+      text: ["Gaining students"],
+      // textAnchor: "middle",
+      fontSize: 24,
+      fontColor: "#666666"
+    }),
+    Plot.text([[0.5, -10]], {
+      text: ["Losing students"],
+      fontSize: 24,
+      fontColor: "#666666"
+    }),
+    // country data: points and labels
+    Plot.dot(filteredNetFlows, {
+      x: "hdi",
+      y: "flow_ratio",
+      fill: d => d.flow_ratio > 0,
+      stroke: d => d.flow_ratio > 0,
+      title: d => `Country: ${d.country_name}`
+    }),
+    Plot.text(filteredNetFlows, {
+      x: "hdi",
+      y: "flow_ratio",
+      text: "country_name",
+      fill: d => d.flow_ratio > 0,
+      stroke: d => d.flow_ratio > 0
+    }),
+  ],
+  color: {
+    type: "diverging",
+    scheme: "BuRd",
+    legend: true
+  }
+});
+```
+

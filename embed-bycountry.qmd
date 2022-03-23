@@ -6,6 +6,9 @@ theme: none
 css: style/embed.css
 execute:
   echo: false
+format:
+  html:
+    self-contained: true
 ---
 
 ::: {.panel-tabset}
@@ -36,9 +39,9 @@ popDestinationPlot;
 
 <!-- TODO - 360 and CC logos here -->
 
-### Embed this chart in your article
+#### Embed this chart in your article
 
-### Get the code and data
+#### Get the code and data
 
 The data and analysis code underpinning this chart is available from <https://github.com/360-info/report-global-education>.
 

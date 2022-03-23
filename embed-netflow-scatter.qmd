@@ -1,0 +1,85 @@
+---
+title: "NET STUDENT FLOW"
+subtitle: "WHICH COUNTRIES GAIN STUDENTS?"
+page-layout: custom
+theme: none
+css: style/embed.css
+execute:
+  echo: false
+format:
+  html:
+    self-contained: true
+---
+
+::: {.panel-tabset}
+
+## Chart: James Goldie, 360info. Data: some other place
+
+```{ojs}
+viewof flowYearSelect = Inputs.range([1998, 2017], {step: 1, label: "Year"});
+
+// load the flow data; filter by the year
+netflows = await FileAttachment("data/netflows.csv").csv({ typed: true } );
+// filteredNetFlows = transpose(netflows).filter(function(row) {
+filteredNetFlows = netflows.filter(function(row) {
+  return row.year == flowYearSelect && row.flow_ratio > -100;
+});
+console.log(filteredNetFlows);
+```
+
+```{ojs}
+Plot.plot({
+  marks: [
+    // horizontal line at y = 0
+    Plot.ruleY([0]),
+    // labels for +ive/-ive
+    Plot.text([[0.5, 10]], {
+      text: ["Gaining students"],
+      fontSize: 24,
+      fill: "#666666",
+      fillOpacity: 0.2
+    }),
+    Plot.text([[0.5, -10]], {
+      text: ["Losing students"],
+      fontSize: 24,
+      fill: "#666666",
+      fillOpacity: 0.2
+    }),
+    // country data: points and labels
+    Plot.text(filteredNetFlows, {
+      x: "hdi",
+      y: "flow_ratio",
+      text: "country_name",
+      textAnchdor: "end",
+      dx: -25,
+      fill: d => d.flow_ratio > 0,
+      fillOpacity: 0.3
+    }),
+    Plot.dot(filteredNetFlows, {
+      x: "hdi",
+      y: "flow_ratio",
+      fill: d => d.flow_ratio > 0,
+      stroke: d => d.flow_ratio > 0,
+      title: d => `Country: ${d.country_name}`
+    })
+  ]
+});
+```
+
+## Use + Remix
+
+<!-- TODO - 360 and CC logos here -->
+
+#### Embed this chart in your article
+
+#### Get the code and data
+
+The data and analysis code underpinning this chart is available from <https://github.com/360-info/report-global-education>.
+
+## Notes
+
+This data was originally sourced from the [**UNESCO Institute of Statistics**](http://data.uis.unesco.org) and [**Our World in Data**](ttps://ourworldindata.org/human-development-index).
+
+Some figures include nationallly- or UNESCO-provided estimates, or 
+
+:::
