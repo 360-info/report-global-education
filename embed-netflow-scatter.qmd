@@ -24,11 +24,10 @@ netflows = await FileAttachment("data/netflows.csv").csv({ typed: true } );
 filteredNetFlows = netflows.filter(function(row) {
   return row.year == flowYearSelect && row.flow_ratio > -100;
 });
-console.log(filteredNetFlows);
 ```
 
 ```{ojs}
-Plot.plot({
+netflowScatterChart = Plot.plot({
   marks: [
     // horizontal line at y = 0
     Plot.ruleY([0]),
@@ -80,6 +79,6 @@ The data and analysis code underpinning this chart is available from <https://gi
 
 This data was originally sourced from the [**UNESCO Institute of Statistics**](http://data.uis.unesco.org) and [**Our World in Data**](ttps://ourworldindata.org/human-development-index).
 
-Some figures include nationallly- or UNESCO-provided estimates, or 
+Some figures include nationally- or UNESCO-provided estimates, or 
 
 :::

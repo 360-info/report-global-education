@@ -404,7 +404,7 @@ national_data %>%
 netflows
 ```
 
-Let's also bring Human Development Index data in to compare against. That's the `IDX.HDI` (or, using a "revised method", `IDX.HDI.REV`)
+Let's also bring Human Development Index data in to compare against. [Our World in Data](https://ourworldindata.org/human-development-index) has the tidiest version of this:
 
 ```{r}
 #| label: hdijoin
@@ -457,50 +457,26 @@ netflows_hdi %>%
   ojs_define(netflows = .)
 ```
 
+So here's what our net flows look like interactively (hover for a second to see country info):
+
 ```{ojs}
-viewof flowYearSelect = Inputs.range([1998, 2017], {step: 1, label: "Year"});
+import {viewof flowYearSelect, netflowScatterChart} from
+  "./embed-netflow-scatter.qmd"
 
-filteredNetFlows = transpose(netflows).filter(function(row) {
-  return row.year == flowYearSelect && row.flow_ratio > -100;
-});
-
-Plot.plot({
-  marks: [
-    // horizontal line at y = 0
-    Plot.ruleY([0]),
-    // labels for +ive/-ive
-    Plot.text([[0.5, 10]], {
-      text: ["Gaining students"],
-      // textAnchor: "middle",
-      fontSize: 24,
-      fontColor: "#666666"
-    }),
-    Plot.text([[0.5, -10]], {
-      text: ["Losing students"],
-      fontSize: 24,
-      fontColor: "#666666"
-    }),
-    // country data: points and labels
-    Plot.dot(filteredNetFlows, {
-      x: "hdi",
-      y: "flow_ratio",
-      fill: d => d.flow_ratio > 0,
-      stroke: d => d.flow_ratio > 0,
-      title: d => `Country: ${d.country_name}`
-    }),
-    Plot.text(filteredNetFlows, {
-      x: "hdi",
-      y: "flow_ratio",
-      text: "country_name",
-      fill: d => d.flow_ratio > 0,
-      stroke: d => d.flow_ratio > 0
-    }),
-  ],
-  color: {
-    type: "diverging",
-    scheme: "BuRd",
-    legend: true
-  }
-});
+viewof flowYearSelect;
+netflowScatterChart;
 ```
 
+It seems that a _subset_ of high-HDI countries (not all) are the ones that tend to receive students.
+
+## Net flow map
+
+These indicators tell us the net flow in or out of any given country, but I'd really like to know the net flow across any _pair_ of countries. Let's return to the country-to-country data, `national_data_joined`, and try to work that out.
+
+What we need is to match each row with its inverse: to find rows X and Y such that `origin_country_name[X] == dest_country_name[Y]` and `origin_country_name[Y] == dest_country_name[X]`. If we can pivot wider on that combination, we can calculate net flows.
+
+To do this, we need a key that matches the two countries. I'm going to sort the two alphabetically to create that key.
+
+```{r}
+national_data_joined
+```
