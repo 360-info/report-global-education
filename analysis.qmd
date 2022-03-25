@@ -18,7 +18,9 @@ suppressPackageStartupMessages({
 })
 library(pins)
 library(countrycode)
+library(igraph)
 library(wbstats)
+library(rnaturalearth)
 library(themes360info)
 
 register_360fonts("libre")
@@ -155,7 +157,11 @@ national_data %>%
     origin_country_name = if_else(
       str_detect(origin_country_name, "unknown countries"),
       paste0(origin_continent, ": unknown countries"),
-      origin_country_name)) %>%
+      origin_country_name),
+    # a few us territories aren't on the origin map, so let's fill them in again
+    # for the destination list
+    dest_country_name = coalesce(dest_country_name,
+      countrycode(dest_country_code, "iso3c", "country.name"))) %>%
   select(starts_with("origin"), starts_with("dest"), year, value, magnitude, qualifier) %>%
   write_csv(here("data", "student-flows-tidy.csv")) ->
 national_data_joined
@@ -473,10 +479,72 @@ It seems that a _subset_ of high-HDI countries (not all) are the ones that tend 
 
 These indicators tell us the net flow in or out of any given country, but I'd really like to know the net flow across any _pair_ of countries. Let's return to the country-to-country data, `national_data_joined`, and try to work that out.
 
-What we need is to match each row with its inverse: to find rows X and Y such that `origin_country_name[X] == dest_country_name[Y]` and `origin_country_name[Y] == dest_country_name[X]`. If we can pivot wider on that combination, we can calculate net flows.
+~~What we need is to match each row with its inverse: to find rows X and Y such that `origin_country_name[X] == dest_country_name[Y]` and `origin_country_name[Y] == dest_country_name[X]`. If we can pivot wider on that combination, we can calculate net flows.~~
 
-To do this, we need a key that matches the two countries. I'm going to sort the two alphabetically to create that key.
+~~To do this, we need a key that matches the two countries. I'm going to sort the two alphabetically to create that key.~~
+
+This is a network analysis problem, so let's use the `igraph` package to turn our data into data frames of vertices (country info) and edges (student flows).
 
 ```{r}
-national_data_joined
+
+# first, let's get country centroid data from {rnaturalearth}
+sf::sf_use_s2(FALSE)
+ne_countries(returnclass = "sf") %>%
+  select(country_code = iso_a3) ->
+boundaries
+
+sf::sf_use_s2(TRUE)
+boundaries %>%
+  st_make_valid() %>%
+  st_centroid(of_largest_polygon = TRUE) ->
+country_centroids
+
+# now, we'll get a list of our countries to be the vertices, and add the 
+bind_rows(
+  national_data_joined %>%
+    select(starts_with("origin_")) %>%
+    rename_with(~ str_replace(.x, "origin_", "")),
+  national_data_joined %>%
+    select(starts_with("dest_")) %>%
+    rename_with(~ str_replace(.x, "dest_", ""))) %>%
+  distinct() %>%
+  select(country_code, country_name, continent) %>%
+  filter(!is.na(country_code)) ->
+country_list
+
+# join 'em up
+country_centroids %>%
+  right_join(country_list, by = "country_code") ->
+country_vertices
+
+# list of graphs (one for each year)
+national_data_joined %>%
+  select(origin_country_code, dest_country_code, year, value, magnitude,
+    qualifier) %>%
+  # some duplicates have snuck in with the "unknown countries" categories
+  # and can be safely discarded
+  distinct(origin_country_code, dest_country_code, year, .keep_all = TRUE) %>%
+  filter(!is.na(origin_country_code), !is.na(dest_country_code), !is.na(year)) %>%
+  split(.$year) %>%
+  # graph_from_data_frame(directed = TRUE, vertices = country_vertices) ->
+  map(graph_from_data_frame, directed = TRUE, vertices = country_vertices) %>%
+  tibble(year = as.numeric(names(.)), graph = .) ->
+country_edges
+
+
+
+# national_data_joined %>%
+#   select(-ends_with("continent")) %>%
+#   # now create a two-country key and direction for the pivot
+#   mutate(
+#     direction =
+#       if_else(origin_country_name < dest_country_name, "toA", "toB"),
+#     pairkey = paste(
+#       pmin(origin_country_code, dest_country_code),
+#       pmax(origin_country_code, dest_country_code),
+#       sep = "_")) %>%
+#   pivot_wider(
+#     id_cols = c(pairkey, year), names_from = direction,
+#     values_from = c(starts_with("origin"), starts_with("dest"), value, magnitude, qualifier),
+#     values_fn = function(x) x[[1]]) %>% View()
 ```
