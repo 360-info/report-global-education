@@ -479,15 +479,12 @@ It seems that a _subset_ of high-HDI countries (not all) are the ones that tend 
 
 These indicators tell us the net flow in or out of any given country, but I'd really like to know the net flow across any _pair_ of countries. Let's return to the country-to-country data, `national_data_joined`, and try to work that out.
 
-~~What we need is to match each row with its inverse: to find rows X and Y such that `origin_country_name[X] == dest_country_name[Y]` and `origin_country_name[Y] == dest_country_name[X]`. If we can pivot wider on that combination, we can calculate net flows.~~
-
-~~To do this, we need a key that matches the two countries. I'm going to sort the two alphabetically to create that key.~~
-
-This is a network analysis problem, so let's use the `igraph` package to turn our data into data frames of vertices (country info) and edges (student flows).
+First, let's get the spatial data (country centroids) needed to make a map.
 
 ```{r}
 
 # first, let's get country centroid data from {rnaturalearth}
+# NOTE - ggnet doesn't seem to like {sfc} points
 sf::sf_use_s2(FALSE)
 ne_countries(returnclass = "sf") %>%
   select(country_code = iso_a3) ->
@@ -511,40 +508,55 @@ bind_rows(
   select(country_code, country_name, continent) %>%
   filter(!is.na(country_code)) ->
 country_list
+```
 
-# join 'em up
-country_centroids %>%
-  right_join(country_list, by = "country_code") ->
-country_vertices
+### Aside: country-pair net flows
 
-# list of graphs (one for each year)
+I'd been hoping to simplify any network visualisation of student flows by only showing the net flow between any two countries.
+
+Unfortunately, the data isn't quite good enough for this. The below code pivots the network of student flows to try and calculate net flow, but there's enough data missing that you're losing a large part of it by requiring both sides (in other words, if either country's departing flow is `NA`, so is the net flow).
+
+Nevertheless, the code is below for reproduction purposes!
+
+```{r}
+#| label: netflowaside
+
 national_data_joined %>%
-  select(origin_country_code, dest_country_code, year, value, magnitude,
-    qualifier) %>%
-  # some duplicates have snuck in with the "unknown countries" categories
-  # and can be safely discarded
-  distinct(origin_country_code, dest_country_code, year, .keep_all = TRUE) %>%
-  filter(!is.na(origin_country_code), !is.na(dest_country_code), !is.na(year)) %>%
-  split(.$year) %>%
-  # graph_from_data_frame(directed = TRUE, vertices = country_vertices) ->
-  map(graph_from_data_frame, directed = TRUE, vertices = country_vertices) %>%
-  tibble(year = as.numeric(names(.)), graph = .) ->
-country_edges
+  select(year, origin = origin_country_code, dest = dest_country_code,
+    value, magnitude, qualifier) %>%
+  filter(!is.na(origin), !is.na(dest)) %>%
+  # now create a two-country key and direction for the pivot
+  mutate(
+    direction = if_else(origin < dest, "toB", "toA"),
+    pairkey = paste(pmin(origin, dest), pmax(origin, dest), sep = "_")) %>%
+  pivot_wider(
+    id_cols = c(pairkey, year), names_from = direction,
+    values_from = c(value, magnitude, qualifier)) %>%
+  separate(pairkey, into = c("countryA", "countryB")) %>%
+  # ditch the extra country columns
+  select(year, countryA, countryB,
+    starts_with("value"),
+    starts_with("magnitude"),
+    starts_with("qualifier")) %>%
+  # calculate net flow
+  mutate(
+    netflow = abs(value_toB - value_toA),
+    net_destination = if_else(
+      value_toB > value_toA,
+      countryB,
+      countryA)) %>%
+  write_csv(here("data", "tidy-countrypair-netflows.csv")) ->
+countrypair_netflows
+```
 
+### Flow maps
 
+Let's return to showing _all_ the student flows. This will be messy, but some judicious use of opacity might make things clearer.
 
-# national_data_joined %>%
-#   select(-ends_with("continent")) %>%
-#   # now create a two-country key and direction for the pivot
-#   mutate(
-#     direction =
-#       if_else(origin_country_name < dest_country_name, "toA", "toB"),
-#     pairkey = paste(
-#       pmin(origin_country_code, dest_country_code),
-#       pmax(origin_country_code, dest_country_code),
-#       sep = "_")) %>%
-#   pivot_wider(
-#     id_cols = c(pairkey, year), names_from = direction,
-#     values_from = c(starts_with("origin"), starts_with("dest"), value, magnitude, qualifier),
-#     values_fn = function(x) x[[1]]) %>% View()
+```{r}
+national_data_joined %>%
+  left_join(country_centroids, by = c("origin_country_code" = "country_code")) %>%
+  rename(origin_pt = geometry) %>%
+  left_join(country_centroids, by = c("dest_country_code" = "country_code")) %>%
+  rename(dest_pt = geometry)
 ```
