@@ -17,6 +17,8 @@ suppressPackageStartupMessages({
   library(here)
 })
 library(pins)
+library(sf)
+library(CoordinateCleaner)
 library(countrycode)
 library(igraph)
 library(wbstats)
@@ -479,24 +481,21 @@ It seems that a _subset_ of high-HDI countries (not all) are the ones that tend 
 
 These indicators tell us the net flow in or out of any given country, but I'd really like to know the net flow across any _pair_ of countries. Let's return to the country-to-country data, `national_data_joined`, and try to work that out.
 
-First, let's get the spatial data (country centroids) needed to make a map.
+First, let's get the spatial data (country centroids) needed to make a map. I first used `{rnaturalearth}` for this, but I found `CoordinateCleaner` (which uses the CIA Fact Book) to be considerably more complete:
 
 ```{r}
-
-# first, let's get country centroid data from {rnaturalearth}
-# NOTE - ggnet doesn't seem to like {sfc} points
-sf::sf_use_s2(FALSE)
-ne_countries(returnclass = "sf") %>%
-  select(country_code = iso_a3) ->
+data(countryref)
+countryref %>%
+  filter(is.na(source)) %>%
+  select(country_code = iso3, centroid.lat, centroid.lon) %>%
+  st_as_sf(coords = c("centroid.lat", "centroid.lon")) %>%
+  distinct(country_code, .keep_all = TRUE) ->
 boundaries
+```
 
-sf::sf_use_s2(TRUE)
-boundaries %>%
-  st_make_valid() %>%
-  st_centroid(of_largest_polygon = TRUE) ->
-country_centroids
-
-# now, we'll get a list of our countries to be the vertices, and add the 
+Let's check against all the countries in our data to ensure we're not missing any centroids.
+```{r}
+#| label: countrylist
 bind_rows(
   national_data_joined %>%
     select(starts_with("origin_")) %>%
@@ -508,6 +507,27 @@ bind_rows(
   select(country_code, country_name, continent) %>%
   filter(!is.na(country_code)) ->
 country_list
+```
+
+Looks like we're missing just one: pre-secession Sudan (`XDN`).
+```{r}
+#| label: missingcentroids
+setdiff(country_list$country_code, boundaries$country_code) %>%
+  { filter(country_list, country_code %in% .) } %>%
+  print(n = Inf)
+# i'm going to eyeball this one! 12.76555 29.91269
+```
+
+I'll add it manually (we don't need the centroids to be too precise):
+
+```{r}
+#| label: sudanpatch
+boundaries %>%
+  bind_rows(tibble(
+    country_code = "XDN",
+    geometry = st_sfc(st_point(c(12.76555, 29.91269))))) %>%
+  filter(country_code != "NUL") ->
+country_centroids
 ```
 
 ### Aside: country-pair net flows
@@ -554,9 +574,15 @@ countrypair_netflows
 Let's return to showing _all_ the student flows. This will be messy, but some judicious use of opacity might make things clearer.
 
 ```{r}
+# bring the country centroid info in and create lines between countries
 national_data_joined %>%
   left_join(country_centroids, by = c("origin_country_code" = "country_code")) %>%
   rename(origin_pt = geometry) %>%
   left_join(country_centroids, by = c("dest_country_code" = "country_code")) %>%
-  rename(dest_pt = geometry)
+  rename(dest_pt = geometry) %>%
+  st_as_sf(crs = st_crs(4326)) %>%
+  mutate(segment = st_cast(
+    st_union(origin_pt, dest_pt, by_feature = TRUE),
+    "LINESTRING") ->
+flows_all
 ```
