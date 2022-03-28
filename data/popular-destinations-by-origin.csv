@@ -30264,7 +30264,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Aruba,Portugal,5,- - - -
 2012,Aruba,Brazil,9,- - - -
 2012,Aruba,Dominican Republic,1,- - - -
-2012,Aruba,NA,6,- - - -
+2012,Aruba,Sint Maarten,6,- - - -
 2012,Asia: unknown countries,Canada,1116,- - c -
 2012,Asia: unknown countries,Poland,529,- - - -
 2012,Asia: unknown countries,Turkey,3954,- - - -
@@ -30620,7 +30620,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Colombia,Canada,672,- - c -
 2012,Colombia,United Kingdom,918,- - - -
 2012,Colombia,Australia,1245,- - - -
-2012,Colombia,Other countries,1692,- - - -
+2012,Colombia,Other countries,1693,- - - -
 2012,Colombia,France,2979,- - - -
 2012,Colombia,Spain,5855,- - - -
 2012,Colombia,Cuba,454,- - - -
@@ -30628,7 +30628,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Colombia,Chile,773,- - - -
 2012,Colombia,Brazil,360,- - - -
 2012,Colombia,Ecuador,1506,- - - -
-2012,Colombia,NA,1,- - - -
 2012,Comoros,Malaysia,32,- - - -
 2012,Comoros,Other countries,26,- - c -
 2012,Comoros,France,1784,- - - -
@@ -30744,7 +30743,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Djibouti,United Arab Emirates,36,- - - -
 2012,Dominica,Canada,24,- - c -
 2012,Dominica,United Kingdom,20,- - - -
-2012,Dominica,Other countries,16,- - - -
+2012,Dominica,Other countries,20,- - - -
 2012,Dominica,France,52,- - - -
 2012,Dominica,Spain,21,- - - -
 2012,Dominica,Cuba,71,- - - -
@@ -30752,8 +30751,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Dominica,Saint Lucia,20,- - - -
 2012,Dominica,Serbia,5,- - - -
 2012,Dominica,Antigua and Barbuda,24,- - - -
-2012,Dominica,United Arab Emirates,4,- - - -
-2012,Dominica,NA,6,- - - -
+2012,Dominica,Sint Maarten,6,- - - -
 2012,Dominican Republic,Canada,132,- - c -
 2012,Dominican Republic,Japan,12,- - - -
 2012,Dominican Republic,United Kingdom,26,- - - -
@@ -31030,18 +31028,17 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Guyana,Japan,4,- - - -
 2012,Guyana,United Kingdom,57,- - - -
 2012,Guyana,Australia,11,- - - -
-2012,Guyana,Other countries,23,- - - -
+2012,Guyana,Other countries,26,- - - -
 2012,Guyana,France,51,- - - -
-2012,Guyana,Netherlands,3,- - - -
 2012,Guyana,Saudi Arabia,37,- - - -
 2012,Guyana,Cuba,790,- - - -
 2012,Guyana,Brazil,21,- - - -
 2012,Guyana,Antigua and Barbuda,58,- - - -
-2012,Guyana,NA,6,- - - -
+2012,Guyana,Sint Maarten,6,- - - -
 2012,Haiti,Canada,474,- - c -
 2012,Haiti,Turkey,25,- - - -
 2012,Haiti,El Salvador,32,- - - -
-2012,Haiti,Other countries,105,- - - -
+2012,Haiti,Other countries,117,- - - -
 2012,Haiti,France,1709,- - - -
 2012,Haiti,Cuba,404,- - - -
 2012,Haiti,Chile,31,- - - -
@@ -31049,7 +31046,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Haiti,Honduras,26,- - - -
 2012,Haiti,Dominican Republic,6847,- - - -
 2012,Haiti,Ecuador,46,- - - -
-2012,Haiti,NA,12,- - - -
 2012,Holy See,United Kingdom,7,- - - -
 2012,Holy See,Australia,2,- - - -
 2012,Holy See,New Zealand,2,- - - -
@@ -31189,7 +31185,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Jamaica,Brazil,14,- - - -
 2012,Jamaica,Antigua and Barbuda,66,- - - -
 2012,Jamaica,Bermuda,17,- - - -
-2012,Jamaica,NA,10,- - - -
+2012,Jamaica,Sint Maarten,10,- - - -
 2012,Japan,Canada,837,- - c -
 2012,Japan,United Kingdom,3131,- - - -
 2012,Japan,Australia,1855,- - - -
@@ -31783,7 +31779,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Peru,Japan,260,- - - -
 2012,Peru,United Kingdom,268,- - - -
 2012,Peru,Australia,272,- - - -
-2012,Peru,Other countries,975,- - c -
+2012,Peru,Other countries,981,- - c -
 2012,Peru,France,1025,- - - -
 2012,Peru,Spain,3338,- - - -
 2012,Peru,Cuba,1143,- - - -
@@ -31791,7 +31787,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Peru,Chile,1046,- - - -
 2012,Peru,Brazil,615,- - - -
 2012,Peru,Ecuador,229,- - - -
-2012,Peru,NA,6,- - - -
 2012,Philippines,Canada,294,- - c -
 2012,Philippines,Japan,632,- - - -
 2012,Philippines,Malaysia,291,- - - -
@@ -31861,7 +31856,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Russia,Finland,2107,- - - -
 2012,Russia,Norway,1061,- - - -
 2012,Russia,United Kingdom,3574,- - - -
-2012,Russia,Other countries,11965,- - c -
+2012,Russia,Other countries,11966,- - c -
 2012,Russia,Belarus,2567,- - - -
 2012,Russia,France,4300,- - - -
 2012,Russia,Italy,1737,- - - -
@@ -31869,7 +31864,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Russia,Kazakhstan,1993,- - - -
 2012,Russia,Armenia,1062,- - - -
 2012,Russia,Ukraine,2990,- - - -
-2012,Russia,NA,1,- - - -
 2012,Rwanda,Canada,126,- - c -
 2012,Rwanda,Malaysia,54,- - - -
 2012,Rwanda,Norway,41,- - - -
@@ -31891,7 +31885,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Saint Kitts and Nevis,Antigua and Barbuda,2,- - - -
 2012,Saint Kitts and Nevis,United Arab Emirates,3,- - - -
 2012,Saint Kitts and Nevis,Dominican Republic,1,- - - -
-2012,Saint Kitts and Nevis,NA,6,- - - -
+2012,Saint Kitts and Nevis,Sint Maarten,6,- - - -
 2012,Saint Lucia,Canada,99,- - c -
 2012,Saint Lucia,United Kingdom,93,- - - -
 2012,Saint Lucia,Australia,7,- - - -
@@ -31903,7 +31897,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Saint Lucia,Belgium,2,- - - -
 2012,Saint Lucia,Malta,2,- - - -
 2012,Saint Lucia,Antigua and Barbuda,5,- - - -
-2012,Saint Lucia,NA,4,- - - -
+2012,Saint Lucia,Sint Maarten,4,- - - -
 2012,Samoa,Japan,8,- - - -
 2012,Samoa,Malaysia,2,- - - -
 2012,Samoa,Turkey,1,- - - -
@@ -32129,12 +32123,11 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Sweden,Poland,1154,- - - -
 2012,Sweden,United Kingdom,3418,- - - -
 2012,Sweden,Australia,692,- - - -
-2012,Sweden,Other countries,1877,- - c -
+2012,Sweden,Other countries,1879,- - c -
 2012,Sweden,France,491,- - - -
 2012,Sweden,Netherlands,288,- - - -
 2012,Sweden,Switzerland,203,- - - -
 2012,Sweden,Denmark,2166,- - - -
-2012,Sweden,NA,2,- - - -
 2012,Switzerland,Canada,228,- - c -
 2012,Switzerland,United Kingdom,2664,- - - -
 2012,Switzerland,Australia,303,- - - -
@@ -32249,7 +32242,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Tunisia,United Arab Emirates,114,- - - -
 2012,Turkey,Canada,735,- - c -
 2012,Turkey,United Kingdom,3320,- - - -
-2012,Turkey,Other countries,6023,- - - -
+2012,Turkey,Other countries,6025,- - - -
 2012,Turkey,Bulgaria,5015,- - - -
 2012,Turkey,France,2484,- - - -
 2012,Turkey,Netherlands,663,- - - -
@@ -32258,7 +32251,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2012,Turkey,Kyrgyzstan,727,- - - -
 2012,Turkey,Ukraine,1077,- - - -
 2012,Turkey,Azerbaijan,2854,- - - -
-2012,Turkey,NA,2,- - - -
 2012,Turkmenistan,Malaysia,110,- - - -
 2012,Turkmenistan,Turkey,4167,- - - -
 2012,Turkmenistan,United Kingdom,63,- - - -
@@ -34789,10 +34781,10 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Anguilla,Brazil,2,- - - -
 2014,Anguilla,Morocco,2,- - - -
 2014,Anguilla,Mozambique,11,- - - -
-2014,Anguilla,NA,1,- - - -
+2014,Anguilla,Sint Maarten,1,- - - -
 2014,Antigua and Barbuda,Canada,63,- - c -
 2014,Antigua and Barbuda,United Kingdom,32,- - - -
-2014,Antigua and Barbuda,Other countries,14,- - - -
+2014,Antigua and Barbuda,Other countries,15,- - - -
 2014,Antigua and Barbuda,United States,204,- - - -
 2014,Antigua and Barbuda,Cuba,60,- - - -
 2014,Antigua and Barbuda,Italy,4,- - - -
@@ -34802,7 +34794,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Antigua and Barbuda,Morocco,8,- - - -
 2014,Antigua and Barbuda,Saint Lucia,15,- - - -
 2014,Antigua and Barbuda,United Arab Emirates,4,- - - -
-2014,Antigua and Barbuda,NA,1,- - - -
 2014,Argentina,United Kingdom,182,- - - -
 2014,Argentina,Australia,121,- - - -
 2014,Argentina,Other countries,786.22983,- - c -
@@ -35306,19 +35297,18 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Djibouti,Benin,22,- - - -
 2014,Dominica,Canada,18,- - c -
 2014,Dominica,United Kingdom,11,- - - -
-2014,Dominica,Other countries,32,- - - -
+2014,Dominica,Other countries,40,- - - -
 2014,Dominica,France,44,- - - -
 2014,Dominica,United States,182,- - - -
 2014,Dominica,Cuba,44,- - - -
 2014,Dominica,Italy,16,- - - -
-2014,Dominica,Romania,8,- - - -
 2014,Dominica,Morocco,18,- - - -
 2014,Dominica,Saint Lucia,30,- - - -
 2014,Dominica,United Arab Emirates,14,- - - -
-2014,Dominica,NA,16,- - - -
+2014,Dominica,Sint Maarten,16,- - - -
 2014,Dominican Republic,Canada,81,- - c -
 2014,Dominican Republic,United Kingdom,47,- - - -
-2014,Dominican Republic,Other countries,142,- - c -
+2014,Dominican Republic,Other countries,144,- - c -
 2014,Dominican Republic,France,137,- - - -
 2014,Dominican Republic,United States,1660,- - - -
 2014,Dominican Republic,Cuba,146,- - - -
@@ -35327,7 +35317,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Dominican Republic,Brazil,32,- - - -
 2014,Dominican Republic,Honduras,33,- - - -
 2014,Dominican Republic,Aruba,19,- - - -
-2014,Dominican Republic,NA,2,- - - -
 2014,DR Congo,Canada,225,- - c -
 2014,DR Congo,South Africa,2812,- - - -
 2014,DR Congo,Other countries,741.5,- - c -
@@ -35594,8 +35583,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Guinea-Bissau,Ghana,71,- - - -
 2014,Guyana,Canada,93,- - c -
 2014,Guyana,United Kingdom,49,- - - -
-2014,Guyana,Australia,9,- - - -
-2014,Guyana,Other countries,45,- - c -
+2014,Guyana,Other countries,54,- - c -
 2014,Guyana,France,15,- - - -
 2014,Guyana,Saudi Arabia,34,- - - -
 2014,Guyana,United States,234,- - - -
@@ -35603,9 +35591,9 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Guyana,Italy,18,- - - -
 2014,Guyana,India,18,- - - -
 2014,Guyana,Brazil,11,- - - -
-2014,Guyana,NA,10,- - - -
+2014,Guyana,Sint Maarten,10,- - - -
 2014,Haiti,Canada,405,- - c -
-2014,Haiti,Other countries,231,- - c -
+2014,Haiti,Other countries,240,- - c -
 2014,Haiti,France,1071,- - - -
 2014,Haiti,United States,896,- - - -
 2014,Haiti,Cuba,268,- - - -
@@ -35615,7 +35603,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Haiti,Dominican Republic,6945,- - - -
 2014,Haiti,Ecuador,44,- - - -
 2014,Haiti,Benin,75,- - - -
-2014,Haiti,NA,9,- - - -
 2014,Holy See,United Kingdom,3,- - - -
 2014,Holy See,United States,1,- - - -
 2014,Holy See,Italy,83,- - - -
@@ -35670,7 +35657,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,India,Canada,15705,- - c -
 2014,India,United Kingdom,19604,- - - -
 2014,India,Australia,25562,- - - -
-2014,India,Other countries,19288,- - c -
+2014,India,Other countries,19292,- - c -
 2014,India,New Zealand,10255.358939999998,- - - -
 2014,India,France,1985,- - - -
 2014,India,United States,97613,- - - -
@@ -35678,7 +35665,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,India,Russia,2630,- - - -
 2014,India,Ukraine,3587,- - - -
 2014,India,United Arab Emirates,9273,- - - -
-2014,India,NA,4,- - - -
 2014,Indonesia,Canada,753,- - c -
 2014,Indonesia,Japan,2387,- - - -
 2014,Indonesia,Malaysia,6537,- - - -
@@ -35747,17 +35733,16 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Italy,Denmark,887,- - - -
 2014,Italy,Germany,4831,- - - -
 2014,Jamaica,Canada,510,- - c -
-2014,Jamaica,Japan,14,- - - -
 2014,Jamaica,United Kingdom,234,- - - -
 2014,Jamaica,Australia,24,- - - -
-2014,Jamaica,Other countries,131,- - c -
+2014,Jamaica,Other countries,145,- - c -
 2014,Jamaica,France,43,- - - -
 2014,Jamaica,United States,2379,- - - -
 2014,Jamaica,Cuba,103,- - - -
 2014,Jamaica,Germany,16,- - - -
 2014,Jamaica,Brazil,30,- - - -
 2014,Jamaica,Bermuda,21,- - - -
-2014,Jamaica,NA,18,- - - -
+2014,Jamaica,Sint Maarten,18,- - - -
 2014,Japan,Canada,1644,- - c -
 2014,Japan,Malaysia,374,- - - -
 2014,Japan,United Kingdom,3089,- - - -
@@ -36174,7 +36159,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Nepal,India,8183,- - - -
 2014,Netherlands,United Kingdom,3326,- - - -
 2014,Netherlands,Australia,250,- - - -
-2014,Netherlands,Other countries,2212.5,- - c -
+2014,Netherlands,Other countries,2213.5,- - c -
 2014,Netherlands,France,568,- - - -
 2014,Netherlands,United States,1972,- - - -
 2014,Netherlands,Austria,286.33609999999993,- - - -
@@ -36183,7 +36168,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Netherlands,Sweden,346,- - - -
 2014,Netherlands,Denmark,400,- - - -
 2014,Netherlands,Germany,910,- - - -
-2014,Netherlands,NA,1,- - - -
 2014,New Zealand,Canada,129,- - c -
 2014,New Zealand,Japan,76,- - - -
 2014,New Zealand,United Kingdom,503,- - - -
@@ -36470,7 +36454,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Saint Kitts and Nevis,Saint Lucia,10,- - - -
 2014,Saint Kitts and Nevis,United Arab Emirates,4,- - - -
 2014,Saint Kitts and Nevis,Dominican Republic,1,- - - -
-2014,Saint Kitts and Nevis,NA,2,- - - -
+2014,Saint Kitts and Nevis,Sint Maarten,2,- - - -
 2014,Saint Lucia,Canada,99,- - c -
 2014,Saint Lucia,United Kingdom,64,- - - -
 2014,Saint Lucia,Australia,5,- - - -
@@ -36484,7 +36468,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Saint Lucia,Italy,5,- - - -
 2014,Saint Lucia,Switzerland,2,- - - -
 2014,Saint Lucia,Denmark,2,- - - -
-2014,Saint Lucia,NA,2,- - - -
+2014,Saint Lucia,Sint Maarten,2,- - - -
 2014,Samoa,Japan,5,- - - -
 2014,Samoa,Turkey,2,- - - -
 2014,Samoa,United Kingdom,2,- - - -
@@ -36677,7 +36661,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,St Vincent/Grenadines,Turkey,3,- - - -
 2014,St Vincent/Grenadines,United Kingdom,41,- - - -
 2014,St Vincent/Grenadines,Australia,5,- - - -
-2014,St Vincent/Grenadines,Other countries,4,- - - -
+2014,St Vincent/Grenadines,Other countries,5,- - - -
 2014,St Vincent/Grenadines,New Zealand,2,- - - -
 2014,St Vincent/Grenadines,France,2,- - - -
 2014,St Vincent/Grenadines,United States,100,- - - -
@@ -36686,7 +36670,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,St Vincent/Grenadines,Saint Lucia,10,- - - -
 2014,St Vincent/Grenadines,Azerbaijan,2,- - - -
 2014,St Vincent/Grenadines,Dominican Republic,3,- - - -
-2014,St Vincent/Grenadines,NA,1,- - - -
 2014,Sudan,Malaysia,2014,- - - -
 2014,Sudan,United Kingdom,277,- - - -
 2014,Sudan,South Africa,156,- - - -
@@ -36700,7 +36683,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Sudan,Egypt,224,- - - -
 2014,Suriname,Canada,18,- - c -
 2014,Suriname,United Kingdom,7,- - - -
-2014,Suriname,Other countries,14,- - - -
+2014,Suriname,Other countries,15,- - - -
 2014,Suriname,France,32,- - - -
 2014,Suriname,Netherlands,535,- - - -
 2014,Suriname,United States,87,- - - -
@@ -36709,19 +36692,17 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Suriname,Belgium,33,- - - -
 2014,Suriname,Brazil,9,- - - -
 2014,Suriname,Aruba,32,- - - -
-2014,Suriname,NA,1,- - - -
 2014,Sweden,Hungary,402,- - - -
 2014,Sweden,Norway,758,- - - -
 2014,Sweden,Poland,1242,- - c -
 2014,Sweden,United Kingdom,3204,- - - -
 2014,Sweden,Australia,751,- - - -
-2014,Sweden,Other countries,3006.46667,- - c -
+2014,Sweden,Other countries,3007.46667,- - c -
 2014,Sweden,France,428,- - - -
 2014,Sweden,United States,4154,- - - -
 2014,Sweden,Romania,497,- - - -
 2014,Sweden,Denmark,2247,- - - -
 2014,Sweden,Germany,605,- - - -
-2014,Sweden,NA,1,- - - -
 2014,Switzerland,Canada,348,- - c -
 2014,Switzerland,United Kingdom,3075,- - - -
 2014,Switzerland,Australia,265,- - - -
@@ -36812,14 +36793,13 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Trinidad and Tobago,United Kingdom,602,- - - -
 2014,Trinidad and Tobago,Australia,22,- - - -
 2014,Trinidad and Tobago,Ireland,57,- - - -
-2014,Trinidad and Tobago,Other countries,63,- - c -
+2014,Trinidad and Tobago,Other countries,64,- - c -
 2014,Trinidad and Tobago,France,35,- - - -
 2014,Trinidad and Tobago,Netherlands,8,- - - -
 2014,Trinidad and Tobago,United States,1369,- - - -
 2014,Trinidad and Tobago,Cuba,13,- - - -
 2014,Trinidad and Tobago,Sweden,8,- - - -
 2014,Trinidad and Tobago,Germany,10,- - - -
-2014,Trinidad and Tobago,NA,1,- - - -
 2014,Tunisia,Canada,816,- - c -
 2014,Tunisia,Other countries,1400.00138,- - c -
 2014,Tunisia,France,8955,- - - -
@@ -36832,7 +36812,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Tunisia,Morocco,335,- - - -
 2014,Tunisia,Ukraine,507,- - - -
 2014,Turkey,United Kingdom,3310,- - - -
-2014,Turkey,Other countries,10062,- - c -
+2014,Turkey,Other countries,10063,- - c -
 2014,Turkey,Bulgaria,3986,- - - -
 2014,Turkey,France,1884,- - - -
 2014,Turkey,United States,10288,- - - -
@@ -36842,7 +36822,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2014,Turkey,Ukraine,1186,- - - -
 2014,Turkey,Azerbaijan,2480,- - - -
 2014,Turkey,Bosnia and Herzegovina,1556,- - - -
-2014,Turkey,NA,1,- - - -
 2014,Turkmenistan,Turkey,6941,- - - -
 2014,Turkmenistan,Other countries,922,- - c -
 2014,Turkmenistan,Belarus,8153,- - - -
@@ -37093,7 +37072,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Anguilla,Indonesia,1,- - - -
 2015,Antigua and Barbuda,Canada,69,- - c -
 2015,Antigua and Barbuda,United Kingdom,35,- - - -
-2015,Antigua and Barbuda,Other countries,15,- - - -
+2015,Antigua and Barbuda,Other countries,16,- - - -
 2015,Antigua and Barbuda,United States,135.45532000000003,- - - -
 2015,Antigua and Barbuda,Cuba,66,- - - -
 2015,Antigua and Barbuda,Portugal,3,- - - -
@@ -37102,7 +37081,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Antigua and Barbuda,Serbia,3,- - - -
 2015,Antigua and Barbuda,Grenada,6,- - - -
 2015,Antigua and Barbuda,Dominican Republic,3,- - - -
-2015,Antigua and Barbuda,NA,1,- - - -
 2015,Argentina,United Kingdom,231,- - - -
 2015,Argentina,Australia,167,- - - -
 2015,Argentina,Other countries,811.00101,a - c -
@@ -37490,7 +37468,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Colombia,Canada,723,- - c -
 2015,Colombia,United Kingdom,1090,- - - -
 2015,Colombia,Australia,1629,- - - -
-2015,Colombia,Other countries,2309.54421,a - c -
+2015,Colombia,Other countries,2311.54421,a - c -
 2015,Colombia,France,2761,- - - -
 2015,Colombia,United States,6830.68145,- - - -
 2015,Colombia,Italy,975,- - - -
@@ -37498,7 +37476,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Colombia,Germany,1852,- - - -
 2015,Colombia,Brazil,1627,- - - -
 2015,Colombia,Ecuador,2404,- - - -
-2015,Colombia,NA,2,- - - -
 2015,Comoros,Malaysia,46,- - - -
 2015,Comoros,Turkey,43,- - - -
 2015,Comoros,Other countries,96,- - c -
@@ -37616,7 +37593,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Djibouti,Benin,38,- - - -
 2015,Dominica,Canada,27,- - c -
 2015,Dominica,United Kingdom,17,- - - -
-2015,Dominica,Other countries,28,- - - -
+2015,Dominica,Other countries,35,- - - -
 2015,Dominica,France,52,- - - -
 2015,Dominica,United States,169.45673000000002,- - - -
 2015,Dominica,Cuba,42,- - - -
@@ -37624,11 +37601,10 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Dominica,Morocco,14,- - - -
 2015,Dominica,Saint Lucia,31,- - - -
 2015,Dominica,United Arab Emirates,25,- - - -
-2015,Dominica,Dominican Republic,7,- - - -
-2015,Dominica,NA,12,- - - -
+2015,Dominica,Sint Maarten,12,- - - -
 2015,Dominican Republic,Canada,60,- - c -
 2015,Dominican Republic,United Kingdom,88,- - - -
-2015,Dominican Republic,Other countries,160,a - c -
+2015,Dominican Republic,Other countries,163,a - c -
 2015,Dominican Republic,France,143,- - - -
 2015,Dominican Republic,United States,1675.25929,- - - -
 2015,Dominican Republic,Cuba,100,- - - -
@@ -37638,7 +37614,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Dominican Republic,Brazil,49,- - - -
 2015,Dominican Republic,Honduras,34,- - - -
 2015,Dominican Republic,Colombia,28,- - - -
-2015,Dominican Republic,NA,3,- - - -
 2015,DR Congo,Canada,252,- - c -
 2015,DR Congo,South Africa,2825,- - - -
 2015,DR Congo,Other countries,1000,a - c -
@@ -37906,8 +37881,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Guinea-Bissau,Cape Verde,33,- - - -
 2015,Guyana,Canada,99,- - c -
 2015,Guyana,United Kingdom,50,- - - -
-2015,Guyana,South Africa,6,- - - -
-2015,Guyana,Other countries,52,a - c -
+2015,Guyana,Other countries,58,a - c -
 2015,Guyana,France,15,- - - -
 2015,Guyana,Saudi Arabia,29,- - - -
 2015,Guyana,United States,264.59062,- - - -
@@ -37915,10 +37889,10 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Guyana,Romania,17,- - - -
 2015,Guyana,India,17,- - - -
 2015,Guyana,Grenada,17,- - - -
-2015,Guyana,NA,13,- - - -
+2015,Guyana,Sint Maarten,13,- - - -
 2015,Haiti,Canada,381,- - c -
 2015,Haiti,Turkey,39,- - - -
-2015,Haiti,Other countries,206,a - c -
+2015,Haiti,Other countries,210,a - c -
 2015,Haiti,France,1049,- - - -
 2015,Haiti,United States,1041.49364,- - - -
 2015,Haiti,Cuba,195,- - - -
@@ -37927,7 +37901,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Haiti,Morocco,39,- - - -
 2015,Haiti,Dominican Republic,6442,- - - -
 2015,Haiti,Ecuador,64,- - - -
-2015,Haiti,NA,4,- - - -
 2015,Holy See,United Kingdom,1,- - - -
 2015,Holy See,United States,1.07254,- - - -
 2015,Holy See,Italy,5,- - - -
@@ -37982,7 +37955,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,India,Canada,16323,- - c -
 2015,India,United Kingdom,18177,- - - -
 2015,India,Australia,36892,- - - -
-2015,India,Other countries,24739.00101,- - c -
+2015,India,Other countries,24743.00101,- - c -
 2015,India,New Zealand,15087.256179999998,- - - -
 2015,India,France,2391,- - - -
 2015,India,United States,112713.60439000001,- - - -
@@ -37990,7 +37963,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,India,Russia,4276,a - - -
 2015,India,Ukraine,3925,- - - -
 2015,India,United Arab Emirates,11697,- - - -
-2015,India,NA,4,- - - -
 2015,Indonesia,Canada,804,- - c -
 2015,Indonesia,Japan,2527,- - - -
 2015,Indonesia,Malaysia,7732,- - - -
@@ -38060,15 +38032,14 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Jamaica,Canada,576,- - c -
 2015,Jamaica,United Kingdom,201,- - - -
 2015,Jamaica,Australia,21,- - - -
-2015,Jamaica,Other countries,138,a - c -
+2015,Jamaica,Other countries,152,a - c -
 2015,Jamaica,France,39,- - - -
 2015,Jamaica,United States,2595.56737,- - - -
 2015,Jamaica,Cuba,84,- - - -
-2015,Jamaica,Germany,14,- - - -
 2015,Jamaica,Brazil,31,- - - -
 2015,Jamaica,Grenada,15,- - - -
 2015,Jamaica,Bermuda,26,- - - -
-2015,Jamaica,NA,17,- - - -
+2015,Jamaica,Sint Maarten,17,- - - -
 2015,Japan,Canada,1479,- - c -
 2015,Japan,Malaysia,394,- - - -
 2015,Japan,United Kingdom,3098,- - - -
@@ -38492,7 +38463,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Nepal,India,8553,- - - -
 2015,Netherlands,United Kingdom,3360,- - - -
 2015,Netherlands,Australia,257,- - - -
-2015,Netherlands,Other countries,2518.52036,a - c -
+2015,Netherlands,Other countries,2520.52036,a - c -
 2015,Netherlands,France,599,- - - -
 2015,Netherlands,United States,1843.96793,- - - -
 2015,Netherlands,Austria,300.16969000000006,- - - -
@@ -38501,7 +38472,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Netherlands,Sweden,338,- - - -
 2015,Netherlands,Denmark,421,- - - -
 2015,Netherlands,Germany,1184,- - - -
-2015,Netherlands,NA,2,- - - -
 2015,New Zealand,Canada,126,- - c -
 2015,New Zealand,Japan,81,- - - -
 2015,New Zealand,United Kingdom,513,- - - -
@@ -38793,11 +38763,10 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Saint Kitts and Nevis,Grenada,7,- - - -
 2015,Saint Kitts and Nevis,United Arab Emirates,24,- - - -
 2015,Saint Kitts and Nevis,Dominican Republic,1,- - - -
-2015,Saint Kitts and Nevis,NA,3,- - - -
+2015,Saint Kitts and Nevis,Sint Maarten,3,- - - -
 2015,Saint Lucia,Canada,90,- - c -
 2015,Saint Lucia,United Kingdom,61,- - - -
-2015,Saint Lucia,Other countries,8,- - - -
-2015,Saint Lucia,New Zealand,2,- - - -
+2015,Saint Lucia,Other countries,10,- - - -
 2015,Saint Lucia,France,31,- - - -
 2015,Saint Lucia,Saudi Arabia,11,- - - -
 2015,Saint Lucia,United States,250.55818000000002,- - - -
@@ -38805,7 +38774,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Saint Lucia,Italy,3,- - - -
 2015,Saint Lucia,Denmark,3,- - - -
 2015,Saint Lucia,Grenada,8,- - - -
-2015,Saint Lucia,NA,3,- - - -
+2015,Saint Lucia,Sint Maarten,3,- - - -
 2015,Samoa,Japan,8,- - - -
 2015,Samoa,Turkey,3,- - - -
 2015,Samoa,United Kingdom,6,- - - -
@@ -38998,21 +38967,16 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Sri Lanka,Russia,384,a - - -
 2015,Sri Lanka,United Arab Emirates,308,- - - -
 2015,St Vincent/Grenadines,Canada,36,- - c -
-2015,St Vincent/Grenadines,Turkey,1,- - - -
 2015,St Vincent/Grenadines,United Kingdom,36,- - - -
-2015,St Vincent/Grenadines,New Zealand,1,- - - -
+2015,St Vincent/Grenadines,Other countries,6,- - - -
 2015,St Vincent/Grenadines,France,6,- - - -
 2015,St Vincent/Grenadines,United States,90.2275,- - - -
 2015,St Vincent/Grenadines,Cuba,37,- - - -
 2015,St Vincent/Grenadines,Italy,2,- - - -
-2015,St Vincent/Grenadines,Austria,1,- - - -
-2015,St Vincent/Grenadines,Denmark,1,- - - -
-2015,St Vincent/Grenadines,Germany,1,- - - -
-2015,St Vincent/Grenadines,Brazil,1,- - - -
 2015,St Vincent/Grenadines,Saint Lucia,14,- - - -
 2015,St Vincent/Grenadines,Grenada,10,- - - -
 2015,St Vincent/Grenadines,Dominican Republic,2,- - - -
-2015,St Vincent/Grenadines,NA,3,- - - -
+2015,St Vincent/Grenadines,Sint Maarten,3,- - - -
 2015,Sudan,Malaysia,2559,- - - -
 2015,Sudan,Turkey,226,- - - -
 2015,Sudan,United Kingdom,280,- - - -
@@ -39026,7 +38990,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Sudan,United Arab Emirates,2083,- - - -
 2015,Suriname,Canada,18,- - c -
 2015,Suriname,Turkey,4,- - - -
-2015,Suriname,Other countries,19,- - - -
+2015,Suriname,Other countries,20,- - - -
 2015,Suriname,France,47,- - - -
 2015,Suriname,Netherlands,577,- - - -
 2015,Suriname,Saudi Arabia,4,- - - -
@@ -39037,7 +39001,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Suriname,Germany,4,- - - -
 2015,Suriname,Georgia,5,- - - -
 2015,Suriname,Aruba,20,- - - -
-2015,Suriname,NA,1,- - - -
 2015,Sweden,Norway,776,- - - -
 2015,Sweden,Poland,1280,- - c -
 2015,Sweden,United Kingdom,3069,- - - -
@@ -39142,7 +39105,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Trinidad and Tobago,United Kingdom,596,- - - -
 2015,Trinidad and Tobago,Australia,23,- - - -
 2015,Trinidad and Tobago,Ireland,16,- - - -
-2015,Trinidad and Tobago,Other countries,93,- - c -
+2015,Trinidad and Tobago,Other countries,94,- - c -
 2015,Trinidad and Tobago,France,26,- - - -
 2015,Trinidad and Tobago,Netherlands,13,- - - -
 2015,Trinidad and Tobago,United States,1567.8992399999997,- - - -
@@ -39150,7 +39113,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Trinidad and Tobago,Germany,12,- - - -
 2015,Trinidad and Tobago,Georgia,12,- - - -
 2015,Trinidad and Tobago,Grenada,298,- - - -
-2015,Trinidad and Tobago,NA,1,- - - -
 2015,Tunisia,Canada,924,- - c -
 2015,Tunisia,Other countries,1467.16768,- - c -
 2015,Tunisia,France,9143,- - - -
@@ -39163,7 +39125,7 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Tunisia,Russia,398,a - - -
 2015,Tunisia,Ukraine,479,- - - -
 2015,Turkey,United Kingdom,3145,- - - -
-2015,Turkey,Other countries,11060,a - c -
+2015,Turkey,Other countries,11061,a - c -
 2015,Turkey,Bulgaria,3310,- - - -
 2015,Turkey,France,2135,- - - -
 2015,Turkey,United States,9962.43734,- - - -
@@ -39173,7 +39135,6 @@ year,origin_country_name,dest_country_lumped,value_lumped,cond_all
 2015,Turkey,Ukraine,1400,- - - -
 2015,Turkey,Azerbaijan,2402,- - - -
 2015,Turkey,Bosnia and Herzegovina,2038,- - - -
-2015,Turkey,NA,1,- - - -
 2015,Turkmenistan,Malaysia,192,- - - -
 2015,Turkmenistan,Turkey,9092,- - - -
 2015,Turkmenistan,Other countries,895,- - c -

@@ -11285,6 +11285,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2012,Serbia,Rwanda,25,- - - -
 2012,Serbia,Slovenia,38,- - - -
 2012,Serbia,Montenegro,2436,- - - -
+2012,Sint Maarten,Peru,6,- - - -
+2012,Sint Maarten,Other countries,2,- - - -
+2012,Sint Maarten,Sweden,2,- - - -
+2012,Sint Maarten,Turkey,2,- - - -
+2012,Sint Maarten,Dominica,6,- - - -
+2012,Sint Maarten,Saint Lucia,4,- - - -
+2012,Sint Maarten,Guyana,6,- - - -
+2012,Sint Maarten,Saint Kitts and Nevis,6,- - - -
+2012,Sint Maarten,Jamaica,10,- - - -
+2012,Sint Maarten,Haiti,12,- - - -
+2012,Sint Maarten,Aruba,6,- - - -
 2012,Slovakia,Other countries,1219,- - - -
 2012,Slovakia,Germany,462,- - - -
 2012,Slovakia,Norway,381,- - - -
@@ -11452,17 +11463,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2012,Zimbabwe,Togo,3,- - - -
 2012,Zimbabwe,South Africa,41,- - - -
 2012,Zimbabwe,Sudan,3,- - - -
-2012,NA,Peru,6,- - - -
-2012,NA,Other countries,2,- - - -
-2012,NA,Sweden,2,- - - -
-2012,NA,Turkey,2,- - - -
-2012,NA,Dominica,6,- - - -
-2012,NA,Saint Lucia,4,- - - -
-2012,NA,Guyana,6,- - - -
-2012,NA,Saint Kitts and Nevis,6,- - - -
-2012,NA,Jamaica,10,- - - -
-2012,NA,Haiti,12,- - - -
-2012,NA,Aruba,6,- - - -
 2013,Andorra,Argentina,1,- - - -
 2013,Andorra,Venezuala,1,- - - -
 2013,Andorra,France,13,- - - -
@@ -13282,6 +13282,22 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2014,Serbia,North Macedonia,73,- - - -
 2014,Serbia,Slovenia,51,- - - -
 2014,Serbia,Montenegro,2180,- - - -
+2014,Sint Maarten,India,4,- - - -
+2014,Sint Maarten,Sweden,1,- - - -
+2014,Sint Maarten,Dominican Republic,2,- - - -
+2014,Sint Maarten,Turkey,1,- - - -
+2014,Sint Maarten,Netherlands,1,- - - -
+2014,Sint Maarten,Dominica,16,- - - -
+2014,Sint Maarten,Saint Lucia,2,- - - -
+2014,Sint Maarten,Antigua and Barbuda,1,- - - -
+2014,Sint Maarten,Guyana,10,- - - -
+2014,Sint Maarten,Saint Kitts and Nevis,2,- - - -
+2014,Sint Maarten,St Vincent/Grenadines,1,- - - -
+2014,Sint Maarten,Trinidad and Tobago,1,- - - -
+2014,Sint Maarten,Suriname,1,- - - -
+2014,Sint Maarten,Jamaica,18,- - - -
+2014,Sint Maarten,Haiti,9,- - - -
+2014,Sint Maarten,Anguilla,1,- - - -
 2014,Slovakia,United Kingdom,142,- - - -
 2014,Slovakia,Other countries,1622,- - - -
 2014,Slovakia,Germany,454,- - - -
@@ -13442,22 +13458,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2014,Viet Nam,Turkmenistan,13,- - - -
 2014,Viet Nam,Laos,1442,- - - -
 2014,Viet Nam,Cambodia,443,- - - -
-2014,NA,India,4,- - - -
-2014,NA,Sweden,1,- - - -
-2014,NA,Dominican Republic,2,- - - -
-2014,NA,Turkey,1,- - - -
-2014,NA,Netherlands,1,- - - -
-2014,NA,Dominica,16,- - - -
-2014,NA,Saint Lucia,2,- - - -
-2014,NA,Antigua and Barbuda,1,- - - -
-2014,NA,Guyana,10,- - - -
-2014,NA,Saint Kitts and Nevis,2,- - - -
-2014,NA,St Vincent/Grenadines,1,- - - -
-2014,NA,Trinidad and Tobago,1,- - - -
-2014,NA,Suriname,1,- - - -
-2014,NA,Jamaica,18,- - - -
-2014,NA,Haiti,9,- - - -
-2014,NA,Anguilla,1,- - - -
 2015,Andorra,Bolivia,1,- - - -
 2015,Andorra,Brazil,1,- - - -
 2015,Andorra,Peru,3,- - - -
@@ -14357,6 +14357,18 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2015,Serbia,Slovenia,45,- - - -
 2015,Serbia,Saudi Arabia,114,- - - -
 2015,Serbia,Montenegro,2466,- - - -
+2015,Sint Maarten,India,4,- - - -
+2015,Sint Maarten,Other countries,4,- - - -
+2015,Sint Maarten,Dominican Republic,3,- - - -
+2015,Sint Maarten,Colombia,2,- - - -
+2015,Sint Maarten,Netherlands,2,- - - -
+2015,Sint Maarten,Dominica,12,- - - -
+2015,Sint Maarten,Saint Lucia,3,- - - -
+2015,Sint Maarten,Guyana,13,- - - -
+2015,Sint Maarten,Saint Kitts and Nevis,3,- - - -
+2015,Sint Maarten,St Vincent/Grenadines,3,- - - -
+2015,Sint Maarten,Jamaica,17,- - - -
+2015,Sint Maarten,Haiti,4,- - - -
 2015,Slovakia,United Kingdom,152,- - - -
 2015,Slovakia,Other countries,1866,- - - -
 2015,Slovakia,Germany,536,- - - -
@@ -14544,18 +14556,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2015,Zimbabwe,Malawi,57,- - - -
 2015,Zimbabwe,South Africa,32,- - - -
 2015,Zimbabwe,South Sudan,90,- - - -
-2015,NA,India,4,- - - -
-2015,NA,Other countries,4,- - - -
-2015,NA,Dominican Republic,3,- - - -
-2015,NA,Colombia,2,- - - -
-2015,NA,Netherlands,2,- - - -
-2015,NA,Dominica,12,- - - -
-2015,NA,Saint Lucia,3,- - - -
-2015,NA,Guyana,13,- - - -
-2015,NA,Saint Kitts and Nevis,3,- - - -
-2015,NA,St Vincent/Grenadines,3,- - - -
-2015,NA,Jamaica,17,- - - -
-2015,NA,Haiti,4,- - - -
 2016,Andorra,Bolivia,6,- - - -
 2016,Andorra,Brazil,1,- - - -
 2016,Andorra,Peru,5,- - - -

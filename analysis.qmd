@@ -22,7 +22,6 @@ library(CoordinateCleaner)
 library(countrycode)
 library(igraph)
 library(wbstats)
-library(rnaturalearth)
 library(themes360info)
 
 register_360fonts("libre")
@@ -515,10 +514,9 @@ Looks like we're missing just one: pre-secession Sudan (`XDN`).
 setdiff(country_list$country_code, boundaries$country_code) %>%
   { filter(country_list, country_code %in% .) } %>%
   print(n = Inf)
-# i'm going to eyeball this one! 12.76555 29.91269
 ```
 
-I'll add it manually (we don't need the centroids to be too precise):
+I'll add it manually (we don't need the centroids to be too precise). I've also dropped a "null" point from this dataset labelled `NUL`:
 
 ```{r}
 #| label: sudanpatch
@@ -574,15 +572,63 @@ countrypair_netflows
 Let's return to showing _all_ the student flows. This will be messy, but some judicious use of opacity might make things clearer.
 
 ```{r}
-# bring the country centroid info in and create lines between countries
+# bring the country centroid and hdi info in and create lines between countries
+
+# (this is a bit colvoluted but was the only performant solution i could find to
+# creating two-point linestrings)
+
+# (also note that {CoordinateCleaner}'s points appear to be Y/X rather than X/Y.
+# this code is a little weird to read as a result)
 national_data_joined %>%
-  left_join(country_centroids, by = c("origin_country_code" = "country_code")) %>%
-  rename(origin_pt = geometry) %>%
-  left_join(country_centroids, by = c("dest_country_code" = "country_code")) %>%
-  rename(dest_pt = geometry) %>%
-  st_as_sf(crs = st_crs(4326)) %>%
-  mutate(segment = st_cast(
-    st_union(origin_pt, dest_pt, by_feature = TRUE),
-    "LINESTRING") ->
+  left_join(country_centroids,
+    by = c("origin_country_code" = "country_code")) %>%
+  left_join(select(hdi, -country_name),
+    by = c("year", "origin_country_code" = "country_code")) %>%
+  rename(origin_pt = geometry, origin_hdi = hdi) %>%
+  left_join(country_centroids,
+    by = c("dest_country_code" = "country_code")) %>%
+  left_join(select(hdi, -country_name),
+    by = c("year", "dest_country_code" = "country_code")) %>%
+  rename(dest_pt = geometry, dest_hdi = hdi) %>%
+  # extract pt coordinates out to cols
+  filter(!st_is_empty(origin_pt), !st_is_empty(dest_pt)) %>%
+  mutate(
+    origin_coord = st_coordinates(origin_pt),
+    dest_coord = st_coordinates(dest_pt),
+    # (note flipping X and Y because {CoordinateCleaner}'s points are around the
+    # wrong way)
+    origin_lat = origin_coord[, "X"],
+    origin_lon = origin_coord[, "Y"],
+    dest_lat = dest_coord[, "X"],
+    dest_lon = dest_coord[, "Y"]) %>%
+  mutate(
+    path = pmap(
+      select(., origin_lon, origin_lat, dest_lon, dest_lat),
+      ~ st_linestring(matrix(c(..1, ..2, ..3, ..4), ncol = 2, byrow = TRUE))),
+    path = st_sfc(path)) %>%
+  select(-ends_with("lon"), -ends_with("lat"), -ends_with("coord")) %>%
+  st_as_sf(crs = st_crs(4326), sf_column_name = "path") ->
 flows_all
+
+# write out to disk
+st_write(flows_all, here("data", "flows_all.gpkg"))
+st_write(flows_all %>% filter(year == 2010), here("data", "flows_2010.gpkg"))
+```
+
+Let's take one year - 2010 - and start visualising flows.
+
+```{r}
+flows_2010 <- flows_all %>% filter(year == 2010L)
+
+st_crs(flows_2010) <- 4326
+
+flows_all %>%
+  filter(origin_country_code == "AUS", year == 2010L) %>%
+#   pull(path) %>%
+#   st_crs()
+  {
+    ggplot(.) +
+      geom_sf(aes(geometry = path, colour = value)) +
+      coord_sf(crs = st_crs(.))
+  }
 ```
