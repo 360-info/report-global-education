@@ -605,30 +605,68 @@ national_data_joined %>%
     path = pmap(
       select(., origin_lon, origin_lat, dest_lon, dest_lat),
       ~ st_linestring(matrix(c(..1, ..2, ..3, ..4), ncol = 2, byrow = TRUE))),
-    path = st_sfc(path)) %>%
+    path = st_sfc(path)) ->
+flows_all_df
+
+flows_all_df %>%
+  select(-ends_with("pt"), -ends_with("coord"), -path) %>%
+  write_csv(here("data", "flows-all.csv")) %>% 
+  select(-ends_with("continent"), -ends_with("country_name"),
+    -ends_with("country_code")) %>%
+  write_csv(here("data", "flows-all-lean.csv"))
+  
+flows_all_df %>%
   select(-ends_with("lon"), -ends_with("lat"), -ends_with("coord")) %>%
   st_as_sf(crs = st_crs(4326), sf_column_name = "path") ->
 flows_all
 
 # write out to disk
-st_write(flows_all, here("data", "flows_all.gpkg"))
-st_write(flows_all %>% filter(year == 2010), here("data", "flows_2010.gpkg"))
+st_write(flows_all, here("data", "flows_all.gpkg"), delete_dsn = TRUE)
 ```
 
-Let's take one year - 2010 - and start visualising flows.
+## Grouped country flows
+
+Let's group our countries by HDI and work out the flows between those groups each year
 
 ```{r}
-flows_2010 <- flows_all %>% filter(year == 2010L)
-
-st_crs(flows_2010) <- 4326
+#| label: groupedhdiflows
 
 flows_all %>%
-  filter(origin_country_code == "AUS", year == 2010L) %>%
-#   pull(path) %>%
-#   st_crs()
+  filter(!is.na(origin_hdi), !is.na(dest_hdi)) %>%
+  # bin the hdis
+  mutate(
+    origin_hdi_bin = cut(origin_hdi, c(0, 0.7, 0.85, 1),
+      labels = c("Low", "Medium",
+        "High")),
+    dest_hdi_bin = cut(dest_hdi, c(0, 0.7, 0.85, 1),
+      labels = c("Low", "Medium",
+        "High"))) ->
+flows_binned
+
+flows_binned %>%
+  st_drop_geometry() %>%
+  select(year, origin_hdi_bin, dest_hdi_bin, value) %>%
+  group_by(year, origin_hdi_bin, dest_hdi_bin) %>%
+  summarise(students = sum(value, na.rm = TRUE)) %>%
+  write_csv(here("data", "netflows-hdigroups.csv")) ->
+flows_hdigroups
+```
+
+```{r}
+#| label: vishdigroups
+flows_hdigroups %>%
+  mutate(lab = scales::label_number_si(accuracy = 0.1)(students)) %>%
   {
     ggplot(.) +
-      geom_sf(aes(geometry = path, colour = value)) +
-      coord_sf(crs = st_crs(.))
+      aes(y = origin_hdi_bin, x = dest_hdi_bin) +
+      geom_tile(aes(fill = students)) +
+      geom_text(aes(label = lab),
+        colour = alpha("white", 0.25)) +
+      facet_wrap(vars(year)) +
+      theme_minimal(base_size = 16) +
+      labs(
+        x = "Destination countries",
+        y = "Origin countries")
   }
+
 ```

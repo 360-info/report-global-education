@@ -6,9 +6,6 @@ theme: none
 css: style/embed.css
 execute:
   echo: false
-format:
-  html:
-    self-contained: true
 ---
 
 ::: {.panel-tabset}
