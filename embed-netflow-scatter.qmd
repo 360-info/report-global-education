@@ -1,29 +1,29 @@
 ---
 title: "NET STUDENT FLOW"
-subtitle: "WHICH COUNTRIES GAIN STUDENTS?"
 page-layout: custom
 theme: none
 css: style/embed.css
 execute:
   echo: false
-format:
-  html:
-    self-contained: true
 ---
 
 ::: {.panel-tabset}
 
 ## Chart: James Goldie, 360info. Data: some other place
 
+::: {.parasubtitle}
+Students tend to go to a **small number of Highly Developed countries.**
+:::
+
 ```{ojs}
 viewof flowYearSelect = Inputs.range([1998, 2017], {step: 1, label: "Year"});
 
 // load the flow data; filter by the year
-netflows = await FileAttachment("data/netflows.csv").csv({ typed: true } );
-// filteredNetFlows = transpose(netflows).filter(function(row) {
+netflows = await FileAttachment("data/netflows.csv").csv({ typed: true });
 filteredNetFlows = netflows.filter(function(row) {
   return row.year == flowYearSelect && row.flow_ratio > -100;
 });
+
 ```
 
 ```{ojs}
@@ -45,15 +45,15 @@ netflowScatterChart = Plot.plot({
       fillOpacity: 0.2
     }),
     // country data: points and labels
-    Plot.text(filteredNetFlows, {
-      x: "hdi",
-      y: "flow_ratio",
-      text: "country_name",
-      textAnchdor: "end",
-      dx: -25,
-      fill: d => d.flow_ratio > 0,
-      fillOpacity: 0.3
-    }),
+    // Plot.text(filteredNetFlows, {
+    //   x: "hdi",
+    //   y: "flow_ratio",
+    //   text: "country_name",
+    //   textAnchdor: "end",
+    //   dx: -25,
+    //   fill: d => d.flow_ratio > 0,
+    //   fillOpacity: 0.3
+    // }),
     Plot.dot(filteredNetFlows, {
       x: "hdi",
       y: "flow_ratio",
@@ -61,24 +61,55 @@ netflowScatterChart = Plot.plot({
       stroke: d => d.flow_ratio > 0,
       title: d => `Country: ${d.country_name}`
     })
-  ]
+  ],
+  x: {
+    label: "Human Development Index →",
+    labelOffset: 45,
+  },
+  y: {
+    label: "↑ Student Net Flow Ratio (%)",
+  },
+  color: {
+    range: ["#d73027", "#4575b4"]
+  },
+  width: 575,
+  marginLeft: 75,
+  marginTop: 45,
+  marginBottom: 45,
+  style: {
+    fontFamily: "'Libre Franklin'",
+    fontSize: "16px"
+  }
 });
 ```
 
 ## Use + Remix
 
-<!-- TODO - 360 and CC logos here -->
+![[](https://creativecommons.org/licenses/by/4.0)](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png)
+
+These charts, as well as the analyses that underpin them, are available under a [Creative Commons Attribution 4.0 licence](https://creativecommons.org/licenses/by/4.0).
 
 #### Embed this chart in your article
 
-#### Get the code and data
+Copy and paste the following code:
 
-The data and analysis code underpinning this chart is available from <https://github.com/360-info/report-global-education>.
+::: {.embedcode}
+```
+<strong>test<strong>
+```
+:::
+
+#### Get the data and code
+
+Visit the [GitHub repository](https://github.com/360-info/report-global-education/tree/main/data) to:
+
+* [download the data](https://github.com/360-info/report-global-education/tree/main/data)
+* [recreate or remix the chart](https://github.com/360-info/report-global-education)
 
 ## Notes
 
-This data was originally sourced from the [**UNESCO Institute of Statistics**](http://data.uis.unesco.org) and [**Our World in Data**](ttps://ourworldindata.org/human-development-index).
+This data was originally sourced from the [UNESCO Institute of Statistics](http://data.uis.unesco.org) and [Our World in Data](https://ourworldindata.org/human-development-index).
 
-Some figures include nationally- or UNESCO-provided estimates, or 
+Some figures include nationally- or UNESCO-provided estimates, or (for example, the United States) have figures that have only been reported every few years.
 
 :::

@@ -13,39 +13,177 @@ execute:
 ## Chart: James Goldie, 360info. Data: some other place
 
 ```{ojs}
-import { viewof basisSelect, viewof yearSelect, popOriginPlot,
-  popDestinationPlot } from "./analysis.qmd"
+countryList =
+  await FileAttachment("data/country-list.csv")
+  .csv({ typed: true });
+
+viewof basisSelect = Inputs.select(countryList.map(d => d.name), {
+  label: "Country",
+  sort: true,
+  unqiue: true
+});
+viewof yearSelect = Inputs.range([1998, 2021], {step: 1, label: "Year"});
 ```
 
-
 ```{ojs}
-//| panel: input
-//| layout-ncol: 2
-viewof basisSelect;
-viewof yearSelect;
+//| output: false
+
+// load the data run off from the analysis
+popOrigins =
+  await FileAttachment("data/popular-origins-by-destination.csv")
+  .csv({ typed: true });
+popDestinations =
+  await FileAttachment("data/popular-destinations-by-origin.csv")
+  .csv({ typed: true });
+
+// first filter data by selected country
+originByCountry = popOrigins.filter(function(row) {
+  return row.dest_country_name == basisSelect;
+});
+destinationByCountry = popDestinations.filter(function(row) {
+  return row.origin_country_name == basisSelect;
+});
+
+
+// compute a fixed x range for a given country across all years, in and out
+countryMax = d3.max([
+  d3.max(originByCountry, d => d.value_lumped),
+  d3.max(destinationByCountry, d => d.value_lumped)
+]);
+
+// further filter data by selected year
+filteredPopularOrigins = originByCountry.filter(function(row) {
+  return row.year == yearSelect;
+});
+filteredPopularDestinations = destinationByCountry.filter(function(row) {
+  return row.year == yearSelect;
+});
+
+commaFormat = d3.format(",.0f");
 ```
 
+#### Where do ${basisSelect}'s foreign students come from? {.textcenter}
+
 ```{ojs}
-//| panel: input
-//| layout-ncol: 2
-popOriginPlot;
-popDestinationPlot;
+
+popOriginPlot =
+  filteredPopularOrigins.length == 0 ?
+  html`<div style="width:475px;height:280px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>into ${basisSelect}</strong> in <strong>${yearSelect}</strong>.</p><div>` :
+  Plot.plot({
+    marks: [
+      Plot.barX(filteredPopularOrigins, {
+        y: "origin_country_lumped",
+        x: "value_lumped",
+        fill: "value_lumped",
+        sort: {y: "x", reverse: true}
+      }),
+      // label for value on left
+      // Plot.text(filteredPopularOrigins, {
+      //   y: "origin_country_lumped",
+      //   x: "value_lumped",
+      //   // add conditions to value label if required
+      //   text: d => {
+      //     if (d.cond_all == "----") { 
+      //       commaFormat(d.value_lumped)
+      //     } else {
+      //       commaFormat(d.value_lumped) + " (" + d.cond_all + ")"
+      //     }
+      //   },
+      //   dx: -25
+      // }),
+    ],
+    x: {
+      label: "Number of incoming students →",
+      labelOffset: 45,
+      domain: [0, countryMax]
+    },
+    y: { label: "" },
+    color: { scheme: "ylgnbu", type: "sqrt" },
+    width: 575,
+    marginLeft: 200,
+    marginRight: 65,
+    marginBottom: 45,
+    style: {
+      fontFamily: "'Libre Franklin'",
+      fontSize: "16px"
+    }
+  });
+```
+#### Where do ${basisSelect}'s students go? {.textcenter}
+
+```{ojs}
+
+popDestinationPlot = 
+  filteredPopularDestinations.length == 0 ?
+  html`<div style="width:475px;height:280px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>out of ${basisSelect}</strong> in <strong>${yearSelect}</strong>.</p><div>` :
+  Plot.plot({
+    marks: [
+      Plot.barX(filteredPopularDestinations, {
+        y: "dest_country_lumped",
+        x: "value_lumped",
+        fill: "value_lumped",
+        sort: {y: "x", reverse: true}
+      }),
+      // label for value on right
+      // Plot.text(filteredPopularDestinations, {
+      //   y: "dest_country_lumped",
+      //   x: "value_lumped",
+      //   // add conditions to value label if required
+      //   text: d => {
+      //     if (d.cond_all == "----") { 
+      //       commaFormat(d.value_lumped)
+      //     } else {
+      //       commaFormat(d.value_lumped) + " (" + d.cond_all + ")"
+      //     }
+      //   },
+      //   dx: 25
+      // })
+    ],
+    x: {
+      label: "Number of outgoing students →",
+      labelOffset: 45,
+      domain: [0, countryMax]
+    },
+    y: { label: "" },
+    color: { scheme: "ylorrd", type: "sqrt" },
+    width: 575,
+    marginLeft: 200,
+    marginRight: 65,
+    marginBottom: 45,
+    style: {
+      fontFamily: "'Libre Franklin'",
+      fontSize: "16px"
+    }
+  });
 ```
 
 ## Use + Remix
 
-<!-- TODO - 360 and CC logos here -->
+![[](https://creativecommons.org/licenses/by/4.0)](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png)
+
+These charts, as well as the analyses that underpin them, are available under a [Creative Commons Attribution 4.0 licence](https://creativecommons.org/licenses/by/4.0).
 
 #### Embed this chart in your article
 
-#### Get the code and data
+Copy and paste the following code:
 
-The data and analysis code underpinning this chart is available from <https://github.com/360-info/report-global-education>.
+::: {.embedcode}
+```
+<strong>test<strong>
+```
+:::
+
+#### Get the data and code
+
+Visit the [GitHub repository](https://github.com/360-info/report-global-education/tree/main/data) to:
+
+* [download the data](https://github.com/360-info/report-global-education/tree/main/data)
+* [recreate or remix the chart](https://github.com/360-info/report-global-education)
 
 ## Notes
 
-This data was originally sourced from the [**UNESCO Institute of Statistics**](http://data.uis.unesco.org).
+This data was originally sourced from the [UNESCO Institute of Statistics](http://data.uis.unesco.org).
 
-Some figures include nationallly- or UNESCO-provided estimates, or 
+Some figures include nationally- or UNESCO-provided estimates, or (for example, the United States) have figures that have only been reported every few years.
 
 :::

@@ -15,4 +15,4 @@ Thumbs.db
 /.quarto/
 
 data/.cache
-analysis_cache
+*_cache/

@@ -5,8 +5,6 @@ author: "James Goldie, 360info"
 date: "2022-03-15"
 code-fold: true
 theme: style/article.scss
-execute: 
-  cache: true
 ---
 
 ## Setup 
@@ -69,6 +67,8 @@ national_data <- read_csv(
 This data is two dimensional, in a way: there's the country students go from (that is, the _origin_) and the country that go to (the _destination_). The way the data is organised into indicators by origin (`"[continent]: "Students from" [country], both sexes (number)"`), and within that indicator there's a row for each destination, each year.
 
 So you can easily look up where a country's students have gone. If you want to look up where a country's students have come from, though, you would need to tally up the destination row for a country in _every_ origin indicator. That's what we're going to do (with the implicit assumption that there are no countries missing).
+
+### Map preparation
 
 The national data already has a destination column. It also has an indicator number column, and we need to map that back to a country code using the label map and the country map.
 
@@ -135,7 +135,11 @@ indicator_origin_map %>%
   knitr::kable()
 ```
 
-That's okay! Now we're ready to map these codes back onto the national data:
+That's okay!
+
+### Joining the flow data
+
+Now we're ready to map these codes back onto the national data:
 
 ```{r}
 #| label: nationaldata
@@ -225,10 +229,6 @@ national_data_joined %>%
     cond_all) %>%
   write_csv(here("data", "popular-origins-by-destination.csv")) ->
 popular_origins
-```
-
-```{r}
-#| label: exportdata
 
 # list of countries
 c(
@@ -236,12 +236,8 @@ c(
   national_data_joined$dest_country_name) %>%
   unique() %>%
   discard(is.na) %>%
-  ojs_define(country_list = .)
-
-# full, lumped datasets
-# TODO - load exported CSVs instead to reduce embed load
-ojs_define(popDestinations = popular_destinations)
-ojs_define(popOrigins = popular_origins)
+  tibble(name = .) %>%
+  write_csv(here("data", "country-list.csv"))
 ```
 
 ## Visualisation: single country flows
@@ -249,141 +245,14 @@ ojs_define(popOrigins = popular_origins)
 Let's start by looking at who comes _from_ and _to_ any given country.
 
 ```{ojs}
-//| label: bycountrycontrols
-viewof basisSelect = Inputs.select(country_list, {
-  label: "Country",
-  sort: true
-});
-viewof yearSelect = Inputs.range([1998, 2021],
-  {step: 1, label: "Year"});
-```
+import { viewof basisSelect, viewof yearSelect, popOriginPlot,
+  popDestinationPlot } from "./embed-bycountry.qmd"
 
-```{ojs}
-//| label:bycountrypreprocessing
+viewof basisSelect;
+viewof yearSelect;
 
-// first filter data by selected country
-originByCountry = transpose(popOrigins).filter(function(row) {
-  return row.dest_country_name == basisSelect;
-});
-destinationByCountry = transpose(popDestinations).filter(function(row) {
-  return row.origin_country_name == basisSelect;
-});
-
-// compute a fixed x range for a given country across all years, in and out
-countryMax = d3.max([
-  d3.max(originByCountry, d => d.value_lumped),
-  d3.max(destinationByCountry, d => d.value_lumped)
-]);
-
-// further filter data by selected year
-filteredPopularOrigins = originByCountry.filter(function(row) {
-  return row.year == yearSelect;
-});
-filteredPopularDestinations = destinationByCountry.filter(function(row) {
-  return row.year == yearSelect;
-});
-
-console.log(filteredPopularOrigins)
-console.log(filteredPopularDestinations)
-
-commaFormat = d3.format(",.0f");
-noDataInMessage = html`<div style="width:475px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>into ${basisSelect}</strong> in <strong>${yearSelect}</strong>.</p><div>`
-
-noDataOutMessage = html`<div style="width:475px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>out of ${basisSelect}</strong> in <strong>${yearSelect}</strong>.</p><div>`
-```
-
-```{ojs}
-//| label: bycountryorigins
-popOriginPlot = filteredPopularOrigins.length == 0 ?
-  noDataInMessage :
-  Plot.plot({
-    marks: [
-      Plot.barX(filteredPopularOrigins, {
-        y: "origin_country_lumped",
-        x: "value_lumped",
-        fill: "value_lumped",
-        sort: {y: "x", reverse: true}
-      }),
-      // label for value on left
-      Plot.text(filteredPopularOrigins, {
-        y: "origin_country_lumped",
-        x: "value_lumped",
-        // add conditions to value label if required
-        text: d => {
-          if (d.cond_all == "----") { 
-            commaFormat(d.value_lumped)
-          } else {
-            commaFormat(d.value_lumped) + " (" + d.cond_all + ")"
-          }
-        },
-        dx: -25
-      }),
-    ],
-    x: {
-      label: "← Number of students from...",
-      labelOffset: 45,
-      domain: [0, countryMax],
-      reverse: true },
-    y: { label: "", axis: "right" },
-    color: { scheme: "ylgnbu", type: "sqrt" },
-    width: 475,
-    marginLeft: 65,
-    marginRight: 140,
-    marginBottom: 40,
-    style: {
-      fontFamily: "'Libre Franklin'",
-      fontSize: "16px"
-    }
-    // caption: html`Which countries send students here?`
-  });
-```
-Where do this country's students go?
-
-```{ojs}
-//| label: bycountrydestinations
-popDestinationPlot = 
-  filteredPopularDestinations.length == 0 ?
-  noDataOutMessage :
-  Plot.plot({
-    marks: [
-      Plot.barX(filteredPopularDestinations, {
-        y: "dest_country_lumped",
-        x: "value_lumped",
-        fill: "value_lumped",
-        sort: {y: "x", reverse: true}
-      }),
-      // label for value on right
-      Plot.text(filteredPopularDestinations, {
-        y: "dest_country_lumped",
-        x: "value_lumped",
-        // add conditions to value label if required
-        text: d => {
-          if (d.cond_all == "----") { 
-            commaFormat(d.value_lumped)
-          } else {
-            commaFormat(d.value_lumped) + " (" + d.cond_all + ")"
-          }
-        },
-        dx: 25
-      })
-    ],
-    x: {
-      label: "Number of students going to →",
-      labelOffset: 45,
-      domain: [0, countryMax]
-    },
-    y: { label: "" },
-    color: { scheme: "ylorrd", type: "sqrt" },
-    width: 475,
-    marginLeft: 140,
-    marginRight: 65,
-    marginBottom: 40,
-    style: {
-      fontFamily: "'Libre Franklin'",
-      fontSize: "16px"
-    }
-    // caption: html`Where do this country's students go?`
-  });
+popOriginPlot;
+popDestinationPlot;
 ```
 
 ## Net flow indicators
@@ -572,6 +441,8 @@ countrypair_netflows
 Let's return to showing _all_ the student flows. This will be messy, but some judicious use of opacity might make things clearer.
 
 ```{r}
+#| label: flowsall
+
 # bring the country centroid and hdi info in and create lines between countries
 
 # (this is a bit colvoluted but was the only performant solution i could find to
