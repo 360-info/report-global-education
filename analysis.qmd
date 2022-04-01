@@ -2,7 +2,7 @@
 title: "Global education"
 subtitle: ""
 author: "James Goldie, 360info"
-date: "2022-03-15"
+date: "2022-04-01"
 code-fold: true
 theme: style/article.scss
 ---
@@ -21,6 +21,7 @@ library(countrycode)
 library(wbstats)
 library(ggalluvial)
 library(themes360info)
+library(ggtext)
 
 register_360fonts("libre")
 ```
@@ -526,7 +527,6 @@ flows_hdigroups
 
 ```{r}
 #| label: vishdigroups
-register_360fonts("itc")
 flows_hdigroups %>%
   filter(between(year, 2008, 2017)) %>%
   # get annual average
