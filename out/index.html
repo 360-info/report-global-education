@@ -870,9 +870,9 @@ using the `.groups` argument.</code></pre>
 <span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">origin_hdi_bin =</span> <span class="fu">recode</span>(origin_hdi_bin,</span>
-<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Low"</span> <span class="ot">=</span> <span class="st">"Low</span><span class="sc">\n</span><span class="st">(HDI less than 70%)"</span>,</span>
-<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Medium"</span> <span class="ot">=</span> <span class="st">"Medium</span><span class="sc">\n</span><span class="st">(HDI 70% to 85%)"</span>,</span>
-<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"High"</span> <span class="ot">=</span> <span class="st">"High</span><span class="sc">\n</span><span class="st">(HDI over 85%)"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Low"</span> <span class="ot">=</span> <span class="st">"Low</span><span class="sc">\n</span><span class="st">HDI less than 70%"</span>,</span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Medium"</span> <span class="ot">=</span> <span class="st">"Medium</span><span class="sc">\n</span><span class="st">HDI 70% to 85%"</span>,</span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"High"</span> <span class="ot">=</span> <span class="st">"High</span><span class="sc">\n</span><span class="st">HDI over 85%"</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>  {</span>
 <span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(.) <span class="sc">+</span></span>
@@ -884,17 +884,17 @@ using the `.groups` argument.</code></pre>
 <span id="cb43-20"><a href="#cb43-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_text</span>(<span class="at">stat =</span> <span class="st">"stratum"</span>, <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">after_stat</span>(stratum)),</span>
 <span id="cb43-21"><a href="#cb43-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">family =</span> <span class="st">"Body 360info"</span>, <span class="at">colour =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="fl">4.5</span>) <span class="sc">+</span></span>
 <span id="cb43-22"><a href="#cb43-22" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_y_continuous</span>(</span>
-<span id="cb43-23"><a href="#cb43-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_number_si</span>(<span class="at">accuracy =</span> <span class="fl">0.1</span>),</span>
+<span id="cb43-23"><a href="#cb43-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_number_si</span>(<span class="at">accuracy =</span> <span class="dv">1</span>),</span>
 <span id="cb43-24"><a href="#cb43-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">sec.axis =</span> <span class="fu">dup_axis</span>(),</span>
 <span id="cb43-25"><a href="#cb43-25" aria-hidden="true" tabindex="-1"></a>        <span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.125</span>))) <span class="sc">+</span></span>
 <span id="cb43-26"><a href="#cb43-26" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_fill_manual</span>(</span>
 <span id="cb43-27"><a href="#cb43-27" aria-hidden="true" tabindex="-1"></a>        <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Low"</span> <span class="ot">=</span> <span class="st">"#10bd69"</span>, <span class="st">"Medium"</span> <span class="ot">=</span> <span class="st">"#2542b8"</span>, <span class="st">"High"</span> <span class="ot">=</span> <span class="st">"#fc4a12"</span>),</span>
 <span id="cb43-28"><a href="#cb43-28" aria-hidden="true" tabindex="-1"></a>        <span class="at">guide =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
 <span id="cb43-29"><a href="#cb43-29" aria-hidden="true" tabindex="-1"></a>      <span class="co"># label origin/destination columns</span></span>
-<span id="cb43-30"><a href="#cb43-30" aria-hidden="true" tabindex="-1"></a>      <span class="fu">annotate_360_glasslight</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="cn">Inf</span>, <span class="at">label =</span> <span class="st">"Origin&lt;br&gt;country"</span>,</span>
-<span id="cb43-31"><a href="#cb43-31" aria-hidden="true" tabindex="-1"></a>        <span class="at">vjust =</span> <span class="st">"inward"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">7</span>) <span class="sc">+</span></span>
-<span id="cb43-32"><a href="#cb43-32" aria-hidden="true" tabindex="-1"></a>      <span class="fu">annotate_360_glasslight</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="cn">Inf</span>, <span class="at">label =</span> <span class="st">"Destination&lt;br&gt;country"</span>,</span>
-<span id="cb43-33"><a href="#cb43-33" aria-hidden="true" tabindex="-1"></a>        <span class="at">vjust =</span> <span class="st">"inward"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb43-30"><a href="#cb43-30" aria-hidden="true" tabindex="-1"></a>      <span class="fu">annotate_360_glasslight</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="cn">Inf</span>, <span class="at">label =</span> <span class="st">"Origin&lt;br&gt;economy"</span>,</span>
+<span id="cb43-31"><a href="#cb43-31" aria-hidden="true" tabindex="-1"></a>        <span class="at">vjust =</span> <span class="st">"inward"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb43-32"><a href="#cb43-32" aria-hidden="true" tabindex="-1"></a>      <span class="fu">annotate_360_glasslight</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="cn">Inf</span>, <span class="at">label =</span> <span class="st">"Destination&lt;br&gt;economy"</span>,</span>
+<span id="cb43-33"><a href="#cb43-33" aria-hidden="true" tabindex="-1"></a>        <span class="at">vjust =</span> <span class="st">"inward"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">6</span>) <span class="sc">+</span></span>
 <span id="cb43-34"><a href="#cb43-34" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_360</span>() <span class="sc">+</span></span>
 <span id="cb43-35"><a href="#cb43-35" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme</span>(</span>
 <span id="cb43-36"><a href="#cb43-36" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
@@ -910,8 +910,8 @@ using the `.groups` argument.</code></pre>
 <span id="cb43-46"><a href="#cb43-46" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Average number of visiting students per year"</span>,</span>
 <span id="cb43-47"><a href="#cb43-47" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="fu">toupper</span>(<span class="st">"Student flows 2008–2017"</span>),</span>
 <span id="cb43-48"><a href="#cb43-48" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="fu">paste</span>(</span>
-<span id="cb43-49"><a href="#cb43-49" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Although students come from countries across the development spectrum,"</span>,</span>
-<span id="cb43-50"><a href="#cb43-50" aria-hidden="true" tabindex="-1"></a>          <span class="st">"they tend to visit **highly developed countries** to study."</span>,</span>
+<span id="cb43-49"><a href="#cb43-49" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Although students come from economies across the development spectrum,"</span>,</span>
+<span id="cb43-50"><a href="#cb43-50" aria-hidden="true" tabindex="-1"></a>          <span class="st">"they tend to visit **highly developed economies** to study."</span>,</span>
 <span id="cb43-51"><a href="#cb43-51" aria-hidden="true" tabindex="-1"></a>          <span class="at">sep =</span> <span class="st">"&lt;br&gt;"</span>),</span>
 <span id="cb43-52"><a href="#cb43-52" aria-hidden="true" tabindex="-1"></a>        <span class="at">caption =</span> <span class="fu">paste</span>(</span>
 <span id="cb43-53"><a href="#cb43-53" aria-hidden="true" tabindex="-1"></a>          <span class="st">"**CHART:** James Goldie, 360info"</span>,</span>
@@ -929,17 +929,17 @@ using the `.groups` argument.</code></pre>
 </div>
 <div class="cell-output-stdout">
 <pre><code># A tibble: 9 × 3
-  origin_hdi_bin             dest_hdi_bin avg_students
-  &lt;fct&gt;                      &lt;fct&gt;               &lt;dbl&gt;
-1 "Low\n(HDI less than 70%)" Low               107708.
-2 "Low\n(HDI less than 70%)" Medium            226533.
-3 "Low\n(HDI less than 70%)" High              619061.
-4 "Medium\n(HDI 70% to 85%)" Low                22779.
-5 "Medium\n(HDI 70% to 85%)" Medium            289125.
-6 "Medium\n(HDI 70% to 85%)" High             1049024.
-7 "High\n(HDI over 85%)"     Low                 8491.
-8 "High\n(HDI over 85%)"     Medium             59578.
-9 "High\n(HDI over 85%)"     High              693972.</code></pre>
+  origin_hdi_bin           dest_hdi_bin avg_students
+  &lt;fct&gt;                    &lt;fct&gt;               &lt;dbl&gt;
+1 "Low\nHDI less than 70%" Low               107708.
+2 "Low\nHDI less than 70%" Medium            226533.
+3 "Low\nHDI less than 70%" High              619061.
+4 "Medium\nHDI 70% to 85%" Low                22779.
+5 "Medium\nHDI 70% to 85%" Medium            289125.
+6 "Medium\nHDI 70% to 85%" High             1049024.
+7 "High\nHDI over 85%"     Low                 8491.
+8 "High\nHDI over 85%"     Medium             59578.
+9 "High\nHDI over 85%"     High              693972.</code></pre>
 </div>
 <details>
 <summary>Code</summary>

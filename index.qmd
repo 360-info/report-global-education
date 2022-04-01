@@ -535,9 +535,9 @@ flows_hdigroups %>%
   ungroup() %>%
   mutate(
     origin_hdi_bin = recode(origin_hdi_bin,
-      "Low" = "Low\n(HDI less than 70%)",
-      "Medium" = "Medium\n(HDI 70% to 85%)",
-      "High" = "High\n(HDI over 85%)")) %>%
+      "Low" = "Low\nHDI less than 70%",
+      "Medium" = "Medium\nHDI 70% to 85%",
+      "High" = "High\nHDI over 85%")) %>%
   print() %>%
   {
     ggplot(.) +
@@ -549,17 +549,17 @@ flows_hdigroups %>%
       geom_text(stat = "stratum", aes(label = after_stat(stratum)),
         family = "Body 360info", colour = "white", size = 4.5) +
       scale_y_continuous(
-        labels = scales::label_number_si(accuracy = 0.1),
+        labels = scales::label_number_si(accuracy = 1),
         sec.axis = dup_axis(),
         expand = expansion(mult = c(0, 0.125))) +
       scale_fill_manual(
         values = c("Low" = "#10bd69", "Medium" = "#2542b8", "High" = "#fc4a12"),
         guide = NULL) +
       # label origin/destination columns
-      annotate_360_glasslight(x = 1, y = Inf, label = "Origin<br>country",
-        vjust = "inward", fontface = "bold", size = 7) +
-      annotate_360_glasslight(x = 2, y = Inf, label = "Destination<br>country",
-        vjust = "inward", fontface = "bold", size = 7) +
+      annotate_360_glasslight(x = 1, y = Inf, label = "Origin<br>economy",
+        vjust = "inward", fontface = "bold", size = 6) +
+      annotate_360_glasslight(x = 2, y = Inf, label = "Destination<br>economy",
+        vjust = "inward", fontface = "bold", size = 6) +
       theme_360() +
       theme(
         panel.grid.minor = element_blank(),
@@ -575,8 +575,8 @@ flows_hdigroups %>%
         x = NULL, y = "Average number of visiting students per year",
         title = toupper("Student flows 2008–2017"),
         subtitle = paste(
-          "Although students come from countries across the development spectrum,",
-          "they tend to visit **highly developed countries** to study.",
+          "Although students come from economies across the development spectrum,",
+          "they tend to visit **highly developed economies** to study.",
           sep = "<br>"),
         caption = paste(
           "**CHART:** James Goldie, 360info",
