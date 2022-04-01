@@ -9,7 +9,7 @@ execute:
 
 ::: {.panel-tabset}
 
-## Chart: James Goldie, 360info. Data: some other place
+## Chart: James Goldie, 360info. Data: UIS/OWID
 
 ::: {.parasubtitle}
 Students tend to go to a **small number of Highly Developed countries.**

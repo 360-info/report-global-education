@@ -10,7 +10,7 @@ execute:
 
 ::: {.panel-tabset}
 
-## Chart: James Goldie, 360info. Data: some other place
+## Chart: James Goldie, 360info. Data: UIS
 
 ```{ojs}
 countryList =
