@@ -18,8 +18,8 @@ library(pins)
 library(sf)
 library(CoordinateCleaner)
 library(countrycode)
-library(igraph)
 library(wbstats)
+library(ggalluvial)
 library(themes360info)
 
 register_360fonts("libre")
@@ -175,7 +175,7 @@ national_data_joined
 Before we start visualising, let's now break this back into data by origin and by destination. That way, we can [lump](https://forcats.tidyverse.org/reference/fct_lump.html) all the same values together and make a more compact statement about the main comings and goings for a given country.
 
 ```{r}
-#| label: lumping
+#| label: lumpingdests
 
 # most popular destinations for each origin
 national_data_joined %>%
@@ -203,6 +203,10 @@ national_data_joined %>%
     cond_all) %>%
   write_csv(here("data", "popular-destinations-by-origin.csv")) ->
 popular_destinations
+```
+
+```{r}
+#| label: lumpingorigins
 
 # most popular origins for each destination
 national_data_joined %>%
@@ -229,6 +233,10 @@ national_data_joined %>%
     cond_all) %>%
   write_csv(here("data", "popular-origins-by-destination.csv")) ->
 popular_origins
+```
+
+```{r}
+#| label: countrylistexport
 
 # list of countries
 c(
@@ -329,7 +337,7 @@ netflows_hdi %>%
   # filter out missing data for ojs transpose()
   filter(!is.na(flow_ratio), !is.na(hdi)) %>%
   select(year, country_name, flow_ratio, hdi) %>%
-  write_csv(here("data", "netflows.csv")) %>%
+  write_csv(here("data", "netflow-ratios.csv")) %>%
   ojs_define(netflows = .)
 ```
 
@@ -352,6 +360,8 @@ These indicators tell us the net flow in or out of any given country, but I'd re
 First, let's get the spatial data (country centroids) needed to make a map. I first used `{rnaturalearth}` for this, but I found `CoordinateCleaner` (which uses the CIA Fact Book) to be considerably more complete:
 
 ```{r}
+#| label: getboundaries
+
 data(countryref)
 countryref %>%
   filter(is.na(source)) %>%
@@ -363,7 +373,7 @@ boundaries
 
 Let's check against all the countries in our data to ensure we're not missing any centroids.
 ```{r}
-#| label: countrylist
+#| label: countrylistjoin
 bind_rows(
   national_data_joined %>%
     select(starts_with("origin_")) %>%
@@ -507,11 +517,9 @@ flows_all %>%
   # bin the hdis
   mutate(
     origin_hdi_bin = cut(origin_hdi, c(0, 0.7, 0.85, 1),
-      labels = c("Low", "Medium",
-        "High")),
+      labels = c("Low", "Medium", "High")),
     dest_hdi_bin = cut(dest_hdi, c(0, 0.7, 0.85, 1),
-      labels = c("Low", "Medium",
-        "High"))) ->
+      labels = c("Low", "Medium", "High"))) ->
 flows_binned
 
 flows_binned %>%
@@ -525,19 +533,67 @@ flows_hdigroups
 
 ```{r}
 #| label: vishdigroups
+register_360fonts("itc")
 flows_hdigroups %>%
-  mutate(lab = scales::label_number_si(accuracy = 0.1)(students)) %>%
+  filter(between(year, 2008, 2017)) %>%
+  # get annual average
+  group_by(origin_hdi_bin, dest_hdi_bin) %>%
+  summarise(avg_students = mean(students, na.rm = TRUE)) %>%
+  ungroup() %>%
+  mutate(
+    origin_hdi_bin = recode(origin_hdi_bin,
+      "Low" = "Low\n(HDI less than 70%)",
+      "Medium" = "Medium\n(HDI 70% to 85%)",
+      "High" = "High\n(HDI over 85%)")) %>%
+  print() %>%
   {
     ggplot(.) +
-      aes(y = origin_hdi_bin, x = dest_hdi_bin) +
-      geom_tile(aes(fill = students)) +
-      geom_text(aes(label = lab),
-        colour = alpha("white", 0.25)) +
-      facet_wrap(vars(year)) +
-      theme_minimal(base_size = 16) +
+      aes(y = avg_students, axis1 = origin_hdi_bin, axis2 = dest_hdi_bin) +
+      geom_alluvium(aes(fill = dest_hdi_bin)) +
+      geom_stratum(
+        aes(fill = dest_hdi_bin),
+        colour = NA) +
+      geom_text(stat = "stratum", aes(label = after_stat(stratum)),
+        family = "Body 360info", colour = "white", size = 4.5) +
+      scale_y_continuous(
+        labels = scales::label_number_si(accuracy = 0.1),
+        sec.axis = dup_axis(),
+        expand = expansion(mult = c(0, 0.125))) +
+      scale_fill_manual(
+        values = c("Low" = "#10bd69", "Medium" = "#2542b8", "High" = "#fc4a12"),
+        guide = NULL) +
+      # label origin/destination columns
+      annotate_360_glasslight(x = 1, y = Inf, label = "Origin<br>country",
+        vjust = "inward", fontface = "bold", size = 7) +
+      annotate_360_glasslight(x = 2, y = Inf, label = "Destination<br>country",
+        vjust = "inward", fontface = "bold", size = 7) +
+      theme_360() +
+      theme(
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        axis.text.x = element_blank(),
+        # axis.ticks.y = element_line(),
+        axis.title.y.right = element_blank(),
+        plot.margin = margin(10, 10, 10, 10),
+        plot.subtitle = element_markdown(family = "Body 360info",
+          face = "plain")
+      ) +
       labs(
-        x = "Destination countries",
-        y = "Origin countries")
-  }
+        x = NULL, y = "Average number of visiting students per year",
+        title = toupper("Student flows 2008–2017"),
+        subtitle = paste(
+          "Although students come from countries across the development spectrum,",
+          "they tend to visit **highly developed countries** to study.",
+          sep = "<br>"),
+        caption = paste(
+          "**CHART:** James Goldie, 360info",
+          "**DATA:** UN Institute of Statistics, Our World in Data",
+          sep = "<br>"))
+  } %>%
+  save_360plot(here("out", "student-flows-hdigroups.png"),
+    shape = "square") %>%
+  save_360plot(here("out", "student-flows-hdigroups.svg"),
+    shape = "square")
 
+knitr::include_graphics(here("out", "student-flows-hdigroups.png"))
 ```

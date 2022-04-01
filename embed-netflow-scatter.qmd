@@ -19,7 +19,7 @@ Students tend to go to a **small number of Highly Developed countries.**
 viewof flowYearSelect = Inputs.range([1998, 2017], {step: 1, label: "Year"});
 
 // load the flow data; filter by the year
-netflows = await FileAttachment("data/netflows.csv").csv({ typed: true });
+netflows = await FileAttachment("data/netflow-ratios.csv").csv({ typed: true });
 filteredNetFlows = netflows.filter(function(row) {
   return row.year == flowYearSelect && row.flow_ratio > -100;
 });
