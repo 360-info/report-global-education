@@ -5,9 +5,9 @@
 * <hdi-owid.csv>: a data frame from [Our World in Data](https://ourworldindata.org/human-development-index) of countries' rated Human Development Index over time.
 
 
-## Files derived from `analysis.qmd`
+## Files derived from `index.qmd`
 
-[This analysis](../analysis.qmd) tidies [UIS student flow data](http://data.uis.unesco.org) and [OWID/UNDP human development data](https://ourworldindata.org/human-development-index) into several forms:
+[This analysis](../index.qmd) tidies [UIS student flow data](http://data.uis.unesco.org) and [OWID/UNDP human development data](https://ourworldindata.org/human-development-index) into several forms:
 
 * <country-list.csv>: a single-column list of country names that appear in the data. Used for country selection in the interactives.
 * <country-names.csv>: a data frame mapping country names and codes to UN data indicator numbers. Includes some manual modifications to country names on our part, as country names do not always align across datasets.
@@ -27,7 +27,7 @@
     * `b` if the estimate is marked as "INCLUDED" or `-` if not;
     * `c` if the estimate is marked as "NAT_EST" or `-` if not;
     * `d` if the estimate is marked as "UIS_EST" or `-` if not;
-  - The README in the [UIS data download](https://apimgmtstzgjpfeq2u763lag.blob.core.windows.net/content/MediaLibrary/bdds/OPRI.zip), which is downloaded to `.cache` by `analysis.qmd`, describes these qualifications in more detail.
+  - The README in the [UIS data download](https://apimgmtstzgjpfeq2u763lag.blob.core.windows.net/content/MediaLibrary/bdds/OPRI.zip), which is downloaded to `.cache` by `index.qmd`, describes these qualifications in more detail.
 * <popular-origins-by-destination.csv>: a data frame of the 10 most common origin countries for any given destination country in a given year. Includes:
   - `year`
   - `dest_country_name`: the name of the country students are visiting.
@@ -43,7 +43,7 @@
  - `dest_country_name`: the name of the country receiving students
  - `year`
  - `value`: the number of students
- - `magnitude`, `qualifier`: columns with additional qualifications on estimates. The README in the [UIS data download](https://apimgmtstzgjpfeq2u763lag.blob.core.windows.net/content/MediaLibrary/bdds/OPRI.zip), which is downloaded to `.cache` by `analysis.qmd`, describes these columns further.
+ - `magnitude`, `qualifier`: columns with additional qualifications on estimates. The README in the [UIS data download](https://apimgmtstzgjpfeq2u763lag.blob.core.windows.net/content/MediaLibrary/bdds/OPRI.zip), which is downloaded to `.cache` by `index.qmd`, describes these columns further.
 * <tidy-countrypair-netflows.csv>: this data frame attempts to calculate the net flow between any two countries (as opposed to <student-flows-tidy.csv> above, which gives each directional flow individually). Unfortunately, most estimates are missing because the flow one way or another is missing that year (either because it wasn't reported at all or because it was folded into another year's estimate).
 
-Additionally, `analysis.qmd` downloads the UIS data into `data/.cache`, using the cached version if you repeatedly render the analysis.
+Additionally, `index.qmd` downloads the UIS data into `data/.cache`, using the cached version if you repeatedly render the analysis.
