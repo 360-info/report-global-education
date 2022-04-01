@@ -490,18 +490,11 @@ national_data_joined %>%
 flows_all_df
 
 flows_all_df %>%
-  select(-ends_with("pt"), -ends_with("coord"), -path) %>%
-  write_csv(here("data", "flows-all.csv")) %>% 
-  select(-ends_with("continent"), -ends_with("country_name"),
-    -ends_with("country_code")) %>%
-  write_csv(here("data", "flows-all-lean.csv"))
-  
-flows_all_df %>%
   select(-ends_with("lon"), -ends_with("lat"), -ends_with("coord")) %>%
   st_as_sf(crs = st_crs(4326), sf_column_name = "path") ->
 flows_all
 
-# write out to disk
+# write out to disk for gis work (not version controlled)
 st_write(flows_all, here("data", "flows_all.gpkg"), delete_dsn = TRUE)
 ```
 

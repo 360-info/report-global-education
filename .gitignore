@@ -16,3 +16,7 @@ Thumbs.db
 
 data/.cache
 *_cache/
+
+# .gpkg files are exported by the analysis but too big to commit
+data/*.gpkg
+

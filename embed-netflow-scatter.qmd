@@ -85,9 +85,9 @@ netflowScatterChart = Plot.plot({
 
 ## Use + Remix
 
-![[](https://creativecommons.org/licenses/by/4.0)](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png)
+These charts, as well as the analyses that underpin them, are available under a [**Creative Commons Attribution 4.0 licence**](https://creativecommons.org/licenses/by/4.0).
 
-These charts, as well as the analyses that underpin them, are available under a [Creative Commons Attribution 4.0 licence](https://creativecommons.org/licenses/by/4.0).
+Please acknowledge [360info](https://360info.org), [UIS](http://data.uis.unesco.org) and [OWID](https://ourworldindata.org/human-development-index) when you use these charts and data.
 
 #### Embed this chart in your article
 
@@ -103,8 +103,8 @@ Copy and paste the following code:
 
 Visit the [GitHub repository](https://github.com/360-info/report-global-education/tree/main/data) to:
 
-* [download the data](https://github.com/360-info/report-global-education/tree/main/data)
-* [recreate or remix the chart](https://github.com/360-info/report-global-education)
+* [**Download the data**](https://github.com/360-info/report-global-education/tree/main/data)
+* [**Recreate or remix the chart**](https://github.com/360-info/report-global-education)
 
 ## Notes
 
