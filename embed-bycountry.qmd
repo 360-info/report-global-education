@@ -169,13 +169,11 @@ Copy and paste the following code:
 
 ::: {.embedcode}
 ```
-<iframe
-  src="https://360info-studentflows.pages.dev/embed-bycountry"
-  title="Interactive charts showing the two-way flow of international students through a selected country for a selected year."
-  width="550"
-  height="850"
-  scrolling="no"
-  style="border:none;"></iframe>
+<iframe src="https://360info-studentflows.pages.dev/
+embed-bycountry" title="Interactive charts showing the 
+two-way flow of international students through a
+selected country for a selected year." width="550"
+height="850" scrolling="no" style="border:none;"></iframe>
 ```
 :::
 

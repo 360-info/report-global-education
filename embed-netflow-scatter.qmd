@@ -95,13 +95,13 @@ Copy and paste the following code:
 
 ::: {.embedcode}
 ```
-<iframe
-  src="https://360info-studentflows.pages.dev/embed-netflow-scatter"
-  title="Chart with Human Development Index increasing to the right and Net Student Ratio increasing upward. Countries situated above the line, in blue, are receiving more students from other countries than they send out."
-  width="550"
-  height="560"
-  scrolling="no"
-  style="border:none;"></iframe>
+<iframe src="https://360info-studentflows.pages.dev/
+embed-netflow-scatter" title="Chart with Human Development
+Index increasing to the right and Net Student Ratio
+increasing upward. Countries situated above the line, in
+blue, are receiving more students from other countries than
+they send out." width="550" height="560" scrolling="no"
+style="border:none;"></iframe>
 ```
 :::
 
