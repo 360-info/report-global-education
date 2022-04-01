@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.161">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="James Goldie, 360info">
+  <meta name="dcterms.date" content="2022-04-01">
+  <title>Global education</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+
+  <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+  <script src="site_libs/clipboard/clipboard.min.js"></script>
+  <meta name="quarto:offset" content="./">
+  <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+  <script src="site_libs/quarto-search/fuse.min.js"></script>
+  <script src="site_libs/quarto-search/quarto-search.js"></script>
+  <script src="site_libs/quarto-html/quarto.js"></script>
+  <script src="site_libs/quarto-html/popper.min.js"></script>
+  <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="site_libs/quarto-html/anchor.min.js"></script>
+  <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+  <link id="quarto-text-highlighting-styles" href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="site_libs/bootstrap/bootstrap.min.js"></script>
+  <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <script id="quarto-search-options" type="application/json">{
+    "location": "sidebar",
+    "copy-button": false,
+    "collapse-after": 3,
+    "panel-placement": "start",
+    "type": "textbox",
+    "limit": 20,
+    "language": {
+      "search-no-results-text": "No results",
+      "search-matching-documents-text": "matching documents",
+      "search-copy-link-title": "Copy link to search",
+      "search-hide-matches-text": "Hide additional matches",
+      "search-more-match-text": "more match in this document",
+      "search-more-matches-text": "more matches in this document",
+      "search-clear-button-title": "Clear",
+      "search-detached-cancel-button-title": "Cancel",
+      "search-submit-button-title": "Submit"
+    }
+  }</script>
+  <script type="module" src="site_libs/quarto-ojs/esbuild-bundle.js"></script>
+  <link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+  <script type="ojs-define">
+  {"contents":[{"name":"netflows","value":{"year":[2009,2014,1998,1999,2000,2001,2003,2004,2011,2012,2002,2003,2013,2015,2016,2017,2011,2012,2013,2014,2015,2016,1998,2000,2016,2017,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2009,2010,2011,2012,2015,2016,2017,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2002,2010,2013,2015,2016,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2008,2010,2014,2015,2016,2017,2005,2011,2012,2013,2014,2015,2016,2017,2002,2003,2004,2005,2006,2007,2008,2009,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2003,2005,2006,2014,2015,2016,2017,2011,2012,2013,2014,2015,2016,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2002,2003,2004,2009,2010,2011,2012,2014,2015,2016,2017,2001,2007,2009,2010,2011,1998,1999,2000,2001,2004,2005,2006,2007,2008,2009,2010,2011,2012,2014,2015,2016,2017,2007,2005,2014,2015,2016,2017,2006,2012,1998,1999,2000,2002,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2002,2003,2005,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2008,2009,2010,2011,2014,2015,2016,2017,2004,2005,2006,2007,2010,2011,2012,2016,2017,2008,2011,2013,2016,2003,2011,2013,2014,2015,2016,2017,2009,2010,2011,2012,2014,2011,2012,2013,2014,2015,2016,2017,2004,2017,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2013,2014,2015,2016,2017,1999,2000,2001,2002,2005,2006,2009,2011,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2012,2014,2015,2016,2017,2004,2005,2006,2007,2009,2010,2011,2012,2013,2014,2015,2016,2017,2012,2015,2003,2004,2005,2006,2007,2010,2013,2014,2016,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2016,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2004,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2001,2003,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2015,2016,2017,2007,2008,2011,2012,2013,2014,2015,2016,2017,2004,2006,2008,2011,2012,2002,2003,2004,2005,2006,2007,2010,2011,2012,2013,2016,2017,2009,2015,2016,2017,2004,2005,2007,2009,2010,2011,2012,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2003,2010,2012,2013,2014,2015,2016,2017,1999,2001,2002,2003,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2005,2006,2007,2008,2010,2012,2015,2016,2017,2000,2001,2002,2003,2004,2005,2006,2011,2012,2013,2014,2015,2016,2017,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2000,2004,1998,1999,2000,2001,2002,2003,2004,2006,2007,2008,2009,2010,2011,2012,2013,2014,2016,2017,2010,2011,2012,2013,2014,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2000,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2015,2016,2017,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2006,2010,2011,2012,2013,2014,2015,2016,2017,2016,2017,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2001,2002,2004,2006,2008,2014,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2005,2006,2007,2010,2011,2012,2014,2015,2016,2017,2004,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2004,2006,2007,2008,2009,2010,2011,2012,2014,2015,2016,2017,2011,2012,2013,2014,2015,2016,2017,1999,2003,2006,2012,2013,2014,2015,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2015,2016,2017,1999,2006,2008,2010,2012,2015,2016,2017,1999,2000,2001,2002,2003,2004,2005,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2001,2003,2004,2005,2006,2007,2008,2009,2010,2013,2014,2015,2016,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2002,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2003,1999,2001,2002,2013,2015,2016,2017,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2012,2013,2014,2015,2017,1999,2000,2011,2012,2013,2014,2015,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2011,2012,2013,2014,2015,2016,2017,2007,2011,2012,1999,2000,2001,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2011,2013,2014,2016,2017,1999,2002,2003,2015,2016,2017,2004,2006,2009,2010,2011,2012,2013,2014,2015,2016,2017,2010,1998,1999,2000,2001,2002,2003,2004,2006,2007,2008,2009,2010,2011,2012,2014,2015,2016,2017,2002,2003,2005,2006,2008,2014,2015,2016,2017,2004,2007,2009,2010,2011,2012,2015,2016,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2015,2016,2017,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2009,2011,2013,2014,2015,2016,2017,2006,2007,2008,2009,2010,2011,2013,2014,2015,2016,2017,2003,1999,2001,2002,2003,2004,2005,2006,2008,2001,1998,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2000,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2017,2004,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2001,2002,2003,2004,2005,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2011,2012,2014,2015,2016,2017,1999,2001,2012,2013,2014,2015,2016,2017,1999,2000,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2011,2012,2013,2014,2015,2016,2017,2008,2009,2010,2011,2012,1998,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1999,2000,2002,2006,2011,2013,2011,2012,2013,2014,2015,2016,2017,2008,2011,2007,1999,2001,2002,2004,2005,2006,2007,2008,2009,2010,2011,2012,2016,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2014,1999,2000,2001,2002,2004,1999,2000,2001,2002,2003,2004,2008,2009,2010,2011,2012,2013,2015,2016,2017,1998,1999,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2003,2004,2011,1999,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,1998,1999,2005,2013,2014,2015,2016,2017,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2002,2004,2008,1999,2000,2001,2002,2003,2005,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,1998,1999,2000,2017,2007,2011,2012,2013,2014,2015,2016,2017,2010,2011,2012,2015],"country_name":["Afghanistan","Afghanistan","Albania","Albania","Albania","Albania","Albania","Albania","Albania","Albania","Andorra","Andorra","Andorra","Andorra","Andorra","Andorra","United Arab Emirates","United Arab Emirates","United Arab Emirates","United Arab Emirates","United Arab Emirates","United Arab Emirates","Argentina","Argentina","Argentina","Argentina","Armenia","Armenia","Armenia","Armenia","Armenia","Armenia","Armenia","Armenia","Armenia","Armenia","Armenia","Armenia","Armenia","Armenia","Armenia","Armenia","Antigua and Barbuda","Antigua and Barbuda","Antigua and Barbuda","Antigua and Barbuda","Australia","Australia","Australia","Austria","Austria","Austria","Austria","Austria","Austria","Austria","Austria","Austria","Austria","Austria","Azerbaijan","Azerbaijan","Azerbaijan","Azerbaijan","Azerbaijan","Azerbaijan","Azerbaijan","Azerbaijan","Azerbaijan","Azerbaijan","Azerbaijan","Azerbaijan","Burundi","Burundi","Burundi","Burundi","Burundi","Burundi","Burundi","Burundi","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Belgium","Benin","Benin","Benin","Benin","Benin","Benin","Burkina Faso","Burkina Faso","Burkina Faso","Burkina Faso","Burkina Faso","Burkina Faso","Burkina Faso","Burkina Faso","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bangladesh","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bulgaria","Bahrain","Bahrain","Bahrain","Bahrain","Bahrain","Bahrain","Bahrain","Bosnia and Herzegovina","Bosnia and Herzegovina","Bosnia and Herzegovina","Bosnia and Herzegovina","Bosnia and Herzegovina","Bosnia and Herzegovina","Bosnia and Herzegovina","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Belarus","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Barbados","Barbados","Barbados","Barbados","Barbados","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Brunei Darussalam","Bhutan","Botswana","Botswana","Botswana","Botswana","Botswana","Central African Republic","Central African Republic","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Switzerland","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","China","China","China","China","China","China","China","China","China","China","China","China","Côte d'Ivoire","Côte d'Ivoire","Côte d'Ivoire","Côte d'Ivoire","Côte d'Ivoire","Côte d'Ivoire","Côte d'Ivoire","Côte d'Ivoire","Cameroon","Cameroon","Cameroon","Cameroon","Cameroon","Cameroon","Cameroon","Cameroon","Cameroon","DR Congo","DR Congo","DR Congo","DR Congo","Congo","Congo","Congo","Colombia","Colombia","Colombia","Colombia","Comoros","Comoros","Comoros","Comoros","Comoros","Cape Verde","Cape Verde","Cape Verde","Cape Verde","Cape Verde","Cape Verde","Cape Verde","Costa Rica","Costa Rica","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Cyprus","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Czechia","Germany","Germany","Germany","Germany","Germany","Djibouti","Djibouti","Djibouti","Djibouti","Djibouti","Djibouti","Djibouti","Djibouti","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Denmark","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Algeria","Algeria","Algeria","Algeria","Algeria","Algeria","Algeria","Algeria","Algeria","Algeria","Algeria","Algeria","Algeria","Ecuador","Ecuador","Egypt","Egypt","Egypt","Egypt","Egypt","Egypt","Egypt","Egypt","Egypt","Spain","Spain","Spain","Spain","Spain","Spain","Spain","Spain","Spain","Spain","Spain","Spain","Spain","Spain","Spain","Spain","Spain","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Estonia","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Finland","Fiji","France","France","France","France","France","France","France","France","France","France","France","France","France","France","France","France","France","France","France","Gabon","Gabon","Gabon","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","United Kingdom","Georgia","Georgia","Georgia","Georgia","Georgia","Georgia","Georgia","Georgia","Georgia","Georgia","Georgia","Georgia","Georgia","Georgia","Georgia","Georgia","Georgia","Ghana","Ghana","Ghana","Ghana","Ghana","Ghana","Ghana","Ghana","Ghana","Guinea","Guinea","Guinea","Guinea","Guinea","Greece","Greece","Greece","Greece","Greece","Greece","Greece","Greece","Greece","Greece","Greece","Greece","Grenada","Grenada","Grenada","Grenada","Guyana","Guyana","Guyana","Guyana","Guyana","Guyana","Guyana","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Hong Kong","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Croatia","Croatia","Croatia","Croatia","Croatia","Croatia","Croatia","Croatia","Croatia","Croatia","Croatia","Croatia","Croatia","Croatia","Croatia","Croatia","Croatia","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Hungary","Indonesia","Indonesia","Indonesia","Indonesia","Indonesia","Indonesia","Indonesia","Indonesia","Indonesia","India","India","India","India","India","India","India","India","India","India","India","India","India","India","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Ireland","Iran","Iran","Iran","Iran","Iran","Iran","Iran","Iran","Iran","Iran","Iran","Iran","Iran","Iran","Iran","Iraq","Iraq","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Iceland","Israel","Israel","Israel","Israel","Israel","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Italy","Jamaica","Jamaica","Jordan","Jordan","Jordan","Jordan","Jordan","Jordan","Jordan","Jordan","Jordan","Jordan","Jordan","Jordan","Jordan","Jordan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Japan","Kazakhstan","Kazakhstan","Kazakhstan","Kazakhstan","Kazakhstan","Kazakhstan","Kazakhstan","Kazakhstan","Kazakhstan","Kazakhstan","Kazakhstan","Kenya","Kenya","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Kyrgyzstan","Cambodia","Cambodia","Cambodia","Cambodia","Saint Kitts and Nevis","Saint Kitts and Nevis","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Republic of Korea","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Laos","Lebanon","Lebanon","Lebanon","Lebanon","Lebanon","Lebanon","Lebanon","Lebanon","Lebanon","Lebanon","Saint Lucia","Saint Lucia","Saint Lucia","Saint Lucia","Saint Lucia","Saint Lucia","Saint Lucia","Saint Lucia","Saint Lucia","Saint Lucia","Saint Lucia","Saint Lucia","Saint Lucia","Liechtenstein","Liechtenstein","Liechtenstein","Liechtenstein","Liechtenstein","Liechtenstein","Liechtenstein","Liechtenstein","Liechtenstein","Liechtenstein","Liechtenstein","Liechtenstein","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Sri Lanka","Lesotho","Lesotho","Lesotho","Lesotho","Lesotho","Lesotho","Lesotho","Lesotho","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Lithuania","Luxembourg","Luxembourg","Luxembourg","Luxembourg","Luxembourg","Luxembourg","Luxembourg","Luxembourg","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Latvia","Morocco","Morocco","Morocco","Morocco","Morocco","Morocco","Morocco","Morocco","Morocco","Morocco","Morocco","Morocco","Morocco","Morocco","Morocco","Morocco","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Moldova","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Madagascar","Maldives","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","North Macedonia","North Macedonia","North Macedonia","North Macedonia","North Macedonia","North Macedonia","North Macedonia","North Macedonia","North Macedonia","North Macedonia","North Macedonia","North Macedonia","North Macedonia","North Macedonia","North Macedonia","Mali","Mali","Mali","Mali","Mali","Mali","Mali","Malta","Malta","Malta","Malta","Malta","Malta","Malta","Malta","Malta","Malta","Malta","Malta","Malta","Malta","Malta","Malta","Malta","Malta","Myanmar","Myanmar","Myanmar","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mongolia","Mozambique","Mozambique","Mozambique","Mozambique","Mozambique","Mauritania","Mauritania","Mauritania","Mauritania","Mauritania","Mauritania","Mauritius","Mauritius","Mauritius","Mauritius","Mauritius","Mauritius","Mauritius","Mauritius","Mauritius","Mauritius","Mauritius","Malawi","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Malaysia","Namibia","Namibia","Namibia","Namibia","Namibia","Namibia","Namibia","Namibia","Namibia","Niger","Niger","Niger","Niger","Niger","Niger","Niger","Niger","Niger","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Netherlands","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Norway","Nepal","Nepal","New Zealand","New Zealand","New Zealand","New Zealand","New Zealand","Oman","Oman","Oman","Oman","Oman","Oman","Oman","Oman","Oman","Oman","Oman","Pakistan","Philippines","Philippines","Philippines","Philippines","Philippines","Philippines","Philippines","Philippines","Palau","Papua New Guinea","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Poland","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Portugal","Palestine","Palestine","Palestine","Palestine","Palestine","Palestine","Palestine","Palestine","Palestine","Palestine","Palestine","Palestine","Qatar","Qatar","Qatar","Qatar","Qatar","Qatar","Qatar","Qatar","Qatar","Qatar","Qatar","Qatar","Qatar","Qatar","Qatar","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Romania","Russia","Russia","Russia","Russia","Russia","Russia","Russia","Russia","Russia","Russia","Russia","Russia","Russia","Russia","Russia","Russia","Rwanda","Rwanda","Rwanda","Rwanda","Rwanda","Rwanda","Rwanda","Rwanda","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Saudi Arabia","Senegal","Senegal","Senegal","Senegal","Senegal","Senegal","Senegal","Senegal","Singapore","Singapore","Singapore","Singapore","Singapore","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","Serbia","Serbia","Serbia","Serbia","Serbia","Serbia","Serbia","Serbia","Serbia","Serbia","Serbia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovakia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Slovenia","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Sweden","Eswatini","Eswatini","Eswatini","Eswatini","Eswatini","Eswatini","Seychelles","Seychelles","Seychelles","Seychelles","Seychelles","Seychelles","Seychelles","Chad","Chad","Togo","Thailand","Thailand","Thailand","Thailand","Thailand","Thailand","Thailand","Thailand","Thailand","Thailand","Thailand","Thailand","Thailand","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Tajikistan","Turkmenistan","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Tunisia","Tunisia","Tunisia","Tunisia","Tunisia","Tunisia","Tunisia","Tunisia","Tunisia","Tunisia","Tunisia","Tunisia","Tunisia","Tunisia","Tunisia","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Turkey","Tanzania","Tanzania","Uganda","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","Ukraine","United States","United States","United States","United States","United States","United States","United States","United States","Uzbekistan","Uzbekistan","Uzbekistan","Uzbekistan","Uzbekistan","Uzbekistan","Uzbekistan","Uzbekistan","Uzbekistan","Uzbekistan","Uzbekistan","Uzbekistan","Venezuala","Venezuala","Venezuala","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Viet Nam","Samoa","Samoa","Samoa","Samoa","Yemen","Yemen","South Africa","South Africa","South Africa","South Africa","South Africa","South Africa","Zimbabwe","Zimbabwe","Zimbabwe","Zimbabwe"],"flow_ratio":[-5.7141,-7.4294,-10.9381,-10.3371,-12.9919,-16.4419,-24.8119,-24.4709,-17.6672,-13.8617,-261.0487,-285.9477,-192.3792,-227.9441,-214.781,-215.9322,35.5396,37.6277,38.0668,38.2301,39.9392,41.2057,-0.1909,-0.2072,2.2253,2.5622,-0.1514,-1.0392,0.3982,0.6235,0.6282,0.557,-0.5495,-0.4035,-1.6185,-1.9752,-2.4335,-3.1873,-2.6775,-2.966,-3.1327,-1.3154,-57.5699,-40.6838,-49.3446,-20.0893,14.8308,16.8174,20.7139,9.2633,11.8935,13.215,14.0698,13.9048,10.2952,13.0256,11.5582,11.8262,12.156,12.7235,-0.6829,-0.476,-1.1376,-2.2072,-4.8266,-7.7661,-6.581,-9.5261,-14.4446,-17.5262,-19.2554,-18.6803,-18.245,-14.5793,-6.3057,0.1128,1.806,-1.593,-3.7648,-3.173,7.4875,8.0301,7.618,8.0009,7.9857,4.1483,2.8148,3.7155,3.7609,4.9212,5.4845,5.5429,5.505,6.182,7.3887,8.5941,8.5071,9.2372,5.6857,-2.4416,3.5014,3.0024,3.1333,3.6233,1.2387,-7.809,-3.0083,-2.9857,-2.9713,-4.6314,-3.6364,-2.9907,-2.6128,-1.4052,-1.788,-1.7633,-1.5735,-1.3571,-1.3841,-1.2588,-1.1663,-2.0468,-2.4805,-3.1303,-4.0531,-4.5095,-4.5836,-4.3735,-4.1932,-3.9155,-3.9283,-4.2188,-4.2785,-4.6914,-4.8741,-4.6785,-4.6722,-4.4778,-4.4723,-4.5383,-6.6303,-13.4866,-15.0084,-0.0105,-0.1182,-1.6794,-0.6906,-5.851,-4.4592,-3.078,-2.089,-2.7389,-4.1122,-7.9828,-1.0928,-1.1137,-1.1772,-1.2663,-1.3013,-1.4979,-1.3039,-1.4941,-1.7342,-4.263,-3.805,-4.5417,-5.1419,-4.9878,-4.3782,-3.8985,-2.7289,-2.0764,-1.1585,-0.5714,-0.5385,-0.4967,-0.2549,-0.2957,-0.3252,-0.3257,-0.3229,-0.3685,-0.3843,-0.4388,-10.5778,-5.4976,0.7679,2.8869,3.5585,-69.2835,-58.8934,-53.3132,-41.5941,-35.9772,-46.2473,-39.6349,-45.2498,-48.8675,-46.766,-53.9127,-46.061,-38.3157,-27.639,-26.9372,-28.8374,-24.8253,-32.7924,-44.5586,-3.686,-3.7304,-3.3932,-2.8558,-16.7638,3.8492,-0.1508,0.1554,0.4412,0.9359,3.3294,3.2944,3.3512,4.1471,4.9882,5.8596,6.7186,7.3989,7.7799,8.7173,9.8678,10.2686,11.9264,11.9812,11.9464,12.5266,13.1224,13.5396,12.8464,12.9092,9.351,10.1012,10.6846,11.559,12.1177,12.4846,12.8471,12.8596,13.0429,12.9729,-0.7537,-0.3954,-0.337,-0.4324,-1.0838,-0.0316,0.3319,-0.3819,-0.2364,-0.958,-0.807,-0.8444,-0.8233,-0.7854,-0.7416,-0.8882,-1.5701,-1.5291,-1.5251,-1.5536,-1.6728,-1.819,-1.839,-1.8263,-1.5784,-1.6037,-1.6618,-1.7479,-0.3382,-4.6535,-5.2499,-12.6857,-4.2991,-4.1538,-4.3159,-4.1535,-16.8409,-15.1115,-13.3261,-12.9104,-8.8462,-8.1656,-7.1325,-8.263,-7.6838,-1.0925,-0.8194,-0.661,-1.7132,-59.9822,-31.0275,-23.3928,-1.3403,-1.3345,-1.3499,-1.6254,-81.4168,-96.9526,-72.607,-72.3673,-79.9046,-31.4045,-34.517,-32.0784,-22.3408,-23.2653,-26.0973,-26.6431,-0.171,-0.023,2.802,4.6972,5.3591,6.5263,3.1368,2.7654,1.9891,2.9318,2.8345,2.994,3.4954,3.7583,4.0868,3.9284,3.6296,3.369,3.3269,2.8642,-108.9467,-141.3098,-119.6665,-79.8736,-64.6344,-59.5952,-82.4186,-67.9361,-79.228,-67.3233,-51.5071,-52.3066,-56.4917,-61.4252,-67.4394,-62.9744,-51.1731,-43.8967,-30.9414,0.1228,0.365,1.0594,1.5228,1.5596,2.9201,3.7757,4.4605,4.8905,4.7947,4.8625,5.4066,5.8318,6.2047,6.4453,6.8749,7.381,8.1409,8.8023,2.7378,3.1608,3.75,4.1568,4.3961,-684.5714,-661.579,-282.2581,-220.1923,-127.1226,-129.8236,-56.4736,-39.4049,3.2242,3.4182,3.3111,4.1131,5.7384,2.1499,2.139,3.0879,3.3015,0.5826,3.1146,5.247,5.4455,5.9907,8.3075,8.1195,8.6749,9.1979,9.0541,2.6445,1.4109,1.2239,1.2037,0.9495,-2.7776,-2.4475,-2.3434,-1.9288,-1.4352,-1.4277,-1.4719,-1.4563,-1.0957,-1.0249,-0.9718,-1.0249,-1.1124,-1.7042,-1.6185,0.8372,0.8608,0.8894,0.9724,0.9659,1.3208,0.9598,0.9398,0.7055,0.3822,0.7313,0.684,0.9738,1.4108,-0.5266,-0.3851,-0.3565,0.3924,0.814,1.3642,1.6355,1.7904,1.2761,1.3359,0.5963,1.1621,-5.3508,-5.0342,-5.9365,-5.0043,-4.4967,-3.6994,-3.3191,-3.21,-3.2239,-3.5031,-3.8451,-4.0009,-4.1309,-4.2747,-3.5537,-3.2668,-2.6696,-1.0687,0.0454,-1.9272,-1.808,-1.5956,-1.2581,-1.1466,-0.9919,0.7159,0.902,1.7821,1.2786,1.5046,1.8282,2.1723,2.567,3.0512,4.3898,4.5475,4.5636,4.3804,4.4662,20.1205,4.1379,4.3314,4.671,5.4401,7.7847,8.8786,8.5942,8.8251,8.8027,9.0752,9.0137,9.0282,9.2085,9.0305,6.4959,6.4061,6.2998,6.2299,6.4601,-39.4085,-36.4278,-42.8841,9.4174,9.8957,9.963,9.7105,8.853,9.8568,12.3096,12.9287,13.1518,13.8377,13.7227,14.2878,14.7318,15.6906,16.069,16.2632,16.9431,17.1376,16.6509,16.4147,-3.5886,-3.3116,-3.1178,-3.1649,-3.3484,-3.2969,-4.2278,-4.7925,-5.4316,-8.1575,-6.9955,-5.9553,-8.2485,-3.3367,-3.2045,-1.6817,-2.3133,-5.1058,-3.31,-1.5577,-0.3924,0.0499,0.9283,1.0998,0.5169,-0.3975,-20.3915,-9.6603,-6.2265,-5.6497,-6.0935,-7.7325,-5.8183,-4.6539,-3.3748,-2.6778,-1.7495,-0.327,0.5152,-0.7674,-0.9614,-1.6883,-1.7549,54.0589,63.3499,64.1404,66.4126,-15.7796,-14.7843,-18.3882,-21.9119,-9.5982,-18.9913,-17.0148,-21.6586,-20.6378,-19.748,-17.0624,-13.9886,-10.3929,-9.3931,-8.5148,-4.9107,-3.5866,-1.7783,-1.2683,-1.4449,-1.7242,-0.6983,-1.1345,-1.1031,-1.0312,-0.8823,-1.1201,-1.1746,-0.7328,-0.5835,-7.0311,-5.0303,-6.541,-4.6557,-3.8713,-3.8882,-3.8058,-2.9335,-6.1214,-5.6722,-5.6755,-4.9005,-4.8784,-4.9331,-4.95,-5.2655,-2.9728,0.2925,1.1349,1.2951,1.5078,1.482,1.446,1.6278,1.672,1.8384,1.9459,2.0993,1.8284,1.9969,2.1915,2.531,3.301,4.1408,3.5957,4.9169,5.6547,-0.8111,-0.7141,-0.7494,-0.6691,-0.6222,-0.4687,-0.533,-0.5266,-0.5016,-0.6359,-0.7763,-0.9046,-0.9932,-1.0778,-1.1558,-1.0528,-0.6541,-0.565,-0.5545,-0.5839,-0.6696,-0.8045,-0.8832,-8.7579,-7.9478,-6.3346,-4.3974,-3.4062,-3.0899,-2.5011,-3.3399,-3.7738,-1.3102,-2.9498,-3.0294,-3.3215,0.2521,-3.875,-1.765,-0.5576,0.3457,1.4496,2.1824,-1.0413,-0.9775,-1.008,-0.9488,-0.968,-0.9416,-1.143,-1.0916,-1.1286,-1.0767,-0.9716,-0.8438,-0.7781,-0.7836,-0.7899,1.1543,-0.15,-25.5679,-24.7223,-20.151,-21.4552,-21.0808,-18.8582,-11.3868,-10.8708,-10.7452,-10.1617,-10.9877,-10.4759,-8.5328,-8.147,-8.3364,-6.3464,-7.5363,-7.8533,-3.0363,-2.7935,-2.7778,-0.9639,-0.9582,-0.78,-0.8041,-0.5871,-0.5931,-0.2333,0.4334,0.6484,0.8732,1.193,1.756,1.4506,1.4771,1.4953,1.5517,1.7171,1.7623,1.6158,1.402,1.2394,-16.5797,-11.7655,0.3868,1.9684,5.2138,4.2259,3.9213,3.9584,5.0398,4.8329,4.9107,3.5671,3.5332,5.7522,7.1107,5.1933,-0.0262,-0.0391,0.0191,0.058,0.2924,0.613,1.4206,1.5458,1.7449,1.7331,1.9267,2.2268,2.5988,2.9045,2.9659,2.6504,2.558,2.6375,2.9064,3.4414,-4.0056,-2.9175,-1.8558,-3.6105,-4.0163,-4.061,-5.8176,-7.7014,-10.3698,-12.458,-11.3329,-1.6862,-1.7178,2.4141,3.9805,5.2504,6.3433,9.2906,10.1408,9.6537,7.8363,5.8983,4.3779,2.903,1.568,1.8802,1.3821,1.2318,1.3361,1.6216,-6.8854,-5.9294,-5.3339,-2.6809,-58.5565,61.4483,-2.2563,-2.2511,-2.2019,-2.3102,-2.4651,-2.5091,-2.6109,-2.6027,-2.5675,-2.4607,-2.41,-2.3755,-2.0726,-1.906,-1.8145,-1.7453,-1.7377,-1.6316,-1.3603,-1.105,-12.5952,-8.3469,-6.0914,-4.7571,-5.2068,-5.2814,-4.6559,-5.0215,-4.3585,-3.9807,-3.1877,-2.6814,-2.705,-3.0036,-3.2817,-2.1309,-2.4495,-4.7434,-4.128,0.6776,2.0379,4.8563,8.5888,9.2713,6.8415,1.5527,3.0485,1.5524,0.7818,-47.9212,-60.688,-81.8498,-37.6019,-37.3748,-44.6021,-34.2236,-47.2965,-24.3755,-9.9647,-10.9039,-2.2677,-11.0495,-50.5639,-45.1258,-46.5082,-26.875,-45.0928,-48.1576,-21.0366,-17.0833,-31.4458,-46.2667,-43.9276,-41.8023,-6.6694,-5.9597,-5.1125,-5.0908,-5.3078,-6.0111,-6.7278,-6.1789,-74.6726,-45.8588,-10.8402,-11.5274,-11.9601,-12.4169,-13.0649,-2.8691,-2.849,-3.1408,-3.0856,-3.1676,-2.6744,-2.5931,-2.3855,-2.1731,-1.8152,-2.1998,-2.762,-3.8436,-5.0638,-5.0809,-4.4984,-3.8891,-3.6754,-261.5446,-249.1828,-186.0844,-94.7731,-86.212,-100,-105.2775,-109.4219,-0.9885,3.5435,4.6768,0.2127,-0.8786,-1.4688,-1.1958,-1.8078,-2.0178,-2.1594,-2.9565,-3.9044,-3.7778,-3.0252,-1.7218,-0.6346,1.0168,0.9817,-11.6292,-12.0335,-12.3617,-13.8728,-10.9121,-9.805,-9.3584,-8.7997,-8.2981,-8.0656,-7.6522,-4.2973,-3.5775,-3.3773,-3.1415,-3.0887,-7.3636,-7.2751,-5.5658,-5.1489,-5.5174,-5.6251,-5.8588,-5.3113,-5.5218,-9.3432,-8.3546,-10.4219,-12.4903,-12.141,-13.4652,-16.1186,-15.4824,-15.9836,-15.4376,-6.8661,-6.6607,-6.6299,-6.3043,-5.3779,-5.0605,-4.4581,-4.0675,-3.9206,-3.6726,-2.6737,-2.0827,-1.9776,-1.9595,-1.7209,-1673.9726,-0.7022,-0.8215,-0.9093,-0.6058,-0.5715,-0.4827,-0.2045,-11.1045,-10.6098,-9.5437,-10.7948,-12.0741,-12.5273,-13.879,-9.806,-6.7996,-6.4663,-4.9354,-4.3456,-3.4768,-3.9532,-4.1894,-8.2842,-8.0097,-7.0755,-5.6798,-6.6955,-8.016,-9.2351,-4.0202,-4.038,-3.6378,-4.0088,-2.1909,-3.1778,-1.8536,-3.4634,-4.128,-6.0177,-6.5591,-6.8227,-6.3591,-10.0684,-3.9096,-2.6786,0.7502,0.8874,-0.7196,-1.0955,-1.108,-2.6183,-2.5613,-2.6468,-3.1521,-3.1305,-2.8209,-2.7141,-3.2807,-4.5541,-4.9483,-5.4286,-5.6308,-5.4085,-4.5509,-4.8378,-4.726,-5.3503,-5.7644,-1.4762,-1.0983,-0.9217,-0.9665,-1.1652,-16.1376,-23.0148,-24.561,-20.6779,-20.7594,-22.0536,-46.4685,-38.5941,-27.1534,-22.8767,-20.0022,-16.1957,-14.5503,-14.4895,-15.7007,-15.6347,-16.8263,-31.3131,-12.7304,-10.8326,-4.9022,-5.2721,-3.0381,-2.6581,-3.4333,-3.3471,-2.7533,-1.6122,-0.1952,0.5112,0.4203,-0.2825,3.2921,3.5877,4.4179,3.0013,-49.175,-54.9712,-45.4961,-60,-35.7284,-1.3607,-2.1176,-2.7692,-3.01,-33.018,-33.3333,-15.5328,-15.413,-14.9607,-10.8987,-6.6749,-4.4388,-3.133,0.4327,0.5631,1.1005,1.4941,1.6947,3.4152,3.0199,2.9364,2.8703,3.6078,2.0063,2.3526,3.1753,5.3644,8.4229,8.7092,8.8875,-1.4544,-1.7682,-2.3761,-3.0049,-3.0939,-2.0033,-0.4022,0.5207,1.1029,1.7525,2.2885,2.3559,0.8148,0.5097,0.8236,-3.4892,-3.4344,-3.3676,-2.8769,-3.0844,-8.5742,-7.6258,14.0057,16.7873,19.184,17.7768,17.8218,-18.4842,-16.5123,-14.6249,-11.5182,-10.8259,-8.9387,-8.4874,-8.3407,-9.2495,-9.6728,-10.9161,-5.4808,-0.071,-0.1479,-0.1536,-0.0889,-0.1581,-0.1133,-0.1117,-0.2348,-68.9583,-4.8686,-0.6514,-0.5546,-0.5213,-0.5029,-0.4914,-0.5626,-0.4854,-0.4623,-0.5405,-0.5966,-0.5666,-0.536,-0.4458,-0.305,-0.1273,0.2354,0.6152,1.2083,1.9057,2.5003,0.4714,1.3785,1.1109,1.6096,1.5638,1.8145,1.698,-0.8798,-0.8373,-0.4314,0.0527,1.4992,0.8655,0.9125,1.3834,2.3288,-9.4638,-8.0952,-8.0479,-8.7339,-7.9385,-7.8463,-8.8188,-9.8819,-11.4558,-11.9208,-12.9128,-11.452,4.3289,4.5333,4.2806,-2.0136,5.516,19.0674,18.1832,19.4713,21.8994,21.1051,17.3859,21.6789,18.004,15.7549,14.2309,0.5317,-0.1244,-0.7338,-1.1059,-1.3351,-1.1544,-1.0292,-1.4383,-1.2377,-0.7637,-1.1541,-1.166,-1.4167,-2.0634,-1.78,-1.5882,-1.7035,-1.5183,-1.6039,0.1509,0.4369,0.4402,0.3739,0.4623,0.5947,0.4153,0.2041,0.9754,0.8842,1.319,1.537,2.25,2.5636,3.0154,3.2874,-52.8003,-26.4646,-7.778,-7.6193,-7.0854,-5.3376,-4.8852,-4.0224,-1.1784,-0.8065,1.8002,0.0558,0.0701,-0.0295,-0.1726,-0.868,-1.5238,-2.231,-2.1614,-1.6652,-0.9463,-0.8301,-0.8615,-0.64,-0.3509,-14.92,-3.2211,1.9522,5.4362,6.1849,7.2528,-0.2221,0.4347,10.8275,13.3739,11.4749,13.0201,10.5523,-0.7864,-1.1336,-1.5053,-1.549,-1.7387,-1.6189,-1.6638,-1.659,-1.6757,-1.6268,-1.8714,-1.8605,-1.234,-1.629,-1.537,-1.4294,-1.7091,-1.8065,-1.8692,-1.9434,-0.04,-0.7807,-1.2806,-2.1415,-1.5229,-1.564,-2.124,-1.5938,-1.7172,-1.7512,-3.1012,-4.9601,-6.0888,-7.7165,-7.9293,-8.8072,-10.1974,-10.0518,-9.112,-9.2601,-9.6642,-10.6551,-10.8206,-10.9877,-10.5886,-11.1926,-13.0882,-13.8996,-1.1311,-5.6517,-3.1499,-0.9736,-1.1118,-1.2644,-1.12,-1.0872,-0.9375,-0.8012,-0.3374,-0.4448,-0.561,-0.1096,-0.0532,-0.0177,-0.4368,-0.2698,-0.2929,3.2463,3.8296,3.435,3.4946,4.2951,1.0186,1.5971,1.8849,1.9373,2.1348,2.8771,3.4266,4.1777,2.3654,1.6908,1.8112,2.1631,2.5137,2.8626,-20.4508,-26.7834,-37.8972,-53.8124,-48.8881,-34.3925,-219.5767,-478,-198.7395,-93.5146,-40.1932,-41.25,-36.9955,-20.0369,-16.2594,-14.4145,-1.1146,-0.9853,-0.9987,-0.9438,-0.8785,-0.8482,-0.7125,-0.6239,-0.4336,-0.3575,-0.2706,-0.2593,0.0332,3.7105,3.1781,0.9011,1.5542,-0.2007,-0.2132,-1.3978,-1.1621,-0.2977,-1.2295,-1.6024,-2.5713,-2.7647,-2.799,-4.4492,-5.6227,-6.1482,-7.7765,-6.6086,-106.8564,-35.2087,-36.4224,-34.6297,-25.3905,-27.7655,-5.2102,-4.9121,-4.7929,-4.9093,-4.75,-4.3071,-4.35,-4.4193,-4.6839,-4.8009,-4.7975,-3.2022,-3.8521,-4.9028,-5.659,-0.7981,-0.8059,-0.9615,-1.0386,-1.0899,-0.9163,-0.8181,-0.7104,-0.7545,-0.7991,-0.7541,-0.5588,-0.402,-0.1785,0.1824,0.0547,0.4375,0.6332,0.866,-13.7202,-10.2519,6.9514,0.1058,-0.522,-0.2471,-0.1879,-0.2909,-0.0185,0.0798,0.146,0.032,0.1019,0.0929,0.0667,0.267,0.3245,0.4711,-0.598,-1.3774,-1.5068,2.9433,2.9692,3.1521,3.5486,3.8802,4.2327,4.601,4.7244,-10.3936,-11.0314,-10.4231,-9.5541,-8.2906,-8.2163,-7.307,-7.6185,-9.7657,-10.4266,-12.1139,-12.2316,-1.2597,-0.9115,-0.6349,-0.9346,-1.1621,-1.2981,-1.4296,-1.6578,-1.3038,-1.5719,-1.9769,-2.2162,-2.1721,-2.1361,-2.1875,-2.3273,-2.1139,-2.6407,-3.338,-58.1646,-47.1406,-71.8274,-39.704,-1.225,-0.8026,3.5408,3.4035,3.3744,3.2542,3.3214,3.0966,-26.1915,-30.6437,-17.2904,-12.1217],"hdi":[0.453,0.491,0.652,0.662,0.669,0.676,0.689,0.694,0.752,0.767,0.78,0.82,0.85,0.854,0.856,0.858,0.841,0.846,0.851,0.855,0.86,0.862,0.753,0.771,0.822,0.825,0.663,0.672,0.68,0.693,0.706,0.72,0.727,0.724,0.728,0.731,0.737,0.742,0.745,0.748,0.749,0.755,0.77,0.766,0.762,0.765,0.936,0.938,0.939,0.881,0.884,0.886,0.895,0.897,0.899,0.897,0.901,0.903,0.906,0.908,0.704,0.709,0.719,0.736,0.74,0.741,0.745,0.752,0.758,0.758,0.757,0.757,0.3,0.303,0.31,0.395,0.414,0.418,0.418,0.417,0.868,0.873,0.876,0.879,0.882,0.885,0.889,0.896,0.899,0.899,0.899,0.903,0.904,0.905,0.908,0.909,0.913,0.915,0.916,0.462,0.473,0.505,0.508,0.512,0.515,0.324,0.385,0.394,0.401,0.405,0.412,0.42,0.423,0.483,0.49,0.497,0.505,0.513,0.52,0.523,0.535,0.708,0.712,0.722,0.729,0.738,0.745,0.75,0.756,0.764,0.771,0.774,0.779,0.782,0.786,0.792,0.797,0.807,0.81,0.813,0.793,0.791,0.793,0.81,0.832,0.846,0.846,0.721,0.739,0.747,0.754,0.755,0.766,0.768,0.676,0.683,0.689,0.696,0.705,0.715,0.725,0.741,0.757,0.774,0.784,0.792,0.798,0.803,0.804,0.807,0.805,0.805,0.808,0.698,0.695,0.698,0.718,0.727,0.731,0.736,0.752,0.757,0.758,0.759,0.751,0.777,0.783,0.782,0.787,0.812,0.818,0.819,0.82,0.834,0.838,0.84,0.84,0.84,0.842,0.842,0.846,0.852,0.853,0.852,0.852,0.853,0.535,0.596,0.701,0.706,0.712,0.717,0.325,0.365,0.861,0.864,0.867,0.877,0.897,0.899,0.899,0.902,0.905,0.908,0.911,0.918,0.92,0.922,0.926,0.881,0.889,0.891,0.891,0.896,0.901,0.905,0.912,0.915,0.917,0.927,0.932,0.932,0.935,0.938,0.939,0.942,0.943,0.944,0.753,0.759,0.768,0.774,0.788,0.795,0.806,0.804,0.808,0.814,0.819,0.828,0.833,0.84,0.842,0.843,0.661,0.675,0.685,0.694,0.706,0.714,0.722,0.729,0.738,0.743,0.748,0.752,0.43,0.437,0.442,0.445,0.465,0.478,0.486,0.492,0.464,0.466,0.472,0.484,0.506,0.515,0.526,0.553,0.556,0.39,0.415,0.426,0.452,0.498,0.56,0.582,0.738,0.742,0.747,0.747,0.476,0.482,0.487,0.493,0.501,0.635,0.636,0.642,0.644,0.647,0.652,0.654,0.725,0.794,0.686,0.692,0.694,0.704,0.718,0.731,0.753,0.77,0.78,0.782,0.779,0.778,0.767,0.765,0.768,0.772,0.774,0.777,0.799,0.802,0.807,0.816,0.824,0.828,0.831,0.837,0.846,0.852,0.856,0.85,0.853,0.852,0.853,0.856,0.86,0.867,0.869,0.785,0.796,0.806,0.813,0.822,0.825,0.835,0.843,0.85,0.854,0.857,0.862,0.865,0.865,0.874,0.879,0.882,0.885,0.888,0.928,0.93,0.933,0.934,0.936,0.362,0.363,0.372,0.378,0.405,0.416,0.441,0.454,0.861,0.863,0.876,0.883,0.894,0.898,0.903,0.905,0.904,0.909,0.906,0.91,0.922,0.924,0.931,0.928,0.926,0.928,0.929,0.71,0.718,0.729,0.733,0.736,0.684,0.692,0.698,0.707,0.719,0.729,0.736,0.74,0.745,0.747,0.749,0.753,0.754,0.726,0.743,0.622,0.628,0.634,0.642,0.65,0.665,0.68,0.683,0.694,0.819,0.825,0.828,0.83,0.833,0.837,0.844,0.848,0.853,0.856,0.858,0.865,0.87,0.873,0.875,0.889,0.891,0.769,0.78,0.79,0.799,0.806,0.814,0.825,0.832,0.839,0.841,0.839,0.845,0.853,0.859,0.862,0.864,0.866,0.868,0.871,0.84,0.848,0.858,0.864,0.867,0.87,0.891,0.895,0.899,0.901,0.904,0.899,0.903,0.907,0.908,0.912,0.914,0.915,0.918,0.92,0.699,0.845,0.849,0.851,0.853,0.857,0.86,0.869,0.874,0.876,0.878,0.878,0.882,0.884,0.886,0.889,0.894,0.898,0.899,0.901,0.636,0.636,0.641,0.855,0.861,0.867,0.871,0.874,0.878,0.886,0.891,0.889,0.892,0.896,0.899,0.905,0.899,0.898,0.915,0.919,0.918,0.92,0.922,0.673,0.678,0.684,0.693,0.701,0.712,0.718,0.73,0.728,0.731,0.735,0.741,0.75,0.757,0.771,0.776,0.78,0.53,0.542,0.563,0.57,0.577,0.576,0.585,0.588,0.592,0.361,0.38,0.396,0.418,0.428,0.818,0.825,0.835,0.845,0.851,0.849,0.856,0.852,0.854,0.856,0.868,0.87,0.738,0.767,0.77,0.772,0.611,0.614,0.618,0.624,0.63,0.639,0.642,0.851,0.862,0.871,0.883,0.887,0.896,0.898,0.901,0.904,0.911,0.915,0.923,0.927,0.93,0.933,0.568,0.596,0.597,0.6,0.603,0.609,0.614,0.617,0.739,0.759,0.766,0.771,0.783,0.793,0.8,0.803,0.802,0.808,0.815,0.816,0.821,0.824,0.827,0.828,0.831,0.754,0.761,0.769,0.777,0.784,0.792,0.795,0.804,0.811,0.813,0.818,0.818,0.823,0.827,0.83,0.835,0.833,0.834,0.835,0.838,0.632,0.641,0.642,0.646,0.661,0.675,0.686,0.691,0.694,0.493,0.498,0.504,0.517,0.526,0.535,0.545,0.591,0.6,0.607,0.618,0.627,0.636,0.64,0.84,0.849,0.857,0.863,0.871,0.88,0.89,0.896,0.902,0.908,0.908,0.906,0.909,0.895,0.902,0.911,0.921,0.929,0.934,0.938,0.689,0.691,0.695,0.731,0.736,0.741,0.747,0.755,0.766,0.781,0.784,0.788,0.789,0.796,0.798,0.607,0.628,0.849,0.853,0.86,0.866,0.875,0.881,0.885,0.891,0.897,0.89,0.89,0.891,0.901,0.909,0.92,0.925,0.933,0.935,0.887,0.892,0.893,0.895,0.899,0.824,0.83,0.837,0.842,0.847,0.852,0.857,0.862,0.866,0.868,0.868,0.87,0.875,0.874,0.876,0.874,0.876,0.878,0.88,0.664,0.662,0.702,0.719,0.726,0.729,0.732,0.735,0.736,0.734,0.728,0.726,0.726,0.733,0.735,0.735,0.847,0.85,0.855,0.859,0.862,0.865,0.869,0.873,0.877,0.88,0.881,0.88,0.885,0.89,0.895,0.899,0.903,0.905,0.907,0.909,0.676,0.685,0.754,0.765,0.772,0.781,0.788,0.793,0.797,0.797,0.8,0.585,0.59,0.602,0.604,0.611,0.615,0.616,0.621,0.628,0.631,0.636,0.636,0.639,0.649,0.658,0.663,0.666,0.669,0.672,0.434,0.453,0.478,0.502,0.738,0.77,0.797,0.808,0.817,0.824,0.832,0.839,0.847,0.855,0.862,0.869,0.874,0.869,0.884,0.888,0.89,0.893,0.896,0.898,0.9,0.903,0.462,0.466,0.472,0.48,0.489,0.497,0.506,0.512,0.521,0.529,0.539,0.546,0.558,0.569,0.579,0.586,0.593,0.598,0.601,0.732,0.731,0.743,0.758,0.76,0.751,0.751,0.752,0.753,0.757,0.695,0.711,0.713,0.719,0.724,0.731,0.734,0.73,0.733,0.737,0.744,0.745,0.747,0.883,0.89,0.893,0.899,0.899,0.904,0.909,0.913,0.911,0.912,0.915,0.916,0.751,0.757,0.759,0.763,0.766,0.768,0.77,0.469,0.46,0.466,0.505,0.505,0.509,0.511,0.52,0.744,0.756,0.768,0.779,0.791,0.798,0.809,0.817,0.825,0.831,0.822,0.824,0.828,0.831,0.836,0.852,0.855,0.858,0.849,0.881,0.89,0.889,0.892,0.899,0.904,0.904,0.716,0.728,0.745,0.76,0.774,0.788,0.802,0.818,0.821,0.818,0.816,0.821,0.824,0.833,0.838,0.841,0.844,0.847,0.52,0.53,0.541,0.563,0.572,0.58,0.586,0.594,0.602,0.608,0.616,0.645,0.65,0.655,0.662,0.667,0.595,0.597,0.607,0.617,0.63,0.64,0.648,0.656,0.661,0.666,0.662,0.67,0.677,0.684,0.693,0.696,0.693,0.697,0.7,0.457,0.472,0.479,0.484,0.491,0.5,0.503,0.504,0.504,0.507,0.509,0.512,0.514,0.517,0.519,0.63,0.695,0.705,0.71,0.756,0.767,0.772,0.774,0.669,0.673,0.679,0.686,0.693,0.702,0.708,0.712,0.728,0.731,0.74,0.743,0.747,0.754,0.757,0.302,0.308,0.408,0.408,0.408,0.414,0.418,0.78,0.783,0.788,0.792,0.8,0.809,0.824,0.822,0.827,0.829,0.83,0.843,0.849,0.856,0.862,0.871,0.875,0.878,0.498,0.54,0.549,0.582,0.589,0.6,0.622,0.637,0.65,0.66,0.672,0.683,0.689,0.697,0.711,0.72,0.729,0.734,0.737,0.743,0.741,0.407,0.423,0.427,0.435,0.437,0.441,0.449,0.451,0.514,0.516,0.52,0.704,0.72,0.741,0.749,0.758,0.767,0.772,0.782,0.782,0.788,0.79,0.441,0.71,0.716,0.725,0.723,0.725,0.731,0.734,0.737,0.75,0.761,0.765,0.772,0.778,0.781,0.79,0.795,0.799,0.802,0.554,0.556,0.556,0.56,0.575,0.636,0.642,0.645,0.647,0.274,0.294,0.308,0.318,0.325,0.336,0.347,0.351,0.354,0.87,0.876,0.879,0.878,0.883,0.886,0.891,0.897,0.904,0.906,0.906,0.91,0.921,0.921,0.926,0.928,0.931,0.906,0.911,0.917,0.916,0.918,0.924,0.934,0.932,0.936,0.938,0.938,0.938,0.942,0.943,0.942,0.946,0.946,0.948,0.951,0.953,0.514,0.535,0.907,0.91,0.914,0.915,0.917,0.752,0.764,0.782,0.789,0.793,0.795,0.812,0.815,0.822,0.822,0.821,0.473,0.62,0.628,0.633,0.637,0.647,0.65,0.651,0.661,0.747,0.441,0.769,0.778,0.785,0.791,0.799,0.804,0.802,0.808,0.814,0.819,0.824,0.828,0.835,0.839,0.836,0.85,0.842,0.855,0.86,0.865,0.785,0.792,0.796,0.797,0.8,0.803,0.81,0.814,0.817,0.822,0.826,0.829,0.837,0.839,0.842,0.847,0.65,0.663,0.66,0.67,0.672,0.677,0.687,0.679,0.679,0.687,0.689,0.686,0.811,0.816,0.823,0.826,0.831,0.835,0.833,0.825,0.836,0.844,0.854,0.853,0.854,0.855,0.856,0.704,0.709,0.715,0.724,0.734,0.746,0.755,0.767,0.781,0.795,0.798,0.797,0.798,0.795,0.8,0.802,0.805,0.807,0.811,0.72,0.727,0.732,0.74,0.746,0.752,0.759,0.767,0.774,0.771,0.789,0.798,0.807,0.813,0.815,0.816,0.32,0.345,0.5,0.503,0.509,0.51,0.52,0.524,0.738,0.743,0.756,0.765,0.77,0.777,0.783,0.791,0.796,0.808,0.823,0.835,0.844,0.852,0.854,0.854,0.853,0.375,0.467,0.476,0.481,0.486,0.492,0.499,0.505,0.883,0.884,0.909,0.914,0.92,0.604,0.615,0.62,0.628,0.635,0.643,0.651,0.659,0.656,0.659,0.659,0.671,0.666,0.67,0.671,0.67,0.674,0.679,0.674,0.751,0.757,0.759,0.759,0.769,0.768,0.771,0.775,0.78,0.785,0.787,0.764,0.764,0.771,0.777,0.785,0.794,0.803,0.814,0.822,0.824,0.829,0.837,0.842,0.844,0.845,0.851,0.853,0.855,0.819,0.825,0.835,0.843,0.85,0.857,0.861,0.869,0.873,0.878,0.878,0.882,0.884,0.877,0.885,0.887,0.889,0.894,0.896,0.893,0.897,0.9,0.902,0.908,0.896,0.899,0.902,0.905,0.901,0.899,0.905,0.906,0.908,0.912,0.92,0.929,0.932,0.933,0.483,0.471,0.455,0.496,0.55,0.572,0.741,0.77,0.779,0.786,0.791,0.793,0.797,0.348,0.382,0.441,0.64,0.657,0.666,0.683,0.693,0.699,0.71,0.714,0.718,0.724,0.727,0.731,0.748,0.544,0.55,0.558,0.568,0.578,0.587,0.593,0.599,0.604,0.618,0.62,0.634,0.637,0.642,0.646,0.645,0.645,0.647,0.65,0.697,0.711,0.716,0.721,0.728,0.746,0.645,0.653,0.661,0.666,0.673,0.682,0.707,0.71,0.716,0.718,0.719,0.723,0.728,0.732,0.735,0.635,0.643,0.662,0.672,0.679,0.685,0.69,0.701,0.708,0.71,0.718,0.734,0.753,0.76,0.771,0.778,0.783,0.787,0.791,0.423,0.434,0.49,0.667,0.681,0.689,0.699,0.706,0.715,0.721,0.729,0.733,0.727,0.733,0.738,0.743,0.745,0.748,0.743,0.746,0.751,0.884,0.885,0.898,0.916,0.918,0.92,0.922,0.924,0.634,0.646,0.653,0.659,0.666,0.674,0.683,0.69,0.695,0.698,0.703,0.71,0.688,0.7,0.753,0.567,0.579,0.587,0.595,0.603,0.616,0.632,0.64,0.656,0.654,0.664,0.67,0.675,0.678,0.684,0.689,0.636,0.642,0.647,0.713,0.482,0.499,0.664,0.675,0.685,0.692,0.696,0.699,0.467,0.478,0.505,0.529]}}]}
+  </script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body class="fullcontent">
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+<header id="title-block-header" class="quarto-title-block default">
+
+
+
+<div class="quarto-title"><h1 class="title display-7">Global education</h1></div><div class="quarto-title-meta"><div><div class="quarto-title-meta-heading">Author</div><div class="quarto-title-meta-contents"><div class="quarto-title-authors"><div><div>
+<p>James Goldie, 360info</p>
+</div></div></div></div></div><div><div class="quarto-title-meta-heading">Published</div><div class="quarto-title-meta-contents"><p class="date">April 1, 2022</p></div></div></div></header>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>({</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(here)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pins)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stderr">
+<pre><code>Linking to GEOS 3.9.1, GDAL 3.2.3, PROJ 7.2.1</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(CoordinateCleaner)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(countrycode)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(wbstats)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggalluvial)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(themes360info)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stderr">
+<pre><code>✔ Using preferred font, ITC Franklin Gothic.
+ℹ Specify a different font to use with 360info themes by calling
+  register_360fonts() or by setting options("themes360info.franklin.pref") to
+  either "itc" or "libre" (or "none" to disable automatic font loading).</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggtext)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">register_360fonts</span>(<span class="st">"libre"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stderr">
+<pre><code>✔ Using preferred font, Libre Franklin.
+ℹ Specify a different font to use with 360info themes by calling
+  register_360fonts() or by setting options("themes360info.franklin.pref") to
+  either "itc" or "libre" (or "none" to disable automatic font loading).</code></pre>
+</div>
+<div class="cell-output-stdout">
+<pre><code>NULL</code></pre>
+</div>
+</div>
+</section>
+<section id="getting-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="getting-the-data">Getting the data</h2>
+<p>This data comes from the <a href="http://data.uis.unesco.org">UNESCO Institute for Statistics (UIS)</a>.</p>
+<p>We’ll use their <a href="https://apiportal.uis.unesco.org/bdds">Bulk Data Download Service</a> to acquire the data quickly, but we’re particularly interested in the indicators within the Education theme labelled <code>Number and rates of international mobile students (inbound and outbound)</code>.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_cache <span class="ot">&lt;-</span> <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">".cache"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(data_cache, <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># download the zip file (keeping it cached if we redo this)</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>zipped_data <span class="ot">&lt;-</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">board_url</span>(</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="at">opri =</span> <span class="fu">paste0</span>(</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">"https://apimgmtstzgjpfeq2u763lag.blob.core.windows.net/"</span>,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">"content/MediaLibrary/bdds/OPRI.zip"</span>)),</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">cache =</span> data_cache) <span class="sc">%&gt;%</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pin_download</span>(<span class="st">"opri"</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># unzip it </span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span>(zipped_data, <span class="at">exdir =</span> data_cache)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co"># read the coding sheets in</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>country_map <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">file.path</span>(data_cache, <span class="st">"OPRI_COUNTRY.csv"</span>), <span class="at">col_types =</span> <span class="st">"cc"</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>indicator_map <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">file.path</span>(data_cache, <span class="st">"OPRI_LABEL.csv"</span>),</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_types =</span> <span class="st">"cc"</span>)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>region_map <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">file.path</span>(data_cache, <span class="st">"OPRI_REGION.csv"</span>), <span class="at">col_types =</span> <span class="st">"ccc"</span>)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co"># read the data in</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>national_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">file.path</span>(data_cache, <span class="st">"OPRI_DATA_NATIONAL.csv"</span>),</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">col_types =</span> <span class="st">"ccincc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="tidying-and-joining-the-origin-data" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="tidying-and-joining-the-origin-data">Tidying and joining the origin data</h2>
+<p>This data is two dimensional, in a way: there’s the country students go from (that is, the <em>origin</em>) and the country that go to (the <em>destination</em>). The way the data is organised into indicators by origin (<code>"[continent]: "Students from" [country], both sexes (number)"</code>), and within that indicator there’s a row for each destination, each year.</p>
+<p>So you can easily look up where a country’s students have gone. If you want to look up where a country’s students have come from, though, you would need to tally up the destination row for a country in <em>every</em> origin indicator. That’s what we’re going to do (with the implicit assumption that there are no countries missing).</p>
+<section id="map-preparation" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="map-preparation">Map preparation</h3>
+<p>The national data already has a destination column. It also has an indicator number column, and we need to map that back to a country code using the label map and the country map.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># first, isolate the continent and country of origin</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>indicator_map <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(INDICATOR_LABEL_EN, <span class="st">"Students from"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">INDICATOR_LABEL_EN =</span> <span class="fu">str_replace</span>(INDICATOR_LABEL_EN,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">fixed</span>(<span class="st">", both sexes (number)"</span>), <span class="st">""</span>),</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">INDICATOR_LABEL_EN =</span> <span class="fu">str_replace</span>(INDICATOR_LABEL_EN,</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">fixed</span>(<span class="st">" Students from "</span>), <span class="st">""</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(INDICATOR_LABEL_EN, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"continent"</span>, <span class="st">"country"</span>), <span class="at">sep =</span> <span class="st">":"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># some indicators also preface country name with "the "</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">country =</span> <span class="fu">str_replace</span>(country, <span class="st">"^the "</span>, <span class="st">""</span>)) <span class="ot">-&gt;</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>tidy_origins</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co"># now match these to the country map</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>tidy_origins <span class="sc">%&gt;%</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(country_map, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"country"</span> <span class="ot">=</span> <span class="st">"COUNTRY_NAME_EN"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># we'll use {countrycode} as a backup for the un country list,</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># since they aren't always entirely consistent</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">countrycode_backup =</span> <span class="fu">countrycode</span>(country,</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>      <span class="at">origin =</span> <span class="st">"country.name"</span>, <span class="at">destination =</span> <span class="st">"iso3c"</span>),</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">code =</span> <span class="fu">coalesce</span>(COUNTRY_ID, countrycode_backup)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(INDICATOR_ID,</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    continent,</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">country_name =</span> country,</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">country_code =</span> code) <span class="sc">%&gt;%</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>  <span class="co"># finally, let's neaten a few country names up</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>  <span class="co"># mutate(l = nchar(country_name)) %&gt;% arrange(desc(l)) %&gt;%</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>  <span class="co"># select(country_name, country_code, l)</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">country_name =</span> <span class="fu">case_when</span>(</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"HKG"</span> <span class="sc">~</span> <span class="st">"Hong Kong"</span>,</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"MAC"</span> <span class="sc">~</span> <span class="st">"Macao"</span>,</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"PRK"</span> <span class="sc">~</span> <span class="st">"North Korea"</span>,</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"COD"</span> <span class="sc">~</span> <span class="st">"DR Congo"</span>,</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"VCT"</span> <span class="sc">~</span> <span class="st">"St Vincent/Grenadines"</span>,</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"VEN"</span> <span class="sc">~</span> <span class="st">"Venezuala"</span>,</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"LAO"</span> <span class="sc">~</span> <span class="st">"Laos"</span>,</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"BOL"</span> <span class="sc">~</span> <span class="st">"Bolivia"</span>,</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"FSM"</span> <span class="sc">~</span> <span class="st">"Micronesia"</span>,</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"TZA"</span> <span class="sc">~</span> <span class="st">"Tanzania"</span>,</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"IRN"</span> <span class="sc">~</span> <span class="st">"Iran"</span>,</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"RUS"</span> <span class="sc">~</span> <span class="st">"Russia"</span>,</span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"MDA"</span> <span class="sc">~</span> <span class="st">"Moldova"</span>,</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>      country_code <span class="sc">==</span> <span class="st">"SYR"</span> <span class="sc">~</span> <span class="st">"Syria"</span>,</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> country_name)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"country-names.csv"</span>)) <span class="ot">-&gt;</span></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>indicator_origin_map</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stderr">
+<pre><code>Warning in countrycode_convert(sourcevar = sourcevar, origin = origin, destination = dest, : Some values were not matched unambiguously: Netherlands Antilles, Sudan (pre-secession), unknown countries</code></pre>
+</div>
+</div>
+<p>Note that we still have a few unmapped country codes: those cases where the origin <em>continent</em> is known but not the <em>country</em>:</p>
+<div class="cell page-columns page-full">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>indicator_origin_map <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(country_code)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display column-page">
+<table class="table table-sm table-striped">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 40%">
+<col style="width: 24%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">INDICATOR_ID</th>
+<th style="text-align: left;">continent</th>
+<th style="text-align: left;">country_name</th>
+<th style="text-align: left;">country_code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">26474</td>
+<td style="text-align: left;">Africa</td>
+<td style="text-align: left;">unknown countries</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">26504</td>
+<td style="text-align: left;">North America</td>
+<td style="text-align: left;">unknown countries</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">26518</td>
+<td style="text-align: left;">South America</td>
+<td style="text-align: left;">unknown countries</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">26570</td>
+<td style="text-align: left;">Asia</td>
+<td style="text-align: left;">unknown countries</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">26615</td>
+<td style="text-align: left;">Europe</td>
+<td style="text-align: left;">unknown countries</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">26630</td>
+<td style="text-align: left;">Oceania</td>
+<td style="text-align: left;">unknown countries</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">26651</td>
+<td style="text-align: left;">Caribbean and Central America</td>
+<td style="text-align: left;">unknown countries</td>
+<td style="text-align: left;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>That’s okay!</p>
+</section>
+<section id="joining-the-flow-data" class="level3">
+<h3 class="anchored" data-anchor-id="joining-the-flow-data">Joining the flow data</h3>
+<p>Now we’re ready to map these codes back onto the national data:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>national_data <span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(INDICATOR_ID, <span class="at">dest_country_code =</span> COUNTRY_ID, <span class="at">year =</span> YEAR,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">value =</span> VALUE, <span class="at">magnitude =</span> MAGNITUDE, <span class="at">qualifier =</span> QUALIFIER) <span class="sc">%&gt;%</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># join the origin map in</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(INDICATOR_ID <span class="sc">%in%</span> indicator_origin_map<span class="sc">$</span>INDICATOR_ID) <span class="sc">%&gt;%</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(indicator_origin_map, <span class="at">by =</span> <span class="st">"INDICATOR_ID"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">origin_continent =</span> continent, <span class="at">origin_country_name =</span> country_name,</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">origin_country_code =</span> country_code) <span class="sc">%&gt;%</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># now we're going to join it _again_, but this time to get  the _destination_</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># name and continent</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(indicator_origin_map,</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"dest_country_code"</span> <span class="ot">=</span> <span class="st">"country_code"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">dest_continent =</span> continent, <span class="at">dest_country_name =</span> country_name) <span class="sc">%&gt;%</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add continent to "unknown countries" bins</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">origin_country_name =</span> <span class="fu">if_else</span>(</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(origin_country_name, <span class="st">"unknown countries"</span>),</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste0</span>(origin_continent, <span class="st">": unknown countries"</span>),</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>      origin_country_name),</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># a few us territories aren't on the origin map, so let's fill them in again</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># for the destination list</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">dest_country_name =</span> <span class="fu">coalesce</span>(dest_country_name,</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">countrycode</span>(dest_country_code, <span class="st">"iso3c"</span>, <span class="st">"country.name"</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"origin"</span>), <span class="fu">starts_with</span>(<span class="st">"dest"</span>), year, value, magnitude, qualifier) <span class="sc">%&gt;%</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"student-flows-tidy.csv"</span>)) <span class="ot">-&gt;</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>national_data_joined</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stderr">
+<pre><code>Warning in countrycode_convert(sourcevar = sourcevar, origin = origin, destination = dest, : Some values were not matched unambiguously: ANT, XDN</code></pre>
+</div>
+</div>
+<p>Before we start visualising, let’s now break this back into data by origin and by destination. That way, we can <a href="https://forcats.tidyverse.org/reference/fct_lump.html">lump</a> all the same values together and make a more compact statement about the main comings and goings for a given country.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># most popular destinations for each origin</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>national_data_joined <span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(value), value <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, origin_country_name) <span class="sc">%&gt;%</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dest_country_lumped =</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fct_lump_n</span>(<span class="at">f =</span> dest_country_name, <span class="at">n =</span> <span class="dv">10</span>, <span class="at">w =</span> value,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">other =</span> <span class="st">"Other countries"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># now add up all the lumped ones</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(origin_country_name, dest_country_lumped, year, value, magnitude,</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    qualifier) <span class="sc">%&gt;%</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, origin_country_name, dest_country_lumped) <span class="sc">%&gt;%</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">value_lumped =</span> <span class="fu">sum</span>(value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># also format labels for qualifiers</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">cond_includes =</span> <span class="fu">if_else</span>(<span class="fu">any</span>(magnitude <span class="sc">==</span> <span class="st">"INCLUDES"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="st">"a"</span>, <span class="st">"-"</span>),</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">cond_included =</span> <span class="fu">if_else</span>(<span class="fu">any</span>(magnitude <span class="sc">==</span> <span class="st">"INCLUDED"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="st">"b"</span>, <span class="st">"-"</span>),</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">cond_natest =</span> <span class="fu">if_else</span>(<span class="fu">any</span>(qualifier <span class="sc">==</span> <span class="st">"NAT_EST"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="st">"c"</span>, <span class="st">"-"</span>),</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">cond_uisest =</span> <span class="fu">if_else</span>(<span class="fu">any</span>(qualifier <span class="sc">==</span> <span class="st">"UIS_EST"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="st">"d"</span>, <span class="st">"-"</span>),</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">cond_all =</span> <span class="fu">str_trim</span>(<span class="fu">paste</span>(cond_includes, cond_included, cond_natest,</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>      cond_uisest, <span class="at">collapse =</span> <span class="st">","</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, origin_country_name, dest_country_lumped, value_lumped,</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    cond_all) <span class="sc">%&gt;%</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"popular-destinations-by-origin.csv"</span>)) <span class="ot">-&gt;</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>popular_destinations</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'year', 'origin_country_name'. You can
+override using the `.groups` argument.</code></pre>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># most popular origins for each destination</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>national_data_joined <span class="sc">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(value), value <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, dest_country_name) <span class="sc">%&gt;%</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">origin_country_lumped =</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fct_lump_n</span>(<span class="at">f =</span> origin_country_name, <span class="at">n =</span> <span class="dv">10</span>, <span class="at">w =</span> value,</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">other =</span> <span class="st">"Other countries"</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># now add up all the lumped ones</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(dest_country_name, origin_country_lumped, year, value, magnitude, qualifier) <span class="sc">%&gt;%</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, dest_country_name, origin_country_lumped) <span class="sc">%&gt;%</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">value_lumped =</span> <span class="fu">sum</span>(value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># also format labels for qualifiers</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">cond_includes =</span> <span class="fu">if_else</span>(<span class="fu">any</span>(magnitude <span class="sc">==</span> <span class="st">"INCLUDES"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="st">"a"</span>, <span class="st">"-"</span>),</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">cond_included =</span> <span class="fu">if_else</span>(<span class="fu">any</span>(magnitude <span class="sc">==</span> <span class="st">"INCLUDED"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="st">"b"</span>, <span class="st">"-"</span>),</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">cond_natest =</span> <span class="fu">if_else</span>(<span class="fu">any</span>(qualifier <span class="sc">==</span> <span class="st">"NAT_EST"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="st">"c"</span>, <span class="st">"-"</span>),</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">cond_uisest =</span> <span class="fu">if_else</span>(<span class="fu">any</span>(qualifier <span class="sc">==</span> <span class="st">"UIS_EST"</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="st">"d"</span>, <span class="st">"-"</span>),</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">cond_all =</span> <span class="fu">str_trim</span>(<span class="fu">paste</span>(cond_includes, cond_included, cond_natest,</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>      cond_uisest, <span class="at">collapse =</span> <span class="st">","</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, dest_country_name, origin_country_lumped, value_lumped,</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>    cond_all) <span class="sc">%&gt;%</span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"popular-origins-by-destination.csv"</span>)) <span class="ot">-&gt;</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>popular_origins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'year', 'dest_country_name'. You can
+override using the `.groups` argument.</code></pre>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># list of countries</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  national_data_joined<span class="sc">$</span>origin_country_name,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  national_data_joined<span class="sc">$</span>dest_country_name) <span class="sc">%&gt;%</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unique</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">discard</span>(is.na) <span class="sc">%&gt;%</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">name =</span> .) <span class="sc">%&gt;%</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"country-list.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+</section>
+<section id="visualisation-single-country-flows" class="level2">
+<h2 class="anchored" data-anchor-id="visualisation-single-country-flows">Visualisation: single country flows</h2>
+<p>Let’s start by looking at who comes <em>from</em> and <em>to</em> any given country.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb19" data-startfrom="257" data-source-offset="-0"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 256;"><span id="cb19-257"><a href="#cb19-257" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { viewof basisSelect<span class="op">,</span> viewof yearSelect<span class="op">,</span> popOriginPlot<span class="op">,</span></span>
+<span id="cb19-258"><a href="#cb19-258" aria-hidden="true" tabindex="-1"></a>  popDestinationPlot } <span class="im">from</span> <span class="st">"./embed-bycountry.qmd"</span></span>
+<span id="cb19-259"><a href="#cb19-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-260"><a href="#cb19-260" aria-hidden="true" tabindex="-1"></a>viewof basisSelect<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb20" data-startfrom="261" data-source-offset="-136"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 260;"><span id="cb20-261"><a href="#cb20-261" aria-hidden="true" tabindex="-1"></a>viewof yearSelect<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb21" data-startfrom="263" data-source-offset="-156"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 262;"><span id="cb21-263"><a href="#cb21-263" aria-hidden="true" tabindex="-1"></a>popOriginPlot<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb22" data-startfrom="264" data-source-offset="-171"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 263;"><span id="cb22-264"><a href="#cb22-264" aria-hidden="true" tabindex="-1"></a>popDestinationPlot<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="net-flow-indicators" class="level2">
+<h2 class="anchored" data-anchor-id="net-flow-indicators">Net flow indicators</h2>
+<p>Also of interest are these two indicators:</p>
+<ul>
+<li><code>MENF.5T8</code>: “Net flow of internationally mobile students (inbound - outbound), both sexes (number)”</li>
+<li><code>MENFR.5T8</code>: “Net flow ratio of internationally mobile students (inbound - outbound), both sexes (%)”</li>
+</ul>
+<p>Let’s see whether countries that have a net flow one way or the other tend to rank highly or lowly on the Human Development Index.</p>
+<p>First we need to grab those two indicators and tidy them up:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>national_data <span class="sc">%&gt;%</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(INDICATOR_ID <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"MENF.5T8"</span>, <span class="st">"MENFR.5T8"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(indicator_origin_map, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"COUNTRY_ID"</span> <span class="ot">=</span> <span class="st">"country_code"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">indicator =</span> <span class="fu">recode</span>(INDICATOR_ID.x,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MENF.5T8"</span> <span class="ot">=</span> <span class="st">"flow_value"</span>,</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"MENFR.5T8"</span> <span class="ot">=</span> <span class="st">"flow_ratio"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> indicator, <span class="at">values_from =</span> VALUE) <span class="sc">%&gt;%</span> </span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">year =</span> YEAR, continent, <span class="at">country_code =</span> COUNTRY_ID, country_name,</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    flow_value, flow_ratio, <span class="at">magnitude =</span> MAGNITUDE, <span class="at">qualifier =</span> QUALIFIER) <span class="ot">-&gt;</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>netflows</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Let’s also bring Human Development Index data in to compare against. <a href="https://ourworldindata.org/human-development-index">Our World in Data</a> has the tidiest version of this:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># from https://hdr.undp.org/en/indicators/137506</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co"># via https://ourworldindata.org/human-development-index</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># but not iso3c codes!</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"hdi-owid.csv"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_names</span>(<span class="fu">c</span>(<span class="st">"country_name"</span>, <span class="st">"country_code"</span>, <span class="st">"year"</span>, <span class="st">"hdi"</span>)) <span class="ot">-&gt;</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>hdi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stderr">
+<pre><code>Rows: 5001 Columns: 4
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (2): Entity, Code
+dbl (2): Year, Human Development Index (UNDP)
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># join the net flow data with owid hdi data</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>netflows <span class="sc">%&gt;%</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(hdi, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"country_code"</span>, <span class="st">"year"</span>), <span class="at">suffix =</span> <span class="fu">c</span>(<span class="st">".uis"</span>, <span class="st">".owid"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">country_name =</span> <span class="fu">coalesce</span>(country_name.uis, country_name.owid)) <span class="sc">%&gt;%</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, continent, country_code, country_name, flow_value, flow_ratio,</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  hdi) <span class="ot">-&gt;</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>netflows_hdi</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>netflows_hdi <span class="sc">%&gt;%</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(flow_ratio), <span class="sc">!</span><span class="fu">is.na</span>(hdi)) <span class="sc">%&gt;%</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">flow_sign =</span> <span class="fu">if_else</span>(flow_ratio <span class="sc">&gt;=</span> <span class="dv">0</span>,</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Net gain of students"</span>,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Net loss of students"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(.) <span class="sc">+</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(<span class="at">x =</span> hdi, <span class="at">y =</span> flow_ratio, <span class="at">colour =</span> flow_sign) <span class="sc">+</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">unname</span>(<span class="fu">colours_360</span>(<span class="st">"blues"</span>))) <span class="sc">+</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(year)) <span class="sc">+</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">100</span>, <span class="dv">100</span>)) <span class="sc">+</span></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme</span>(</span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"top"</span>,</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>) <span class="sc">+</span></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">labs</span>(</span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="st">"Human development index"</span>,</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="st">"Net student flow (%)"</span>,</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">colour =</span> <span class="st">"Net flow"</span>)</span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>  }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stderr">
+<pre><code>Warning: Removed 25 rows containing missing values (geom_point).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/vishdi-1.png" class="img-fluid" width="672"></p>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>netflows_hdi <span class="sc">%&gt;%</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># filter out missing data for ojs transpose()</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(flow_ratio), <span class="sc">!</span><span class="fu">is.na</span>(hdi)) <span class="sc">%&gt;%</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, country_name, flow_ratio, hdi) <span class="sc">%&gt;%</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"netflow-ratios.csv"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ojs_define</span>(<span class="at">netflows =</span> .)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>So here’s what our net flows look like interactively (hover for a second to see country info):</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb30" data-startfrom="348" data-source-offset="-0"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 347;"><span id="cb30-348"><a href="#cb30-348" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {viewof flowYearSelect<span class="op">,</span> netflowScatterChart} <span class="im">from</span></span>
+<span id="cb30-349"><a href="#cb30-349" aria-hidden="true" tabindex="-1"></a>  <span class="st">"./embed-netflow-scatter.qmd"</span></span>
+<span id="cb30-350"><a href="#cb30-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-351"><a href="#cb30-351" aria-hidden="true" tabindex="-1"></a>viewof flowYearSelect<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb31" data-startfrom="352" data-source-offset="-113"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 351;"><span id="cb31-352"><a href="#cb31-352" aria-hidden="true" tabindex="-1"></a>netflowScatterChart<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div>
+<div id="ojs-cell-2-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<p>It seems that a <em>subset</em> of high-HDI countries (not all) are the ones that tend to receive students.</p>
+</section>
+<section id="net-flow-map" class="level2">
+<h2 class="anchored" data-anchor-id="net-flow-map">Net flow map</h2>
+<p>These indicators tell us the net flow in or out of any given country, but I’d really like to know the net flow across any <em>pair</em> of countries. Let’s return to the country-to-country data, <code>national_data_joined</code>, and try to work that out.</p>
+<p>First, let’s get the spatial data (country centroids) needed to make a map. I first used <code>{rnaturalearth}</code> for this, but I found <code>CoordinateCleaner</code> (which uses the CIA Fact Book) to be considerably more complete:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(countryref)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>countryref <span class="sc">%&gt;%</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">is.na</span>(source)) <span class="sc">%&gt;%</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">country_code =</span> iso3, centroid.lat, centroid.lon) <span class="sc">%&gt;%</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"centroid.lat"</span>, <span class="st">"centroid.lon"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(country_code, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>) <span class="ot">-&gt;</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>boundaries</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Let’s check against all the countries in our data to ensure we’re not missing any centroids. ::: {.cell}</p>
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  national_data_joined <span class="sc">%&gt;%</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"origin_"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rename_with</span>(<span class="sc">~</span> <span class="fu">str_replace</span>(.x, <span class="st">"origin_"</span>, <span class="st">""</span>)),</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  national_data_joined <span class="sc">%&gt;%</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"dest_"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rename_with</span>(<span class="sc">~</span> <span class="fu">str_replace</span>(.x, <span class="st">"dest_"</span>, <span class="st">""</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(country_code, country_name, continent) <span class="sc">%&gt;%</span></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(country_code)) <span class="ot">-&gt;</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>country_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<p>:::</p>
+<p>Looks like we’re missing just one: pre-secession Sudan (<code>XDN</code>). ::: {.cell}</p>
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setdiff</span>(country_list<span class="sc">$</span>country_code, boundaries<span class="sc">$</span>country_code) <span class="sc">%&gt;%</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  { <span class="fu">filter</span>(country_list, country_code <span class="sc">%in%</span> .) } <span class="sc">%&gt;%</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="cn">Inf</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  country_code country_name          continent
+  &lt;chr&gt;        &lt;chr&gt;                 &lt;chr&gt;    
+1 XDN          Sudan (pre-secession) Africa   </code></pre>
+</div>
+<p>:::</p>
+<p>I’ll add it manually (we don’t need the centroids to be too precise). I’ve also dropped a “null” point from this dataset labelled <code>NUL</code>:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>boundaries <span class="sc">%&gt;%</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(<span class="fu">tibble</span>(</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">country_code =</span> <span class="st">"XDN"</span>,</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">geometry =</span> <span class="fu">st_sfc</span>(<span class="fu">st_point</span>(<span class="fu">c</span>(<span class="fl">12.76555</span>, <span class="fl">29.91269</span>))))) <span class="sc">%&gt;%</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(country_code <span class="sc">!=</span> <span class="st">"NUL"</span>) <span class="ot">-&gt;</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>country_centroids</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="aside-country-pair-net-flows" class="level3">
+<h3 class="anchored" data-anchor-id="aside-country-pair-net-flows">Aside: country-pair net flows</h3>
+<p>I’d been hoping to simplify any network visualisation of student flows by only showing the net flow between any two countries.</p>
+<p>Unfortunately, the data isn’t quite good enough for this. The below code pivots the network of student flows to try and calculate net flow, but there’s enough data missing that you’re losing a large part of it by requiring both sides (in other words, if either country’s departing flow is <code>NA</code>, so is the net flow).</p>
+<p>Nevertheless, the code is below for reproduction purposes!</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>national_data_joined <span class="sc">%&gt;%</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, <span class="at">origin =</span> origin_country_code, <span class="at">dest =</span> dest_country_code,</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    value, magnitude, qualifier) <span class="sc">%&gt;%</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(origin), <span class="sc">!</span><span class="fu">is.na</span>(dest)) <span class="sc">%&gt;%</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># now create a two-country key and direction for the pivot</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">direction =</span> <span class="fu">if_else</span>(origin <span class="sc">&lt;</span> dest, <span class="st">"toB"</span>, <span class="st">"toA"</span>),</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">pairkey =</span> <span class="fu">paste</span>(<span class="fu">pmin</span>(origin, dest), <span class="fu">pmax</span>(origin, dest), <span class="at">sep =</span> <span class="st">"_"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">id_cols =</span> <span class="fu">c</span>(pairkey, year), <span class="at">names_from =</span> direction,</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> <span class="fu">c</span>(value, magnitude, qualifier)) <span class="sc">%&gt;%</span></span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(pairkey, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"countryA"</span>, <span class="st">"countryB"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># ditch the extra country columns</span></span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, countryA, countryB,</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">starts_with</span>(<span class="st">"value"</span>),</span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">starts_with</span>(<span class="st">"magnitude"</span>),</span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">starts_with</span>(<span class="st">"qualifier"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># calculate net flow</span></span>
+<span id="cb37-19"><a href="#cb37-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb37-20"><a href="#cb37-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">netflow =</span> <span class="fu">abs</span>(value_toB <span class="sc">-</span> value_toA),</span>
+<span id="cb37-21"><a href="#cb37-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">net_destination =</span> <span class="fu">if_else</span>(</span>
+<span id="cb37-22"><a href="#cb37-22" aria-hidden="true" tabindex="-1"></a>      value_toB <span class="sc">&gt;</span> value_toA,</span>
+<span id="cb37-23"><a href="#cb37-23" aria-hidden="true" tabindex="-1"></a>      countryB,</span>
+<span id="cb37-24"><a href="#cb37-24" aria-hidden="true" tabindex="-1"></a>      countryA)) <span class="sc">%&gt;%</span></span>
+<span id="cb37-25"><a href="#cb37-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"tidy-countrypair-netflows.csv"</span>)) <span class="ot">-&gt;</span></span>
+<span id="cb37-26"><a href="#cb37-26" aria-hidden="true" tabindex="-1"></a>countrypair_netflows</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="flow-maps" class="level3">
+<h3 class="anchored" data-anchor-id="flow-maps">Flow maps</h3>
+<p>Let’s return to showing <em>all</em> the student flows. This will be messy, but some judicious use of opacity might make things clearer.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># bring the country centroid and hdi info in and create lines between countries</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="co"># (this is a bit colvoluted but was the only performant solution i could find to</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="co"># creating two-point linestrings)</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="co"># (also note that {CoordinateCleaner}'s points appear to be Y/X rather than X/Y.</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="co"># this code is a little weird to read as a result)</span></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>national_data_joined <span class="sc">%&gt;%</span></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(country_centroids,</span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"origin_country_code"</span> <span class="ot">=</span> <span class="st">"country_code"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(<span class="fu">select</span>(hdi, <span class="sc">-</span>country_name),</span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"year"</span>, <span class="st">"origin_country_code"</span> <span class="ot">=</span> <span class="st">"country_code"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">origin_pt =</span> geometry, <span class="at">origin_hdi =</span> hdi) <span class="sc">%&gt;%</span></span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(country_centroids,</span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"dest_country_code"</span> <span class="ot">=</span> <span class="st">"country_code"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(<span class="fu">select</span>(hdi, <span class="sc">-</span>country_name),</span>
+<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"year"</span>, <span class="st">"dest_country_code"</span> <span class="ot">=</span> <span class="st">"country_code"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">dest_pt =</span> geometry, <span class="at">dest_hdi =</span> hdi) <span class="sc">%&gt;%</span></span>
+<span id="cb38-19"><a href="#cb38-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># extract pt coordinates out to cols</span></span>
+<span id="cb38-20"><a href="#cb38-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">st_is_empty</span>(origin_pt), <span class="sc">!</span><span class="fu">st_is_empty</span>(dest_pt)) <span class="sc">%&gt;%</span></span>
+<span id="cb38-21"><a href="#cb38-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb38-22"><a href="#cb38-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">origin_coord =</span> <span class="fu">st_coordinates</span>(origin_pt),</span>
+<span id="cb38-23"><a href="#cb38-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">dest_coord =</span> <span class="fu">st_coordinates</span>(dest_pt),</span>
+<span id="cb38-24"><a href="#cb38-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># (note flipping X and Y because {CoordinateCleaner}'s points are around the</span></span>
+<span id="cb38-25"><a href="#cb38-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># wrong way)</span></span>
+<span id="cb38-26"><a href="#cb38-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">origin_lat =</span> origin_coord[, <span class="st">"X"</span>],</span>
+<span id="cb38-27"><a href="#cb38-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">origin_lon =</span> origin_coord[, <span class="st">"Y"</span>],</span>
+<span id="cb38-28"><a href="#cb38-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">dest_lat =</span> dest_coord[, <span class="st">"X"</span>],</span>
+<span id="cb38-29"><a href="#cb38-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">dest_lon =</span> dest_coord[, <span class="st">"Y"</span>]) <span class="sc">%&gt;%</span></span>
+<span id="cb38-30"><a href="#cb38-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb38-31"><a href="#cb38-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">path =</span> <span class="fu">pmap</span>(</span>
+<span id="cb38-32"><a href="#cb38-32" aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(., origin_lon, origin_lat, dest_lon, dest_lat),</span>
+<span id="cb38-33"><a href="#cb38-33" aria-hidden="true" tabindex="-1"></a>      <span class="sc">~</span> <span class="fu">st_linestring</span>(<span class="fu">matrix</span>(<span class="fu">c</span>(..<span class="dv">1</span>, ..<span class="dv">2</span>, ..<span class="dv">3</span>, ..<span class="dv">4</span>), <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>))),</span>
+<span id="cb38-34"><a href="#cb38-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">path =</span> <span class="fu">st_sfc</span>(path)) <span class="ot">-&gt;</span></span>
+<span id="cb38-35"><a href="#cb38-35" aria-hidden="true" tabindex="-1"></a>flows_all_df</span>
+<span id="cb38-36"><a href="#cb38-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-37"><a href="#cb38-37" aria-hidden="true" tabindex="-1"></a>flows_all_df <span class="sc">%&gt;%</span></span>
+<span id="cb38-38"><a href="#cb38-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">ends_with</span>(<span class="st">"lon"</span>), <span class="sc">-</span><span class="fu">ends_with</span>(<span class="st">"lat"</span>), <span class="sc">-</span><span class="fu">ends_with</span>(<span class="st">"coord"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb38-39"><a href="#cb38-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>(<span class="at">crs =</span> <span class="fu">st_crs</span>(<span class="dv">4326</span>), <span class="at">sf_column_name =</span> <span class="st">"path"</span>) <span class="ot">-&gt;</span></span>
+<span id="cb38-40"><a href="#cb38-40" aria-hidden="true" tabindex="-1"></a>flows_all</span>
+<span id="cb38-41"><a href="#cb38-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-42"><a href="#cb38-42" aria-hidden="true" tabindex="-1"></a><span class="co"># write out to disk for gis work (not version controlled)</span></span>
+<span id="cb38-43"><a href="#cb38-43" aria-hidden="true" tabindex="-1"></a><span class="fu">st_write</span>(flows_all, <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"flows_all.gpkg"</span>), <span class="at">delete_dsn =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stderr">
+<pre><code>Warning in clean_columns(as.data.frame(obj), factorsAsCharacter): Dropping
+column(s) origin_pt,dest_pt of class(es) sfc_POINT;sfc,sfc_POINT;sfc</code></pre>
+</div>
+<div class="cell-output-stdout">
+<pre><code>Deleting source `/Users/jgol0005/Code/report-global-education/data/flows_all.gpkg' using driver `GPKG'
+Writing layer `flows_all' to data source 
+  `/Users/jgol0005/Code/report-global-education/data/flows_all.gpkg' using driver `GPKG'
+Writing 408896 features with 12 fields and geometry type Line String.</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="grouped-country-flows" class="level2">
+<h2 class="anchored" data-anchor-id="grouped-country-flows">Grouped country flows</h2>
+<p>Let’s group our countries by HDI and work out the flows between those groups each year</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>flows_all <span class="sc">%&gt;%</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(origin_hdi), <span class="sc">!</span><span class="fu">is.na</span>(dest_hdi)) <span class="sc">%&gt;%</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># bin the hdis</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">origin_hdi_bin =</span> <span class="fu">cut</span>(origin_hdi, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.7</span>, <span class="fl">0.85</span>, <span class="dv">1</span>),</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Low"</span>, <span class="st">"Medium"</span>, <span class="st">"High"</span>)),</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">dest_hdi_bin =</span> <span class="fu">cut</span>(dest_hdi, <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.7</span>, <span class="fl">0.85</span>, <span class="dv">1</span>),</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Low"</span>, <span class="st">"Medium"</span>, <span class="st">"High"</span>))) <span class="ot">-&gt;</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>flows_binned</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>flows_binned <span class="sc">%&gt;%</span></span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_drop_geometry</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, origin_hdi_bin, dest_hdi_bin, value) <span class="sc">%&gt;%</span></span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, origin_hdi_bin, dest_hdi_bin) <span class="sc">%&gt;%</span></span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">students =</span> <span class="fu">sum</span>(value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"netflows-hdigroups.csv"</span>)) <span class="ot">-&gt;</span></span>
+<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a>flows_hdigroups</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'year', 'origin_hdi_bin'. You can override
+using the `.groups` argument.</code></pre>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>flows_hdigroups <span class="sc">%&gt;%</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">between</span>(year, <span class="dv">2008</span>, <span class="dv">2017</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># get annual average</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(origin_hdi_bin, dest_hdi_bin) <span class="sc">%&gt;%</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_students =</span> <span class="fu">mean</span>(students, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">origin_hdi_bin =</span> <span class="fu">recode</span>(origin_hdi_bin,</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Low"</span> <span class="ot">=</span> <span class="st">"Low</span><span class="sc">\n</span><span class="st">(HDI less than 70%)"</span>,</span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Medium"</span> <span class="ot">=</span> <span class="st">"Medium</span><span class="sc">\n</span><span class="st">(HDI 70% to 85%)"</span>,</span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"High"</span> <span class="ot">=</span> <span class="st">"High</span><span class="sc">\n</span><span class="st">(HDI over 85%)"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(.) <span class="sc">+</span></span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">aes</span>(<span class="at">y =</span> avg_students, <span class="at">axis1 =</span> origin_hdi_bin, <span class="at">axis2 =</span> dest_hdi_bin) <span class="sc">+</span></span>
+<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_alluvium</span>(<span class="fu">aes</span>(<span class="at">fill =</span> dest_hdi_bin)) <span class="sc">+</span></span>
+<span id="cb43-17"><a href="#cb43-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_stratum</span>(</span>
+<span id="cb43-18"><a href="#cb43-18" aria-hidden="true" tabindex="-1"></a>        <span class="fu">aes</span>(<span class="at">fill =</span> dest_hdi_bin),</span>
+<span id="cb43-19"><a href="#cb43-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb43-20"><a href="#cb43-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_text</span>(<span class="at">stat =</span> <span class="st">"stratum"</span>, <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">after_stat</span>(stratum)),</span>
+<span id="cb43-21"><a href="#cb43-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">family =</span> <span class="st">"Body 360info"</span>, <span class="at">colour =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="fl">4.5</span>) <span class="sc">+</span></span>
+<span id="cb43-22"><a href="#cb43-22" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb43-23"><a href="#cb43-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_number_si</span>(<span class="at">accuracy =</span> <span class="fl">0.1</span>),</span>
+<span id="cb43-24"><a href="#cb43-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">sec.axis =</span> <span class="fu">dup_axis</span>(),</span>
+<span id="cb43-25"><a href="#cb43-25" aria-hidden="true" tabindex="-1"></a>        <span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.125</span>))) <span class="sc">+</span></span>
+<span id="cb43-26"><a href="#cb43-26" aria-hidden="true" tabindex="-1"></a>      <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb43-27"><a href="#cb43-27" aria-hidden="true" tabindex="-1"></a>        <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Low"</span> <span class="ot">=</span> <span class="st">"#10bd69"</span>, <span class="st">"Medium"</span> <span class="ot">=</span> <span class="st">"#2542b8"</span>, <span class="st">"High"</span> <span class="ot">=</span> <span class="st">"#fc4a12"</span>),</span>
+<span id="cb43-28"><a href="#cb43-28" aria-hidden="true" tabindex="-1"></a>        <span class="at">guide =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb43-29"><a href="#cb43-29" aria-hidden="true" tabindex="-1"></a>      <span class="co"># label origin/destination columns</span></span>
+<span id="cb43-30"><a href="#cb43-30" aria-hidden="true" tabindex="-1"></a>      <span class="fu">annotate_360_glasslight</span>(<span class="at">x =</span> <span class="dv">1</span>, <span class="at">y =</span> <span class="cn">Inf</span>, <span class="at">label =</span> <span class="st">"Origin&lt;br&gt;country"</span>,</span>
+<span id="cb43-31"><a href="#cb43-31" aria-hidden="true" tabindex="-1"></a>        <span class="at">vjust =</span> <span class="st">"inward"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb43-32"><a href="#cb43-32" aria-hidden="true" tabindex="-1"></a>      <span class="fu">annotate_360_glasslight</span>(<span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="cn">Inf</span>, <span class="at">label =</span> <span class="st">"Destination&lt;br&gt;country"</span>,</span>
+<span id="cb43-33"><a href="#cb43-33" aria-hidden="true" tabindex="-1"></a>        <span class="at">vjust =</span> <span class="st">"inward"</span>, <span class="at">fontface =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">7</span>) <span class="sc">+</span></span>
+<span id="cb43-34"><a href="#cb43-34" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_360</span>() <span class="sc">+</span></span>
+<span id="cb43-35"><a href="#cb43-35" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme</span>(</span>
+<span id="cb43-36"><a href="#cb43-36" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb43-37"><a href="#cb43-37" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb43-38"><a href="#cb43-38" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb43-39"><a href="#cb43-39" aria-hidden="true" tabindex="-1"></a>        <span class="co"># axis.ticks.y = element_line(),</span></span>
+<span id="cb43-40"><a href="#cb43-40" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.y.right =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb43-41"><a href="#cb43-41" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>),</span>
+<span id="cb43-42"><a href="#cb43-42" aria-hidden="true" tabindex="-1"></a>        <span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(<span class="at">family =</span> <span class="st">"Body 360info"</span>,</span>
+<span id="cb43-43"><a href="#cb43-43" aria-hidden="true" tabindex="-1"></a>          <span class="at">face =</span> <span class="st">"plain"</span>)</span>
+<span id="cb43-44"><a href="#cb43-44" aria-hidden="true" tabindex="-1"></a>      ) <span class="sc">+</span></span>
+<span id="cb43-45"><a href="#cb43-45" aria-hidden="true" tabindex="-1"></a>      <span class="fu">labs</span>(</span>
+<span id="cb43-46"><a href="#cb43-46" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Average number of visiting students per year"</span>,</span>
+<span id="cb43-47"><a href="#cb43-47" aria-hidden="true" tabindex="-1"></a>        <span class="at">title =</span> <span class="fu">toupper</span>(<span class="st">"Student flows 2008–2017"</span>),</span>
+<span id="cb43-48"><a href="#cb43-48" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="fu">paste</span>(</span>
+<span id="cb43-49"><a href="#cb43-49" aria-hidden="true" tabindex="-1"></a>          <span class="st">"Although students come from countries across the development spectrum,"</span>,</span>
+<span id="cb43-50"><a href="#cb43-50" aria-hidden="true" tabindex="-1"></a>          <span class="st">"they tend to visit **highly developed countries** to study."</span>,</span>
+<span id="cb43-51"><a href="#cb43-51" aria-hidden="true" tabindex="-1"></a>          <span class="at">sep =</span> <span class="st">"&lt;br&gt;"</span>),</span>
+<span id="cb43-52"><a href="#cb43-52" aria-hidden="true" tabindex="-1"></a>        <span class="at">caption =</span> <span class="fu">paste</span>(</span>
+<span id="cb43-53"><a href="#cb43-53" aria-hidden="true" tabindex="-1"></a>          <span class="st">"**CHART:** James Goldie, 360info"</span>,</span>
+<span id="cb43-54"><a href="#cb43-54" aria-hidden="true" tabindex="-1"></a>          <span class="st">"**DATA:** UN Institute of Statistics, Our World in Data"</span>,</span>
+<span id="cb43-55"><a href="#cb43-55" aria-hidden="true" tabindex="-1"></a>          <span class="at">sep =</span> <span class="st">"&lt;br&gt;"</span>))</span>
+<span id="cb43-56"><a href="#cb43-56" aria-hidden="true" tabindex="-1"></a>  } <span class="sc">%&gt;%</span></span>
+<span id="cb43-57"><a href="#cb43-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">save_360plot</span>(<span class="fu">here</span>(<span class="st">"out"</span>, <span class="st">"student-flows-hdigroups.png"</span>),</span>
+<span id="cb43-58"><a href="#cb43-58" aria-hidden="true" tabindex="-1"></a>    <span class="at">shape =</span> <span class="st">"square"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb43-59"><a href="#cb43-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">save_360plot</span>(<span class="fu">here</span>(<span class="st">"out"</span>, <span class="st">"student-flows-hdigroups.svg"</span>),</span>
+<span id="cb43-60"><a href="#cb43-60" aria-hidden="true" tabindex="-1"></a>    <span class="at">shape =</span> <span class="st">"square"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'origin_hdi_bin'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="cell-output-stdout">
+<pre><code># A tibble: 9 × 3
+  origin_hdi_bin             dest_hdi_bin avg_students
+  &lt;fct&gt;                      &lt;fct&gt;               &lt;dbl&gt;
+1 "Low\n(HDI less than 70%)" Low               107708.
+2 "Low\n(HDI less than 70%)" Medium            226533.
+3 "Low\n(HDI less than 70%)" High              619061.
+4 "Medium\n(HDI 70% to 85%)" Low                22779.
+5 "Medium\n(HDI 70% to 85%)" Medium            289125.
+6 "Medium\n(HDI 70% to 85%)" High             1049024.
+7 "High\n(HDI over 85%)"     Low                 8491.
+8 "High\n(HDI over 85%)"     Medium             59578.
+9 "High\n(HDI over 85%)"     High              693972.</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r cell-code code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">here</span>(<span class="st">"out"</span>, <span class="st">"student-flows-hdigroups.png"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="./Users/jgol0005/Code/report-global-education/out/student-flows-hdigroups.png" class="img-fluid" width="600"></p>
+</div>
+</div>
+
+
+
+</section>
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"import { viewof basisSelect, viewof yearSelect, popOriginPlot,\n  popDestinationPlot } from \"./embed-bycountry.qmd\"\n\nviewof basisSelect;\nviewof yearSelect;\n\npopOriginPlot;\npopDestinationPlot;"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"import {viewof flowYearSelect, netflowScatterChart} from\n  \"./embed-netflow-scatter.qmd\"\n\nviewof flowYearSelect;\nnetflowScatterChart;"}]}
+</script>
+<script type="module">
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+</body></html>

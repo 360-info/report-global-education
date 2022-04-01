@@ -98,7 +98,7 @@
 <h1 class="title">NET STUDENT FLOW</h1>
 </header>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Chart: James Goldie, 360info. Data: some other place</a></li><li><a href="#tabset-1-2">Use + Remix</a></li><li><a href="#tabset-1-3">Notes</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Chart: James Goldie, 360info. Data: UIS/OWID</a></li><li><a href="#tabset-1-2">Use + Remix</a></li><li><a href="#tabset-1-3">Notes</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="parasubtitle">
@@ -108,7 +108,7 @@
 <div class="sourceCode hidden" id="cb1" data-startfrom="19" data-source-offset="-0"><pre class="sourceCode js cell-code code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 18;"><span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>viewof flowYearSelect <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1998</span><span class="op">,</span> <span class="dv">2017</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Year"</span>})<span class="op">;</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">// load the flow data; filter by the year</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>netflows <span class="op">=</span> <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"data/netflows.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>netflows <span class="op">=</span> <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"data/netflow-ratios.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">;</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>filteredNetFlows <span class="op">=</span> netflows<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(row) {</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> row<span class="op">.</span><span class="at">year</span> <span class="op">==</span> flowYearSelect <span class="op">&amp;&amp;</span> row<span class="op">.</span><span class="at">flow_ratio</span> <span class="op">&gt;</span> <span class="op">-</span><span class="dv">100</span><span class="op">;</span></span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -197,13 +197,8 @@
 </div>
 </div>
 <div id="tabset-1-2">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png" class="img-fluid"></p>
-<p></p><figcaption aria-hidden="true"><a href="https://creativecommons.org/licenses/by/4.0"></a></figcaption><p></p>
-</figure>
-</div>
-<p>These charts, as well as the analyses that underpin them, are available under a <a href="https://creativecommons.org/licenses/by/4.0">Creative Commons Attribution 4.0 licence</a>.</p>
+<p>These charts, as well as the analyses that underpin them, are available under a <a href="https://creativecommons.org/licenses/by/4.0"><strong>Creative Commons Attribution 4.0 licence</strong></a>.</p>
+<p>Please acknowledge <a href="https://360info.org">360info</a>, <a href="http://data.uis.unesco.org">UIS</a> and <a href="https://ourworldindata.org/human-development-index">OWID</a> when you use these charts and data.</p>
 <h4 id="embed-this-chart-in-your-article" class="anchored">Embed this chart in your article</h4>
 <p>Copy and paste the following code:</p>
 <div class="embedcode">
@@ -212,8 +207,8 @@
 <h4 id="get-the-data-and-code" class="anchored">Get the data and code</h4>
 <p>Visit the <a href="https://github.com/360-info/report-global-education/tree/main/data">GitHub repository</a> to:</p>
 <ul>
-<li><a href="https://github.com/360-info/report-global-education/tree/main/data">download the data</a></li>
-<li><a href="https://github.com/360-info/report-global-education">recreate or remix the chart</a></li>
+<li><a href="https://github.com/360-info/report-global-education/tree/main/data"><strong>Download the data</strong></a></li>
+<li><a href="https://github.com/360-info/report-global-education"><strong>Recreate or remix the chart</strong></a></li>
 </ul>
 </div>
 <div id="tabset-1-3">
@@ -224,7 +219,7 @@
 </div>
 
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"viewof flowYearSelect = Inputs.range([1998, 2017], {step: 1, label: \"Year\"});\n\n// load the flow data; filter by the year\nnetflows = await FileAttachment(\"data/netflows.csv\").csv({ typed: true });\nfilteredNetFlows = netflows.filter(function(row) {\n  return row.year == flowYearSelect && row.flow_ratio > -100;\n});"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"netflowScatterChart = Plot.plot({\n  marks: [\n    // horizontal line at y = 0\n    Plot.ruleY([0]),\n    // labels for +ive/-ive\n    Plot.text([[0.5, 10]], {\n      text: [\"Gaining students\"],\n      fontSize: 24,\n      fill: \"#666666\",\n      fillOpacity: 0.2\n    }),\n    Plot.text([[0.5, -10]], {\n      text: [\"Losing students\"],\n      fontSize: 24,\n      fill: \"#666666\",\n      fillOpacity: 0.2\n    }),\n    // country data: points and labels\n    // Plot.text(filteredNetFlows, {\n    //   x: \"hdi\",\n    //   y: \"flow_ratio\",\n    //   text: \"country_name\",\n    //   textAnchdor: \"end\",\n    //   dx: -25,\n    //   fill: d => d.flow_ratio > 0,\n    //   fillOpacity: 0.3\n    // }),\n    Plot.dot(filteredNetFlows, {\n      x: \"hdi\",\n      y: \"flow_ratio\",\n      fill: d => d.flow_ratio > 0,\n      stroke: d => d.flow_ratio > 0,\n      title: d => `Country: ${d.country_name}`\n    })\n  ],\n  x: {\n    label: \"Human Development Index →\",\n    labelOffset: 45,\n  },\n  y: {\n    label: \"↑ Student Net Flow Ratio (%)\",\n  },\n  color: {\n    range: [\"#d73027\", \"#4575b4\"]\n  },\n  width: 575,\n  marginLeft: 75,\n  marginTop: 45,\n  marginBottom: 45,\n  style: {\n    fontFamily: \"'Libre Franklin'\",\n    fontSize: \"16px\"\n  }\n});"},{"methodName":"interpretQuiet","source":"shinyInput('flowYearSelect')"}]}
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"viewof flowYearSelect = Inputs.range([1998, 2017], {step: 1, label: \"Year\"});\n\n// load the flow data; filter by the year\nnetflows = await FileAttachment(\"data/netflow-ratios.csv\").csv({ typed: true });\nfilteredNetFlows = netflows.filter(function(row) {\n  return row.year == flowYearSelect && row.flow_ratio > -100;\n});"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"netflowScatterChart = Plot.plot({\n  marks: [\n    // horizontal line at y = 0\n    Plot.ruleY([0]),\n    // labels for +ive/-ive\n    Plot.text([[0.5, 10]], {\n      text: [\"Gaining students\"],\n      fontSize: 24,\n      fill: \"#666666\",\n      fillOpacity: 0.2\n    }),\n    Plot.text([[0.5, -10]], {\n      text: [\"Losing students\"],\n      fontSize: 24,\n      fill: \"#666666\",\n      fillOpacity: 0.2\n    }),\n    // country data: points and labels\n    // Plot.text(filteredNetFlows, {\n    //   x: \"hdi\",\n    //   y: \"flow_ratio\",\n    //   text: \"country_name\",\n    //   textAnchdor: \"end\",\n    //   dx: -25,\n    //   fill: d => d.flow_ratio > 0,\n    //   fillOpacity: 0.3\n    // }),\n    Plot.dot(filteredNetFlows, {\n      x: \"hdi\",\n      y: \"flow_ratio\",\n      fill: d => d.flow_ratio > 0,\n      stroke: d => d.flow_ratio > 0,\n      title: d => `Country: ${d.country_name}`\n    })\n  ],\n  x: {\n    label: \"Human Development Index →\",\n    labelOffset: 45,\n  },\n  y: {\n    label: \"↑ Student Net Flow Ratio (%)\",\n  },\n  color: {\n    range: [\"#d73027\", \"#4575b4\"]\n  },\n  width: 575,\n  marginLeft: 75,\n  marginTop: 45,\n  marginBottom: 45,\n  style: {\n    fontFamily: \"'Libre Franklin'\",\n    fontSize: \"16px\"\n  }\n});"},{"methodName":"interpretQuiet","source":"shinyInput('flowYearSelect')"}]}
 </script>
 <script type="module">
 window._ojs.paths.runtimeToDoc = "../..";
