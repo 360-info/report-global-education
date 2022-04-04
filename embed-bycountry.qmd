@@ -206,6 +206,8 @@ two-way flow of international students through a
 selected country for a selected year." width="550"
 height="850" scrolling="no" style="border:none;"></iframe>
 ```
+
+This content is subject to [360info's Terms of Use](https://newshub.360info.org/page/terms).
 :::
 
 #### Get the data and code
