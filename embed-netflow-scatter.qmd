@@ -93,7 +93,7 @@ netflowScatterChart = Plot.plot({
   color: {
     range: ["#d73027", "#4575b4"]
   },
-  width: 575,
+  width: 475,
   marginLeft: 75,
   marginTop: 45,
   marginBottom: 45,
@@ -124,9 +124,9 @@ blue, are receiving more students from other countries than
 they send out." width="550" height="560" scrolling="no"
 style="border:none;"></iframe>
 ```
+:::
 
 This content is subject to [360info's Terms of Use](https://newshub.360info.org/page/terms).
-:::
 
 #### Get the data and code
 

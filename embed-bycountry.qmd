@@ -81,7 +81,7 @@ commaFormat = d3.format(",.0f");
 
 popOriginPlot =
   filteredPopularOrigins.length == 0 ?
-  html`<div style="width:475px;height:280px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>into ${basisSelect}</strong> in <strong>${yearSelect}</strong>.</p><div>` :
+  html`<div style="width:100%;height:280px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>into ${basisSelect}</strong> in <strong>${yearSelect}</strong>.</p><div>` :
   Plot.plot({
     marks: [
       Plot.barX(filteredPopularOrigins, {
@@ -121,8 +121,8 @@ popOriginPlot =
       ariaDescription: `Vertical axis: top 10 origin countries, ordered by popularity. All other origin countries sending students to ${basisSelect} are lumped together as 'other countries'`
     },
     color: { scheme: "ylgnbu", type: "sqrt" },
-    width: 575,
-    marginLeft: 200,
+    width: 450,
+    marginLeft: 175,
     marginRight: 65,
     marginBottom: 45,
     style: {
@@ -137,7 +137,7 @@ popOriginPlot =
 
 popDestinationPlot = 
   filteredPopularDestinations.length == 0 ?
-  html`<div style="width:475px;height:280px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>out of ${basisSelect}</strong> in <strong>${yearSelect}</strong>.</p><div>` :
+  html`<div style="width:100%;height:280px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>out of ${basisSelect}</strong> in <strong>${yearSelect}</strong>.</p><div>` :
   Plot.plot({
     marks: [
       Plot.barX(filteredPopularDestinations, {
@@ -177,8 +177,8 @@ popDestinationPlot =
       ariaDescription: `Vertical axis: top 10 destination countries, ordered by popularity. All other destination countries receiving students from ${basisSelect} are lumped together as 'other countries'`
     },
     color: { scheme: "ylorrd", type: "sqrt" },
-    width: 575,
-    marginLeft: 200,
+    width: 450,
+    marginLeft: 175,
     marginRight: 65,
     marginBottom: 45,
     style: {
@@ -206,9 +206,9 @@ two-way flow of international students through a
 selected country for a selected year." width="550"
 height="850" scrolling="no" style="border:none;"></iframe>
 ```
+:::
 
 This content is subject to [360info's Terms of Use](https://newshub.360info.org/page/terms).
-:::
 
 #### Get the data and code
 
