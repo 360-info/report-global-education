@@ -6,6 +6,20 @@ theme: none
 css: style/embed.css
 execute:
   echo: false
+format:
+  html:
+    header-includes: |
+      <!-- Global site tag (gtag.js) - Google Analytics (no cookies!) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3E86R5NVXZ"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3E86R5NVXZ', {
+          client_storage: 'none'
+        });
+      </script>
 ---
 
 ::: {.panel-tabset}
@@ -76,7 +90,8 @@ popOriginPlot =
         fill: "value_lumped",
         sort: {y: "x", reverse: true},
         ariaLabel: "origin_country_lumped",
-        ariaDescription: d => `${d.origin_country_lumped} sent ${d.value_lumped} students.`
+        ariaDescription: d => `${d.origin_country_lumped} sent ${d.value_lumped} students.`,
+        title: d => `${d.origin_country_lumped}: ${d.value_lumped} students`
       }),
       // label for value on left
       // Plot.text(filteredPopularOrigins, {
@@ -131,7 +146,8 @@ popDestinationPlot =
         fill: "value_lumped",
         sort: {y: "x", reverse: true},
         ariaLabel: "dest_country_lumped",
-        ariaDescription: d => `${d.origin_country_lumped} received ${d.value_lumped} students.`
+        ariaDescription: d => `${d.origin_country_lumped} received ${d.value_lumped} students.`,
+        title: d => `${d.origin_country_lumped}: ${d.value_lumped} students`
       }),
       // label for value on right
       // Plot.text(filteredPopularDestinations, {
