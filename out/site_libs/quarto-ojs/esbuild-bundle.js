@@ -236,8 +236,8 @@ function T(e2, t2, n2) {
 }
 k.amd = {};
 var U = T("d3", "7.0.1", "dist/d3.min.js");
-var q = T("@observablehq/inputs", "0.9.1", "dist/inputs.min.js");
-var M = T("@observablehq/plot", "0.2.0", "dist/plot.umd.min.js");
+var q = T("@observablehq/inputs", "0.10.4", "dist/inputs.min.js");
+var M = T("@observablehq/plot", "0.4.2", "dist/plot.umd.min.js");
 var S = T("@observablehq/graphviz", "0.2.1", "dist/graphviz.min.js");
 var _ = T("@observablehq/highlight.js", "2.0.0", "highlight.min.js");
 var D = T("@observablehq/katex", "0.11.1", "dist/katex.min.js");

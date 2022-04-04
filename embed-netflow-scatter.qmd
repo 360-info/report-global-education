@@ -36,13 +36,15 @@ netflowScatterChart = Plot.plot({
       text: ["Gaining students"],
       fontSize: 24,
       fill: "#666666",
-      fillOpacity: 0.2
+      fillOpacity: 0.2,
+      ariaHidden: true
     }),
     Plot.text([[0.5, -10]], {
       text: ["Losing students"],
       fontSize: 24,
       fill: "#666666",
-      fillOpacity: 0.2
+      fillOpacity: 0.2,
+      ariaHidden: true
     }),
     // country data: points and labels
     // Plot.text(filteredNetFlows, {
@@ -59,15 +61,20 @@ netflowScatterChart = Plot.plot({
       y: "flow_ratio",
       fill: d => d.flow_ratio > 0,
       stroke: d => d.flow_ratio > 0,
-      title: d => `Country: ${d.country_name}`
+      title: d => `Country: ${d.country_name}`,
+      ariaDescription: d => `${d.country_name} had a Human Development Index of ${d.hdi} and a net student flow ratio of ${d.flow_ratio} percent.`
     })
   ],
   x: {
     label: "Human Development Index →",
+    ariaLabel: "X axis",
+    ariaDescription: "Horizontal axis: Human Development Index, increasing to the right",
     labelOffset: 45,
   },
   y: {
     label: "↑ Student Net Flow Ratio (%)",
+    ariaLabel: "Y axis",
+    ariaDescription: "Vertical axis: Student Net Flow Ratio. Positive ratios above the line indicate a country gained students; negative ratios below the line indicate a country lost students.",
   },
   color: {
     range: ["#d73027", "#4575b4"]

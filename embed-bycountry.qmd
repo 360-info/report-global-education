@@ -44,7 +44,6 @@ destinationByCountry = popDestinations.filter(function(row) {
   return row.origin_country_name == basisSelect;
 });
 
-
 // compute a fixed x range for a given country across all years, in and out
 countryMax = d3.max([
   d3.max(originByCountry, d => d.value_lumped),
@@ -75,7 +74,9 @@ popOriginPlot =
         y: "origin_country_lumped",
         x: "value_lumped",
         fill: "value_lumped",
-        sort: {y: "x", reverse: true}
+        sort: {y: "x", reverse: true},
+        ariaLabel: "origin_country_lumped",
+        ariaDescription: d => `${d.origin_country_lumped} sent ${d.value_lumped} students.`
       }),
       // label for value on left
       // Plot.text(filteredPopularOrigins, {
@@ -94,10 +95,16 @@ popOriginPlot =
     ],
     x: {
       label: "Number of incoming students →",
+      ariaLabel: "X axis",
+      ariaDescription: "Horizontal axis: number of incoming students, increasing to the right",
       labelOffset: 45,
       domain: [0, countryMax]
     },
-    y: { label: "" },
+    y: {
+      label: "",
+      ariaLabel: "Y axis",
+      ariaDescription: `Vertical axis: top 10 origin countries, ordered by popularity. All other origin countries sending students to ${basisSelect} are lumped together as 'other countries'`
+    },
     color: { scheme: "ylgnbu", type: "sqrt" },
     width: 575,
     marginLeft: 200,
@@ -122,7 +129,9 @@ popDestinationPlot =
         y: "dest_country_lumped",
         x: "value_lumped",
         fill: "value_lumped",
-        sort: {y: "x", reverse: true}
+        sort: {y: "x", reverse: true},
+        ariaLabel: "dest_country_lumped",
+        ariaDescription: d => `${d.origin_country_lumped} received ${d.value_lumped} students.`
       }),
       // label for value on right
       // Plot.text(filteredPopularDestinations, {
@@ -141,10 +150,16 @@ popDestinationPlot =
     ],
     x: {
       label: "Number of outgoing students →",
+      ariaLabel: "X axis",
+      ariaDescription: "Horizontal axis: number of outgoing students, increasing to the right",
       labelOffset: 45,
       domain: [0, countryMax]
     },
-    y: { label: "" },
+    y: {
+      label: "",
+      ariaLabel: "Y axis",
+      ariaDescription: `Vertical axis: top 10 destination countries, ordered by popularity. All other destination countries receiving students from ${basisSelect} are lumped together as 'other countries'`
+    },
     color: { scheme: "ylorrd", type: "sqrt" },
     width: 575,
     marginLeft: 200,

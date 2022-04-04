@@ -42,6 +42,17 @@ Now, render the `.qmd` files to the `/out` directory with:
 quarto render
 ```
 
+### Note on accessibility
+
+The interactive charts in the [`/out`](out) folder use a newer version of the [Observable Plot](https://github.com/observablehq/plot) library than the one currently bundled with Quarto. In particular, Observable Plot 0.4.1 [supports enhanced accessibility features](https://github.com/observablehq/plot/blob/main/CHANGELOG.md#041) for users using screen readers.
+
+If you rebuild the charts using the current Quarto release, these accessibility features will not be present (although the chart will otherwise render). To build using the newer version of Observable Plot:
+
+* [install the development version of Quarto](https://github.com/quarto-dev/quarto-cli#development-version), and
+* [modify Quarto's OJS bundle to use Observable Plot 0.4.1 or higher](https://github.com/quarto-dev/quarto-cli/issues/435#issuecomment-1076942406).
+
+These steps aren't required if you're simply serving the version of these charts in the [`/out`](out) folder!
+
 ## ❓ Help
 
 If you find any problems with our analysis or charts, please feel free to [create an issue](https://github.com/360-info/report-global-education/issues/new)!
