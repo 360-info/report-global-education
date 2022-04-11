@@ -110,8 +110,9 @@ popOriginPlot =
     ],
     x: {
       label: "Number of incoming students →",
+      tickFormat: ".1s",
       ariaLabel: "X axis",
-      ariaDescription: "Horizontal axis: number of incoming students, increasing to the right",
+      ariaDescription: "Horizontal axis: number of incoming students, increasing to the right`",
       labelOffset: 45,
       domain: [0, countryMax]
     },
@@ -166,6 +167,7 @@ popDestinationPlot =
     ],
     x: {
       label: "Number of outgoing students →",
+      tickFormat: ".1s",
       ariaLabel: "X axis",
       ariaDescription: "Horizontal axis: number of outgoing students, increasing to the right",
       labelOffset: 45,

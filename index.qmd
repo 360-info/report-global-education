@@ -34,7 +34,9 @@ We'll use their [Bulk Data Download Service](https://apiportal.uis.unesco.org/bd
 
 ```{r}
 #| label: import
+library(pins)
 
+# create /data/.cache
 data_cache <- here("data", ".cache")
 dir.create(data_cache, showWarnings = FALSE)
 
