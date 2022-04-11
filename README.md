@@ -2,6 +2,8 @@
 
 These charts and analysis track the flow of students toward a small group of countries using data from the [UNESCO Institute of Statistics](http://data.uis.unesco.org) and [Our World in Data](https://ourworldindata.org/human-development-index).
 
+![Alluvial chart of the average flow of students between economies rated Low, Medium and High on the Human Development Index between 2008 and 2017.](https://github.com/360-info/report-global-education/blob/main/out/student-flows-hdigroups.png?raw=true)
+
 ## ♻️ Use + Remix rights
 
 ![[Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0)](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by.png)
