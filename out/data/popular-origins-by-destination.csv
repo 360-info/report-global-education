@@ -18007,6 +18007,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Bahrain,Palestine,184,- - - -
 2019,Bahrain,Egypt,555,- - - -
 2019,Bahrain,Saudi Arabia,1898,- - - -
+2019,Belarus,China,1938,- - - -
+2019,Belarus,India,459,- - - -
+2019,Belarus,Other countries,2404,- - - -
+2019,Belarus,Nigeria,387,- - - -
+2019,Belarus,Iran,825,- - - -
+2019,Belarus,Russia,1796,- - - -
+2019,Belarus,Ukraine,383,- - - -
+2019,Belarus,Turkmenistan,8196,- - - -
+2019,Belarus,Lebanon,513,- - - -
+2019,Belarus,Sri Lanka,584,- - - -
+2019,Belarus,Tajikistan,462,- - - -
 2019,Belgium,China,557,- - - -
 2019,Belgium,India,476,- - - -
 2019,Belgium,Other countries,9874,- - - -
@@ -18018,6 +18029,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Belgium,DR Congo,451,- - - -
 2019,Belgium,Luxembourg,1840,- - - -
 2019,Belgium,Netherlands,5110,- - - -
+2019,Benin,Other countries,349,- - - -
+2019,Benin,Nigeria,1122,- - - -
+2019,Benin,Cameroon,296,- - - -
+2019,Benin,Congo,430,- - - -
+2019,Benin,Central African Republic,169,- - - -
+2019,Benin,Chad,482,- - - -
+2019,Benin,Togo,341,- - - -
+2019,Benin,Gabon,154,- - - -
+2019,Benin,Burkina Faso,107,- - - -
+2019,Benin,Côte d'Ivoire,83,- - - -
+2019,Benin,Niger,286,- - - -
 2019,Bosnia and Herzegovina,Other countries,218,- - - -
 2019,Bosnia and Herzegovina,Germany,52,- - - -
 2019,Bosnia and Herzegovina,United States,17,- - - -
@@ -18205,6 +18227,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Ecuador,Spain,437,- - - -
 2019,Ecuador,Italy,125,- - - -
 2019,Ecuador,Albania,73,- - - -
+2019,El Salvador,Peru,13,- - - -
+2019,El Salvador,Other countries,102,- - - -
+2019,El Salvador,Venezuala,14,- - - -
+2019,El Salvador,United States,90,- - - -
+2019,El Salvador,Colombia,31,- - - -
+2019,El Salvador,Guatemala,141,- - - -
+2019,El Salvador,Honduras,162,- - - -
+2019,El Salvador,Mexico,29,- - - -
+2019,El Salvador,Nicaragua,70,- - - -
+2019,El Salvador,Panama,46,- - - -
+2019,El Salvador,Spain,12,- - - -
 2019,Estonia,India,190,- - - -
 2019,Estonia,Other countries,1730,- - - -
 2019,Estonia,Nigeria,275,- - - -
@@ -18891,17 +18924,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,United Kingdom,United States,19418,- - - -
 2019,United Kingdom,Spain,10716,- - - -
 2019,United Kingdom,Italy,14412,- - - -
-2019,United States,Brazil,15244.73783,a - - -
-2019,United States,Asia: unknown countries,19791.85747,a - - -
-2019,United States,China,340222.3345100001,a - - -
-2019,United States,India,133321.41964,a - - -
-2019,United States,Other countries,297560.62535999995,a - - -
-2019,United States,Republic of Korea,49593.2262,a - - -
-2019,United States,Viet Nam,25951.327890000004,a - - -
-2019,United States,Japan,14730.19122,a - - -
-2019,United States,Mexico,15148.614250000002,a - - -
-2019,United States,Canada,26581.620349999997,a - - -
-2019,United States,Saudi Arabia,38409.669879999994,a - - -
 2019,Uzbekistan,China,32,- - - -
 2019,Uzbekistan,Other countries,10,- - - -
 2019,Uzbekistan,Republic of Korea,22,- - - -
@@ -18956,6 +18978,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Armenia,Syria,327,- - - -
 2020,Armenia,Egypt,50,- - - -
 2020,Armenia,Georgia,883,- - - -
+2020,Australia,Brazil,9538,- - - -
+2020,Australia,China,128183,- - - -
+2020,Australia,India,84484,- - - -
+2020,Australia,Indonesia,12852,- - - -
+2020,Australia,Malaysia,14125,- - - -
+2020,Australia,Other countries,108384,- - - -
+2020,Australia,Viet Nam,15959,- - - -
+2020,Australia,Philippines,10082,- - - -
+2020,Australia,Nepal,40752,- - - -
+2020,Australia,Pakistan,11297,- - - -
+2020,Australia,Sri Lanka,10472,- - - -
 2020,Azerbaijan,China,75,- - - -
 2020,Azerbaijan,Other countries,580,- - - -
 2020,Azerbaijan,Nigeria,84,- - - -
@@ -18989,6 +19022,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Belarus,Sri Lanka,824,- - - -
 2020,Belarus,Tajikistan,437,- - - -
 2020,Belarus,Uzbekistan,432,- - - -
+2020,Benin,Other countries,382,- - - -
+2020,Benin,Nigeria,1076,- - - -
+2020,Benin,Cameroon,268,- - - -
+2020,Benin,Congo,385,- - - -
+2020,Benin,Ghana,191,- - - -
+2020,Benin,Central African Republic,125,- - - -
+2020,Benin,Chad,371,- - - -
+2020,Benin,Togo,307,- - - -
+2020,Benin,Gabon,162,- - - -
+2020,Benin,Burkina Faso,95,- - - -
+2020,Benin,Niger,319,- - - -
 2020,Bosnia and Herzegovina,Other countries,195,- - - -
 2020,Bosnia and Herzegovina,Germany,52,- - - -
 2020,Bosnia and Herzegovina,Serbia,1593,- - - -
@@ -19032,6 +19076,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Burkina Faso,Côte d'Ivoire,528,- - - -
 2020,Burkina Faso,Niger,534,- - - -
 2020,Burkina Faso,Guinea-Bissau,22,- - - -
+2020,Colombia,Brazil,148,- - - -
+2020,Colombia,Peru,371,- - - -
+2020,Colombia,Other countries,977,- - - -
+2020,Colombia,Argentina,131,- - - -
+2020,Colombia,Ecuador,562,- - - -
+2020,Colombia,Venezuala,1820,- - - -
+2020,Colombia,France,219,- - - -
+2020,Colombia,United States,132,- - - -
+2020,Colombia,Mexico,424,- - - -
+2020,Colombia,Panama,158,- - - -
+2020,Colombia,Spain,95,- - - -
 2020,Costa Rica,Peru,39,- - - -
 2020,Costa Rica,Other countries,277,- - - -
 2020,Costa Rica,Venezuala,193,- - - -
@@ -19044,6 +19099,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Costa Rica,Nicaragua,1474,- - - -
 2020,Costa Rica,Spain,45,- - - -
 2020,Costa Rica,El Salvador,145,- - - -
+2020,Côte d'Ivoire,Other countries,724,- - - -
+2020,Côte d'Ivoire,Nigeria,253,- - - -
+2020,Côte d'Ivoire,Cameroon,335,- - - -
+2020,Côte d'Ivoire,Congo,217,- - - -
+2020,Côte d'Ivoire,Guinea,352,- - - -
+2020,Côte d'Ivoire,Benin,603,- - - -
+2020,Côte d'Ivoire,Chad,150,- - - -
+2020,Côte d'Ivoire,Mali,312,- - - -
+2020,Côte d'Ivoire,Togo,406,- - - -
+2020,Côte d'Ivoire,Burkina Faso,773,- - - -
+2020,Côte d'Ivoire,Niger,281,- - - -
 2020,Cuba,Other countries,1619,- - - -
 2020,Cuba,Viet Nam,68,- - - -
 2020,Cuba,United States,67,- - - -
@@ -19169,6 +19235,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Madagascar,Africa: unknown countries,1307,- - - -
 2020,Madagascar,Europe: unknown countries,10,- - - -
 2020,Madagascar,Comoros,1560,- - - -
+2020,Malaysia,Asia: unknown countries,3386,- - - -
+2020,Malaysia,China,16974,- - - -
+2020,Malaysia,India,3171,- - - -
+2020,Malaysia,Indonesia,9902,- - - -
+2020,Malaysia,Other countries,28983,- - - -
+2020,Malaysia,Nigeria,4329,- - - -
+2020,Malaysia,Bangladesh,7548,- - - -
+2020,Malaysia,Pakistan,4453,- - - -
+2020,Malaysia,Yemen,4657,- - - -
+2020,Malaysia,Sri Lanka,2311,- - - -
+2020,Malaysia,Egypt,2393,- - - -
 2020,Mauritania,Other countries,34,- - - -
 2020,Mauritania,Morocco,58,- - - -
 2020,Mauritania,United Arab Emirates,7,- - - -
@@ -19332,11 +19409,28 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Thailand,Cambodia,1550,- - - -
 2020,Tonga,New Zealand,4,- - - -
 2020,Tonga,Vanuatu,13,- - - -
+2020,Tunisia,Other countries,2191,- - - -
+2020,Tunisia,Morocco,408,- - - -
+2020,Tunisia,Libya,524,- - - -
+2020,Tunisia,Cameroon,788,- - - -
+2020,Tunisia,DR Congo,1199,- - - -
+2020,Tunisia,Algeria,526,- - - -
+2020,Tunisia,Mali,441,- - - -
+2020,Tunisia,Gabon,744,- - - -
+2020,Tunisia,Côte d'Ivoire,421,- - - -
+2020,Tunisia,Niger,372,- - - -
+2020,Tunisia,Mauritania,723,- - - -
 2020,Turkmenistan,China,5,- - - -
 2020,Turkmenistan,Russia,1,- - - -
 2020,Turkmenistan,Ukraine,1,- - - -
 2020,Turkmenistan,Tajikistan,21,- - - -
 2020,Turkmenistan,Afghanistan,125,- - - -
+2020,Turks and Caicos Islands,Dominican Republic,24,- - - -
+2020,Turks and Caicos Islands,United States,5,- - - -
+2020,Turks and Caicos Islands,Bahamas,13,- - - -
+2020,Turks and Caicos Islands,Guyana,4,- - - -
+2020,Turks and Caicos Islands,Jamaica,19,- - - -
+2020,Turks and Caicos Islands,Haiti,33,- - - -
 2020,Ukraine,China,2601,- - - -
 2020,Ukraine,India,14383,- - - -
 2020,Ukraine,Other countries,17215,- - - -
