@@ -34,10 +34,16 @@ countryList =
 
 viewof basisSelect = Inputs.select(countryList.map(d => d.name), {
   label: "Country",
+  value: "Australia",
   sort: true,
   unqiue: true
 });
-viewof yearSelect = Inputs.range([1998, 2021], {step: 1, label: "Year"});
+viewof yearSelect = Inputs.range([1998, 2021],
+  {
+    step: 1,
+    label: "Year",
+    value: 2019
+  });
 ```
 
 ```{ojs}
