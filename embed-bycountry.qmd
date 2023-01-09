@@ -134,7 +134,7 @@ popOriginPlot =
     marginRight: 65,
     marginBottom: 45,
     style: {
-      fontFamily: "'Libre Franklin'",
+      fontFamily: "'Public Sans'",
       fontSize: "16px"
     }
   });
@@ -191,7 +191,7 @@ popDestinationPlot =
     marginRight: 65,
     marginBottom: 45,
     style: {
-      fontFamily: "'Libre Franklin'",
+      fontFamily: "'Public Sans'",
       fontSize: "16px"
     }
   });
