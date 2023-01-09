@@ -1,0 +1,67 @@
+<!-- initialise miromodal.js -->
+
+```{ojs}
+//| include: false
+micro = require("micromodal@0.4.10")
+micro.init({
+  awaitOpenAnimation: true,
+  awaitCloseAnimation: true
+});
+```
+
+::::::: {#modal-useremix .modal .micromodal-slide aria-hidden="true"}
+:::::: {.modal__overlay tabindex="-1" data-micromodal-close="true"}
+::::: {.modal__container role="dialog" aria-modal="true" aria-labelledby="modal-useremix-title"}
+
+<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+
+:::: {#modal-useremix-content}
+## Use + Remix
+
+This map, as well as the analyses that underpin them, are available under a [Creative Commons Attribution 4.0 licence](https://creativecommons.org/licenses/by/4.0).
+
+Please acknowledge [360info](https://360info.org) and [UIS](http://data.uis.unesco.org) when you use these charts and data.
+
+#### Embed this chart in your article
+
+Copy and the following code and paste it into your story editor using the <i class="bi bi-code-square"></i> Embed button:
+
+::: {.embedcode}
+```
+{{< var embed.before >}}{{< var embed.url >}}{{< var embed.after >}}
+```
+:::
+
+This content is subject to [360info's Terms of Use](https://newshub.360info.org/page/terms).
+
+#### Get the data and code
+
+Visit the [GitHub repository](https://github.com/360-info/report-global-education/tree/main/data) to:
+
+* [Download the data](https://github.com/360-info/report-global-education/tree/main/data)
+* [Recreate or remix the chart](https://github.com/360-info/report-global-education)
+::::
+
+:::::
+::::::
+:::::::
+
+::::::: {#modal-about .modal .micromodal-slide aria-hidden="true"}
+:::::: {.modal__overlay tabindex="-1" data-micromodal-close="true"}
+::::: {.modal__container role="dialog" aria-modal="true" aria-labelledby="modal-about-title"}
+
+<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+
+<header>
+## Data sources {#modal-about-title}
+</header>
+
+:::: {#modal-about-content}
+This data was originally sourced from the [UNESCO Institute of Statistics](http://data.uis.unesco.org).
+
+Some figures include nationally- or UNESCO-provided estimates, or have figures that have only been reported every few years.
+::::
+
+:::::
+::::::
+:::::::

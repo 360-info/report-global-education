@@ -1,0 +1,7 @@
+# alter url for production; alter height based on content
+embed:
+  before: |
+    &lt;iframe allow=&quotfullscreen&quot allowfullscreen=&quottrue&quot src=&quot;
+  url: https://360info-studentflows.pages.dev/embed-bycountry?edshare
+  after: |
+    &quot; title="Interactive: student flow by country" style="width:100%; height:830px; border:none; background-color: white;" scrolling="no">&lt;/iframe&gt;

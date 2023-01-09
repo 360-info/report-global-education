@@ -1,6 +1,6 @@
 ---
-title: "STUDENT FLOW BY COUNTRY"
-subtitle: "WHERE DO STUDENTS COME FROM, AND WHERE DO THEY GO?"
+title: "Global education"
+subtitle: "Where do students come from, and where do they go?"
 page-layout: custom
 theme: none
 css:
@@ -24,6 +24,8 @@ format:
         });
       </script>
 ---
+
+{{< include _popup-buttons.qmd >}}
 
 ```{ojs}
 countryList =
@@ -189,94 +191,4 @@ popDestinationPlot =
   });
 ```
 
-<!-- dialogs -->
-
-```{ojs}
-//| include: false
-
-micro = require("micromodal@0.4.10")
-micro.init({
-  awaitOpenAnimation: true,
-  awaitCloseAnimation: true
-});
-```
-
-<!-- and here's the popup itself! -->
-
-::: {.modalpanel}
-<!-- dialog buttons -->
-<a href="#" data-micromodal-trigger="modalnotes" tabindex="0">
-  <i class="bi bi-clipboard-data"></i>
-  Notes
-</a>
-
-<a href="#" data-micromodal-trigger="modaluseremix" tabindex="0">
-  <i class="bi bi-share-fill"></i>
-  Share
-</a>
-
-Chart: James Goldie, 360info. Data: UIS
-:::
-
-::::::: {#modaluseremix .modal .micromodal-slide aria-hidden="true"}
-:::::: {.modal__overlay tabindex="-1" data-micromodal-close="true"}
-::::: {.modal__container role="dialog" aria-modal="true" aria-labelledby="modaluseremix-title"}
-
-<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-
-## Use + Remix
-
-:::: {#modaluseremix-content}
-These charts, as well as the analyses that underpin them, are available under a [**Creative Commons Attribution 4.0**](https://creativecommons.org/licenses/by/4.0) licence.
-
-Please acknowledge [360info](https://360info.org) and [UIS](http://data.uis.unesco.org) when you use these charts and data.
-
-#### Embed this chart in your story
-
-Copy and paste the following code:
-
-::: {.embedcode}
-```
-<iframe src="https://360info-studentflows.pages.dev/
-embed-bycountry" title="Interactive charts showing the 
-two-way flow of international students through a
-selected country for a selected year." width="550"
-height="850" scrolling="no" style="border:none;"></iframe>
-```
-:::
-
-This content is subject to [360info's Terms of Use](https://newshub.360info.org/page/terms).
-
-#### Get the data and code
-
-Visit the [GitHub repository](https://github.com/360-info/report-global-education/tree/main/data) to:
-
-* [**Download the data**](https://github.com/360-info/report-global-education/tree/main/data)
-* [**Recreate or remix the chart**](https://github.com/360-info/report-global-education)
-::::
-
-:::::
-::::::
-:::::::
-
-<!-- notes dialog -->
-
-::::::: {#modalnotes .modal .micromodal-slide aria-hidden="true"}
-:::::: {.modal__overlay tabindex="-1" data-micromodal-close="true"}
-::::: {.modal__container role="dialog" aria-modal="true" aria-labelledby="modalnotes-title"}
-
-<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-
-<header>
-## Notes {#modalnotes-title}
-</header>
-
-:::: {#modalnotes-content}
-This data was originally sourced from the [UNESCO Institute of Statistics](http://data.uis.unesco.org).
-
-Some figures include nationally- or UNESCO-provided estimates, or have figures that have only been reported every few years.
-::::
-
-:::::
-::::::
-:::::::
+{{< include _popup-dialogs.qmd >}}
