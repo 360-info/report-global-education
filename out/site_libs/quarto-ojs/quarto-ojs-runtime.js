@@ -1,4 +1,4 @@
-// @quarto/quarto-ojs-runtime v0.0.5 Copyright 2022 undefined
+// @quarto/quarto-ojs-runtime v0.0.15 Copyright 2022 undefined
 var EOL = {},
     EOF = {},
     QUOTE = 34,
@@ -195,16 +195,43 @@ function autoType(object) {
 // https://github.com/d3/d3-dsv/issues/45
 const fixtz = new Date("2019-01-01T00:00").getHours() || new Date("2019-07-01T00:00").getHours();
 
+function dependency(name, version, main) {
+  return {
+    resolve(path = main) {
+      return `${name}@${version}/${path}`;
+    }
+  };
+}
+
+const d3 = dependency("d3", "7.6.1", "dist/d3.min.js");
+const inputs = dependency("@observablehq/inputs", "0.10.4", "dist/inputs.min.js");
+const plot = dependency("@observablehq/plot", "0.6.0", "dist/plot.umd.min.js");
+const graphviz = dependency("@observablehq/graphviz", "0.2.1", "dist/graphviz.min.js");
+const highlight = dependency("@observablehq/highlight.js", "2.0.0", "highlight.min.js");
+const katex = dependency("@observablehq/katex", "0.11.1", "dist/katex.min.js");
+const lodash = dependency("lodash", "4.17.21", "lodash.min.js");
+const htl = dependency("htl", "0.3.1", "dist/htl.min.js");
+const jszip = dependency("jszip", "3.10.0", "dist/jszip.min.js");
+const marked = dependency("marked", "0.3.12", "marked.min.js");
+const sql = dependency("sql.js", "1.7.0", "dist/sql-wasm.js");
+const vega = dependency("vega", "5.22.1", "build/vega.min.js");
+const vegalite = dependency("vega-lite", "5.5.0", "build/vega-lite.min.js");
+const vegaliteApi = dependency("vega-lite-api", "5.0.0", "build/vega-lite-api.min.js");
+const arrow = dependency("apache-arrow", "4.0.1", "Arrow.es2015.min.js");
+const arquero = dependency("arquero", "4.8.8", "dist/arquero.min.js");
+const topojson = dependency("topojson-client", "3.1.0", "dist/topojson-client.min.js");
+const exceljs = dependency("exceljs", "4.3.0", "dist/exceljs.min.js");
+const mermaid$1 = dependency("mermaid", "9.1.6", "dist/mermaid.min.js");
+const leaflet$1 = dependency("leaflet", "1.8.0", "dist/leaflet.js");
+
 const metas = new Map;
 const queue$1 = [];
 const map$2 = queue$1.map;
 const some = queue$1.some;
 const hasOwnProperty$2 = queue$1.hasOwnProperty;
-const origin = "https://cdn.jsdelivr.net/npm/";
 const identifierRe = /^((?:@[^/@]+\/)?[^/@]+)(?:@([^/]+))?(?:\/(.*))?$/;
 const versionRe = /^\d+\.\d+\.\d+(-[\w-.+]+)?$/;
-const extensionRe = /\.[^/]*$/;
-const mains = ["unpkg", "jsdelivr", "browser", "main"];
+const extensionRe = /(?:\.[^/]*|\/)$/;
 
 class RequireError extends Error {
   constructor(message) {
@@ -213,15 +240,6 @@ class RequireError extends Error {
 }
 
 RequireError.prototype.name = RequireError.name;
-
-function main(meta) {
-  for (const key of mains) {
-    const value = meta[key];
-    if (typeof value === "string") {
-      return extensionRe.test(value) ? value : `${value}.js`;
-    }
-  }
-}
 
 function parseIdentifier(identifier) {
   const match = identifierRe.exec(identifier);
@@ -232,35 +250,49 @@ function parseIdentifier(identifier) {
   };
 }
 
-function resolveMeta(target) {
-  const url = `${origin}${target.name}${target.version ? `@${target.version}` : ""}/package.json`;
-  let meta = metas.get(url);
-  if (!meta) metas.set(url, meta = fetch(url).then(response => {
-    if (!response.ok) throw new RequireError("unable to load package.json");
-    if (response.redirected && !metas.has(response.url)) metas.set(response.url, meta);
-    return response.json();
-  }));
-  return meta;
-}
+function resolveFrom(origin = "https://cdn.jsdelivr.net/npm/", mains = ["unpkg", "jsdelivr", "browser", "main"]) {
+  if (!/\/$/.test(origin)) throw new Error("origin lacks trailing slash");
 
-async function resolve$1(name, base) {
-  if (name.startsWith(origin)) name = name.substring(origin.length);
-  if (/^(\w+:)|\/\//i.test(name)) return name;
-  if (/^[.]{0,2}\//i.test(name)) return new URL(name, base == null ? location : base).href;
-  if (!name.length || /^[\s._]/.test(name) || /\s$/.test(name)) throw new RequireError("illegal name");
-  const target = parseIdentifier(name);
-  if (!target) return `${origin}${name}`;
-  if (!target.version && base != null && base.startsWith(origin)) {
-    const meta = await resolveMeta(parseIdentifier(base.substring(origin.length)));
-    target.version = meta.dependencies && meta.dependencies[target.name] || meta.peerDependencies && meta.peerDependencies[target.name];
+  function main(meta) {
+    for (const key of mains) {
+      let value = meta[key];
+      if (typeof value === "string") {
+        if (value.startsWith("./")) value = value.slice(2);
+        return extensionRe.test(value) ? value : `${value}.js`;
+      }
+    }
   }
-  if (target.path && !extensionRe.test(target.path)) target.path += ".js";
-  if (target.path && target.version && versionRe.test(target.version)) return `${origin}${target.name}@${target.version}/${target.path}`;
-  const meta = await resolveMeta(target);
-  return `${origin}${meta.name}@${meta.version}/${target.path || main(meta) || "index.js"}`;
+
+  function resolveMeta(target) {
+    const url = `${origin}${target.name}${target.version ? `@${target.version}` : ""}/package.json`;
+    let meta = metas.get(url);
+    if (!meta) metas.set(url, meta = fetch(url).then(response => {
+      if (!response.ok) throw new RequireError("unable to load package.json");
+      if (response.redirected && !metas.has(response.url)) metas.set(response.url, meta);
+      return response.json();
+    }));
+    return meta;
+  }
+
+  return async function resolve(name, base) {
+    if (name.startsWith(origin)) name = name.substring(origin.length);
+    if (/^(\w+:)|\/\//i.test(name)) return name;
+    if (/^[.]{0,2}\//i.test(name)) return new URL(name, base == null ? location : base).href;
+    if (!name.length || /^[\s._]/.test(name) || /\s$/.test(name)) throw new RequireError("illegal name");
+    const target = parseIdentifier(name);
+    if (!target) return `${origin}${name}`;
+    if (!target.version && base != null && base.startsWith(origin)) {
+      const meta = await resolveMeta(parseIdentifier(base.substring(origin.length)));
+      target.version = meta.dependencies && meta.dependencies[target.name] || meta.peerDependencies && meta.peerDependencies[target.name];
+    }
+    if (target.path && !extensionRe.test(target.path)) target.path += ".js";
+    if (target.path && target.version && versionRe.test(target.version)) return `${origin}${target.name}@${target.version}/${target.path}`;
+    const meta = await resolveMeta(target);
+    return `${origin}${meta.name}@${meta.version}/${target.path || main(meta) || "index.js"}`;
+  };
 }
 
-var require = requireFrom(resolve$1);
+var require = requireFrom(resolveFrom());
 let requestsInFlight = 0;
 let prevDefine = undefined;
 
@@ -374,33 +406,15 @@ function define(name, dependencies, factory) {
 
 define.amd = {};
 
-function dependency(name, version, main) {
-  return {
-    resolve(path = main) {
-      return `https://cdn.jsdelivr.net/npm/${name}@${version}/${path}`;
-    }
-  };
+let requireDefault = require;
+
+function setDefaultRequire(require) {
+  requireDefault = require;
 }
 
-const d3 = dependency("d3", "7.4.4", "dist/d3.min.js");
-const inputs = dependency("@observablehq/inputs", "0.10.4", "dist/inputs.min.js");
-const plot = dependency("@observablehq/plot", "0.4.3", "dist/plot.umd.min.js");
-const graphviz = dependency("@observablehq/graphviz", "0.2.1", "dist/graphviz.min.js");
-const highlight = dependency("@observablehq/highlight.js", "2.0.0", "highlight.min.js");
-const katex = dependency("@observablehq/katex", "0.11.1", "dist/katex.min.js");
-const lodash = dependency("lodash", "4.17.21", "lodash.min.js");
-const htl = dependency("htl", "0.3.1", "dist/htl.min.js");
-const jszip = dependency("jszip", "3.9.1", "dist/jszip.min.js");
-const marked = dependency("marked", "0.3.12", "marked.min.js");
-const sql = dependency("sql.js", "1.6.2", "dist/sql-wasm.js");
-const vega = dependency("vega", "5.22.1", "build/vega.min.js");
-const vegalite = dependency("vega-lite", "5.2.0", "build/vega-lite.min.js");
-const vegaliteApi = dependency("vega-lite-api", "5.0.0", "build/vega-lite-api.min.js");
-const arrow = dependency("apache-arrow", "4.0.1", "Arrow.es2015.min.js");
-const arquero = dependency("arquero", "4.8.8", "dist/arquero.min.js");
-const topojson = dependency("topojson-client", "3.1.0", "dist/topojson-client.min.js");
-const exceljs = dependency("exceljs", "4.3.0", "dist/exceljs.min.js");
-const mermaid$1 = dependency("mermaid", "9.0.0", "dist/mermaid.min.js");
+function requirer(resolve) {
+  return resolve == null ? requireDefault : requireFrom(resolve);
+}
 
 function fromEntries(obj) {
   const result = {};
@@ -411,8 +425,8 @@ function fromEntries(obj) {
 }
 
 async function sqlite(require) {
-  const init = await require(sql.resolve());
-  return init({locateFile: file => sql.resolve(`dist/${file}`)});
+  const [init, dist] = await Promise.all([require(sql.resolve()), require.resolve(sql.resolve("dist/"))]);
+  return init({locateFile: file => `${dist}${file}`});
 }
 
 class SQLiteDatabaseClient {
@@ -422,7 +436,7 @@ class SQLiteDatabaseClient {
     });
   }
   static async open(source) {
-    const [SQL, buffer] = await Promise.all([sqlite(require), Promise.resolve(source).then(load$1)]);
+    const [SQL, buffer] = await Promise.all([sqlite(requireDefault), Promise.resolve(source).then(load$1)]);
     return new SQLiteDatabaseClient(new SQL.Database(buffer));
   }
   async query(query, params) {
@@ -437,6 +451,15 @@ class SQLiteDatabaseClient {
       text$2(rows.map(row => row.detail).join("\n"))
     ]);
   }
+  async describeTables({schema} = {}) {
+    return this.query(`SELECT NULLIF(schema, 'main') AS schema, name FROM pragma_table_list() WHERE type = 'table'${schema == null ? "" : ` AND schema = ?`} AND name NOT LIKE 'sqlite_%'`, schema == null ? [] : [schema]);
+  }
+  async describeColumns({schema, table} = {}) {
+    if (table == null) throw new Error(`missing table`);
+    const rows = await this.query(`SELECT name, type, "notnull" FROM pragma_table_info(?${schema == null ? "" : `, ?`}) ORDER BY cid`, schema == null ? [table] : [table, schema]);
+    if (!rows.length) throw new Error(`table not found: ${table}`);
+    return rows.map(({name, type, notnull}) => ({name, type: sqliteType(type), databaseType: type, nullable: !notnull}));
+  }
   async describe(object) {
     const rows = await (object === undefined
       ? this.query(`SELECT name FROM sqlite_master WHERE type = 'table'`)
@@ -448,13 +471,53 @@ class SQLiteDatabaseClient {
       element$1("tbody", rows.map(r => element$1("tr", columns.map(c => element$1("td", [text$2(r[c])])))))
     ]);
   }
-  async sql(strings, ...args) {
-    return this.query(strings.join("?"), args);
+  async sql() {
+    return this.query(...this.queryTag.apply(this, arguments));
+  }
+  queryTag(strings, ...params) {
+    return [strings.join("?"), params];
   }
 }
+
 Object.defineProperty(SQLiteDatabaseClient.prototype, "dialect", {
   value: "sqlite"
 });
+
+// https://www.sqlite.org/datatype3.html
+function sqliteType(type) {
+  switch (type) {
+    case "NULL":
+      return "null";
+    case "INT":
+    case "INTEGER":
+    case "TINYINT":
+    case "SMALLINT":
+    case "MEDIUMINT":
+    case "BIGINT":
+    case "UNSIGNED BIG INT":
+    case "INT2":
+    case "INT8":
+      return "integer";
+    case "TEXT":
+    case "CLOB":
+      return "string";
+    case "REAL":
+    case "DOUBLE":
+    case "DOUBLE PRECISION":
+    case "FLOAT":
+    case "NUMERIC":
+      return "number";
+    case "BLOB":
+      return "buffer";
+    case "DATE":
+    case "DATETIME":
+      return "string"; // TODO convert strings to Date instances in sql.js
+    default:
+      return /^(?:(?:(?:VARYING|NATIVE) )?CHARACTER|(?:N|VAR|NVAR)CHAR)\(/.test(type) ? "string"
+        : /^(?:DECIMAL|NUMERIC)\(/.test(type) ? "number"
+        : "other";
+  }
+}
 
 function load$1(source) {
   return typeof source === "string" ? fetch(source).then(load$1)
@@ -490,8 +553,8 @@ class Workbook {
       _: {value: workbook},
       sheetNames: {
         value: workbook.worksheets.map((s) => s.name),
-        enumerable: true,
-      },
+        enumerable: true
+      }
     });
   }
   sheet(name, options) {
@@ -568,7 +631,7 @@ function parseRange(specifier = ":", {columnCount, rowCount}) {
     specifier.split(":").map(fromCellReference);
   return [
     [c0, r0],
-    [c1, r1],
+    [c1, r1]
   ];
 }
 
@@ -647,14 +710,14 @@ class AbstractFile {
     });
   }
   async arrow() {
-    const [Arrow, response] = await Promise.all([require(arrow.resolve()), remote_fetch(this)]);
+    const [Arrow, response] = await Promise.all([requireDefault(arrow.resolve()), remote_fetch(this)]);
     return Arrow.Table.from(response);
   }
   async sqlite() {
     return SQLiteDatabaseClient.open(remote_fetch(this));
   }
   async zip() {
-    const [JSZip, buffer] = await Promise.all([require(jszip.resolve()), this.arrayBuffer()]);
+    const [JSZip, buffer] = await Promise.all([requireDefault(jszip.resolve()), this.arrayBuffer()]);
     return new ZipArchive(await JSZip.loadAsync(buffer));
   }
   async xml(mimeType = "application/xml") {
@@ -664,7 +727,7 @@ class AbstractFile {
     return this.xml("text/html");
   }
   async xlsx() {
-    const [ExcelJS, buffer] = await Promise.all([require(exceljs.resolve()), this.arrayBuffer()]);
+    const [ExcelJS, buffer] = await Promise.all([requireDefault(exceljs.resolve()), this.arrayBuffer()]);
     return new Workbook(await new ExcelJS.Workbook().xlsx.load(buffer));
   }
 }
@@ -1149,6 +1212,17 @@ var html$1 = template(function(string) {
   return document.createElement("span");
 });
 
+async function leaflet(require) {
+  const L = await require(leaflet$1.resolve());
+  if (!L._style) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = await require.resolve(leaflet$1.resolve("dist/leaflet.css"));
+    L._style = document.head.appendChild(link);
+  }
+  return L;
+}
+
 function md(require) {
   return require(marked.resolve()).then(function(marked) {
     return template(
@@ -1259,10 +1333,6 @@ function resolve(name, base) {
   return "https://unpkg.com/" + name;
 }
 
-function requirer(resolve) {
-  return resolve == null ? require : requireFrom(resolve);
-}
-
 var svg = template(function(string) {
   var root = document.createElementNS("http://www.w3.org/2000/svg", "g");
   root.innerHTML = string.trim();
@@ -1287,7 +1357,7 @@ function style(href) {
 function tex(require) {
   return Promise.all([
     require(katex.resolve()),
-    style(katex.resolve("dist/katex.min.css"))
+    require.resolve(katex.resolve("dist/katex.min.css")).then(style)
   ]).then(function(values) {
     var katex = values[0], tex = renderer();
 
@@ -1324,32 +1394,568 @@ function width() {
   });
 }
 
-var Library = Object.assign(function Library(resolver) {
+// These are copied from d3-array; TODO import once this package adopts type: module.
+
+function descending(a, b) {
+  return a == null || b == null ? NaN : b < a ? -1 : b > a ? 1 : b >= a ? 0 : NaN;
+}
+
+function ascending(a, b) {
+  return a == null || b == null ? NaN : a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
+}
+
+function reverse(values) {
+  if (typeof values[Symbol.iterator] !== "function") throw new TypeError("values is not iterable");
+  return Array.from(values).reverse();
+}
+
+const nChecks = 20; // number of values to check in each array
+
+// We support two levels of DatabaseClient. The simplest DatabaseClient
+// implements only the client.sql tagged template literal. More advanced
+// DatabaseClients implement client.query and client.queryStream, which support
+// streaming and abort, and the client.queryTag tagged template literal is used
+// to translate the contents of a SQL cell or Table cell into the appropriate
+// arguments for calling client.query or client.queryStream. For table cells, we
+// additionally require client.describeColumns. The client.describeTables method
+// is optional.
+function isDatabaseClient(value, mode) {
+  return (
+    value &&
+    (typeof value.sql === "function" ||
+      (typeof value.queryTag === "function" &&
+        (typeof value.query === "function" ||
+          typeof value.queryStream === "function"))) &&
+    (mode !== "table" || typeof value.describeColumns === "function") &&
+    value !== __query // don’t match our internal helper
+  );
+}
+
+// Returns true if the value is a typed array (for a single-column table), or if
+// it’s an array. In the latter case, the elements of the array must be
+// consistently typed: either plain objects or primitives or dates.
+function isDataArray(value) {
+  return (
+    (Array.isArray(value) &&
+      (isQueryResultSetSchema(value.schema) ||
+        isQueryResultSetColumns(value.columns) ||
+        arrayContainsObjects(value) ||
+        arrayContainsPrimitives(value) ||
+        arrayContainsDates(value))) ||
+    isTypedArray(value)
+  );
+}
+
+// Given an array, checks that the given value is an array that does not contain
+// any primitive values (at least for the first few values that we check), and
+// that the first object contains enumerable keys (see computeSchema for how we
+// infer the columns). We assume that the contents of the table are homogenous,
+// but we don’t currently enforce this.
+// https://observablehq.com/@observablehq/database-client-specification#§1
+function arrayContainsObjects(value) {
+  const n = Math.min(nChecks, value.length);
+  for (let i = 0; i < n; ++i) {
+    const v = value[i];
+    if (v === null || typeof v !== "object") return false;
+  }
+  return n > 0 && objectHasEnumerableKeys(value[0]);
+}
+
+// Using a for-in loop here means that we can abort after finding at least one
+// enumerable key (whereas Object.keys would require materializing the array of
+// all keys, which would be considerably slower if the value has many keys!).
+// This function assumes that value is an object; see arrayContainsObjects.
+function objectHasEnumerableKeys(value) {
+  for (const _ in value) return true;
+  return false;
+}
+
+function isQueryResultSetSchema(schemas) {
+  return (Array.isArray(schemas) && schemas.every((s) => s && typeof s.name === "string"));
+}
+
+function isQueryResultSetColumns(columns) {
+  return (Array.isArray(columns) && columns.every((name) => typeof name === "string"));
+}
+
+// Returns true if the value represents an array of primitives (i.e., a
+// single-column table). This should only be passed values for which
+// isDataArray returns true.
+function arrayIsPrimitive(value) {
+  return (
+    isTypedArray(value) ||
+    arrayContainsPrimitives(value) ||
+    arrayContainsDates(value)
+  );
+}
+
+// Given an array, checks that the first n elements are primitives (number,
+// string, boolean, bigint) of a consistent type.
+function arrayContainsPrimitives(value) {
+  const n = Math.min(nChecks, value.length);
+  if (!(n > 0)) return false;
+  let type;
+  let hasPrimitive = false; // ensure we encounter 1+ primitives
+  for (let i = 0; i < n; ++i) {
+    const v = value[i];
+    if (v == null) continue; // ignore null and undefined
+    const t = typeof v;
+    if (type === undefined) {
+      switch (t) {
+        case "number":
+        case "boolean":
+        case "string":
+        case "bigint":
+          type = t;
+          break;
+        default:
+          return false;
+      }
+    } else if (t !== type) {
+      return false;
+    }
+    hasPrimitive = true;
+  }
+  return hasPrimitive;
+}
+
+// Given an array, checks that the first n elements are dates.
+function arrayContainsDates(value) {
+  const n = Math.min(nChecks, value.length);
+  if (!(n > 0)) return false;
+  let hasDate = false; // ensure we encounter 1+ dates
+  for (let i = 0; i < n; ++i) {
+    const v = value[i];
+    if (v == null) continue; // ignore null and undefined
+    if (!(v instanceof Date)) return false;
+    hasDate = true;
+  }
+  return hasDate;
+}
+
+function isTypedArray(value) {
+  return (
+    value instanceof Int8Array ||
+    value instanceof Int16Array ||
+    value instanceof Int32Array ||
+    value instanceof Uint8Array ||
+    value instanceof Uint8ClampedArray ||
+    value instanceof Uint16Array ||
+    value instanceof Uint32Array ||
+    value instanceof Float32Array ||
+    value instanceof Float64Array
+  );
+}
+
+// __query is used by table cells; __query.sql is used by SQL cells.
+const __query = Object.assign(
+  async (source, operations, invalidation) => {
+    source = await loadDataSource(await source, "table");
+    if (isDatabaseClient(source)) return evaluateQuery(source, makeQueryTemplate(operations, source), invalidation);
+    if (isDataArray(source)) return __table(source, operations);
+    if (!source) throw new Error("missing data source");
+    throw new Error("invalid data source");
+  },
+  {
+    sql(source, invalidation) {
+      return async function () {
+        return evaluateQuery(await loadDataSource(await source, "sql"), arguments, invalidation);
+      };
+    }
+  }
+);
+
+async function loadDataSource(source, mode) {
+  if (source instanceof FileAttachment) {
+    if (mode === "table") {
+      switch (source.mimeType) {
+        case "text/csv": return source.csv({typed: true});
+        case "text/tab-separated-values": return source.tsv({typed: true});
+        case "application/json": return source.json();
+      }
+    }
+    if (mode === "table" || mode === "sql") {
+      switch (source.mimeType) {
+        case "application/x-sqlite3": return source.sqlite();
+      }
+    }
+    throw new Error(`unsupported file type: ${source.mimeType}`);
+  }
+  return source;
+}
+
+async function evaluateQuery(source, args, invalidation) {
+  if (!source) throw new Error("missing data source");
+
+  // If this DatabaseClient supports abort and streaming, use that.
+  if (typeof source.queryTag === "function") {
+    const abortController = new AbortController();
+    const options = {signal: abortController.signal};
+    invalidation.then(() => abortController.abort("invalidated"));
+    if (typeof source.queryStream === "function") {
+      return accumulateQuery(
+        source.queryStream(...source.queryTag.apply(source, args), options)
+      );
+    }
+    if (typeof source.query === "function") {
+      return source.query(...source.queryTag.apply(source, args), options);
+    }
+  }
+
+  // Otherwise, fallback to the basic sql tagged template literal.
+  if (typeof source.sql === "function") {
+    return source.sql.apply(source, args);
+  }
+
+  // TODO: test if source is a file attachment, and support CSV etc.
+  throw new Error("source does not implement query, queryStream, or sql");
+}
+
+// Generator function that yields accumulated query results client.queryStream
+async function* accumulateQuery(queryRequest) {
+  const queryResponse = await queryRequest;
+  const values = [];
+  values.done = false;
+  values.error = null;
+  values.schema = queryResponse.schema;
+  try {
+    const iterator = queryResponse.readRows();
+    do {
+      const result = await iterator.next();
+      if (result.done) {
+        values.done = true;
+      } else {
+        for (const value of result.value) {
+          values.push(value);
+        }
+      }
+      yield values;
+    } while (!values.done);
+  } catch (error) {
+    values.error = error;
+    yield values;
+  }
+}
+
+/**
+ * Returns a SQL query in the form [[parts], ...params] where parts is an array
+ * of sub-strings and params are the parameter values to be inserted between each
+ * sub-string.
+ */
+function makeQueryTemplate(operations, source) {
+  const escaper =
+    typeof source.escape === "function" ? source.escape : (i) => i;
+  const {select, from, filter, sort, slice} = operations;
+  if (!from.table)
+    throw new Error("missing from table");
+  if (select.columns && select.columns.length === 0)
+    throw new Error("at least one column must be selected");
+  const columns = select.columns ? select.columns.map((c) => `t.${escaper(c)}`) : "*";
+  const args = [
+    [`SELECT ${columns} FROM ${formatTable(from.table, escaper)} t`]
+  ];
+  for (let i = 0; i < filter.length; ++i) {
+    appendSql(i ? `\nAND ` : `\nWHERE `, args);
+    appendWhereEntry(filter[i], args);
+  }
+  for (let i = 0; i < sort.length; ++i) {
+    appendSql(i ? `, ` : `\nORDER BY `, args);
+    appendOrderBy(sort[i], args);
+  }
+  if (slice.to !== null || slice.from !== null) {
+    appendSql(
+      `\nLIMIT ${slice.to !== null ? slice.to - (slice.from || 0) : 1e9}`,
+      args
+    );
+  }
+  if (slice.from !== null) {
+    appendSql(` OFFSET ${slice.from}`, args);
+  }
+  return args;
+}
+
+function formatTable(table, escaper) {
+  if (typeof table === "object") { // i.e., not a bare string specifier
+    let from = "";
+    if (table.database != null) from += escaper(table.database) + ".";
+    if (table.schema != null) from += escaper(table.schema) + ".";
+    from += escaper(table.table);
+    return from;
+  }
+  return table;
+}
+
+function appendSql(sql, args) {
+  const strings = args[0];
+  strings[strings.length - 1] += sql;
+}
+
+function appendOrderBy({column, direction}, args) {
+  appendSql(`t.${column} ${direction.toUpperCase()}`, args);
+}
+
+function appendWhereEntry({type, operands}, args) {
+  if (operands.length < 1) throw new Error("Invalid operand length");
+
+  // Unary operations
+  if (operands.length === 1) {
+    appendOperand(operands[0], args);
+    switch (type) {
+      case "n":
+        appendSql(` IS NULL`, args);
+        return;
+      case "nn":
+        appendSql(` IS NOT NULL`, args);
+        return;
+      default:
+        throw new Error("Invalid filter operation");
+    }
+  }
+
+  // Binary operations
+  if (operands.length === 2) {
+    if (["in", "nin"].includes(type)) ; else if (["c", "nc"].includes(type)) {
+      // TODO: Case (in)sensitive?
+      appendOperand(operands[0], args);
+      switch (type) {
+        case "c":
+          appendSql(` LIKE `, args);
+          break;
+        case "nc":
+          appendSql(` NOT LIKE `, args);
+          break;
+      }
+      appendOperand(likeOperand(operands[1]), args);
+      return;
+    } else {
+      appendOperand(operands[0], args);
+      switch (type) {
+        case "eq":
+          appendSql(` = `, args);
+          break;
+        case "ne":
+          appendSql(` <> `, args);
+          break;
+        case "gt":
+          appendSql(` > `, args);
+          break;
+        case "lt":
+          appendSql(` < `, args);
+          break;
+        case "gte":
+          appendSql(` >= `, args);
+          break;
+        case "lte":
+          appendSql(` <= `, args);
+          break;
+        default:
+          throw new Error("Invalid filter operation");
+      }
+      appendOperand(operands[1], args);
+      return;
+    }
+  }
+
+  // List operations
+  appendOperand(operands[0], args);
+  switch (type) {
+    case "in":
+      appendSql(` IN (`, args);
+      break;
+    case "nin":
+      appendSql(` NOT IN (`, args);
+      break;
+    default:
+      throw new Error("Invalid filter operation");
+  }
+  appendListOperands(operands.slice(1), args);
+  appendSql(")", args);
+}
+
+function appendOperand(o, args) {
+  if (o.type === "column") {
+    appendSql(`t.${o.value}`, args);
+  } else {
+    args.push(o.value);
+    args[0].push("");
+  }
+}
+
+// TODO: Support column operands here?
+function appendListOperands(ops, args) {
+  let first = true;
+  for (const op of ops) {
+    if (first) first = false;
+    else appendSql(",", args);
+    args.push(op.value);
+    args[0].push("");
+  }
+}
+
+function likeOperand(operand) {
+  return {...operand, value: `%${operand.value}%`};
+}
+
+// This function applies table cell operations to an in-memory table (array of
+// objects); it should be equivalent to the corresponding SQL query.
+function __table(source, operations) {
+  const input = source;
+  let {schema, columns} = source;
+  let primitive = arrayIsPrimitive(source);
+  if (primitive) source = Array.from(source, (value) => ({value}));
+  for (const {type, operands} of operations.filter) {
+    const [{value: column}] = operands;
+    const values = operands.slice(1).map(({value}) => value);
+    switch (type) {
+      case "eq": {
+        const [value] = values;
+        if (value instanceof Date) {
+          const time = +value; // compare as primitive
+          source = source.filter((d) => +d[column] === time);
+        } else {
+          source = source.filter((d) => d[column] === value);
+        }
+        break;
+      }
+      case "ne": {
+        const [value] = values;
+        source = source.filter((d) => d[column] !== value);
+        break;
+      }
+      case "c": {
+        const [value] = values;
+        source = source.filter(
+          (d) => typeof d[column] === "string" && d[column].includes(value)
+        );
+        break;
+      }
+      case "nc": {
+        const [value] = values;
+        source = source.filter(
+          (d) => typeof d[column] === "string" && !d[column].includes(value)
+        );
+        break;
+      }
+      case "in": {
+        const set = new Set(values); // TODO support dates?
+        source = source.filter((d) => set.has(d[column]));
+        break;
+      }
+      case "nin": {
+        const set = new Set(values); // TODO support dates?
+        source = source.filter((d) => !set.has(d[column]));
+        break;
+      }
+      case "n": {
+        source = source.filter((d) => d[column] == null);
+        break;
+      }
+      case "nn": {
+        source = source.filter((d) => d[column] != null);
+        break;
+      }
+      case "lt": {
+        const [value] = values;
+        source = source.filter((d) => d[column] < value);
+        break;
+      }
+      case "lte": {
+        const [value] = values;
+        source = source.filter((d) => d[column] <= value);
+        break;
+      }
+      case "gt": {
+        const [value] = values;
+        source = source.filter((d) => d[column] > value);
+        break;
+      }
+      case "gte": {
+        const [value] = values;
+        source = source.filter((d) => d[column] >= value);
+        break;
+      }
+      default:
+        throw new Error(`unknown filter type: ${type}`);
+    }
+  }
+  for (const {column, direction} of reverse(operations.sort)) {
+    const compare = direction === "desc" ? descending : ascending;
+    if (source === input) source = source.slice(); // defensive copy
+    source.sort((a, b) => compare(a[column], b[column]));
+  }
+  let {from, to} = operations.slice;
+  from = from == null ? 0 : Math.max(0, from);
+  to = to == null ? Infinity : Math.max(0, to);
+  if (from > 0 || to < Infinity) {
+    source = source.slice(Math.max(0, from), Math.max(0, to));
+  }
+  if (operations.select.columns) {
+    if (schema) {
+      const schemaByName = new Map(schema.map((s) => [s.name, s]));
+      schema = operations.select.columns.map((c) => schemaByName.get(c));
+    }
+    if (columns) {
+      columns = operations.select.columns;
+    }
+    source = source.map((d) =>
+      Object.fromEntries(operations.select.columns.map((c) => [c, d[c]]))
+    );
+  }
+  if (primitive) source = source.map((d) => d.value);
+  if (source !== input) {
+    if (schema) source.schema = schema;
+    if (columns) source.columns = columns;
+  }
+  return source;
+}
+
+var Library = Object.assign(Object.defineProperties(function Library(resolver) {
   const require = requirer(resolver);
   Object.defineProperties(this, properties({
     FileAttachment: () => NoFileAttachments,
-    Arrow: () => require(arrow.resolve()),
-    Inputs: () => require(inputs.resolve()).then(Inputs => ({...Inputs, file: Inputs.fileOf(AbstractFile)})),
     Mutable: () => Mutable,
-    Plot: () => require(plot.resolve()),
-    SQLite: () => sqlite(require),
-    SQLiteDatabaseClient: () => SQLiteDatabaseClient,
-    _: () => require(lodash.resolve()),
-    aq: () => require.alias({"apache-arrow": arrow.resolve()})(arquero.resolve()),
-    d3: () => require(d3.resolve()),
+    now,
+    width,
+
+    // Tagged template literals
     dot: () => require(graphviz.resolve()),
     htl: () => require(htl.resolve()),
     html: () => html$1,
     md: () => md(require),
-    mermaid: () => mermaid(require),
-    now,
-    require: () => require,
-    resolve: () => resolve,
     svg: () => svg,
     tex: () => tex(require),
+
+    // Recommended libraries
+    // https://observablehq.com/@observablehq/recommended-libraries
+    _: () => require(lodash.resolve()),
+    aq: () => require.alias({"apache-arrow": arrow.resolve()})(arquero.resolve()),
+    Arrow: () => require(arrow.resolve()),
+    d3: () => require(d3.resolve()),
+    Inputs: () => require(inputs.resolve()).then(Inputs => ({...Inputs, file: Inputs.fileOf(AbstractFile)})),
+    L: () => leaflet(require),
+    mermaid: () => mermaid(require),
+    Plot: () => require(plot.resolve()),
+    __query: () => __query,
+    require: () => require,
+    resolve: () => resolve, // deprecated; use async require.resolve instead
+    SQLite: () => sqlite(require),
+    SQLiteDatabaseClient: () => SQLiteDatabaseClient,
     topojson: () => require(topojson.resolve()),
     vl: () => vl(require),
-    width,
+
+    // Sample datasets
+    // https://observablehq.com/@observablehq/datasets
+    aapl: () => new FileAttachment("https://static.observableusercontent.com/files/3ccff97fd2d93da734e76829b2b066eafdaac6a1fafdec0faf6ebc443271cfc109d29e80dd217468fcb2aff1e6bffdc73f356cc48feb657f35378e6abbbb63b9").csv({typed: true}),
+    alphabet: () => new FileAttachment("https://static.observableusercontent.com/files/75d52e6c3130b1cae83cda89305e17b50f33e7420ef205587a135e8562bcfd22e483cf4fa2fb5df6dff66f9c5d19740be1cfaf47406286e2eb6574b49ffc685d").csv({typed: true}),
+    cars: () => new FileAttachment("https://static.observableusercontent.com/files/048ec3dfd528110c0665dfa363dd28bc516ffb7247231f3ab25005036717f5c4c232a5efc7bb74bc03037155cb72b1abe85a33d86eb9f1a336196030443be4f6").csv({typed: true}),
+    citywages: () => new FileAttachment("https://static.observableusercontent.com/files/39837ec5121fcc163131dbc2fe8c1a2e0b3423a5d1e96b5ce371e2ac2e20a290d78b71a4fb08b9fa6a0107776e17fb78af313b8ea70f4cc6648fad68ddf06f7a").csv({typed: true}),
+    diamonds: () => new FileAttachment("https://static.observableusercontent.com/files/87942b1f5d061a21fa4bb8f2162db44e3ef0f7391301f867ab5ba718b225a63091af20675f0bfe7f922db097b217b377135203a7eab34651e21a8d09f4e37252").csv({typed: true}),
+    flare: () => new FileAttachment("https://static.observableusercontent.com/files/a6b0d94a7f5828fd133765a934f4c9746d2010e2f342d335923991f31b14120de96b5cb4f160d509d8dc627f0107d7f5b5070d2516f01e4c862b5b4867533000").csv({typed: true}),
+    industries: () => new FileAttachment("https://static.observableusercontent.com/files/76f13741128340cc88798c0a0b7fa5a2df8370f57554000774ab8ee9ae785ffa2903010cad670d4939af3e9c17e5e18e7e05ed2b38b848ac2fc1a0066aa0005f").csv({typed: true}),
+    miserables: () => new FileAttachment("https://static.observableusercontent.com/files/31d904f6e21d42d4963ece9c8cc4fbd75efcbdc404bf511bc79906f0a1be68b5a01e935f65123670ed04e35ca8cae3c2b943f82bf8db49c5a67c85cbb58db052").json(),
+    olympians: () => new FileAttachment("https://static.observableusercontent.com/files/31ca24545a0603dce099d10ee89ee5ae72d29fa55e8fc7c9ffb5ded87ac83060d80f1d9e21f4ae8eb04c1e8940b7287d179fe8060d887fb1f055f430e210007c").csv({typed: true}),
+    penguins: () => new FileAttachment("https://static.observableusercontent.com/files/715db1223e067f00500780077febc6cebbdd90c151d3d78317c802732252052ab0e367039872ab9c77d6ef99e5f55a0724b35ddc898a1c99cb14c31a379af80a").csv({typed: true}),
+    weather: () => new FileAttachment("https://static.observableusercontent.com/files/693a46b22b33db0f042728700e0c73e836fa13d55446df89120682d55339c6db7cc9e574d3d73f24ecc9bc7eb9ac9a1e7e104a1ee52c00aab1e77eb102913c1f").csv({typed: true}),
 
     // Note: these are namespace objects, and thus exposed directly rather than
     // being wrapped in a function. This allows library.Generators to resolve,
@@ -1359,11 +1965,25 @@ var Library = Object.assign(function Library(resolver) {
     Generators: Generators$1,
     Promises
   }));
-}, {resolve: require.resolve});
+}, {
+  resolve: {
+    get: () => requireDefault.resolve,
+    enumerable: true,
+    configurable: true
+  },
+  require: {
+    get: () => requireDefault,
+    set: setDefaultRequire,
+    enumerable: true,
+    configurable: true
+  }
+}), {
+  resolveFrom,
+  requireFrom
+});
 
 function properties(values) {
-  return fromEntries(Object.entries(values).map(property));
-  // return Object.fromEntries(Object.entries(values).map(property));
+  return Object.fromEntries(Object.entries(values).map(property));
 }
 
 function property([key, value]) {
@@ -1452,7 +2072,9 @@ class PandocCodeDecorator {
     const startIndex = startEntry.index;
     const endIndex = endEntry && endEntry.index || this._elementEntryPoints.length;
     for (let i = startIndex; i < endIndex; ++i) {
-      yield this._elementEntryPoints[i];
+      if (this._elementEntryPoints[i] !== void 0) {
+        yield this._elementEntryPoints[i];
+      }
     }
   }
   decorateSpan(start, end, classes) {
@@ -1489,11 +2111,11 @@ class PandocCodeDecorator {
       this._elementEntryPoints.sort((a, b) => a.offset - b.offset);
     };
     const startEntry = this.locateEntry(start);
-    if (startEntry !== void 0 && startEntry.entry.offset != start) {
+    if (startEntry !== void 0 && startEntry.entry !== void 0 && startEntry.entry.offset != start) {
       splitEntry(startEntry.entry, start);
     }
     const endEntry = this.locateEntry(end);
-    if (endEntry !== void 0 && endEntry.entry.offset !== end) {
+    if (endEntry !== void 0 && startEntry.entry !== void 0 && endEntry.entry.offset !== end) {
       splitEntry(endEntry.entry, end);
     }
   }
@@ -2421,8 +3043,13 @@ function variable_undefined() {
   throw variable_undefined;
 }
 
+function variable_stale() {
+  throw variable_stale;
+}
+
 function variable_rejector(variable) {
   return function(error) {
+    if (error === variable_stale) throw error;
     if (error === variable_undefined) throw new RuntimeError(variable._name + " is not defined", variable._name);
     if (error instanceof Error && error.message) throw new RuntimeError(error.message, variable._name);
     throw new RuntimeError(variable._name + " could not be resolved", variable._name);
@@ -2533,6 +3160,11 @@ function variable_defineImpl(name, inputs, definition) {
     this._name = name;
   }
 
+  // If this redefined variable was previously evaluated, invalidate it. (If the
+  // variable was never evaluated, then the invalidated value could never have
+  // been exposed and we can avoid this extra work.)
+  if (this._version > 0) ++this._version;
+
   runtime._updates.add(this);
   runtime._compute();
   return this;
@@ -2609,11 +3241,26 @@ async function module_value(name) {
   var v = this._scope.get(name);
   if (!v) throw new RuntimeError(name + " is not defined");
   if (v._observer === no_observer) {
-    v._observer = true;
-    this._runtime._dirty.add(v);
+    v = this.variable(true).define([name], identity$1);
+    try {
+      return await module_revalue(this._runtime, v);
+    } finally {
+      v.delete();
+    }
+  } else {
+    return module_revalue(this._runtime, v);
   }
-  await this._runtime._compute();
-  return v._promise;
+}
+
+// If the variable is redefined before its value resolves, try again.
+async function module_revalue(runtime, variable) {
+  await runtime._compute();
+  try {
+    return await variable._promise;
+  } catch (error) {
+    if (error === variable_stale) return module_revalue(runtime, variable);
+    throw error;
+  }
 }
 
 function module_derive(injects, injectModule) {
@@ -2933,7 +3580,7 @@ function variable_compute(variable) {
 
   // Compute the initial value of the variable.
   function define(inputs) {
-    if (variable._version !== version) return;
+    if (variable._version !== version) throw variable_stale;
 
     // Replace any reference to invalidation with the promise, lazily.
     for (var i = 0, n = inputs.length; i < n; ++i) {
@@ -2958,8 +3605,8 @@ function variable_compute(variable) {
   // already have been invalidated here, in which case we need to terminate the
   // generator immediately!
   function generate(value) {
+    if (variable._version !== version) throw variable_stale;
     if (generatorish(value)) {
-      if (variable._version !== version) return void value.return();
       (invalidation || variable_invalidator(variable)).then(variable_return(value));
       return variable_generate(variable, version, value);
     }
@@ -2967,11 +3614,10 @@ function variable_compute(variable) {
   }
 
   promise.then((value) => {
-    if (variable._version !== version) return;
     variable._value = value;
     variable._fulfilled(value);
   }, (error) => {
-    if (variable._version !== version) return;
+    if (error === variable_stale) return;
     variable._value = undefined;
     variable._rejected(error);
   });
@@ -2996,14 +3642,15 @@ function variable_generate(variable, version, generator) {
   // successful, reject the variable, compute downstream variables, and return.
   function recompute() {
     const promise = compute((value) => {
-      if (variable._version !== version) return;
+      if (variable._version !== version) throw variable_stale;
       currentValue = value;
       postcompute(value, promise).then(() => runtime._precompute(recompute));
       variable._fulfilled(value);
       return value;
     });
     promise.catch((error) => {
-      if (variable._version !== version) return;
+      if (error === variable_stale) throw error;
+      if (variable._version !== version) throw variable_stale;
       postcompute(undefined, promise);
       variable._rejected(error);
     });
@@ -3021,7 +3668,7 @@ function variable_generate(variable, version, generator) {
   // When retrieving the first value from the generator, the promise graph is
   // already established, so we only need to queue the next pull.
   return compute((value) => {
-    if (variable._version !== version) return;
+    if (variable._version !== version) throw variable_stale;
     currentValue = value;
     runtime._precompute(recompute);
     return value;
@@ -9289,6 +9936,16 @@ var dist = {exports: {}};
 	  })(node, state);
 	}
 
+	// A full walk triggers the callback on each node
+	function full(node, callback, baseVisitor, state, override) {
+	  if (!baseVisitor) { baseVisitor = base
+	  ; }(function c(node, st, override) {
+	    var type = override || node.type;
+	    baseVisitor[type](node, st, c);
+	    if (!override) { callback(node, st, type); }
+	  })(node, state, override);
+	}
+
 	// Fallback to an Object.create polyfill for older environments.
 	var create = Object.create || function(proto) {
 	  function Ctor() {}
@@ -10163,7 +10820,12 @@ var dist = {exports: {}};
 	    cell.secrets = new Map();
 	  }
 	  return cell;
-	}var index=/*#__PURE__*/Object.freeze({__proto__:null,parseCell: parseCell,peekId: peekId,CellParser: CellParser,parseModule: parseModule,ModuleParser: ModuleParser,walk: walk});const extractPath = path => {
+	}var index=/*#__PURE__*/Object.freeze({__proto__:null,parseCell: parseCell,peekId: peekId,CellParser: CellParser,parseModule: parseModule,ModuleParser: ModuleParser,walk: walk});/**
+	 *  FINISH REPLACING THE SIMPLE WALKER WITH A FULL WALKER THAT DOES SUBSTITUTION ALL AT ONCE.
+	 * 
+	 */
+
+	const extractPath = path => {
 	  let source = path;
 	  let m;
 
@@ -10241,64 +10903,62 @@ var dist = {exports: {}};
 	  if (cell.id && cell.id.name) name = cell.id.name;
 	  else if (cell.id && cell.id.id && cell.id.id.name) name = cell.id.id.name;
 	  let bodyText = cell.input.substring(cell.body.start, cell.body.end);
-	  const cellReferences = (cell.references || []).map(ref => {
+	  let expressionMap = {};
+	  let references = [];
+	  const cellReferences = Array.from(new Set((cell.references || []).map(ref => {
 	    if (ref.type === "ViewExpression") {
+	      if (expressionMap[ref.id.name] === undefined) {
+	        expressionMap[ref.id.name] = ref.id.name;
+	        references.push(ref.id.name);
+	      }
 	      return "viewof " + ref.id.name;
 	    } else if (ref.type === "MutableExpression") {
+	      if (expressionMap[ref.id.name] === undefined) {
+	        expressionMap[ref.id.name] = ref.id.name;
+	        references.push(ref.id.name);
+	      }
 	      return "mutable " + ref.id.name;
-	    } else return ref.name;
-	  });
-	  let $count = 0;
-	  let indexShift = 0;
-	  const references = (cell.references || []).map(ref => {
-	    if (ref.type === "ViewExpression") {
-	      const $string = "$" + $count;
-	      $count++;
-	      // replace "viewof X" in bodyText with "$($count)"
-	      simple(
-	        cell.body,
-	        {
-	          ViewExpression(node) {
-	            const start = node.start - cell.body.start;
-	            const end = node.end - cell.body.start;
-	            bodyText =
-	              bodyText.slice(0, start + indexShift) +
-	              $string +
-	              bodyText.slice(end + indexShift);
-	            indexShift += $string.length - (end - start);
-	          }
-	        },
-	        walk
-	      );
-	      return $string;
-	    } else if (ref.type === "MutableExpression") {
-	      const $string = "$" + $count;
-	      const $stringValue = $string + ".value";
-	      $count++;
-	      // replace "mutable Y" in bodyText with "$($count).value"
-	      simple(
-	        cell.body,
-	        {
-	          MutableExpression(node) {
-	            const start = node.start - cell.body.start;
-	            const end = node.end - cell.body.start;
-	            bodyText =
-	              bodyText.slice(0, start + indexShift) +
-	              $stringValue +
-	              bodyText.slice(end + indexShift);
-	            indexShift += $stringValue.length - (end - start);
-	          }
-	        },
-	        walk
-	      );
-	      return $string;
-	    } else return ref.name;
-	  });
+	    } else {
+	      references.push(ref.name);
+	      return ref.name;
+	    }
+	  })));
+	  const uniq = (lst) => {
+	    const result = [];
+	    const s = new Set();
+	    for (const v of lst) {
+	      if (s.has(v)) continue;
+	      s.add(v);
+	      result.push(v);
+	    }
+	    return result;
+	  };
+	  const patches = [];
+	  let latestPatch = { newStr: "", span: [cell.body.start, cell.body.start] };
+	  full(cell.body, node => {
+	    if (node.type === "ViewExpression" || node.type === "MutableExpression") {
+	      // cover previous ground?
+	      if (node.start !== latestPatch.span[1]) {
+	        patches.push({ newStr: cell.input.substring(latestPatch.span[1], node.start)});
+	      }
+	      const suffix = node.type === "MutableExpression" ? ".value" : "";
+	      const newStr = `${expressionMap[node.id.name]}${suffix}`;
+	      const patch = {
+	        newStr,
+	        span: [node.start, node.end]
+	      };
+	      latestPatch = patch;
+	      patches.push(patch);
+	    }
+	  }, walk);
+	  patches.push({newStr: cell.input.substring(latestPatch.span[1], cell.body.end), span: [latestPatch.span[1], cell.body.end]});
+	  bodyText = patches.map(x => x.newStr).join("");
+
 	  return {
 	    cellName: name,
-	    references: Array.from(new Set(references)),
+	    references: uniq(references),
 	    bodyText,
-	    cellReferences: Array.from(new Set(cellReferences))
+	    cellReferences: uniq(cellReferences)
 	  };
 	}function names(cell) {
 	  if (cell.body && cell.body.specifiers)
@@ -10432,7 +11092,7 @@ var dist = {exports: {}};
 
 	  if (!mapValue) return "";
 	  return `  const fileAttachments = new Map(${mapValue});
-	  main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));`;
+  main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));`;
 	}
 
 	function ESMVariables(moduleObject, importMap, params) {
@@ -10458,12 +11118,12 @@ var dist = {exports: {}};
 	        if (defineImportMarkdown)
 	          src +=
 	            `  main.variable(observer()).define(
-	    null,
-	    ["md"],
-	    md => md\`~~~javascript
-	${importString}
-	~~~\`
-	  );` + "\n";
+    null,
+    ["md"],
+    md => md\`~~~javascript
+${importString}
+~~~\`
+  );` + "\n";
 
 	        // name imported notebook define functions
 	        const childName = `child${++childJ}`;
@@ -10472,7 +11132,7 @@ var dist = {exports: {}};
 	        })${
 	          hasInjections ? `.derive(${JSON.stringify(injections)}, main)` : ""
 	        };
-	${specifiers
+${specifiers
 	  .map(
 	    specifier =>
 	      `  main.import("${specifier.name}", "${specifier.alias}", ${childName});`
@@ -10491,8 +11151,8 @@ var dist = {exports: {}};
 	        let code = "";
 	        if (cell.body.type !== "BlockStatement")
 	          code = `{return(
-	${bodyText}
-	)}`;
+${bodyText}
+)}`;
 	        else code = "\n" + bodyText + "\n";
 	        const cellReferencesString = cellReferences.length
 	          ? JSON.stringify(cellReferences) + ", "
@@ -10509,15 +11169,15 @@ var dist = {exports: {}};
 	        if (cell.id && cell.id.type === "ViewExpression") {
 	          const reference = `"viewof ${cellName}"`;
 	          src += `  main.variable(observer(${reference})).define(${reference}, ${cellReferencesString}${cellFunction});
-	  main.variable(${
+  main.variable(${
 	    observeViewofValues ? `observer("${cellName}")` : `null`
 	  }).define("${cellName}", ["Generators", ${reference}], (G, _) => G.input(_));`;
 	        } else if (cell.id && cell.id.type === "MutableExpression") {
 	          const initialName = `"initial ${cellName}"`;
 	          const mutableName = `"mutable ${cellName}"`;
 	          src += `  main.define(${initialName}, ${cellReferencesString}${cellFunction});
-	  main.variable(observer(${mutableName})).define(${mutableName}, ["Mutable", ${initialName}], (M, _) => new M(_));
-	  main.variable(${
+  main.variable(observer(${mutableName})).define(${mutableName}, ["Mutable", ${initialName}], (M, _) => new M(_));
+  main.variable(${
 	    observeMutableValues ? `observer("${cellName}")` : `null`
 	  }).define("${cellName}", [${mutableName}], _ => _.generator);`;
 	        } else {
@@ -10541,19 +11201,19 @@ var dist = {exports: {}};
 	  } = params;
 	  const { importSrc, importMap } = ESMImports(moduleObject, resolveImportPath);
 	  return `${importSrc}export default function define(runtime, observer) {
-	  const main = runtime.module();
-	${ESMAttachments(
+  const main = runtime.module();
+${ESMAttachments(
 	  moduleObject,
 	  resolveFileAttachments,
 	  UNSAFE_allowJavascriptFileAttachments
 	)}
-	${ESMVariables(moduleObject, importMap, {
+${ESMVariables(moduleObject, importMap, {
 	  defineImportMarkdown,
 	  observeViewofValues,
 	  observeMutableValues
 	}) || ""}
-	  return main;
-	}`;
+  return main;
+}`;
 	}
 
 	function defaultResolveImportPath(path) {
@@ -10732,8 +11392,8 @@ var dist = {exports: {}};
 	          null,
 	          ["md"],
 	          md => md`~~~javascript
-	  ${importString}
-	  ~~~`
+  ${importString}
+  ~~~`
 	        );
 	      if (hasInjections) {
 	        const child = other.derive(injections, module);
@@ -11111,10 +11771,10 @@ function getLineInfo(input, offset) {
 var defaultOptions = {
   // `ecmaVersion` indicates the ECMAScript version to parse. Must be
   // either 3, 5, 6 (or 2015), 7 (2016), 8 (2017), 9 (2018), 10
-  // (2019), 11 (2020), 12 (2021), 13 (2022), or `"latest"` (the
-  // latest version the library supports). This influences support
-  // for strict mode, the set of reserved words, and support for
-  // new syntax features.
+  // (2019), 11 (2020), 12 (2021), 13 (2022), 14 (2023), or `"latest"`
+  // (the latest version the library supports). This influences
+  // support for strict mode, the set of reserved words, and support
+  // for new syntax features.
   ecmaVersion: null,
   // `sourceType` indicates the mode the code should be parsed in.
   // Can be either `"script"` or `"module"`. This influences global
@@ -11148,8 +11808,9 @@ var defaultOptions = {
   // When enabled, super identifiers are not constrained to
   // appearing in methods and do not raise an error when they appear elsewhere.
   allowSuperOutsideMethod: null,
-  // When enabled, hashbang directive in the beginning of file
-  // is allowed and treated as a line comment.
+  // When enabled, hashbang directive in the beginning of file is
+  // allowed and treated as a line comment. Enabled by default when
+  // `ecmaVersion` >= 2023.
   allowHashBang: false,
   // When `locations` is on, `loc` properties holding objects with
   // `start` and `end` properties in `{line, column}` form (with
@@ -11223,6 +11884,9 @@ function getOptions(opts) {
 
   if (options.allowReserved == null)
     { options.allowReserved = options.ecmaVersion < 5; }
+
+  if (opts.allowHashBang == null)
+    { options.allowHashBang = options.ecmaVersion >= 14; }
 
   if (isArray(options.onToken)) {
     var tokens = options.onToken;
@@ -11554,7 +12218,7 @@ pp$9.checkPatternErrors = function(refDestructuringErrors, isAssign) {
   if (refDestructuringErrors.trailingComma > -1)
     { this.raiseRecoverable(refDestructuringErrors.trailingComma, "Comma is not permitted after the rest element"); }
   var parens = isAssign ? refDestructuringErrors.parenthesizedAssign : refDestructuringErrors.parenthesizedBind;
-  if (parens > -1) { this.raiseRecoverable(parens, "Parenthesized pattern"); }
+  if (parens > -1) { this.raiseRecoverable(parens, isAssign ? "Assigning to rvalue" : "Parenthesized pattern"); }
 };
 
 pp$9.checkExpressionErrors = function(refDestructuringErrors, andThrow) {
@@ -12650,6 +13314,7 @@ pp$8.adaptDirectivePrologue = function(statements) {
 };
 pp$8.isDirectiveCandidate = function(statement) {
   return (
+    this.options.ecmaVersion >= 5 &&
     statement.type === "ExpressionStatement" &&
     statement.expression.type === "Literal" &&
     typeof statement.expression.value === "string" &&
@@ -13060,7 +13725,8 @@ pp$6.updateContext = function(prevType) {
     { this.exprAllowed = type.beforeExpr; }
 };
 
-// Used to handle egde case when token context could not be inferred correctly in tokenize phase
+// Used to handle egde cases when token context could not be inferred correctly during tokenization phase
+
 pp$6.overrideContext = function(tokenCtx) {
   if (this.curContext() !== tokenCtx) {
     this.context[this.context.length - 1] = tokenCtx;
@@ -13875,15 +14541,6 @@ pp$5.parseProperty = function(isPattern, refDestructuringErrors) {
         this.raise(this.start, "Comma is not permitted after the rest element");
       }
       return this.finishNode(prop, "RestElement")
-    }
-    // To disallow parenthesized identifier via `this.toAssignable()`.
-    if (this.type === types$1.parenL && refDestructuringErrors) {
-      if (refDestructuringErrors.parenthesizedAssign < 0) {
-        refDestructuringErrors.parenthesizedAssign = this.start;
-      }
-      if (refDestructuringErrors.parenthesizedBind < 0) {
-        refDestructuringErrors.parenthesizedBind = this.start;
-      }
     }
     // Parse argument.
     prop.argument = this.parseMaybeAssign(false, refDestructuringErrors);
@@ -16314,7 +16971,7 @@ pp.readWord = function() {
 
 // Acorn is a tiny, fast JavaScript parser written in JavaScript.
 
-var version = "8.7.1";
+var version = "8.8.1";
 
 Parser.acorn = {
   Parser: Parser,
@@ -17343,15 +18000,34 @@ class EmptyInspector {
 
 // here we need to convert from an ES6 module to an observable module
 // in, well, a best-effort kind of way.
-function es6ImportAsObservableModule(m) {
+function es6ImportAsObservableModule(modulePromise, specs) {
+  const promiseMap = {};
+  const resolveMap = {};
+  specs.forEach(spec => {
+    promiseMap[spec] = new Promise((resolve, reject) => { resolveMap[spec] = { resolve, reject }; });
+  });
+  modulePromise.then(m => {
+    specs.forEach(spec => {
+      resolveMap[spec].resolve(m[spec]);
+    });
+  }).catch(error => {
+    specs.forEach(spec => {
+      resolveMap[spec].reject(error);
+    });
+  });
   return function (runtime, observer) {
     const main = runtime.module();
 
+    specs.forEach(key => {
+      main.variable(observer(key)).define(key, [], () => promiseMap[key]);
+    });
+/* 
     Object.keys(m).forEach((key) => {
       const v = m[key];
-      main.variable(observer(key)).define(key, [], () => v);
-    });
 
+      main.variable(observer(key)).define(key, [], () => promiseMap[key]v);
+    });
+ */
     return main;
   };
 }
@@ -17450,8 +18126,10 @@ async function defaultResolveImportPath(path) {
   extension of the URL pathname. If the extension is "js", we take the
   specifier to mean an ES module; If the extension is "ojs", we take
   the specifier to mean an "ojs" module (a collection of observable
-  statements packaged into a module, suitable for reuse). Finally,
-  if the extension is "qmd", we take the specifier
+  statements packaged into a module, suitable for reuse). If the 
+  extension is "ts" or "tsx", then this is an import that was actually transpiled 
+  into js during quarto render, and we change the extension to .js and
+  resolve that. Finally, if the extension is "qmd", we take the specifier
   to mean an "implicit ojs module", equivalent to extracting all
   the ojs statements from the .qmd file and producing an OJS module.
 
@@ -17510,7 +18188,7 @@ function importPathResolver(paths, localResolverMap) {
     return path;
   }
 
-  return async (path) => {
+  return async (path, specs) => {
     const isLocalModule = path.startsWith("/") || path.startsWith(".");
     const isImportFromObservableWebsite = path.match(
       /^https:\/\/(api\.|beta\.|)observablehq\.com\//i,
@@ -17523,6 +18201,11 @@ function importPathResolver(paths, localResolverMap) {
     let importPath, fetchPath;
     let moduleType;
     if (window._ojs.selfContained) {
+      if (path.endsWith(".ts")) {
+        path = path.replace(/\.ts$/, ".js");
+      } else if (path.endsWith(".tsx")) {
+        path = path.replace(/\.tsx$/, ".js");
+      }
       const resolved = localResolverMap.get(path);
       if (resolved === undefined) {
         throw new Error(`missing local file ${path} in self-contained mode`);
@@ -17546,7 +18229,7 @@ function importPathResolver(paths, localResolverMap) {
     } else {
       // we have a relative URL here
       const resourceURL = new URL(path, window.location);
-      moduleType = resourceURL.pathname.match(/\.(ojs|js|qmd)$/)[1];
+      moduleType = resourceURL.pathname.match(/\.(ojs|js|ts|tsx|qmd)$/)[1];
 
       // resolve path according to quarto path resolution rules.
       if (path.startsWith("/")) {
@@ -17558,10 +18241,22 @@ function importPathResolver(paths, localResolverMap) {
       }
     }
 
-    if (moduleType === "js") {
+    if (moduleType === "ts" || moduleType === "tsx") {
       try {
-        const m = await import(importPath);
-        return es6ImportAsObservableModule(m);
+        const modulePromise = import(window._ojs.selfContained ? 
+          importPath : 
+          importPath.replace(/\.ts$/, ".js").replace(/\.tsx$/, ".js"));
+        return es6ImportAsObservableModule(modulePromise, specs);
+      } catch (e) {
+        // record the error on the browser console to make debugging
+        // slightly more convenient.
+        console.error(e);
+        throw e;
+      }
+    } else if (moduleType === "js") {
+      try {
+        const modulePromise = import(importPath);
+        return es6ImportAsObservableModule(modulePromise, specs);
       } catch (e) {
         // record the error on the browser console to make debugging
         // slightly more convenient.
@@ -17790,6 +18485,208 @@ class OJSConnector {
   }
 }
 
+/*!
+ * escape-html
+ * Copyright(c) 2012-2013 TJ Holowaychuk
+ * Copyright(c) 2015 Andreas Lubbe
+ * Copyright(c) 2015 Tiancheng "Timothy" Gu
+ * Copyright(c) 2022 RStudio, PBC
+ * 
+ * MIT Licensed
+ *
+ * Minimal changes to make ES6
+ * 
+ */
+
+var matchHtmlRegExp = /["'&<>]/;
+
+/**
+ * Escape special characters in the given string of text.
+ *
+ * @param  {string} string The string to escape for inserting into HTML
+ * @return {string}
+ * @public
+ */
+
+function escapeHtml (string) {
+  var str = '' + string;
+  var match = matchHtmlRegExp.exec(str);
+
+  if (!match) {
+    return str
+  }
+
+  var escape;
+  var html = '';
+  var index = 0;
+  var lastIndex = 0;
+
+  for (index = match.index; index < str.length; index++) {
+    switch (str.charCodeAt(index)) {
+      case 34: // "
+        escape = '&quot;';
+        break
+      case 38: // &
+        escape = '&amp;';
+        break
+      case 39: // '
+        escape = '&#39;';
+        break
+      case 60: // <
+        escape = '&lt;';
+        break
+      case 62: // >
+        escape = '&gt;';
+        break
+      default:
+        continue
+    }
+
+    if (lastIndex !== index) {
+      html += str.substring(lastIndex, index);
+    }
+
+    lastIndex = index + 1;
+    html += escape;
+  }
+
+  return lastIndex !== index
+    ? html + str.substring(lastIndex, index)
+    : html
+}
+
+function createHtmlElement(tag, attrs, ...children) {
+  const el = document.createElement(tag);
+  for (const [key, val] of Object.entries(attrs || {})) {
+    el.setAttribute(key, val);
+  }
+  while (children.length) {
+    const child = children.shift();
+    if (Array.isArray(child)) {
+      children.unshift(...child);
+    } else if (child instanceof HTMLElement) {
+      el.appendChild(child);
+    } else {
+      el.appendChild(document.createTextNode(escapeHtml(child)));
+    }
+  }
+  return el;
+}
+
+function createNamespacedElement(ns, tag, attrs, ...children) {
+  const el = document.createElementNS(ns.namespace, tag);
+  for (const [key, val] of Object.entries(attrs || {})) {
+    el.setAttribute(key, val);
+  }
+  while (children.length) {
+    const child = children.shift();
+    if (Array.isArray(child)) {
+      children.unshift(...child);
+    } else if (child instanceof HTMLElement || child instanceof ns.class) {
+      el.appendChild(child);
+    } else {
+      el.appendChild(document.createTextNode(escapeHtml(child)));
+    }
+  }
+  return el;
+}
+
+const resolver = {
+  a: "svg",
+  animate: "svg",
+  animateMotion: "svg",
+  animateTransform: "svg",
+  circle: "svg",
+  clipPath: "svg",
+  defs: "svg",
+  desc: "svg",
+  discard: "svg",
+  ellipse: "svg",
+  feBlend: "svg",
+  feColorMatrix: "svg",
+  feComponentTransfer: "svg",
+  feComposite: "svg",
+  feConvolveMatrix: "svg",
+  feDiffuseLighting: "svg",
+  feDisplacementMap: "svg",
+  feDistantLight: "svg",
+  feDropShadow: "svg",
+  feFlood: "svg",
+  feFuncA: "svg",
+  feFuncB: "svg",
+  feFuncG: "svg",
+  feFuncR: "svg",
+  feGaussianBlur: "svg",
+  feImage: "svg",
+  feMerge: "svg",
+  feMergeNode: "svg",
+  feMorphology: "svg",
+  feOffset: "svg",
+  fePointLight: "svg",
+  feSpecularLighting: "svg",
+  feSpotLight: "svg",
+  feTile: "svg",
+  feTurbulence: "svg",
+  filter: "svg",
+  foreignObject: "svg",
+  g: "svg",
+  image: "svg",
+  line: "svg",
+  linearGradient: "svg",
+  marker: "svg",
+  mask: "svg",
+  metadata: "svg",
+  mpath: "svg",
+  path: "svg",
+  pattern: "svg",
+  polygon: "svg",
+  polyline: "svg",
+  radialGradient: "svg",
+  rect: "svg",
+  script: "svg",
+  set: "svg",
+  stop: "svg",
+  style: "svg",
+  svg: "svg",
+  switch: "svg",
+  symbol: "svg",
+  text: "svg",
+  textPath: "svg",
+  title: "svg",
+  tspan: "svg",
+  use: "svg",
+  view: "svg",  
+};
+
+const nss = {
+  "svg": { namespace: "http://www.w3.org/2000/svg", class: SVGElement }
+};
+
+function resolveCreator(tag) {
+  const nsKey = resolver[tag];
+  if (nsKey === undefined) {
+    return createHtmlElement;
+  }
+  const namespace = nss[nsKey];
+
+  return function(tag, attrs, ...children) {
+    return createNamespacedElement(namespace, tag, attrs, ...children);
+  }
+}
+
+function createQuartoJsxShim()
+{
+  return {
+    createElement(tag, attrs, ...children) {
+      if (typeof tag === "function") {
+        return tag({...attrs, children });
+      }
+
+      return resolveCreator(tag)(tag, attrs, ...children);
+    }
+  };
+}
+
 /*global Shiny, $, DOMParser, MutationObserver, URL
  *
  * quarto-ojs.js
@@ -17930,7 +18827,7 @@ class QuartoOJSConnector extends OJSConnector {
       ojsDiv = ojsDiv.parentElement;
     }
     if (!ojsDiv) {
-      throw new Error("Internal error: couldn't find output display div");
+      return null;
     }
     return ojsDiv;
   }
@@ -17939,13 +18836,26 @@ class QuartoOJSConnector extends OJSConnector {
     if (!hasErrors) {
       preDiv.classList.remove("numberSource");
       if (preDiv._hidden === true) {
-        preDiv.parentElement.classList.add("hidden");
+        const parent = preDiv.parentElement;
+        parent.classList.add("hidden");
+        // when code-tools is active (that is, when pre is inside a details tag), we also need to hide the details tag.
+        if (parent.parentElement.tagName === "DETAILS") {
+          parent.parentElement.classList.add("hidden");
+        }
       }
     } else {
       preDiv.classList.add("numberSource");
-      if (preDiv.parentElement.classList.contains("hidden")) {
-        preDiv._hidden = true;
-        preDiv.parentElement.classList.remove("hidden");
+      const parent = preDiv.parentElement;
+      if (parent.classList.contains("hidden")) {
+        preDiv._hidden = true; // signal that we used to be hidden so that when errors go away, we're hidden again.
+        parent.classList.remove("hidden");
+
+        // when code-tools is active (that is, when pre is inside a details tag), we also need to unhide the details tag.
+        if (parent.parentElement.tagName === "DETAILS") {
+          parent.parentElement.classList.remove("hidden");
+          // open the code-tools by default when error happens.
+          parent.parentElement.setAttribute("open", "open");
+        }
       }
     }
   }
@@ -17972,6 +18882,10 @@ class QuartoOJSConnector extends OJSConnector {
 
   decorateOjsDivWithErrorPinpoint(ojsDiv, start, end, line, column) {
     const cellOutputDisplay = this.findCellOutputDisplay(ojsDiv);
+    // if ojs element is inline, there's no div.
+    if (!cellOutputDisplay) {
+      return;
+    }
     if (cellOutputDisplay._errorSpans === undefined) {
       cellOutputDisplay._errorSpans = [];
     }
@@ -17984,6 +18898,10 @@ class QuartoOJSConnector extends OJSConnector {
   }
 
   decorateSource(cellDiv, ojsDiv) {
+    if (!cellDiv) {
+      // no div in inline spans
+      return;
+    }
     this.clearErrorPinpoints(cellDiv, ojsDiv);
     const preDiv = this.locatePreDiv(cellDiv, ojsDiv);
     // sometimes the source code is not echoed.
@@ -17994,7 +18912,12 @@ class QuartoOJSConnector extends OJSConnector {
     }
     // now find all ojsDivs that contain errors that need to be decorated
     // on preDiv
-    let div = preDiv.parentElement.nextElementSibling;
+    let parent = preDiv.parentElement;
+    if (parent.parentElement.tagName === "DETAILS") {
+      // we're in a code-tools setting, need to go one further up
+      parent = parent.parentElement;
+    }
+    let div = parent.nextElementSibling;
     let foundErrors = false;
     while (div !== null && div.classList.contains("cell-output-display")) {
       for (const errorSpan of div._errorSpans || []) {
@@ -18018,7 +18941,9 @@ class QuartoOJSConnector extends OJSConnector {
 
   clearError(ojsDiv) {
     const cellOutputDisplay = this.findCellOutputDisplay(ojsDiv);
-    cellOutputDisplay._errorSpans = [];
+    // if ojs element is inline, there's no div.
+    if (cellOutputDisplay)
+      cellOutputDisplay._errorSpans = [];
   }
 
   signalError(cellDiv, ojsDiv, ojsAst) {
@@ -18148,9 +19073,7 @@ class QuartoOJSConnector extends OJSConnector {
             cellOutputDisplay = cellDiv;
           }
         }
-        const forceShowDeclarations = !(
-          cellDiv && cellDiv.dataset.output !== "all"
-        );
+        const forceShowDeclarations = (!cellDiv) || (cellDiv.dataset.output === "all");
 
         const config = { childList: true };
         const callback = function (mutationsList) {
@@ -18316,14 +19239,32 @@ function createRuntime() {
     const keys = Object.keys(df);
     return df[keys[0]]
       .map((v, i) =>
-        Object.fromEntries(keys.map((key) => [key, df[key][i] || undefined]))
-      )
+        Object.fromEntries(keys.map((key) => {
+          const v = df[key][i];
+          const result = v === null ? undefined : v;
+          return [key, result];
+        })))
       .filter((v) => !Object.values(v).every((e) => e === undefined));
   }
   lib.transpose = () => transpose;
 
-  const mainEl = document.querySelector("main");
+  // TODO this should be user-configurable, so that we can actually 
+  // make it work in arbitrary layouts.
+  // There's probably a slick reactive trick to make the element
+  // user settable. 
+  //
+  // Right now we support quarto's standard HTML formats
+
+  const mainEl = (document.querySelector("main") // html
+   || document.querySelector("div.reveal")       // reveal
+   || document.querySelector("body"));           // fall-through
+
   function width() {
+    if (mainEl === null) {
+      return lib.Generators.observe((change) => {
+        change(undefined);
+      });
+    }
     return lib.Generators.observe(function (change) {
       var width = change(mainEl.clientWidth);
       function resized() {
@@ -18362,10 +19303,16 @@ function createRuntime() {
       lineBreak.remove();
     });
 
-  // select all panel elements with ids
-  const layoutDivs = Array.from(
+  // select all elements to track:
+  //   panel elements with ids, and divs with ids and .ojs-track-layout
+
+  const layoutDivs = [...Array.from(
     document.querySelectorAll("div.quarto-layout-panel div[id]")
-  );
+  ),
+  ...Array.from(
+    document.querySelectorAll('div.ojs-track-layout[id]')
+  )];
+  
   function layoutWidth() {
     return lib.Generators.observe(function (change) {
       const ourWidths = Object.fromEntries(
@@ -18495,7 +19442,6 @@ function createRuntime() {
       // grab a new id accidentally.
       let targetElement;
       const getElement = () => {
-        // console.log("getElement called");
         targetElement = document.getElementById(targetElementId);
         let subFigId;
         if (!targetElement) {
@@ -18508,8 +19454,6 @@ function createRuntime() {
             throw new Error("Ran out of quarto subfigures.");
           }
         }
-        // console.log("getElement will return", targetElement);
-        // console.log("state: ", { targetElementId, subFigId });
         return targetElement;
       };
 
@@ -18528,6 +19472,12 @@ function createRuntime() {
         }
 
         const ojsDiv = targetElement.querySelector(".observablehq");
+        if (!ojsDiv) {
+          // we failed to find an observablehq div inside the targetElement.
+          // This is an internal error and we have no way to report it
+          // except throwing the original exception.
+          throw e;
+        }
         // because this is in an exception handler, we might need
         // to clear some of the garbage that other pieces of code
         // won't have the chance to
@@ -18590,6 +19540,7 @@ function createRuntime() {
   return result;
 }
 
+
 function initializeRuntime()
 {
   // TODO "obs" or "ojs"? Inconsistent naming.
@@ -18605,6 +19556,7 @@ function initializeRuntime()
     // via DOM
   };
   window._ojs.runtime = createRuntime();
+  window._ojs.jsx = createQuartoJsxShim();
 }
 
 initializeRuntime();
