@@ -1,0 +1,75 @@
+<!-- initialise miromodal.js -->
+
+```{ojs}
+//| include: false
+micro = require("micromodal@0.4.10")
+micro.init({
+  awaitOpenAnimation: true,
+  awaitCloseAnimation: true
+});
+```
+
+::::::: {#modal-useremix .modal .micromodal-slide aria-hidden="true"}
+:::::: {.modal__overlay tabindex="-1" data-micromodal-close="true"}
+::::: {.modal__container role="dialog" aria-modal="true" aria-labelledby="modal-useremix-title"}
+
+<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+
+:::: {#modal-useremix-content}
+## Use + Remix
+
+This {{< meta 360embed.type >}}, as well as the analysis that underpins it, is available under a [**Creative Commons Attribution 4.0 licence**](https://creativecommons.org/licenses/by/4.0).
+
+Please acknowledge [360info](https://360info.org) and our data sources when you use them.
+
+#### Embed this chart in your article
+
+Copy and paste the following code:
+
+::: {.embedcode}
+```html
+<div style="aspect-ratio: {{< meta 360embed.aspect-ratio >}}; width: 100%; min-height: {{< meta 360embed.min-height >}}; max-height: {{< meta 360embed.max-height >}}">
+  <iframe
+    allow="fullscreen; clipboard-write self {{< meta 360embed.domain >}}"
+    allowfullscreen="true"
+    src="{{< meta 360embed.domain >}}{{< meta 360embed.path >}}"
+    title="{{< meta 360embed.title >}}"
+    style="width:100%; height:100%; position: relative; top: 0; left: 0; border:none; background-color: {{< meta 360embed.bg-colour >}};" scrolling="no"></iframe>
+</div>
+```
+:::
+
+
+This content is subject to [360info's Terms of Use](https://newshub.360info.org/page/terms).
+
+#### Get the data and code
+
+Visit the [GitHub repository](https://github.com/360-info/{{< meta 360embed.repo >}}/tree/main/data) to:
+
+* [**Download the data**](https://github.com/360-info/{{< meta 360embed.repo >}}/tree/main/data)
+* [**Recreate or remix the chart**](https://github.com/360-info/{{< meta 360embed.repo >}})
+::::
+
+:::::
+::::::
+:::::::
+
+<!-- notes dialog -->
+
+::::::: {#modal-about .modal .micromodal-slide aria-hidden="true"}
+:::::: {.modal__overlay tabindex="-1" data-micromodal-close="true"}
+::::: {.modal__container role="dialog" aria-modal="true" aria-labelledby="modal-about-title"}
+
+<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+
+<header>
+## About {#modal-about-title}
+</header>
+
+:::: {#modal-about-content}
+{{< meta 360embed.about >}}
+::::
+
+:::::
+::::::
+:::::::

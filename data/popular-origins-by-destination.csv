@@ -1171,17 +1171,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2000,Jamaica,Saint Kitts and Nevis,30,- - - -
 2000,Jamaica,St Vincent/Grenadines,43,- - - -
 2000,Jamaica,Trinidad and Tobago,153,- - - -
-2000,Japan,Brazil,371,- - - -
-2000,Japan,China,28076,- - - -
-2000,Japan,Indonesia,1143,- - - -
-2000,Japan,Malaysia,1956,- - - -
-2000,Japan,Thailand,1019,- - - -
-2000,Japan,Other countries,6082,- - - -
-2000,Japan,Republic of Korea,18237,- - - -
-2000,Japan,Viet Nam,531,- - - -
-2000,Japan,United States,1077,- - - -
-2000,Japan,Bangladesh,760,- - - -
-2000,Japan,Philippines,430,- - - -
+2000,Japan,Sudan (pre-secession),21,- - - -
 2000,Jordan,Malaysia,1232,- - - -
 2000,Jordan,Other countries,1326,- - - -
 2000,Jordan,Oman,742,- - - -
@@ -1293,7 +1283,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2000,New Zealand,Japan,680,- - - -
 2000,New Zealand,United States,458,- - - -
 2000,New Zealand,Fiji,342,- - - -
-2000,Niger,Nigeria,3,- - - -
+2000,Niger,Other countries,3,- - - -
 2000,Niger,Cameroon,30,- - - -
 2000,Niger,Benin,21,- - - -
 2000,Niger,Chad,15,- - - -
@@ -1792,17 +1782,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2001,Italy,Cameroon,745,- - - -
 2001,Italy,Albania,3386,- - - -
 2001,Italy,San Marino,674,- - - -
-2001,Japan,Brazil,380,- - - -
-2001,Japan,China,31955,- - - -
-2001,Japan,Indonesia,1235,- - - -
-2001,Japan,Malaysia,1747,- - - -
-2001,Japan,Thailand,1147,- - - -
-2001,Japan,Other countries,6376,- - - -
-2001,Japan,Republic of Korea,17905,- - - -
-2001,Japan,Viet Nam,646,- - - -
-2001,Japan,United States,1066,- - - -
-2001,Japan,Bangladesh,734,- - - -
-2001,Japan,Philippines,439,- - - -
+2001,Japan,Sudan (pre-secession),23,- - - -
 2001,Kazakhstan,China,140,- - - -
 2001,Kazakhstan,India,577,- - - -
 2001,Kazakhstan,Other countries,213,- - - -
@@ -2167,9 +2147,9 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2001,United Kingdom,Greece,28640,- - - -
 2001,United Kingdom,Spain,7287,- - - -
 2001,United Kingdom,Ireland,12217,- - - -
-2001,United States,Sudan (pre-secession),317.44,- - - -
-2001,United States,South America: unknown countries,9.54,- - - -
-2001,United States,Netherlands Antilles,305.3,- - - -
+2001,United States,Sudan (pre-secession),317.44000244140625,- - - -
+2001,United States,South America: unknown countries,9.539999961853026,- - - -
+2001,United States,Netherlands Antilles,305.2999877929688,- - - -
 2001,Viet Nam,China,26,- - - -
 2001,Viet Nam,Republic of Korea,20,- - - -
 2001,Viet Nam,Japan,5,- - - -
@@ -2470,17 +2450,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2002,Italy,Cameroon,679,- - - -
 2002,Italy,Albania,4256,- - - -
 2002,Italy,San Marino,720,- - - -
-2002,Japan,Brazil,378,- - - -
-2002,Japan,China,41180,- - - -
-2002,Japan,Indonesia,1293,- - - -
-2002,Japan,Malaysia,1613,- - - -
-2002,Japan,Thailand,1255,- - - -
-2002,Japan,Other countries,7037,- - - -
-2002,Japan,Republic of Korea,18899,- - - -
-2002,Japan,Viet Nam,867,- - - -
-2002,Japan,United States,1156,- - - -
-2002,Japan,Bangladesh,764,- - - -
-2002,Japan,Philippines,442,- - - -
+2002,Japan,Sudan (pre-secession),25,- - - -
 2002,Kyrgyzstan,Other countries,107,- - - -
 2002,Kyrgyzstan,Russia,245,- - - -
 2002,Kyrgyzstan,Ukraine,68,- - - -
@@ -3215,17 +3185,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2003,Italy,Cameroon,897,- - - -
 2003,Italy,Albania,6623,- - - -
 2003,Italy,San Marino,753,- - - -
-2003,Japan,China,51656,- - - -
-2003,Japan,Indonesia,1382,- - - -
-2003,Japan,Malaysia,1612,- - - -
-2003,Japan,Thailand,1390,- - - -
-2003,Japan,Other countries,7516,- - - -
-2003,Japan,Republic of Korea,19062,- - - -
-2003,Japan,Viet Nam,1092,- - - -
-2003,Japan,United States,1175,- - - -
-2003,Japan,Bangladesh,757,- - - -
-2003,Japan,Philippines,424,- - - -
-2003,Japan,Mongolia,433,- - - -
+2003,Japan,Sudan (pre-secession),27,- - - -
 2003,Jordan,Malaysia,403,- - - -
 2003,Jordan,Other countries,1705,- - - -
 2003,Jordan,Oman,913,- - - -
@@ -4015,17 +3975,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2004,Italy,Poland,1002,- - - -
 2004,Italy,Cameroon,1041,- - - -
 2004,Italy,Albania,8494,- - - -
-2004,Japan,China,76130,- - - -
-2004,Japan,Indonesia,1474,- - - -
-2004,Japan,Malaysia,1841,- - - -
-2004,Japan,Thailand,1604,- - - -
-2004,Japan,Other countries,8716,- - - -
-2004,Japan,Republic of Korea,23280,- - - -
-2004,Japan,Viet Nam,1340,- - - -
-2004,Japan,United States,1241,- - - -
-2004,Japan,Bangladesh,958,- - - -
-2004,Japan,Mongolia,689,- - - -
-2004,Japan,Sri Lanka,615,- - - -
+2004,Japan,Sudan (pre-secession),32,- - - -
 2004,Jordan,Malaysia,305,- - - -
 2004,Jordan,Other countries,2089,- - - -
 2004,Jordan,Oman,1860,- - - -
@@ -4166,12 +4116,12 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2004,Moldova,Lebanon,14,- - - -
 2004,Moldova,Syria,471,- - - -
 2004,Mongolia,China,129,- - - -
+2004,Mongolia,Other countries,1,- - - -
 2004,Mongolia,Republic of Korea,44,- - - -
 2004,Mongolia,Viet Nam,8,- - - -
 2004,Mongolia,Japan,22,- - - -
 2004,Mongolia,United States,4,- - - -
 2004,Mongolia,Russia,162,- - - -
-2004,Mongolia,Iraq,1,- - - -
 2004,Mongolia,Czechia,5,- - - -
 2004,Mongolia,Kazakhstan,8,- - - -
 2004,Mongolia,Poland,4,- - - -
@@ -4777,17 +4727,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2005,Italy,Poland,1151,- - - -
 2005,Italy,Cameroon,1364,- - - -
 2005,Italy,Albania,9724,- - - -
-2005,Japan,China,83264,- - - -
-2005,Japan,Indonesia,1414,- - - -
-2005,Japan,Malaysia,1915,- - - -
-2005,Japan,Thailand,1631,- - - -
-2005,Japan,Other countries,9351,- - - -
-2005,Japan,Republic of Korea,22571,- - - -
-2005,Japan,Viet Nam,1563,- - - -
-2005,Japan,United States,1552,- - - -
-2005,Japan,Bangladesh,1110,- - - -
-2005,Japan,Mongolia,766,- - - -
-2005,Japan,Sri Lanka,765,- - - -
+2005,Japan,Sudan (pre-secession),30,- - - -
 2005,Jordan,Malaysia,411,- - - -
 2005,Jordan,Other countries,2321,- - - -
 2005,Jordan,Oman,1310,- - - -
@@ -5571,17 +5511,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2006,Italy,Poland,1332,- - - -
 2006,Italy,Cameroon,1405,- - - -
 2006,Italy,Albania,10959,- - - -
-2006,Japan,China,86378,- - - -
-2006,Japan,Indonesia,1467,- - - -
-2006,Japan,Malaysia,2009,- - - -
-2006,Japan,Thailand,1623,- - - -
-2006,Japan,Other countries,9812,- - - -
-2006,Japan,Republic of Korea,22344,- - - -
-2006,Japan,Viet Nam,1734,- - - -
-2006,Japan,United States,1708,- - - -
-2006,Japan,Bangladesh,1303,- - - -
-2006,Japan,Mongolia,872,- - - -
-2006,Japan,Sri Lanka,867,- - - -
+2006,Japan,Sudan (pre-secession),25,- - - -
 2006,Jordan,Malaysia,422,- - - -
 2006,Jordan,Other countries,2569,- - - -
 2006,Jordan,Oman,1581,- - - -
@@ -6375,17 +6305,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2007,Italy,Poland,1478,- - - -
 2007,Italy,Cameroon,1614,- - - -
 2007,Italy,Albania,11883,- - - -
-2007,Japan,China,80231,- - - -
-2007,Japan,Indonesia,1541,- - - -
-2007,Japan,Malaysia,2052,- - - -
-2007,Japan,Thailand,1722,- - - -
-2007,Japan,Other countries,10667,- - - -
-2007,Japan,Republic of Korea,22109,- - - -
-2007,Japan,Viet Nam,2087,- - - -
-2007,Japan,United States,1888,- - - -
-2007,Japan,Bangladesh,1431,- - - -
-2007,Japan,Nepal,994,- - - -
-2007,Japan,Sri Lanka,1155,- - - -
+2007,Japan,Sudan (pre-secession),26,- - - -
 2007,Jordan,Malaysia,481,- - - -
 2007,Jordan,Other countries,2303,- - - -
 2007,Jordan,Oman,1012,- - - -
@@ -6848,15 +6768,15 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2008,Australia,Viet Nam,5446,- - - -
 2008,Australia,Canada,4321,- - - -
 2008,Austria,China,1436,- - - -
-2008,Austria,Other countries,15211.166659999999,- - - -
-2008,Austria,Germany,17464.41667,- - - -
+2008,Austria,Other countries,15211.16665649414,- - - -
+2008,Austria,Germany,17464.416015625004,- - - -
 2008,Austria,Serbia,1497,- - - -
 2008,Austria,Slovakia,1470,- - - -
-2008,Austria,Italy,6732.666670000001,- - - -
+2008,Austria,Italy,6732.666503906251,- - - -
 2008,Austria,Bosnia and Herzegovina,2742,- - - -
 2008,Austria,Croatia,1440,- - - -
-2008,Austria,Hungary,1391.3333299999997,- - - -
-2008,Austria,Poland,1636.66667,- - - -
+2008,Austria,Hungary,1391.3333740234377,- - - -
+2008,Austria,Poland,1636.666625976563,- - - -
 2008,Austria,Turkey,2345.5,- - - -
 2008,Azerbaijan,China,163,- - - -
 2008,Azerbaijan,India,51,- - - -
@@ -6961,17 +6881,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2008,Costa Rica,Nicaragua,402,- - - -
 2008,Costa Rica,Panama,44,- - - -
 2008,Costa Rica,El Salvador,80,- - - -
-2008,Côte d'Ivoire,Other countries,507,- - - -
-2008,Côte d'Ivoire,Africa: unknown countries,144,- - - -
-2008,Côte d'Ivoire,Lebanon,109,- - - -
-2008,Côte d'Ivoire,Cameroon,172,- - - -
-2008,Côte d'Ivoire,Congo,95,- - - -
-2008,Côte d'Ivoire,Guinea,201,- - - -
-2008,Côte d'Ivoire,Benin,691,- - - -
-2008,Côte d'Ivoire,Chad,133,- - - -
-2008,Côte d'Ivoire,Togo,198,- - - -
-2008,Côte d'Ivoire,Gabon,116,- - - -
-2008,Côte d'Ivoire,Burkina Faso,305,- - - -
 2008,Croatia,Other countries,16,- - - -
 2008,Croatia,Germany,16,- - - -
 2008,Croatia,France,3,- - - -
@@ -7019,6 +6928,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2008,Czechia,Belarus,355,- - - -
 2008,Czechia,Kazakhstan,332,- - - -
 2008,Czechia,Portugal,369,- - - -
+2008,Côte d'Ivoire,Other countries,507,- - - -
+2008,Côte d'Ivoire,Africa: unknown countries,144,- - - -
+2008,Côte d'Ivoire,Lebanon,109,- - - -
+2008,Côte d'Ivoire,Cameroon,172,- - - -
+2008,Côte d'Ivoire,Congo,95,- - - -
+2008,Côte d'Ivoire,Guinea,201,- - - -
+2008,Côte d'Ivoire,Benin,691,- - - -
+2008,Côte d'Ivoire,Chad,133,- - - -
+2008,Côte d'Ivoire,Togo,198,- - - -
+2008,Côte d'Ivoire,Gabon,116,- - - -
+2008,Côte d'Ivoire,Burkina Faso,305,- - - -
 2008,Denmark,China,768,- - - -
 2008,Denmark,India,156,- - - -
 2008,Denmark,Other countries,1396,- - - -
@@ -7173,17 +7093,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2008,Italy,Poland,1430,- - - -
 2008,Italy,Cameroon,1915,- - - -
 2008,Italy,Albania,11787,- - - -
-2008,Japan,China,77916,- - - -
-2008,Japan,Indonesia,1578,- - - -
-2008,Japan,Malaysia,2012,- - - -
-2008,Japan,Thailand,1975,- - - -
-2008,Japan,Other countries,11278,- - - -
-2008,Japan,Republic of Korea,23290,- - - -
-2008,Japan,Viet Nam,2541,- - - -
-2008,Japan,United States,1955,- - - -
-2008,Japan,Bangladesh,1515,- - - -
-2008,Japan,Nepal,1311,- - - -
-2008,Japan,Sri Lanka,1197,- - - -
+2008,Japan,Sudan (pre-secession),28,- - - -
 2008,Jordan,Malaysia,624,- - - -
 2008,Jordan,Other countries,2912,- - - -
 2008,Jordan,Oman,1217,- - - -
@@ -7892,15 +7802,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2009,Chile,Guatemala,79,- - - -
 2009,Chile,Mexico,58,- - - -
 2009,Chile,Panama,104,- - - -
-2009,Côte d'Ivoire,Africa: unknown countries,683,- - c -
-2009,Côte d'Ivoire,Europe: unknown countries,15,- - c -
-2009,Côte d'Ivoire,Senegal,56,- - c -
-2009,Côte d'Ivoire,Benin,281,- - c -
-2009,Côte d'Ivoire,Mali,72,- - c -
-2009,Côte d'Ivoire,Togo,183,- - c -
-2009,Côte d'Ivoire,Burkina Faso,190,- - c -
-2009,Côte d'Ivoire,Niger,82,- - c -
-2009,Côte d'Ivoire,Guinea-Bissau,1,- - c -
 2009,Croatia,Other countries,25,- - - -
 2009,Croatia,United States,4,- - - -
 2009,Croatia,Russia,3,- - - -
@@ -7946,6 +7847,15 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2009,Czechia,Kazakhstan,490,- - - -
 2009,Czechia,Poland,363,- - - -
 2009,Czechia,Portugal,402,- - - -
+2009,Côte d'Ivoire,Africa: unknown countries,683,- - c -
+2009,Côte d'Ivoire,Europe: unknown countries,15,- - c -
+2009,Côte d'Ivoire,Senegal,56,- - c -
+2009,Côte d'Ivoire,Benin,281,- - c -
+2009,Côte d'Ivoire,Mali,72,- - c -
+2009,Côte d'Ivoire,Togo,183,- - c -
+2009,Côte d'Ivoire,Burkina Faso,190,- - c -
+2009,Côte d'Ivoire,Niger,82,- - c -
+2009,Côte d'Ivoire,Guinea-Bissau,1,- - c -
 2009,Denmark,China,886,- - - -
 2009,Denmark,India,328,- - - -
 2009,Denmark,Other countries,3673,- - - -
@@ -8091,17 +8001,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2009,Italy,Poland,1462,- - - -
 2009,Italy,Cameroon,2155,- - - -
 2009,Italy,Albania,12259,- - - -
-2009,Japan,China,79394,- - - -
-2009,Japan,Indonesia,1788,- - - -
-2009,Japan,Malaysia,2147,- - - -
-2009,Japan,Thailand,2193,- - - -
-2009,Japan,Other countries,11929,- - - -
-2009,Japan,Republic of Korea,24850,- - - -
-2009,Japan,Viet Nam,2895,- - - -
-2009,Japan,United States,2126,- - - -
-2009,Japan,Bangladesh,1683,- - - -
-2009,Japan,Mongolia,1122,- - - -
-2009,Japan,Nepal,1457,- - - -
+2009,Japan,Sudan (pre-secession),28,- - - -
 2009,Jordan,Malaysia,648,- - - -
 2009,Jordan,Other countries,3304,- - - -
 2009,Jordan,Oman,1237,- - - -
@@ -8784,15 +8684,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2010,Chile,Venezuala,180,- - - -
 2010,Chile,Colombia,757,- - - -
 2010,Chile,Mexico,221,- - - -
-2010,Côte d'Ivoire,Africa: unknown countries,835,- - c -
-2010,Côte d'Ivoire,Europe: unknown countries,12,- - c -
-2010,Côte d'Ivoire,Senegal,45,- - c -
-2010,Côte d'Ivoire,Benin,265,- - c -
-2010,Côte d'Ivoire,Mali,75,- - c -
-2010,Côte d'Ivoire,Togo,178,- - c -
-2010,Côte d'Ivoire,Burkina Faso,184,- - c -
-2010,Côte d'Ivoire,Niger,116,- - c -
-2010,Côte d'Ivoire,Guinea-Bissau,1,- - c -
 2010,Croatia,Other countries,27,- - - -
 2010,Croatia,Germany,6,- - - -
 2010,Croatia,Serbia,53,- - - -
@@ -8841,6 +8732,15 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2010,Czechia,Kazakhstan,679,- - - -
 2010,Czechia,Poland,330,- - - -
 2010,Czechia,Portugal,443,- - - -
+2010,Côte d'Ivoire,Africa: unknown countries,835,- - c -
+2010,Côte d'Ivoire,Europe: unknown countries,12,- - c -
+2010,Côte d'Ivoire,Senegal,45,- - c -
+2010,Côte d'Ivoire,Benin,265,- - c -
+2010,Côte d'Ivoire,Mali,75,- - c -
+2010,Côte d'Ivoire,Togo,178,- - c -
+2010,Côte d'Ivoire,Burkina Faso,184,- - c -
+2010,Côte d'Ivoire,Niger,116,- - c -
+2010,Côte d'Ivoire,Guinea-Bissau,1,- - c -
 2010,Denmark,China,1325,- - - -
 2010,Denmark,Other countries,5120,- - - -
 2010,Denmark,Germany,1533,- - - -
@@ -9034,17 +8934,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2010,Italy,Poland,1274,- - - -
 2010,Italy,Cameroon,2292,- - - -
 2010,Italy,Albania,12234,- - - -
-2010,Japan,China,86553,- - - -
-2010,Japan,Indonesia,1974,- - - -
-2010,Japan,Malaysia,2271,- - - -
-2010,Japan,Thailand,2419,- - - -
-2010,Japan,Other countries,12678,- - - -
-2010,Japan,Republic of Korea,25660,- - - -
-2010,Japan,Viet Nam,3280,- - - -
-2010,Japan,United States,2239,- - - -
-2010,Japan,Bangladesh,1693,- - - -
-2010,Japan,Mongolia,1153,- - - -
-2010,Japan,Nepal,1641,- - - -
+2010,Japan,Sudan (pre-secession),31,- - - -
 2010,Jordan,Other countries,2411,- - - -
 2010,Jordan,Oman,1051,- - - -
 2010,Jordan,Israel,2913,- - - -
@@ -9532,9 +9422,9 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2011,Armenia,Syria,89,- - - -
 2011,Armenia,Georgia,1163,- - - -
 2011,Aruba,Peru,3,- - - -
+2011,Aruba,Other countries,1,- - - -
 2011,Aruba,Venezuala,9,- - - -
 2011,Aruba,Dominican Republic,5,- - - -
-2011,Aruba,United States,1,- - - -
 2011,Aruba,Colombia,17,- - - -
 2011,Aruba,Philippines,8,- - - -
 2011,Aruba,Netherlands,5,- - - -
@@ -9699,15 +9589,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2011,Congo,Chad,17,- - - -
 2011,Congo,Gabon,7,- - - -
 2011,Congo,Burkina Faso,1,- - - -
-2011,Côte d'Ivoire,Asia: unknown countries,182,- - - -
-2011,Côte d'Ivoire,Africa: unknown countries,446,- - - -
-2011,Côte d'Ivoire,Europe: unknown countries,11,- - - -
-2011,Côte d'Ivoire,Senegal,35,- - - -
-2011,Côte d'Ivoire,Benin,174,- - - -
-2011,Côte d'Ivoire,Mali,35,- - - -
-2011,Côte d'Ivoire,Togo,124,- - - -
-2011,Côte d'Ivoire,Burkina Faso,181,- - - -
-2011,Côte d'Ivoire,Niger,49,- - - -
 2011,Croatia,Other countries,30,- - - -
 2011,Croatia,Germany,5,- - - -
 2011,Croatia,United States,6,- - - -
@@ -9752,6 +9633,15 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2011,Czechia,Belarus,523,- - - -
 2011,Czechia,Kazakhstan,821,- - - -
 2011,Czechia,Portugal,480,- - - -
+2011,Côte d'Ivoire,Asia: unknown countries,182,- - - -
+2011,Côte d'Ivoire,Africa: unknown countries,446,- - - -
+2011,Côte d'Ivoire,Europe: unknown countries,11,- - - -
+2011,Côte d'Ivoire,Senegal,35,- - - -
+2011,Côte d'Ivoire,Benin,174,- - - -
+2011,Côte d'Ivoire,Mali,35,- - - -
+2011,Côte d'Ivoire,Togo,124,- - - -
+2011,Côte d'Ivoire,Burkina Faso,181,- - - -
+2011,Côte d'Ivoire,Niger,49,- - - -
 2011,Denmark,China,1078,- - - -
 2011,Denmark,Other countries,5457,- - - -
 2011,Denmark,Germany,1947,- - - -
@@ -9937,17 +9827,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2011,Italy,Cameroon,2501,- - - -
 2011,Italy,Albania,12452,- - - -
 2011,Italy,Moldova,1611,- - - -
-2011,Japan,China,94382,- - - -
-2011,Japan,Indonesia,2176,- - - -
-2011,Japan,Malaysia,2397,- - - -
-2011,Japan,Thailand,2476,- - - -
-2011,Japan,Other countries,13240,- - - -
-2011,Japan,Republic of Korea,25961,- - - -
-2011,Japan,Viet Nam,3672,- - - -
-2011,Japan,United States,2466,- - - -
-2011,Japan,Bangladesh,1619,- - - -
-2011,Japan,Mongolia,1237,- - - -
-2011,Japan,Nepal,1826,- - - -
+2011,Japan,Sudan (pre-secession),36,- - - -
 2011,Jordan,Malaysia,1481,- - - -
 2011,Jordan,Other countries,2132,- - - -
 2011,Jordan,Oman,946,- - - -
@@ -10442,7 +10322,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2011,United Kingdom,Greece,11583,- - - -
 2011,United Kingdom,Cyprus,11471,- - - -
 2011,United Kingdom,Ireland,16748,- - - -
-2011,United States,Sudan (pre-secession),231.48875,- - - -
+2011,United States,Sudan (pre-secession),231.4887542724609,- - - -
 2011,Uzbekistan,Russia,52,- - - -
 2011,Uzbekistan,Ukraine,3,- - - -
 2011,Uzbekistan,Belarus,1,- - - -
@@ -10647,17 +10527,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2012,Chile,Mexico,87,- - - -
 2012,Chile,Panama,72,- - - -
 2012,Comoros,Madagascar,2,- - - -
-2012,Côte d'Ivoire,Asia: unknown countries,65,- - - -
-2012,Côte d'Ivoire,North America: unknown countries,19,- - - -
-2012,Côte d'Ivoire,Africa: unknown countries,478,- - - -
-2012,Côte d'Ivoire,Europe: unknown countries,19,- - - -
-2012,Côte d'Ivoire,Senegal,35,- - - -
-2012,Côte d'Ivoire,Benin,176,- - - -
-2012,Côte d'Ivoire,Mali,50,- - - -
-2012,Côte d'Ivoire,Togo,117,- - - -
-2012,Côte d'Ivoire,Burkina Faso,186,- - - -
-2012,Côte d'Ivoire,Niger,58,- - - -
-2012,Côte d'Ivoire,Guinea-Bissau,1,- - - -
 2012,Croatia,Other countries,80,- - - -
 2012,Croatia,Germany,24,- - - -
 2012,Croatia,Sweden,16,- - - -
@@ -10703,6 +10572,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2012,Czechia,Belarus,527,- - - -
 2012,Czechia,Kazakhstan,979,- - - -
 2012,Czechia,Portugal,468,- - - -
+2012,Côte d'Ivoire,Asia: unknown countries,65,- - - -
+2012,Côte d'Ivoire,Other countries,1,- - - -
+2012,Côte d'Ivoire,North America: unknown countries,19,- - - -
+2012,Côte d'Ivoire,Africa: unknown countries,478,- - - -
+2012,Côte d'Ivoire,Europe: unknown countries,19,- - - -
+2012,Côte d'Ivoire,Senegal,35,- - - -
+2012,Côte d'Ivoire,Benin,176,- - - -
+2012,Côte d'Ivoire,Mali,50,- - - -
+2012,Côte d'Ivoire,Togo,117,- - - -
+2012,Côte d'Ivoire,Burkina Faso,186,- - - -
+2012,Côte d'Ivoire,Niger,58,- - - -
 2012,Denmark,China,915,- - - -
 2012,Denmark,Other countries,6133,- - - -
 2012,Denmark,Germany,2377,- - - -
@@ -10917,17 +10797,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2012,Italy,Cameroon,2652,- - - -
 2012,Italy,Albania,12045,- - - -
 2012,Italy,Moldova,1815,- - - -
-2012,Japan,China,96592,- - - -
-2012,Japan,Indonesia,2213,- - - -
-2012,Japan,Malaysia,2400,- - - -
-2012,Japan,Thailand,2476,- - - -
-2012,Japan,Other countries,12527,- - - -
-2012,Japan,Republic of Korea,24171,- - - -
-2012,Japan,Viet Nam,4047,- - - -
-2012,Japan,United States,1625,- - - -
-2012,Japan,Bangladesh,1364,- - - -
-2012,Japan,Mongolia,1157,- - - -
-2012,Japan,Nepal,2035,- - - -
 2012,Jordan,Malaysia,2027,- - - -
 2012,Jordan,Other countries,3130,- - - -
 2012,Jordan,Oman,1079,- - - -
@@ -11507,17 +11376,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2013,Australia,Viet Nam,12383,- - - -
 2013,Australia,Nepal,7212,- - - -
 2013,Australia,Saudi Arabia,4946,- - - -
-2013,Austria,Other countries,18196.73891,- - - -
-2013,Austria,Germany,28214.783330000002,- - - -
+2013,Austria,Other countries,18196.738870620728,- - - -
+2013,Austria,Germany,28214.783203125004,- - - -
 2013,Austria,Romania,1481.25,- - - -
-2013,Austria,Serbia,1790.0833299999997,- - - -
+2013,Austria,Serbia,1790.0833740234377,- - - -
 2013,Austria,Slovakia,1322,- - - -
-2013,Austria,Italy,7807.5833299999995,- - - -
-2013,Austria,Bosnia and Herzegovina,2193.833330000001,- - - -
-2013,Austria,Bulgaria,1646.16667,- - - -
+2013,Austria,Italy,7807.58349609375,- - - -
+2013,Austria,Bosnia and Herzegovina,2193.8332519531255,- - - -
+2013,Austria,Bulgaria,1646.166625976563,- - - -
 2013,Austria,Hungary,1655.25,- - - -
-2013,Austria,Poland,1151.66667,- - - -
-2013,Austria,Turkey,3140.8214300000004,- - - -
+2013,Austria,Poland,1151.666625976563,- - - -
+2013,Austria,Turkey,3140.821533203126,- - - -
 2013,Azerbaijan,China,110,- - - -
 2013,Azerbaijan,India,82,- - - -
 2013,Azerbaijan,Other countries,275,- - - -
@@ -11663,17 +11532,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2013,Czechia,Kazakhstan,1174,- - - -
 2013,Czechia,Poland,382,- - - -
 2013,Czechia,Portugal,442,- - - -
-2013,Denmark,China,1204,- - - -
-2013,Denmark,Other countries,10992,- - - -
-2013,Denmark,Germany,3245,- - - -
-2013,Denmark,Norway,3581,- - - -
-2013,Denmark,Sweden,2506,- - - -
-2013,Denmark,Romania,2016,- - - -
-2013,Denmark,Iceland,1187,- - - -
-2013,Denmark,Lithuania,1716,- - - -
-2013,Denmark,Bulgaria,1115,- - - -
-2013,Denmark,Poland,1094,- - - -
-2013,Denmark,Latvia,823,- - - -
 2013,DR Congo,Other countries,152,- - - -
 2013,DR Congo,Nigeria,20,- - - -
 2013,DR Congo,Africa: unknown countries,668,- - - -
@@ -11685,6 +11543,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2013,DR Congo,Central African Republic,28,- - - -
 2013,DR Congo,Togo,20,- - - -
 2013,DR Congo,Burundi,140,- - - -
+2013,Denmark,China,1204,- - - -
+2013,Denmark,Other countries,10992,- - - -
+2013,Denmark,Germany,3245,- - - -
+2013,Denmark,Norway,3581,- - - -
+2013,Denmark,Sweden,2506,- - - -
+2013,Denmark,Romania,2016,- - - -
+2013,Denmark,Iceland,1187,- - - -
+2013,Denmark,Lithuania,1716,- - - -
+2013,Denmark,Bulgaria,1115,- - - -
+2013,Denmark,Poland,1094,- - - -
+2013,Denmark,Latvia,823,- - - -
 2013,Egypt,China,297,- - - -
 2013,Egypt,Indonesia,2682,- - - -
 2013,Egypt,Malaysia,4821,- - - -
@@ -12079,17 +11948,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2013,Netherlands,Spain,965,- - - -
 2013,Netherlands,Italy,1487,- - - -
 2013,Netherlands,Bulgaria,1614,- - - -
-2013,New Zealand,China,12219.21556,- - - -
-2013,New Zealand,India,6844.79278,- - - -
-2013,New Zealand,Malaysia,1654.78509,- - - -
-2013,New Zealand,Other countries,8585.09313,- - - -
-2013,New Zealand,Republic of Korea,1418.94217,- - - -
-2013,New Zealand,Viet Nam,980.82274,- - - -
-2013,New Zealand,Japan,728.5790900000001,- - - -
-2013,New Zealand,United States,2238.13403,- - - -
-2013,New Zealand,Sri Lanka,611.9321999999999,- - - -
-2013,New Zealand,Australia,2641.30787,- - - -
-2013,New Zealand,Saudi Arabia,994.1917500000001,- - - -
+2013,New Zealand,China,12219.215820312502,- - - -
+2013,New Zealand,India,6844.792968750001,- - - -
+2013,New Zealand,Malaysia,1654.785034179688,- - - -
+2013,New Zealand,Other countries,8585.093125343323,- - - -
+2013,New Zealand,Republic of Korea,1418.9421386718748,- - - -
+2013,New Zealand,Viet Nam,980.82275390625,- - - -
+2013,New Zealand,Japan,728.5791015625001,- - - -
+2013,New Zealand,United States,2238.1340332031255,- - - -
+2013,New Zealand,Sri Lanka,611.93218994140625,- - - -
+2013,New Zealand,Australia,2641.3078613281245,- - - -
+2013,New Zealand,Saudi Arabia,994.1917724609376,- - - -
 2013,North Macedonia,Other countries,31,- - - -
 2013,North Macedonia,Serbia,912,- - - -
 2013,North Macedonia,Italy,8,- - - -
@@ -12366,17 +12235,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2013,United Kingdom,United States,14652,- - - -
 2013,United Kingdom,Cyprus,10928,- - - -
 2013,United Kingdom,Ireland,12579,- - - -
-2013,United States,Asia: unknown countries,20928.41482,- - - -
-2013,United States,China,225474.28874000002,- - - -
-2013,United States,India,92596.84686999998,- - - -
-2013,United States,Other countries,250259.54975999994,- - - -
-2013,United States,Republic of Korea,67592.42516000001,- - - -
-2013,United States,Viet Nam,15406.32988,- - - -
-2013,United States,Japan,18727.237110000002,- - - -
-2013,United States,Mexico,13588.92272,- - - -
-2013,United States,Canada,26181.573269999997,- - - -
-2013,United States,Turkey,10793.427029999999,- - - -
-2013,United States,Saudi Arabia,42651.16767999999,- - - -
+2013,United States,Asia: unknown countries,20928.4140625,- - - -
+2013,United States,China,225474.28125,- - - -
+2013,United States,India,92596.84375,- - - -
+2013,United States,Other countries,250259.5494604111,- - - -
+2013,United States,Republic of Korea,67592.42187499999,- - - -
+2013,United States,Viet Nam,15406.330078125002,- - - -
+2013,United States,Japan,18727.236328125,- - - -
+2013,United States,Mexico,13588.922851562502,- - - -
+2013,United States,Canada,26181.57421875,- - - -
+2013,United States,Turkey,10793.426757812504,- - - -
+2013,United States,Saudi Arabia,42651.16796874999,- - - -
 2013,Uzbekistan,Russia,108,- - - -
 2013,Uzbekistan,Ukraine,4,- - - -
 2013,Uzbekistan,Kazakhstan,91,- - - -
@@ -12431,17 +12300,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2014,Australia,Viet Nam,12898,- - - -
 2014,Australia,Nepal,9168,- - - -
 2014,Australia,Pakistan,6316,- - - -
-2014,Austria,Other countries,15465.699489999999,- - - -
-2014,Austria,Germany,26746.27982,- - - -
-2014,Austria,Iran,1020.7804700000002,- - - -
-2014,Austria,Romania,1331.2276100000001,- - - -
-2014,Austria,Serbia,1739.0916399999999,- - - -
-2014,Austria,Slovakia,1084.6735899999999,- - - -
-2014,Austria,Italy,7606.35134,- - - -
-2014,Austria,Bosnia and Herzegovina,2097.5958,- - - -
-2014,Austria,Bulgaria,1565.80817,- - - -
-2014,Austria,Hungary,1744.01524,- - - -
-2014,Austria,Turkey,2740.1723500000003,- - - -
+2014,Austria,Other countries,15465.699571609497,- - - -
+2014,Austria,Germany,26746.279296874993,- - - -
+2014,Austria,Iran,1020.7804565429691,- - - -
+2014,Austria,Romania,1331.2276611328132,- - - -
+2014,Austria,Serbia,1739.091674804688,- - - -
+2014,Austria,Slovakia,1084.673583984375,- - - -
+2014,Austria,Italy,7606.351562500001,- - - -
+2014,Austria,Bosnia and Herzegovina,2097.595703125,- - - -
+2014,Austria,Bulgaria,1565.8082275390627,- - - -
+2014,Austria,Hungary,1744.0152587890632,- - - -
+2014,Austria,Turkey,2740.1723632812505,- - - -
 2014,Azerbaijan,China,161,- - - -
 2014,Azerbaijan,India,34,- - - -
 2014,Azerbaijan,Other countries,293,- - - -
@@ -12610,17 +12479,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2014,Colombia,Mexico,173,- - - -
 2014,Colombia,Panama,84,- - - -
 2014,Colombia,Spain,76,- - - -
-2014,Côte d'Ivoire,Other countries,596,- - - -
-2014,Côte d'Ivoire,Nigeria,175,- - - -
-2014,Côte d'Ivoire,Lebanon,152,- - - -
-2014,Côte d'Ivoire,Cameroon,144,- - - -
-2014,Côte d'Ivoire,Congo,248,- - - -
-2014,Côte d'Ivoire,Guinea,191,- - - -
-2014,Côte d'Ivoire,Benin,328,- - - -
-2014,Côte d'Ivoire,Mali,213,- - - -
-2014,Côte d'Ivoire,Togo,241,- - - -
-2014,Côte d'Ivoire,Burkina Faso,495,- - - -
-2014,Côte d'Ivoire,Niger,167,- - - -
 2014,Croatia,Other countries,136,- - - -
 2014,Croatia,Germany,69,- - - -
 2014,Croatia,Sweden,45,- - - -
@@ -12665,6 +12523,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2014,Czechia,Kazakhstan,1376,- - - -
 2014,Czechia,Poland,363,- - - -
 2014,Czechia,Portugal,412,- - - -
+2014,Côte d'Ivoire,Other countries,596,- - - -
+2014,Côte d'Ivoire,Nigeria,175,- - - -
+2014,Côte d'Ivoire,Lebanon,152,- - - -
+2014,Côte d'Ivoire,Cameroon,144,- - - -
+2014,Côte d'Ivoire,Congo,248,- - - -
+2014,Côte d'Ivoire,Guinea,191,- - - -
+2014,Côte d'Ivoire,Benin,328,- - - -
+2014,Côte d'Ivoire,Mali,213,- - - -
+2014,Côte d'Ivoire,Togo,241,- - - -
+2014,Côte d'Ivoire,Burkina Faso,495,- - - -
+2014,Côte d'Ivoire,Niger,167,- - - -
 2014,Denmark,China,1168,- - - -
 2014,Denmark,Other countries,11976,- - - -
 2014,Denmark,Germany,3137,- - - -
@@ -13120,17 +12989,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2014,Netherlands,Spain,1155,- - - -
 2014,Netherlands,Italy,1726,- - - -
 2014,Netherlands,Bulgaria,1628,- - - -
-2014,New Zealand,China,13951.77666,- - - -
-2014,New Zealand,India,10255.358939999998,- - - -
-2014,New Zealand,Malaysia,1508.4197800000002,- - - -
-2014,New Zealand,Other countries,9135.7887,- - - -
-2014,New Zealand,Republic of Korea,1294.9850900000001,- - - -
-2014,New Zealand,Viet Nam,984.1738300000002,- - - -
-2014,New Zealand,Japan,773.89748,- - - -
-2014,New Zealand,United States,2186.1696699999998,- - - -
-2014,New Zealand,Sri Lanka,604.63275,- - - -
-2014,New Zealand,Australia,2530.2686499999995,- - - -
-2014,New Zealand,Saudi Arabia,859.50697,- - - -
+2014,New Zealand,China,13951.7763671875,- - - -
+2014,New Zealand,India,10255.359374999998,- - - -
+2014,New Zealand,Malaysia,1508.4197998046882,- - - -
+2014,New Zealand,Other countries,9135.788699150085,- - - -
+2014,New Zealand,Republic of Korea,1294.9851074218752,- - - -
+2014,New Zealand,Viet Nam,984.173828125,- - - -
+2014,New Zealand,Japan,773.8974609375,- - - -
+2014,New Zealand,United States,2186.169677734375,- - - -
+2014,New Zealand,Sri Lanka,604.63275146484375,- - - -
+2014,New Zealand,Australia,2530.2685546875,- - - -
+2014,New Zealand,Saudi Arabia,859.5069580078125,- - - -
 2014,North Macedonia,Other countries,55,- - - -
 2014,North Macedonia,Germany,10,- - - -
 2014,North Macedonia,Greece,11,- - - -
@@ -13506,17 +13375,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2015,Australia,Viet Nam,13147,- - - -
 2015,Australia,Nepal,11816,- - - -
 2015,Australia,Pakistan,8200,- - - -
-2015,Austria,Other countries,16883.155199999997,- - - -
-2015,Austria,Germany,27149.51815,- - - -
-2015,Austria,Iran,1147.33693,- - - -
-2015,Austria,Russia,1128.0040299999998,- - - -
-2015,Austria,Romania,1219.6827299999998,- - - -
-2015,Austria,Serbia,1879.3444199999997,- - - -
-2015,Austria,Italy,8063.63024,- - - -
-2015,Austria,Bosnia and Herzegovina,2354.59644,- - - -
-2015,Austria,Bulgaria,1493.8827299999998,- - - -
-2015,Austria,Hungary,1949.6878399999998,- - - -
-2015,Austria,Turkey,2536.47922,- - - -
+2015,Austria,Other countries,16883.155100941658,- - - -
+2015,Austria,Germany,27149.517578124996,- - - -
+2015,Austria,Iran,1147.3369140625,- - - -
+2015,Austria,Russia,1128.0040283203127,- - - -
+2015,Austria,Romania,1219.6827392578125,- - - -
+2015,Austria,Serbia,1879.3443603515627,- - - -
+2015,Austria,Italy,8063.630371093751,- - - -
+2015,Austria,Bosnia and Herzegovina,2354.596435546875,- - - -
+2015,Austria,Bulgaria,1493.882690429688,- - - -
+2015,Austria,Hungary,1949.6878662109377,- - - -
+2015,Austria,Turkey,2536.479248046875,- - - -
 2015,Azerbaijan,China,131,- - - -
 2015,Azerbaijan,Other countries,241,- - - -
 2015,Azerbaijan,Viet Nam,32,- - - -
@@ -13684,17 +13553,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2015,Colombia,Mexico,181,- - - -
 2015,Colombia,Panama,81,- - - -
 2015,Colombia,Spain,106,- - - -
-2015,Côte d'Ivoire,Other countries,481,- - - -
-2015,Côte d'Ivoire,Nigeria,272,- - - -
-2015,Côte d'Ivoire,Lebanon,157,- - - -
-2015,Côte d'Ivoire,Cameroon,242,- - - -
-2015,Côte d'Ivoire,Congo,309,- - - -
-2015,Côte d'Ivoire,Guinea,202,- - - -
-2015,Côte d'Ivoire,Benin,469,- - - -
-2015,Côte d'Ivoire,Mali,247,- - - -
-2015,Côte d'Ivoire,Togo,310,- - - -
-2015,Côte d'Ivoire,Burkina Faso,619,- - - -
-2015,Côte d'Ivoire,Niger,157,- - - -
 2015,Croatia,Other countries,169,- - - -
 2015,Croatia,Germany,75,- - - -
 2015,Croatia,Sweden,46,- - - -
@@ -13740,6 +13598,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2015,Czechia,Belarus,643,- - - -
 2015,Czechia,Kazakhstan,1446,- - - -
 2015,Czechia,Portugal,382,- - - -
+2015,Côte d'Ivoire,Other countries,481,- - - -
+2015,Côte d'Ivoire,Nigeria,272,- - - -
+2015,Côte d'Ivoire,Lebanon,157,- - - -
+2015,Côte d'Ivoire,Cameroon,242,- - - -
+2015,Côte d'Ivoire,Congo,309,- - - -
+2015,Côte d'Ivoire,Guinea,202,- - - -
+2015,Côte d'Ivoire,Benin,469,- - - -
+2015,Côte d'Ivoire,Mali,247,- - - -
+2015,Côte d'Ivoire,Togo,310,- - - -
+2015,Côte d'Ivoire,Burkina Faso,619,- - - -
+2015,Côte d'Ivoire,Niger,157,- - - -
 2015,Denmark,China,1116,- - - -
 2015,Denmark,Other countries,13431,- - - -
 2015,Denmark,Germany,3415,- - - -
@@ -13960,17 +13829,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2015,Italy,Cameroon,2753,- - - -
 2015,Italy,Albania,11460,- - - -
 2015,Italy,Moldova,2302,- - - -
-2015,Japan,China,79175,a - - -
 2015,Japan,Indonesia,2527,- - - -
 2015,Japan,Malaysia,2209,- - - -
 2015,Japan,Thailand,2516,- - - -
-2015,Japan,Other countries,12143,- - - -
-2015,Japan,Republic of Korea,13480,a - - -
+2015,Japan,Other countries,10441,- - - -
 2015,Japan,Myanmar,1239,- - - -
 2015,Japan,Viet Nam,10614,- - - -
 2015,Japan,United States,1918,- - - -
+2015,Japan,Bangladesh,810,- - - -
 2015,Japan,Mongolia,1058,- - - -
 2015,Japan,Nepal,5090,- - - -
+2015,Japan,Sri Lanka,892,- - - -
 2015,Jordan,Malaysia,3071,- - - -
 2015,Jordan,Other countries,4397,- - - -
 2015,Jordan,Oman,1347,- - - -
@@ -14191,17 +14060,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2015,Netherlands,Spain,1531,- - - -
 2015,Netherlands,Italy,2401,- - - -
 2015,Netherlands,Bulgaria,1846,- - - -
-2015,New Zealand,China,15009.422040000001,- - - -
-2015,New Zealand,India,15087.256179999998,- - - -
-2015,New Zealand,Malaysia,1479.07189,- - - -
-2015,New Zealand,Other countries,9832.036380000003,- - - -
-2015,New Zealand,Republic of Korea,1194.56897,- - - -
-2015,New Zealand,Viet Nam,1035.7978,- - - -
-2015,New Zealand,Japan,694.7982900000001,- - - -
-2015,New Zealand,United States,2377.6406399999996,- - - -
-2015,New Zealand,Philippines,1105.2439399999998,- - - -
-2015,New Zealand,Australia,2461.06037,- - - -
-2015,New Zealand,Saudi Arabia,715.13147,- - - -
+2015,New Zealand,China,15009.421875,- - - -
+2015,New Zealand,India,15087.255859375,- - - -
+2015,New Zealand,Malaysia,1479.071899414063,- - - -
+2015,New Zealand,Other countries,9832.03631401062,- - - -
+2015,New Zealand,Republic of Korea,1194.5689697265632,- - - -
+2015,New Zealand,Viet Nam,1035.7978515625002,- - - -
+2015,New Zealand,Japan,694.7982788085939,- - - -
+2015,New Zealand,United States,2377.6406249999995,- - - -
+2015,New Zealand,Philippines,1105.243896484375,- - - -
+2015,New Zealand,Australia,2461.0603027343755,- - - -
+2015,New Zealand,Saudi Arabia,715.1314697265625,- - - -
 2015,Niger,Other countries,244,- - - -
 2015,Niger,Nigeria,243,- - - -
 2015,Niger,Cameroon,106,- - - -
@@ -14302,17 +14171,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2015,Romania,Turkey,498,- - - -
 2015,Romania,Moldova,6861,- - - -
 2015,Romania,Tunisia,1233,- - - -
-2015,Russia,China,9785,a - - -
-2015,Russia,Other countries,31702,a - - -
-2015,Russia,Ukraine,21817,a - - -
-2015,Russia,Belarus,18804,a - - -
-2015,Russia,Kazakhstan,59295,a - - -
-2015,Russia,Azerbaijan,14083,a - - -
-2015,Russia,Turkmenistan,16332,a - - -
-2015,Russia,Moldova,5834,a - - -
-2015,Russia,Tajikistan,10825,a - - -
-2015,Russia,Uzbekistan,16162,a - - -
-2015,Russia,Armenia,4446,a - - -
 2015,Rwanda,India,10,- - - -
 2015,Rwanda,Other countries,16,- - - -
 2015,Rwanda,Nigeria,17,- - - -
@@ -14512,17 +14370,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2015,United Kingdom,United States,15378,- - - -
 2015,United Kingdom,Italy,10474,- - - -
 2015,United Kingdom,Ireland,10849,- - - -
-2015,United States,Brazil,13349.090440000002,- - - -
-2015,United States,Asia: unknown countries,18197.786120000004,- - - -
-2015,United States,China,291063.49374000006,- - - -
-2015,United States,India,112713.60439000001,- - - -
-2015,United States,Other countries,276306.3827999998,- - - -
-2015,United States,Republic of Korea,63952.31627000001,- - - -
-2015,United States,Viet Nam,19335.919239999996,- - - -
-2015,United States,Japan,15074.89214,- - - -
-2015,United States,Mexico,14962.39924,- - - -
-2015,United States,Canada,28453.662180000003,- - - -
-2015,United States,Saudi Arabia,53637.47357,- - - -
+2015,United States,Brazil,13349.090820312502,- - - -
+2015,United States,Asia: unknown countries,18197.785156250004,- - - -
+2015,United States,China,291063.5,- - - -
+2015,United States,India,112713.60156250001,- - - -
+2015,United States,Other countries,276306.38309657574,- - - -
+2015,United States,Republic of Korea,63952.31640625001,- - - -
+2015,United States,Viet Nam,19335.919921874993,- - - -
+2015,United States,Japan,15074.892578125002,- - - -
+2015,United States,Mexico,14962.3994140625,- - - -
+2015,United States,Canada,28453.662109374996,- - - -
+2015,United States,Saudi Arabia,53637.47265625001,- - - -
 2015,Uzbekistan,Russia,129,- - - -
 2015,Uzbekistan,Ukraine,21,- - - -
 2015,Uzbekistan,Kazakhstan,119,- - - -
@@ -14620,17 +14478,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2016,Australia,Nepal,14712,- - - -
 2016,Australia,Pakistan,9955,- - - -
 2016,Australia,Sri Lanka,6126,- - - -
-2016,Austria,Other countries,18008.200060000003,- - - -
-2016,Austria,Germany,27827.78796,- - - -
-2016,Austria,Iran,1231.8730899999998,- - - -
-2016,Austria,Russia,1257.00612,- - - -
-2016,Austria,Romania,1231.67156,- - - -
-2016,Austria,Serbia,2067.1789,- - - -
-2016,Austria,Italy,8307.058869999999,- - - -
-2016,Austria,Bosnia and Herzegovina,2770.0955700000004,- - - -
-2016,Austria,Bulgaria,1449.7117700000001,- - - -
-2016,Austria,Hungary,2122.02294,- - - -
-2016,Austria,Turkey,2439.58825,- - - -
+2016,Austria,Other countries,18008.200104236603,- - - -
+2016,Austria,Germany,27827.787109375,- - - -
+2016,Austria,Iran,1231.8730468749995,- - - -
+2016,Austria,Russia,1257.006103515625,- - - -
+2016,Austria,Romania,1231.671508789063,- - - -
+2016,Austria,Serbia,2067.178955078125,- - - -
+2016,Austria,Italy,8307.058593749998,- - - -
+2016,Austria,Bosnia and Herzegovina,2770.0954589843755,- - - -
+2016,Austria,Bulgaria,1449.7117919921882,- - - -
+2016,Austria,Hungary,2122.0229492187495,- - - -
+2016,Austria,Turkey,2439.5881347656245,- - - -
 2016,Azerbaijan,China,131,- - - -
 2016,Azerbaijan,Other countries,341,- - - -
 2016,Azerbaijan,Iran,404,- - - -
@@ -14810,17 +14668,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2016,Colombia,Mexico,367,- - - -
 2016,Colombia,Panama,93,- - - -
 2016,Colombia,Spain,106,- - - -
-2016,Côte d'Ivoire,Other countries,693,- - - -
-2016,Côte d'Ivoire,Nigeria,342,- - - -
-2016,Côte d'Ivoire,Lebanon,152,- - - -
-2016,Côte d'Ivoire,Cameroon,270,- - - -
-2016,Côte d'Ivoire,Congo,381,- - - -
-2016,Côte d'Ivoire,Guinea,259,- - - -
-2016,Côte d'Ivoire,Benin,553,- - - -
-2016,Côte d'Ivoire,Mali,309,- - - -
-2016,Côte d'Ivoire,Togo,390,- - - -
-2016,Côte d'Ivoire,Burkina Faso,730,- - - -
-2016,Côte d'Ivoire,Niger,241,- - - -
 2016,Croatia,United Kingdom,21,- - - -
 2016,Croatia,Other countries,146,- - - -
 2016,Croatia,Germany,79,- - - -
@@ -14866,6 +14713,28 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2016,Czechia,Belarus,707,- - - -
 2016,Czechia,Kazakhstan,1515,- - - -
 2016,Czechia,Portugal,373,- - - -
+2016,Côte d'Ivoire,Other countries,693,- - - -
+2016,Côte d'Ivoire,Nigeria,342,- - - -
+2016,Côte d'Ivoire,Lebanon,152,- - - -
+2016,Côte d'Ivoire,Cameroon,270,- - - -
+2016,Côte d'Ivoire,Congo,381,- - - -
+2016,Côte d'Ivoire,Guinea,259,- - - -
+2016,Côte d'Ivoire,Benin,553,- - - -
+2016,Côte d'Ivoire,Mali,309,- - - -
+2016,Côte d'Ivoire,Togo,390,- - - -
+2016,Côte d'Ivoire,Burkina Faso,730,- - - -
+2016,Côte d'Ivoire,Niger,241,- - - -
+2016,DR Congo,Other countries,92,- - - -
+2016,DR Congo,Nigeria,28,- - - -
+2016,DR Congo,Cameroon,506,- - - -
+2016,DR Congo,Congo,316,- - - -
+2016,DR Congo,Rwanda,646,- - - -
+2016,DR Congo,Angola,185,- - - -
+2016,DR Congo,Uganda,35,- - - -
+2016,DR Congo,Benin,23,- - - -
+2016,DR Congo,Central African Republic,16,- - - -
+2016,DR Congo,Togo,21,- - - -
+2016,DR Congo,Burundi,169,- - - -
 2016,Denmark,China,1285,- - - -
 2016,Denmark,Other countries,14410,- - - -
 2016,Denmark,Germany,3656,- - - -
@@ -14888,17 +14757,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2016,Dominican Republic,Spain,135,- - - -
 2016,Dominican Republic,Italy,35,- - - -
 2016,Dominican Republic,Haiti,6177,- - - -
-2016,DR Congo,Other countries,92,- - - -
-2016,DR Congo,Nigeria,28,- - - -
-2016,DR Congo,Cameroon,506,- - - -
-2016,DR Congo,Congo,316,- - - -
-2016,DR Congo,Rwanda,646,- - - -
-2016,DR Congo,Angola,185,- - - -
-2016,DR Congo,Uganda,35,- - - -
-2016,DR Congo,Benin,23,- - - -
-2016,DR Congo,Central African Republic,16,- - - -
-2016,DR Congo,Togo,21,- - - -
-2016,DR Congo,Burundi,169,- - - -
 2016,Ecuador,Bolivia,74,- - - -
 2016,Ecuador,Chile,142,- - - -
 2016,Ecuador,Peru,265,- - - -
@@ -15119,17 +14977,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2016,Italy,Cameroon,2611,- - - -
 2016,Italy,Albania,10724,- - - -
 2016,Italy,Moldova,2428,- - - -
-2016,Japan,China,76537,a - - -
 2016,Japan,Indonesia,2854,- - - -
 2016,Japan,Malaysia,2245,- - - -
 2016,Japan,Thailand,2691,- - - -
-2016,Japan,Other countries,13716,- - - -
-2016,Japan,Republic of Korea,12951,a - - -
+2016,Japan,Other countries,11585,- - - -
 2016,Japan,Myanmar,1576,- - - -
 2016,Japan,Viet Nam,19152,- - - -
 2016,Japan,United States,2117,- - - -
+2016,Japan,Bangladesh,982,- - - -
 2016,Japan,Mongolia,1192,- - - -
 2016,Japan,Nepal,8425,- - - -
+2016,Japan,Sri Lanka,1149,- - - -
 2016,Jordan,Malaysia,2430,- - - -
 2016,Jordan,Other countries,5326,- - - -
 2016,Jordan,Oman,1785,- - - -
@@ -15347,17 +15205,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2016,Netherlands,Spain,1804,- - - -
 2016,Netherlands,Italy,3012,- - - -
 2016,Netherlands,Bulgaria,2029,- - - -
-2016,New Zealand,China,16625.76722,- - - -
-2016,New Zealand,India,15016.67805,- - - -
-2016,New Zealand,Indonesia,709.8999,- - - -
-2016,New Zealand,Malaysia,1640.1972199999998,- - - -
-2016,New Zealand,Other countries,10244.263000000003,- - - -
-2016,New Zealand,Republic of Korea,1174.31697,- - - -
-2016,New Zealand,Viet Nam,1123.61682,- - - -
-2016,New Zealand,United States,2484.3597400000003,- - - -
-2016,New Zealand,Philippines,1494.55066,- - - -
-2016,New Zealand,Sri Lanka,785.09207,- - - -
-2016,New Zealand,Australia,2555.5015900000003,- - - -
+2016,New Zealand,China,16625.767578125,- - - -
+2016,New Zealand,India,15016.677734375,- - - -
+2016,New Zealand,Indonesia,709.89990234375,- - - -
+2016,New Zealand,Malaysia,1640.197265625,- - - -
+2016,New Zealand,Other countries,10244.26298236847,- - - -
+2016,New Zealand,Republic of Korea,1174.317016601563,- - - -
+2016,New Zealand,Viet Nam,1123.616821289063,- - - -
+2016,New Zealand,United States,2484.359619140625,- - - -
+2016,New Zealand,Philippines,1494.5506591796882,- - - -
+2016,New Zealand,Sri Lanka,785.092041015625,- - - -
+2016,New Zealand,Australia,2555.5017089843755,- - - -
 2016,Niger,Other countries,378,- - - -
 2016,Niger,Nigeria,244,- - - -
 2016,Niger,Cameroon,104,- - - -
@@ -15656,17 +15514,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2016,United Kingdom,United States,15654,- - - -
 2016,United Kingdom,Italy,12086,- - - -
 2016,United Kingdom,Ireland,10191,- - - -
-2016,United States,Brazil,13746.595019999999,- - - -
-2016,United States,Asia: unknown countries,18205.17747,- - - -
-2016,United States,China,309837.34654999996,- - - -
-2016,United States,India,135732.84234000003,- - - -
-2016,United States,Other countries,291871.70212999993,- - - -
-2016,United States,Republic of Korea,60453.571959999994,- - - -
-2016,United States,Viet Nam,22171.75039,- - - -
-2016,United States,Japan,15436.748290000001,- - - -
-2016,United States,Mexico,17031.837059999998,- - - -
-2016,United States,Canada,28254.997780000005,- - - -
-2016,United States,Saudi Arabia,58384.747189999995,- - - -
+2016,United States,Brazil,13746.594726562502,- - - -
+2016,United States,Asia: unknown countries,18205.177734374996,- - - -
+2016,United States,China,309837.34374999994,- - - -
+2016,United States,India,135732.84375,- - - -
+2016,United States,Other countries,291871.7017862797,- - - -
+2016,United States,Republic of Korea,60453.5703125,- - - -
+2016,United States,Viet Nam,22171.75,- - - -
+2016,United States,Japan,15436.748046875004,- - - -
+2016,United States,Mexico,17031.837890625004,- - - -
+2016,United States,Canada,28254.998046874996,- - - -
+2016,United States,Saudi Arabia,58384.74609375,- - - -
 2016,Uzbekistan,Russia,134,- - - -
 2016,Uzbekistan,Ukraine,14,- - - -
 2016,Uzbekistan,Kazakhstan,108,- - - -
@@ -15732,17 +15590,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2017,Australia,Viet Nam,15298,- - - -
 2017,Australia,Nepal,21065,- - - -
 2017,Australia,Pakistan,10067,- - - -
-2017,Austria,Other countries,19211.78573,- - - -
-2017,Austria,Germany,28473.830949999996,- - - -
-2017,Austria,Iran,1465.5697,- - - -
-2017,Austria,Russia,1389.9666700000002,- - - -
-2017,Austria,Serbia,2214.4833300000005,- - - -
-2017,Austria,Ukraine,1356.5833299999997,- - - -
-2017,Austria,Italy,8741.148760000002,- - - -
-2017,Austria,Bosnia and Herzegovina,3058.61667,- - - -
-2017,Austria,Bulgaria,1498.0833299999997,- - - -
-2017,Austria,Hungary,2220.55,- - - -
-2017,Austria,Turkey,2405.3500000000004,- - - -
+2017,Austria,Other countries,19211.785861968994,- - - -
+2017,Austria,Germany,28473.830078124996,- - - -
+2017,Austria,Iran,1465.569702148438,- - - -
+2017,Austria,Russia,1389.9666748046882,- - - -
+2017,Austria,Serbia,2214.4833984375005,- - - -
+2017,Austria,Ukraine,1356.5833740234377,- - - -
+2017,Austria,Italy,8741.148437500002,- - - -
+2017,Austria,Bosnia and Herzegovina,3058.6166992187495,- - - -
+2017,Austria,Bulgaria,1498.0833740234377,- - - -
+2017,Austria,Hungary,2220.550048828125,- - - -
+2017,Austria,Turkey,2405.3500976562505,- - - -
 2017,Azerbaijan,China,76,- - - -
 2017,Azerbaijan,Other countries,336,- - - -
 2017,Azerbaijan,Nigeria,53,- - - -
@@ -15936,17 +15794,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2017,Costa Rica,Mexico,70,- - - -
 2017,Costa Rica,Nicaragua,1406,- - - -
 2017,Costa Rica,El Salvador,140,- - - -
-2017,Côte d'Ivoire,Other countries,920,- - - -
-2017,Côte d'Ivoire,Nigeria,313,- - - -
-2017,Côte d'Ivoire,Cameroon,313,- - - -
-2017,Côte d'Ivoire,DR Congo,182,- - - -
-2017,Côte d'Ivoire,Congo,203,- - - -
-2017,Côte d'Ivoire,Guinea,315,- - - -
-2017,Côte d'Ivoire,Benin,620,- - - -
-2017,Côte d'Ivoire,Mali,311,- - - -
-2017,Côte d'Ivoire,Togo,429,- - - -
-2017,Côte d'Ivoire,Burkina Faso,858,- - - -
-2017,Côte d'Ivoire,Niger,272,- - - -
 2017,Croatia,Other countries,1026,- - - -
 2017,Croatia,Germany,226,- - - -
 2017,Croatia,France,89,- - - -
@@ -15991,6 +15838,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2017,Czechia,Belarus,751,- - - -
 2017,Czechia,Kazakhstan,1648,- - - -
 2017,Czechia,Poland,366,- - - -
+2017,Côte d'Ivoire,Other countries,920,- - - -
+2017,Côte d'Ivoire,Nigeria,313,- - - -
+2017,Côte d'Ivoire,Cameroon,313,- - - -
+2017,Côte d'Ivoire,DR Congo,182,- - - -
+2017,Côte d'Ivoire,Congo,203,- - - -
+2017,Côte d'Ivoire,Guinea,315,- - - -
+2017,Côte d'Ivoire,Benin,620,- - - -
+2017,Côte d'Ivoire,Mali,311,- - - -
+2017,Côte d'Ivoire,Togo,429,- - - -
+2017,Côte d'Ivoire,Burkina Faso,858,- - - -
+2017,Côte d'Ivoire,Niger,272,- - - -
 2017,Denmark,Other countries,14861,- - - -
 2017,Denmark,Germany,3570,- - - -
 2017,Denmark,Norway,3190,- - - -
@@ -16135,17 +15993,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2017,Honduras,Nicaragua,154,- - - -
 2017,Honduras,Panama,65,- - - -
 2017,Honduras,El Salvador,200,- - - -
-2017,Hong Kong,Asia: unknown countries,84.4,- - - -
-2017,Hong Kong,China,28736.765000000003,- - - -
-2017,Hong Kong,India,519.001,- - - -
-2017,Hong Kong,Indonesia,393.532,- - - -
-2017,Hong Kong,Malaysia,397.892,- - - -
-2017,Hong Kong,Other countries,1065.484,- - - -
-2017,Hong Kong,Republic of Korea,1138.336,- - - -
+2017,Hong Kong,Asia: unknown countries,84.40000152587892,- - - -
+2017,Hong Kong,China,28736.765625000004,- - - -
+2017,Hong Kong,India,519.0009765625001,- - - -
+2017,Hong Kong,Indonesia,393.5320129394531,- - - -
+2017,Hong Kong,Malaysia,397.89199829101557,- - - -
+2017,Hong Kong,Other countries,1065.483999490738,- - - -
+2017,Hong Kong,Republic of Korea,1138.336059570313,- - - -
 2017,Hong Kong,United States,129,- - - -
-2017,Hong Kong,Bangladesh,72.333,- - - -
-2017,Hong Kong,Pakistan,203.166,- - - -
-2017,Hong Kong,Macao,226.4,- - - -
+2017,Hong Kong,Bangladesh,72.33300018310547,- - - -
+2017,Hong Kong,Pakistan,203.1660003662109,- - - -
+2017,Hong Kong,Macao,226.3999938964844,- - - -
 2017,Hungary,China,1574,- - - -
 2017,Hungary,Other countries,12264,- - - -
 2017,Hungary,Germany,3234,- - - -
@@ -16223,15 +16081,15 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2017,Italy,Cameroon,2456,- - - -
 2017,Italy,Albania,10364,- - - -
 2017,Italy,Moldova,2575,- - - -
-2017,Japan,China,79375,a - - -
 2017,Japan,Indonesia,3616,- - - -
 2017,Japan,Malaysia,2439,- - - -
 2017,Japan,Thailand,3054,- - - -
-2017,Japan,Other countries,17248,- - - -
-2017,Japan,Republic of Korea,13121,a - - -
+2017,Japan,Other countries,14406,- - - -
 2017,Japan,Myanmar,1797,- - - -
 2017,Japan,Viet Nam,26768,- - - -
 2017,Japan,United States,2319,- - - -
+2017,Japan,Bangladesh,1404,- - - -
+2017,Japan,Mongolia,1438,- - - -
 2017,Japan,Nepal,12783,- - - -
 2017,Japan,Sri Lanka,1814,- - - -
 2017,Jordan,Malaysia,1890,- - - -
@@ -16480,17 +16338,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2017,Netherlands,Spain,2189,- - - -
 2017,Netherlands,Italy,3769,- - - -
 2017,Netherlands,Bulgaria,2292,- - - -
-2017,New Zealand,China,17645.97116,- - - -
-2017,New Zealand,India,12552.350809999998,- - - -
-2017,New Zealand,Indonesia,705.3115099999999,- - - -
-2017,New Zealand,Malaysia,1730.06646,- - - -
-2017,New Zealand,Other countries,10140.156700000003,- - - -
-2017,New Zealand,Republic of Korea,1086.81751,- - - -
-2017,New Zealand,Viet Nam,1296.7369600000002,- - - -
+2017,New Zealand,China,17645.970703125004,- - - -
+2017,New Zealand,India,12552.350585937498,- - - -
+2017,New Zealand,Indonesia,705.3115234374999,- - - -
+2017,New Zealand,Malaysia,1730.0664062499998,- - - -
+2017,New Zealand,Other countries,10140.156665802002,- - - -
+2017,New Zealand,Republic of Korea,1086.817504882813,- - - -
+2017,New Zealand,Viet Nam,1296.736938476563,- - - -
 2017,New Zealand,United States,2754,- - - -
-2017,New Zealand,Philippines,1398.4974,- - - -
-2017,New Zealand,Sri Lanka,862.86083,- - - -
-2017,New Zealand,Australia,2505.6982199999998,- - - -
+2017,New Zealand,Philippines,1398.4974365234377,- - - -
+2017,New Zealand,Sri Lanka,862.8608398437499,- - - -
+2017,New Zealand,Australia,2505.6982421875,- - - -
 2017,Niger,Other countries,391,- - - -
 2017,Niger,Nigeria,280,- - - -
 2017,Niger,Cameroon,133,- - - -
@@ -16671,6 +16529,12 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2017,Serbia,North Macedonia,130,- - - -
 2017,Serbia,Slovenia,100,- - - -
 2017,Serbia,Montenegro,2792,- - - -
+2017,Sint Maarten,Venezuala,1,- - - -
+2017,Sint Maarten,Turkey,1,- - - -
+2017,Sint Maarten,Saint Lucia,1,- - - -
+2017,Sint Maarten,Guyana,1,- - - -
+2017,Sint Maarten,Saint Kitts and Nevis,1,- - - -
+2017,Sint Maarten,Jamaica,3,- - - -
 2017,Slovakia,Other countries,1829,- - - -
 2017,Slovakia,Germany,634,- - - -
 2017,Slovakia,Norway,581,- - - -
@@ -16803,17 +16667,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2017,United Kingdom,United States,16178,- - - -
 2017,United Kingdom,Greece,10025,- - - -
 2017,United Kingdom,Italy,13376,- - - -
-2017,United States,Brazil,12357.165719999999,- - - -
-2017,United States,Asia: unknown countries,18093.482700000004,- - - -
-2017,United States,China,321624.82489,- - - -
-2017,United States,India,142618.16185,- - - -
-2017,United States,Other countries,296844.26612000004,- - - -
-2017,United States,Republic of Korea,56186.452900000004,- - - -
-2017,United States,Viet Nam,23204.044,- - - -
-2017,United States,Japan,14786.72543,- - - -
-2017,United States,Mexico,16414.2586,- - - -
-2017,United States,Canada,27800.25751,- - - -
-2017,United States,Saudi Arabia,54708.83062,- - - -
+2017,United States,Brazil,12357.166015624998,- - - -
+2017,United States,Asia: unknown countries,18093.482421875,- - - -
+2017,United States,China,321624.8125,- - - -
+2017,United States,India,142618.15625,- - - -
+2017,United States,Other countries,296844.2645379305,- - - -
+2017,United States,Republic of Korea,56186.453125,- - - -
+2017,United States,Viet Nam,23204.044921874996,- - - -
+2017,United States,Japan,14786.7255859375,- - - -
+2017,United States,Mexico,16414.257812500004,- - - -
+2017,United States,Canada,27800.257812500004,- - - -
+2017,United States,Saudi Arabia,54708.83203125001,- - - -
 2017,Uzbekistan,Russia,133,- - - -
 2017,Uzbekistan,Ukraine,15,- - - -
 2017,Uzbekistan,Kazakhstan,94,- - - -
@@ -16860,7 +16724,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2018,Argentina,Chile,6468,- - - -
 2018,Argentina,Paraguay,11341,- - - -
 2018,Argentina,Peru,16632,- - - -
-2018,Argentina,Other countries,12176.25189,- - - -
+2018,Argentina,Other countries,12176.251892089844,- - - -
 2018,Argentina,Ecuador,4801,- - - -
 2018,Argentina,Venezuala,6232,- - - -
 2018,Argentina,United States,4071,- - - -
@@ -16888,17 +16752,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2018,Australia,Nepal,32939,- - - -
 2018,Australia,Pakistan,11324,- - - -
 2018,Australia,Sri Lanka,8826,- - - -
-2018,Austria,Other countries,19997.781469999994,- - - -
-2018,Austria,Germany,28932.447400000005,- - - -
-2018,Austria,Iran,1482.75476,- - - -
-2018,Austria,Russia,1447.45,- - - -
-2018,Austria,Serbia,2294.8500000000004,- - - -
-2018,Austria,Ukraine,1426.4666700000002,- - - -
-2018,Austria,Italy,8809.334240000002,- - - -
+2018,Austria,Other countries,19997.78143274784,- - - -
+2018,Austria,Germany,28932.447265625004,- - - -
+2018,Austria,Iran,1482.7547607421882,- - - -
+2018,Austria,Russia,1447.4499511718752,- - - -
+2018,Austria,Serbia,2294.8500976562505,- - - -
+2018,Austria,Ukraine,1426.4666748046882,- - - -
+2018,Austria,Italy,8809.333984375,- - - -
 2018,Austria,Bosnia and Herzegovina,3139.25,- - - -
-2018,Austria,Bulgaria,1499.8333299999997,- - - -
-2018,Austria,Hungary,2246.0833300000004,- - - -
-2018,Austria,Turkey,2220.3500000000004,- - - -
+2018,Austria,Bulgaria,1499.8333740234377,- - - -
+2018,Austria,Hungary,2246.083251953125,- - - -
+2018,Austria,Turkey,2220.3500976562505,- - - -
 2018,Azerbaijan,China,87,- - - -
 2018,Azerbaijan,Other countries,530,- - - -
 2018,Azerbaijan,Iran,463,- - - -
@@ -17035,17 +16899,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2018,Cameroon,Côte d'Ivoire,13,- - - -
 2018,Cameroon,Equatorial Guinea,6,- - - -
 2018,Cameroon,Gambia,17,- - - -
-2018,Canada,Brazil,3187.96028,- - - -
-2018,Canada,China,70876.77455,- - - -
-2018,Canada,India,34805.55647,- - - -
-2018,Canada,Other countries,59539.62917999995,- - - -
-2018,Canada,Republic of Korea,5639.87076,- - - -
-2018,Canada,Nigeria,7082.297909999999,- - - -
-2018,Canada,France,17029.815259999996,- - - -
-2018,Canada,United States,9411.68935,- - - -
-2018,Canada,Iran,4145.752020000001,- - - -
-2018,Canada,Pakistan,2801.87429,- - - -
-2018,Canada,Saudi Arabia,5694.098889999999,- - - -
+2018,Canada,Brazil,3187.960205078125,- - - -
+2018,Canada,China,70876.7734375,- - - -
+2018,Canada,India,34805.5546875,- - - -
+2018,Canada,Other countries,59539.62912547588,- - - -
+2018,Canada,Republic of Korea,5639.870605468751,- - - -
+2018,Canada,Nigeria,7082.2978515625,- - - -
+2018,Canada,France,17029.814453125,- - - -
+2018,Canada,United States,9411.689453125002,- - - -
+2018,Canada,Iran,4145.751953125,- - - -
+2018,Canada,Pakistan,2801.8742675781255,- - - -
+2018,Canada,Saudi Arabia,5694.099121093752,- - - -
 2018,Cape Verde,Brazil,9,- - - -
 2018,Cape Verde,Colombia,1,- - - -
 2018,Cape Verde,Africa: unknown countries,65,- - - -
@@ -17267,17 +17131,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2018,Honduras,Nicaragua,123,- - - -
 2018,Honduras,Panama,57,- - - -
 2018,Honduras,El Salvador,208,- - - -
-2018,Hong Kong,China,31113.391,- - - -
+2018,Hong Kong,China,31113.390625,- - - -
 2018,Hong Kong,India,617,- - - -
-2018,Hong Kong,Indonesia,457.014,- - - -
-2018,Hong Kong,Malaysia,427.017,- - - -
-2018,Hong Kong,Other countries,1219.1349999999995,- - - -
-2018,Hong Kong,Republic of Korea,1273.012,- - - -
-2018,Hong Kong,United States,129.008,- - - -
-2018,Hong Kong,Bangladesh,87.01400000000001,- - - -
-2018,Hong Kong,Kazakhstan,97.006,- - - -
-2018,Hong Kong,Pakistan,213.02100000000002,- - - -
-2018,Hong Kong,Macao,231.002,- - - -
+2018,Hong Kong,Indonesia,457.0140075683594,- - - -
+2018,Hong Kong,Malaysia,427.01699829101557,- - - -
+2018,Hong Kong,Other countries,1219.1350054740906,- - - -
+2018,Hong Kong,Republic of Korea,1273.011962890625,- - - -
+2018,Hong Kong,United States,129.00799560546878,- - - -
+2018,Hong Kong,Bangladesh,87.01399993896484,- - - -
+2018,Hong Kong,Kazakhstan,97.00599670410155,- - - -
+2018,Hong Kong,Pakistan,213.02099609375,- - - -
+2018,Hong Kong,Macao,231.0019989013672,- - - -
 2018,Hungary,China,2075,- - - -
 2018,Hungary,Other countries,15012,- - - -
 2018,Hungary,Germany,3258,- - - -
@@ -17355,15 +17219,15 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2018,Italy,Cameroon,2668,- - - -
 2018,Italy,Albania,10267,- - - -
 2018,Italy,Moldova,2642,- - - -
-2018,Japan,China,84101,a - - -
 2018,Japan,Indonesia,4187,- - - -
 2018,Japan,Malaysia,2600,- - - -
 2018,Japan,Thailand,3183,- - - -
-2018,Japan,Other countries,18852,- - - -
-2018,Japan,Republic of Korea,13227,a - - -
+2018,Japan,Other countries,15293,- - - -
 2018,Japan,Myanmar,2634,- - - -
 2018,Japan,Viet Nam,34276,- - - -
 2018,Japan,United States,2352,- - - -
+2018,Japan,Bangladesh,1910,- - - -
+2018,Japan,Mongolia,1649,- - - -
 2018,Japan,Nepal,14462,- - - -
 2018,Japan,Sri Lanka,2870,- - - -
 2018,Jordan,Malaysia,923,- - - -
@@ -17494,12 +17358,8 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2018,Malta,Russia,29,- - - -
 2018,Malta,Italy,91,- - - -
 2018,Malta,Libya,82,- - - -
-2018,Mexico,Asia: unknown countries,81,a - - -
 2018,Mexico,United States,2465,- - - -
-2018,Mexico,Oceania: unknown countries,3,a - - -
-2018,Mexico,Africa: unknown countries,159,a - - -
 2018,Mexico,Canada,60,- - - -
-2018,Mexico,Europe: unknown countries,317,a - - -
 2018,Moldova,India,166,- - - -
 2018,Moldova,Other countries,192,- - - -
 2018,Moldova,Sweden,21,- - - -
@@ -17579,17 +17439,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2018,Netherlands,Spain,2595,- - - -
 2018,Netherlands,Italy,4500,- - - -
 2018,Netherlands,Bulgaria,2592,- - - -
-2018,New Zealand,China,18338.133539999995,- - - -
-2018,New Zealand,India,11604.17741,- - - -
-2018,New Zealand,Malaysia,1853.75465,- - - -
-2018,New Zealand,Other countries,10364.385359999998,- - - -
-2018,New Zealand,Republic of Korea,1049.4242399999998,- - - -
-2018,New Zealand,Viet Nam,1358.6002399999998,- - - -
-2018,New Zealand,United States,2736.25429,- - - -
-2018,New Zealand,Philippines,1226.86809,- - - -
-2018,New Zealand,Nepal,767.5985900000001,- - - -
-2018,New Zealand,Sri Lanka,882.8589999999999,- - - -
-2018,New Zealand,Australia,2520.3452,- - - -
+2018,New Zealand,China,18338.1328125,- - - -
+2018,New Zealand,India,11604.177734375,- - - -
+2018,New Zealand,Malaysia,1853.7546386718748,- - - -
+2018,New Zealand,Other countries,10364.385422468185,- - - -
+2018,New Zealand,Republic of Korea,1049.4241943359377,- - - -
+2018,New Zealand,Viet Nam,1358.600219726563,- - - -
+2018,New Zealand,United States,2736.2543945312505,- - - -
+2018,New Zealand,Philippines,1226.868041992188,- - - -
+2018,New Zealand,Nepal,767.598571777344,- - - -
+2018,New Zealand,Sri Lanka,882.8590087890624,- - - -
+2018,New Zealand,Australia,2520.3452148437505,- - - -
 2018,Niger,Other countries,467,- - - -
 2018,Niger,Nigeria,799,- - - -
 2018,Niger,Cameroon,146,- - - -
@@ -17900,17 +17760,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2018,United Kingdom,United States,17590,- - - -
 2018,United Kingdom,Greece,10109,- - - -
 2018,United Kingdom,Italy,13904,- - - -
-2018,United States,Asia: unknown countries,19150.026980000002,a - - -
-2018,United States,China,333935.22174999997,a - - -
-2018,United States,India,135939.73553,a - - -
-2018,United States,Other countries,301433.80554000003,a - - -
-2018,United States,Republic of Korea,52368.65936,a - - -
-2018,United States,Viet Nam,25595.801959999997,a - - -
-2018,United States,Japan,14901.18001,a - - -
-2018,United States,Mexico,15432.78069,a - - -
-2018,United States,Canada,26538.09547,a - - -
-2018,United States,Nepal,14402.326309999999,a - - -
-2018,United States,Saudi Arabia,47321.04586,a - - -
+2018,United States,Asia: unknown countries,19150.027343750004,- - - -
+2018,United States,China,333935.21874999994,- - - -
+2018,United States,India,135939.73437500003,- - - -
+2018,United States,Other countries,301433.80542194843,- - - -
+2018,United States,Republic of Korea,52368.66015625,- - - -
+2018,United States,Viet Nam,25595.802734374996,- - - -
+2018,United States,Japan,14901.1796875,- - - -
+2018,United States,Mexico,15432.7802734375,- - - -
+2018,United States,Canada,26538.095703125004,- - - -
+2018,United States,Nepal,14402.326171875,- - - -
+2018,United States,Saudi Arabia,47321.04687500001,- - - -
 2018,Uzbekistan,Russia,174,- - - -
 2018,Uzbekistan,Ukraine,14,- - - -
 2018,Uzbekistan,Kazakhstan,108,- - - -
@@ -17974,17 +17834,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Australia,Nepal,41881,- - - -
 2019,Australia,Pakistan,12186,- - - -
 2019,Australia,Sri Lanka,11266,- - - -
-2019,Austria,Other countries,20259.47078,- - - -
-2019,Austria,Germany,29321.606559999997,- - - -
-2019,Austria,Iran,1425.60516,- - - -
-2019,Austria,Russia,1479.24798,- - - -
-2019,Austria,Serbia,1679.21348,- - - -
-2019,Austria,Ukraine,1449.59604,- - - -
-2019,Austria,Italy,8983.67418,- - - -
-2019,Austria,Bosnia and Herzegovina,2904.2882899999995,- - - -
-2019,Austria,Bulgaria,1420.57669,- - - -
-2019,Austria,Hungary,2155.5373300000006,- - - -
-2019,Austria,Turkey,1884.6606,- - - -
+2019,Austria,Other countries,20259.470717549324,- - - -
+2019,Austria,Germany,29321.607421874996,- - - -
+2019,Austria,Iran,1425.6051025390627,- - - -
+2019,Austria,Russia,1479.247924804688,- - - -
+2019,Austria,Serbia,1679.213500976563,- - - -
+2019,Austria,Ukraine,1449.596069335938,- - - -
+2019,Austria,Italy,8983.673828125002,- - - -
+2019,Austria,Bosnia and Herzegovina,2904.288330078125,- - - -
+2019,Austria,Bulgaria,1420.5766601562502,- - - -
+2019,Austria,Hungary,2155.5373535156255,- - - -
+2019,Austria,Turkey,1884.6606445312498,- - - -
 2019,Azerbaijan,China,77,- - - -
 2019,Azerbaijan,Other countries,429,- - - -
 2019,Azerbaijan,Nigeria,59,- - - -
@@ -18107,7 +17967,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Canada,Brazil,4770,- - - -
 2019,Canada,China,75768,- - - -
 2019,Canada,India,74340,- - - -
-2019,Canada,Other countries,63515.85812,- - - -
+2019,Canada,Other countries,63515.85810852051,- - - -
 2019,Canada,Republic of Korea,6489,- - - -
 2019,Canada,Nigeria,6708,- - - -
 2019,Canada,Viet Nam,7161,- - - -
@@ -18148,17 +18008,6 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Costa Rica,Nicaragua,1422,- - - -
 2019,Costa Rica,Panama,41,- - - -
 2019,Costa Rica,El Salvador,139,- - - -
-2019,Côte d'Ivoire,Other countries,765,- - - -
-2019,Côte d'Ivoire,Nigeria,222,- - - -
-2019,Côte d'Ivoire,Cameroon,371,- - - -
-2019,Côte d'Ivoire,Congo,383,- - - -
-2019,Côte d'Ivoire,Guinea,333,- - - -
-2019,Côte d'Ivoire,Benin,679,- - - -
-2019,Côte d'Ivoire,Comoros,138,- - - -
-2019,Côte d'Ivoire,Mali,351,- - - -
-2019,Côte d'Ivoire,Togo,432,- - - -
-2019,Côte d'Ivoire,Burkina Faso,841,- - - -
-2019,Côte d'Ivoire,Niger,377,- - - -
 2019,Croatia,Other countries,1357,- - - -
 2019,Croatia,Germany,385,- - - -
 2019,Croatia,France,228,- - - -
@@ -18204,6 +18053,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Czechia,Kazakhstan,1751,- - - -
 2019,Czechia,Moldova,1726,- - - -
 2019,Czechia,San Marino,8970,- - - -
+2019,Côte d'Ivoire,Other countries,765,- - - -
+2019,Côte d'Ivoire,Nigeria,222,- - - -
+2019,Côte d'Ivoire,Cameroon,371,- - - -
+2019,Côte d'Ivoire,Congo,383,- - - -
+2019,Côte d'Ivoire,Guinea,333,- - - -
+2019,Côte d'Ivoire,Benin,679,- - - -
+2019,Côte d'Ivoire,Comoros,138,- - - -
+2019,Côte d'Ivoire,Mali,351,- - - -
+2019,Côte d'Ivoire,Togo,432,- - - -
+2019,Côte d'Ivoire,Burkina Faso,841,- - - -
+2019,Côte d'Ivoire,Niger,377,- - - -
 2019,Denmark,China,1237,- - - -
 2019,Denmark,Other countries,14851,- - - -
 2019,Denmark,Germany,3518,- - - -
@@ -18338,16 +18198,16 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Honduras,Nicaragua,150,- - - -
 2019,Honduras,Panama,74,- - - -
 2019,Honduras,El Salvador,190,- - - -
-2019,Hong Kong,China,35622.998999999996,- - - -
+2019,Hong Kong,China,35623,- - - -
 2019,Hong Kong,India,719,- - - -
 2019,Hong Kong,Indonesia,584,- - - -
-2019,Hong Kong,Malaysia,428.002,- - - -
-2019,Hong Kong,Other countries,1392.0059999999999,- - - -
+2019,Hong Kong,Malaysia,428.0020141601563,- - - -
+2019,Hong Kong,Other countries,1392.0059976577759,- - - -
 2019,Hong Kong,Republic of Korea,1498,- - - -
 2019,Hong Kong,United States,129,- - - -
-2019,Hong Kong,Bangladesh,108.002,- - - -
+2019,Hong Kong,Bangladesh,108.00199890136722,- - - -
 2019,Hong Kong,Kazakhstan,179,- - - -
-2019,Hong Kong,Pakistan,260.002,- - - -
+2019,Hong Kong,Pakistan,260.0020141601563,- - - -
 2019,Hong Kong,Macao,242,- - - -
 2019,Hungary,China,2377,- - - -
 2019,Hungary,Other countries,17365,- - - -
@@ -18415,15 +18275,15 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Italy,Romania,1400,- - - -
 2019,Italy,Turkey,2001,- - - -
 2019,Italy,Albania,1670,- - - -
-2019,Japan,China,91528,a - - -
 2019,Japan,Indonesia,4722,- - - -
 2019,Japan,Malaysia,2681,- - - -
 2019,Japan,Thailand,3140,- - - -
-2019,Japan,Other countries,20834,- - - -
-2019,Japan,Republic of Korea,14328,a - - -
+2019,Japan,Other countries,16524,- - - -
 2019,Japan,Myanmar,3336,- - - -
 2019,Japan,Viet Nam,40633,- - - -
 2019,Japan,United States,2453,- - - -
+2019,Japan,Bangladesh,2436,- - - -
+2019,Japan,Mongolia,1874,- - - -
 2019,Japan,Nepal,14959,- - - -
 2019,Japan,Sri Lanka,4282,- - - -
 2019,Jordan,Asia: unknown countries,1433,- - - -
@@ -18539,6 +18399,9 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Macao,Portugal,81,- - - -
 2019,Macao,Cape Verde,88,- - - -
 2019,Macao,Guinea-Bissau,17,- - - -
+2019,Madagascar,Africa: unknown countries,1307,- - - -
+2019,Madagascar,Europe: unknown countries,10,- - - -
+2019,Madagascar,Comoros,1560,- - - -
 2019,Malaysia,China,11713,- - - -
 2019,Malaysia,India,2810,- - - -
 2019,Malaysia,Indonesia,8440,- - - -
@@ -18552,15 +18415,15 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Malaysia,Saudi Arabia,2149,- - - -
 2019,Malta,India,273,- - - -
 2019,Malta,United Kingdom,339,- - - -
-2019,Malta,Other countries,838.8299999999999,- - - -
+2019,Malta,Other countries,838.8300000429153,- - - -
 2019,Malta,Germany,51,- - - -
 2019,Malta,Nigeria,68,- - - -
 2019,Malta,Oman,51,- - - -
-2019,Malta,Morocco,46.86,- - - -
+2019,Malta,Morocco,46.860000610351555,- - - -
 2019,Malta,United States,51,- - - -
 2019,Malta,Italy,146,- - - -
 2019,Malta,Kuwait,44,- - - -
-2019,Malta,Libya,90.16999999999999,- - - -
+2019,Malta,Libya,90.16999816894531,- - - -
 2019,Marshall Islands,China,3,- - - -
 2019,Marshall Islands,New Zealand,1,- - - -
 2019,Marshall Islands,France,1,- - - -
@@ -18585,12 +18448,8 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Mauritania,Burkina Faso,7,- - - -
 2019,Mauritania,Côte d'Ivoire,8,- - - -
 2019,Mauritania,Gambia,45,- - - -
-2019,Mexico,Asia: unknown countries,515,a - - -
 2019,Mexico,United States,15829,- - - -
-2019,Mexico,Oceania: unknown countries,22,a - - -
-2019,Mexico,Africa: unknown countries,431,a - - -
 2019,Mexico,Canada,144,- - - -
-2019,Mexico,Europe: unknown countries,1314,a - - -
 2019,Moldova,India,259,- - - -
 2019,Moldova,Other countries,177,- - - -
 2019,Moldova,United States,34,- - - -
@@ -18624,9 +18483,20 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Morocco,Côte d'Ivoire,1701,- - - -
 2019,Morocco,Niger,920,- - - -
 2019,Morocco,Mauritania,1230,- - - -
+2019,Namibia,Other countries,220,- - - -
+2019,Namibia,Nigeria,53,- - - -
+2019,Namibia,Africa: unknown countries,385,- - - -
+2019,Namibia,Botswana,45,- - - -
+2019,Namibia,Zambia,296,- - - -
+2019,Namibia,Zimbabwe,1060,- - - -
+2019,Namibia,DR Congo,107,- - - -
+2019,Namibia,Angola,668,- - - -
+2019,Namibia,Central African Republic,63,- - - -
+2019,Namibia,Malawi,84,- - - -
+2019,Namibia,South Africa,82,- - - -
 2019,Netherlands,China,4475,- - - -
 2019,Netherlands,United Kingdom,3163,- - - -
-2019,Netherlands,Other countries,30903,a - - -
+2019,Netherlands,Other countries,30816,- - - -
 2019,Netherlands,Belgium,3395,- - - -
 2019,Netherlands,Germany,21314,- - - -
 2019,Netherlands,France,2609,- - - -
@@ -18635,17 +18505,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Netherlands,Spain,2570,- - - -
 2019,Netherlands,Italy,4566,- - - -
 2019,Netherlands,Bulgaria,2994,- - - -
-2019,New Zealand,China,18679.773259999998,- - - -
-2019,New Zealand,India,12280.92258,- - - -
-2019,New Zealand,Malaysia,1642.43129,- - - -
-2019,New Zealand,Other countries,10099.259509999998,- - - -
-2019,New Zealand,Republic of Korea,1035.09258,- - - -
-2019,New Zealand,Viet Nam,1353.49074,- - - -
-2019,New Zealand,United States,2698.8571400000005,- - - -
-2019,New Zealand,Philippines,1010.5700800000001,- - - -
-2019,New Zealand,Nepal,901.00309,- - - -
-2019,New Zealand,Sri Lanka,940.83844,- - - -
-2019,New Zealand,Australia,2358.3519600000004,- - - -
+2019,New Zealand,China,18679.7734375,- - - -
+2019,New Zealand,India,12280.922851562502,- - - -
+2019,New Zealand,Malaysia,1642.431274414063,- - - -
+2019,New Zealand,Other countries,10099.259447097778,- - - -
+2019,New Zealand,Republic of Korea,1035.0925292968748,- - - -
+2019,New Zealand,Viet Nam,1353.49072265625,- - - -
+2019,New Zealand,United States,2698.857177734376,- - - -
+2019,New Zealand,Philippines,1010.5700683593751,- - - -
+2019,New Zealand,Nepal,901.0031127929686,- - - -
+2019,New Zealand,Sri Lanka,940.8384399414064,- - - -
+2019,New Zealand,Australia,2358.3520507812505,- - - -
 2019,Niger,Other countries,414,- - - -
 2019,Niger,Nigeria,929,- - - -
 2019,Niger,Cameroon,172,- - - -
@@ -18658,6 +18528,18 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Niger,Burkina Faso,429,- - - -
 2019,Niger,Côte d'Ivoire,75,- - - -
 2019,Niger,Mauritania,75,- - - -
+2019,North Macedonia,Other countries,66,- - - -
+2019,North Macedonia,Germany,18,- - - -
+2019,North Macedonia,Switzerland,10,- - - -
+2019,North Macedonia,Serbia,249,- - - -
+2019,North Macedonia,United Arab Emirates,17,- - - -
+2019,North Macedonia,Europe: unknown countries,1210,- - - -
+2019,North Macedonia,Bulgaria,16,- - - -
+2019,North Macedonia,Croatia,13,- - - -
+2019,North Macedonia,Turkey,1182,- - - -
+2019,North Macedonia,Pakistan,10,- - - -
+2019,North Macedonia,Albania,89,- - - -
+2019,North Macedonia,Montenegro,62,- - - -
 2019,Norway,China,510,- - - -
 2019,Norway,India,364,- - - -
 2019,Norway,Other countries,5635,- - - -
@@ -18680,6 +18562,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Oman,Tanzania,164,- - - -
 2019,Oman,Egypt,451,- - - -
 2019,Oman,Sudan,185,- - - -
+2019,Panama,Peru,78,- - - -
+2019,Panama,Other countries,309,- - - -
+2019,Panama,Ecuador,49,- - - -
+2019,Panama,Venezuala,771,- - - -
+2019,Panama,Dominican Republic,81,- - - -
+2019,Panama,Colombia,1169,- - - -
+2019,Panama,Costa Rica,55,- - - -
+2019,Panama,Honduras,51,- - - -
+2019,Panama,Nicaragua,225,- - - -
+2019,Panama,Italy,47,- - - -
+2019,Panama,El Salvador,88,- - - -
 2019,Poland,Asia: unknown countries,888,- - - -
 2019,Poland,China,983,- - - -
 2019,Poland,India,2153,- - - -
@@ -18763,7 +18656,7 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Saint Lucia,United States,10,- - - -
 2019,Saint Lucia,Canada,2,- - - -
 2019,Samoa,New Zealand,37,- - - -
-2019,Samoa,United States,2,- - - -
+2019,Samoa,Other countries,2,- - - -
 2019,Samoa,Fiji,11,- - - -
 2019,Samoa,Kiribati,4,- - - -
 2019,Samoa,Solomon Islands,5,- - - -
@@ -18863,17 +18756,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Sri Lanka,Australia,22,- - - -
 2019,Sri Lanka,Cambodia,19,- - - -
 2019,Sri Lanka,Bhutan,174,- - - -
-2019,Sweden,China,2533.72533,- - - -
-2019,Sweden,India,2432.46473,- - - -
-2019,Sweden,Other countries,10228.427860000003,- - - -
-2019,Sweden,Germany,1963.76813,- - - -
-2019,Sweden,United States,687.4395499999999,- - - -
-2019,Sweden,Bangladesh,834.09968,- - - -
-2019,Sweden,Iran,1025.5068700000002,- - - -
-2019,Sweden,Greece,721.9525399999999,- - - -
-2019,Sweden,Finland,2333.8512900000005,- - - -
-2019,Sweden,Italy,771.7668,- - - -
-2019,Sweden,Pakistan,877.20523,- - - -
+2019,Sweden,China,2533.7253417968745,- - - -
+2019,Sweden,India,2432.4648437499995,- - - -
+2019,Sweden,Other countries,10228.427896797657,- - - -
+2019,Sweden,Germany,1963.768188476563,- - - -
+2019,Sweden,United States,687.4395751953124,- - - -
+2019,Sweden,Bangladesh,834.0996704101565,- - - -
+2019,Sweden,Iran,1025.5068359375,- - - -
+2019,Sweden,Greece,721.9525146484374,- - - -
+2019,Sweden,Finland,2333.851318359376,- - - -
+2019,Sweden,Italy,771.7667846679689,- - - -
+2019,Sweden,Pakistan,877.2052001953124,- - - -
 2019,Switzerland,China,2083,- - - -
 2019,Switzerland,India,879,- - - -
 2019,Switzerland,Other countries,16928,- - - -
@@ -18885,6 +18778,18 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2019,Switzerland,Italy,5673,- - - -
 2019,Switzerland,Austria,1524,- - - -
 2019,Switzerland,Liechtenstein,888,- - - -
+2019,Trinidad and Tobago,Other countries,297,- - - -
+2019,Trinidad and Tobago,Nigeria,42,- - - -
+2019,Trinidad and Tobago,United States,60,- - - -
+2019,Trinidad and Tobago,Dominica,40,- - - -
+2019,Trinidad and Tobago,Saint Lucia,140,- - - -
+2019,Trinidad and Tobago,Antigua and Barbuda,40,- - - -
+2019,Trinidad and Tobago,Bahamas,88,- - - -
+2019,Trinidad and Tobago,Barbados,132,- - - -
+2019,Trinidad and Tobago,Guyana,257,- - - -
+2019,Trinidad and Tobago,St Vincent/Grenadines,148,- - - -
+2019,Trinidad and Tobago,Grenada,84,- - - -
+2019,Trinidad and Tobago,Jamaica,179,- - - -
 2019,Turkey,Other countries,54040,- - - -
 2019,Turkey,Germany,4378,- - - -
 2019,Turkey,Iran,7154,- - - -
@@ -18967,6 +18872,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Andorra,Spain,184,- - - -
 2020,Andorra,Philippines,3,- - - -
 2020,Andorra,Portugal,44,- - - -
+2020,Argentina,Bolivia,13760,- - - -
+2020,Argentina,Brazil,20515,- - - -
+2020,Argentina,Chile,6656,- - - -
+2020,Argentina,Paraguay,13212,- - - -
+2020,Argentina,Peru,17964,- - - -
+2020,Argentina,Uruguay,3834,- - - -
+2020,Argentina,Other countries,7566,- - - -
+2020,Argentina,Ecuador,5657,- - - -
+2020,Argentina,Venezuala,11028,- - - -
+2020,Argentina,United States,5777,- - - -
+2020,Argentina,Colombia,13482,- - - -
 2020,Armenia,India,1570,- - - -
 2020,Armenia,Other countries,259,- - - -
 2020,Armenia,Iran,283,- - - -
@@ -18989,6 +18905,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Australia,Nepal,40752,- - - -
 2020,Australia,Pakistan,11297,- - - -
 2020,Australia,Sri Lanka,10472,- - - -
+2020,Austria,Other countries,20168.474269986153,- - - -
+2020,Austria,Germany,30502.716796874996,- - - -
+2020,Austria,Iran,1324.026733398438,- - - -
+2020,Austria,Russia,1538.8955078125,- - - -
+2020,Austria,Serbia,1545.231811523438,- - - -
+2020,Austria,Ukraine,1455.425048828125,- - - -
+2020,Austria,Italy,9184.705078125002,- - - -
+2020,Austria,Bosnia and Herzegovina,2831.232421875,- - - -
+2020,Austria,Bulgaria,1401.5080566406252,- - - -
+2020,Austria,Hungary,2137.674560546875,- - - -
+2020,Austria,Turkey,1731.321533203125,- - - -
 2020,Azerbaijan,China,75,- - - -
 2020,Azerbaijan,Other countries,580,- - - -
 2020,Azerbaijan,Nigeria,84,- - - -
@@ -19022,6 +18949,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Belarus,Sri Lanka,824,- - - -
 2020,Belarus,Tajikistan,437,- - - -
 2020,Belarus,Uzbekistan,432,- - - -
+2020,Belgium,China,917,- - - -
+2020,Belgium,Other countries,11952,- - - -
+2020,Belgium,Germany,681,- - - -
+2020,Belgium,France,18095,- - - -
+2020,Belgium,Morocco,1028,- - - -
+2020,Belgium,Spain,718,- - - -
+2020,Belgium,Italy,1210,- - - -
+2020,Belgium,Cameroon,2290,- - - -
+2020,Belgium,DR Congo,753,- - - -
+2020,Belgium,Luxembourg,1878,- - - -
+2020,Belgium,Netherlands,4451,- - - -
 2020,Benin,Other countries,382,- - - -
 2020,Benin,Nigeria,1076,- - - -
 2020,Benin,Cameroon,268,- - - -
@@ -19056,6 +18994,18 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Botswana,Guinea-Bissau,37,- - - -
 2020,Botswana,Madagascar,40,- - - -
 2020,Botswana,Sudan,116,- - - -
+2020,Brazil,Bolivia,1136,- - - -
+2020,Brazil,Paraguay,1332,- - - -
+2020,Brazil,Peru,1468,- - - -
+2020,Brazil,Other countries,9328,- - - -
+2020,Brazil,Argentina,1094,- - - -
+2020,Brazil,Venezuala,774,- - - -
+2020,Brazil,Japan,1449,- - - -
+2020,Brazil,Colombia,1806,- - - -
+2020,Brazil,Angola,1706,- - - -
+2020,Brazil,Haiti,992,- - - -
+2020,Brazil,Guinea-Bissau,1130,- - - -
+2020,British Virgin Islands,Asia: unknown countries,4,- - - -
 2020,Brunei Darussalam,India,32,- - - -
 2020,Brunei Darussalam,Indonesia,58,- - - -
 2020,Brunei Darussalam,Malaysia,116,- - - -
@@ -19068,6 +19018,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Brunei Darussalam,Bangladesh,12,- - - -
 2020,Brunei Darussalam,Philippines,26,- - - -
 2020,Brunei Darussalam,Pakistan,19,- - - -
+2020,Bulgaria,India,358,- - - -
+2020,Bulgaria,United Kingdom,2702,- - - -
+2020,Bulgaria,Other countries,4158,- - - -
+2020,Bulgaria,Germany,1467,- - - -
+2020,Bulgaria,Greece,3957,- - - -
+2020,Bulgaria,Serbia,542,- - - -
+2020,Bulgaria,Ukraine,1197,- - - -
+2020,Bulgaria,Italy,716,- - - -
+2020,Bulgaria,Cyprus,355,- - - -
+2020,Bulgaria,Turkey,1123,- - - -
+2020,Bulgaria,North Macedonia,1000,- - - -
 2020,Burkina Faso,Africa: unknown countries,973,- - - -
 2020,Burkina Faso,Senegal,41,- - - -
 2020,Burkina Faso,Benin,419,- - - -
@@ -19076,14 +19037,36 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Burkina Faso,Côte d'Ivoire,528,- - - -
 2020,Burkina Faso,Niger,534,- - - -
 2020,Burkina Faso,Guinea-Bissau,22,- - - -
+2020,Canada,Brazil,5151,- - - -
+2020,Canada,China,81006,- - - -
+2020,Canada,India,95031,- - - -
+2020,Canada,Other countries,72582,- - - -
+2020,Canada,Republic of Korea,7143,- - - -
+2020,Canada,Nigeria,7542,- - - -
+2020,Canada,Viet Nam,9243,- - - -
+2020,Canada,France,18198,- - - -
+2020,Canada,United States,9303,- - - -
+2020,Canada,Bangladesh,5136,- - - -
+2020,Canada,Iran,7854,- - - -
+2020,Chile,Bolivia,910,- - - -
+2020,Chile,Brazil,287,- - - -
+2020,Chile,Peru,2681,- - - -
+2020,Chile,Other countries,1129,- - - -
+2020,Chile,Argentina,301,- - - -
+2020,Chile,Cuba,256,- - - -
+2020,Chile,Ecuador,1048,- - - -
+2020,Chile,Venezuala,2365,- - - -
+2020,Chile,Colombia,2466,- - - -
+2020,Chile,Mexico,176,- - - -
+2020,Chile,Haiti,544,- - - -
 2020,Colombia,Brazil,148,- - - -
 2020,Colombia,Peru,371,- - - -
-2020,Colombia,Other countries,977,- - - -
+2020,Colombia,Other countries,976,- - - -
 2020,Colombia,Argentina,131,- - - -
 2020,Colombia,Ecuador,562,- - - -
 2020,Colombia,Venezuala,1820,- - - -
 2020,Colombia,France,219,- - - -
-2020,Colombia,United States,132,- - - -
+2020,Colombia,United States,120,- - - -
 2020,Colombia,Mexico,424,- - - -
 2020,Colombia,Panama,158,- - - -
 2020,Colombia,Spain,95,- - - -
@@ -19099,17 +19082,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Costa Rica,Nicaragua,1474,- - - -
 2020,Costa Rica,Spain,45,- - - -
 2020,Costa Rica,El Salvador,145,- - - -
-2020,Côte d'Ivoire,Other countries,724,- - - -
-2020,Côte d'Ivoire,Nigeria,253,- - - -
-2020,Côte d'Ivoire,Cameroon,335,- - - -
-2020,Côte d'Ivoire,Congo,217,- - - -
-2020,Côte d'Ivoire,Guinea,352,- - - -
-2020,Côte d'Ivoire,Benin,603,- - - -
-2020,Côte d'Ivoire,Chad,150,- - - -
-2020,Côte d'Ivoire,Mali,312,- - - -
-2020,Côte d'Ivoire,Togo,406,- - - -
-2020,Côte d'Ivoire,Burkina Faso,773,- - - -
-2020,Côte d'Ivoire,Niger,281,- - - -
+2020,Croatia,Other countries,1139,- - - -
+2020,Croatia,Germany,239,- - - -
+2020,Croatia,France,144,- - - -
+2020,Croatia,United States,99,- - - -
+2020,Croatia,Serbia,107,- - - -
+2020,Croatia,Spain,162,- - - -
+2020,Croatia,Italy,144,- - - -
+2020,Croatia,Bosnia and Herzegovina,2232,- - - -
+2020,Croatia,Poland,114,- - - -
+2020,Croatia,Slovenia,191,- - - -
+2020,Croatia,Gibraltar,194,- - - -
 2020,Cuba,Other countries,1619,- - - -
 2020,Cuba,Viet Nam,68,- - - -
 2020,Cuba,United States,67,- - - -
@@ -19121,6 +19104,139 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Cuba,Palestine,103,- - - -
 2020,Cuba,South Africa,2506,- - - -
 2020,Cuba,Haiti,113,- - - -
+2020,Cyprus,India,4012,- - - -
+2020,Cyprus,United Kingdom,108,- - - -
+2020,Cyprus,Other countries,1491,- - - -
+2020,Cyprus,Germany,115,- - - -
+2020,Cyprus,Nigeria,377,- - - -
+2020,Cyprus,Viet Nam,122,- - - -
+2020,Cyprus,Bangladesh,907,- - - -
+2020,Cyprus,Russia,142,- - - -
+2020,Cyprus,Greece,4422,- - - -
+2020,Cyprus,Nepal,2439,- - - -
+2020,Cyprus,Pakistan,318,- - - -
+2020,Czechia,China,801,- - - -
+2020,Czechia,India,978,- - - -
+2020,Czechia,United Kingdom,499,- - - -
+2020,Czechia,Other countries,9119,- - - -
+2020,Czechia,Germany,892,- - - -
+2020,Czechia,Russia,6407,- - - -
+2020,Czechia,Slovakia,21633,- - - -
+2020,Czechia,Ukraine,3811,- - - -
+2020,Czechia,Italy,553,- - - -
+2020,Czechia,Belarus,833,- - - -
+2020,Czechia,Kazakhstan,2027,- - - -
+2020,Côte d'Ivoire,Other countries,724,- - - -
+2020,Côte d'Ivoire,Nigeria,253,- - - -
+2020,Côte d'Ivoire,Cameroon,335,- - - -
+2020,Côte d'Ivoire,Congo,217,- - - -
+2020,Côte d'Ivoire,Guinea,352,- - - -
+2020,Côte d'Ivoire,Benin,603,- - - -
+2020,Côte d'Ivoire,Chad,150,- - - -
+2020,Côte d'Ivoire,Mali,312,- - - -
+2020,Côte d'Ivoire,Togo,406,- - - -
+2020,Côte d'Ivoire,Burkina Faso,773,- - - -
+2020,Côte d'Ivoire,Niger,281,- - - -
+2020,DR Congo,Other countries,34,- - - -
+2020,DR Congo,Nigeria,17,- - - -
+2020,DR Congo,Cameroon,595,- - - -
+2020,DR Congo,Congo,465,- - - -
+2020,DR Congo,Rwanda,832,- - - -
+2020,DR Congo,Angola,402,- - - -
+2020,DR Congo,Uganda,17,- - - -
+2020,DR Congo,Central African Republic,18,- - - -
+2020,DR Congo,Chad,18,- - - -
+2020,DR Congo,Togo,17,- - - -
+2020,DR Congo,Burundi,52,- - - -
+2020,Denmark,China,1381,- - - -
+2020,Denmark,Other countries,14341,- - - -
+2020,Denmark,Germany,3334,- - - -
+2020,Denmark,Norway,3014,- - - -
+2020,Denmark,Sweden,1509,- - - -
+2020,Denmark,Romania,1542,- - - -
+2020,Denmark,Slovakia,1364,- - - -
+2020,Denmark,Spain,1114,- - - -
+2020,Denmark,Italy,1269,- - - -
+2020,Denmark,Hungary,1207,- - - -
+2020,Denmark,Poland,1398,- - - -
+2020,Dominican Republic,Peru,52,- - - -
+2020,Dominican Republic,Other countries,393,- - - -
+2020,Dominican Republic,Argentina,37,- - - -
+2020,Dominican Republic,Cuba,167,- - - -
+2020,Dominican Republic,Venezuala,585,- - - -
+2020,Dominican Republic,United States,1406,- - - -
+2020,Dominican Republic,Colombia,177,- - - -
+2020,Dominican Republic,Mexico,57,- - - -
+2020,Dominican Republic,Spain,159,- - - -
+2020,Dominican Republic,Italy,69,- - - -
+2020,Dominican Republic,Haiti,4885,- - - -
+2020,Ecuador,Brazil,56,- - - -
+2020,Ecuador,Chile,151,- - - -
+2020,Ecuador,Peru,222,- - - -
+2020,Ecuador,United Kingdom,43,- - - -
+2020,Ecuador,Other countries,430,- - - -
+2020,Ecuador,Argentina,127,- - - -
+2020,Ecuador,Cuba,373,- - - -
+2020,Ecuador,Venezuala,995,- - - -
+2020,Ecuador,Colombia,1459,- - - -
+2020,Ecuador,Spain,1382,- - - -
+2020,Ecuador,Italy,287,- - - -
+2020,Egypt,India,289,- - - -
+2020,Egypt,Indonesia,5937,- - - -
+2020,Egypt,Malaysia,6560,- - - -
+2020,Egypt,Thailand,2953,- - - -
+2020,Egypt,Other countries,4797,- - - -
+2020,Egypt,Nigeria,1344,- - - -
+2020,Egypt,Somalia,282,- - - -
+2020,Egypt,Brunei Darussalam,273,- - - -
+2020,Egypt,Iraq,609,- - - -
+2020,Egypt,Syria,296,- - - -
+2020,Egypt,Afghanistan,431,- - - -
+2020,El Salvador,Brazil,13,- - - -
+2020,El Salvador,Peru,18,- - - -
+2020,El Salvador,Other countries,92,- - - -
+2020,El Salvador,Venezuala,14,- - - -
+2020,El Salvador,United States,143,- - - -
+2020,El Salvador,Colombia,20,- - - -
+2020,El Salvador,Guatemala,169,- - - -
+2020,El Salvador,Honduras,169,- - - -
+2020,El Salvador,Mexico,23,- - - -
+2020,El Salvador,Nicaragua,72,- - - -
+2020,El Salvador,Panama,43,- - - -
+2020,El Salvador,Spain,13,- - - -
+2020,Estonia,India,247,- - - -
+2020,Estonia,Other countries,2001,- - - -
+2020,Estonia,Nigeria,355,- - - -
+2020,Estonia,Bangladesh,224,- - - -
+2020,Estonia,Iran,132,- - - -
+2020,Estonia,Russia,468,- - - -
+2020,Estonia,Ukraine,299,- - - -
+2020,Estonia,Finland,1282,- - - -
+2020,Estonia,Azerbaijan,155,- - - -
+2020,Estonia,Turkey,195,- - - -
+2020,Estonia,Pakistan,155,- - - -
+2020,Finland,China,1717,- - - -
+2020,Finland,India,849,- - - -
+2020,Finland,Other countries,7990,- - - -
+2020,Finland,Germany,653,- - - -
+2020,Finland,Sweden,426,- - - -
+2020,Finland,Viet Nam,2197,- - - -
+2020,Finland,Bangladesh,821,- - - -
+2020,Finland,Iran,534,- - - -
+2020,Finland,Russia,1728,- - - -
+2020,Finland,Nepal,907,- - - -
+2020,Finland,Pakistan,618,- - - -
+2020,France,China,24780,- - - -
+2020,France,India,5676,- - - -
+2020,France,Other countries,111025,- - - -
+2020,France,Morocco,32707,- - - -
+2020,France,Italy,8428,- - - -
+2020,France,Lebanon,5470,- - - -
+2020,France,Cameroon,5272,- - - -
+2020,France,Algeria,22895,- - - -
+2020,France,Senegal,10897,- - - -
+2020,France,Tunisia,9796,- - - -
+2020,France,Côte d'Ivoire,7164,- - - -
 2020,Georgia,India,6832,- - - -
 2020,Georgia,Other countries,1434,- - - -
 2020,Georgia,Nigeria,595,- - - -
@@ -19132,6 +19248,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Georgia,Azerbaijan,1344,- - - -
 2020,Georgia,Lebanon,205,- - - -
 2020,Georgia,Egypt,441,- - - -
+2020,Germany,China,39281,- - - -
+2020,Germany,India,25130,- - - -
+2020,Germany,Other countries,186341,- - - -
+2020,Germany,France,9283,- - - -
+2020,Germany,United States,8246,- - - -
+2020,Germany,Iran,9319,- - - -
+2020,Germany,Russia,11055,- - - -
+2020,Germany,Italy,10820,- - - -
+2020,Germany,Turkey,10862,- - - -
+2020,Germany,Syria,15769,- - - -
+2020,Germany,Austria,14514,- - - -
 2020,Ghana,Other countries,1070,- - - -
 2020,Ghana,Nigeria,2960,- - - -
 2020,Ghana,United States,228,- - - -
@@ -19143,6 +19270,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Ghana,Togo,133,- - - -
 2020,Ghana,Gabon,205,- - - -
 2020,Ghana,Côte d'Ivoire,258,- - - -
+2020,Greece,Other countries,2448,- - - -
+2020,Greece,Germany,1178,- - - -
+2020,Greece,Russia,405,- - - -
+2020,Greece,Romania,135,- - - -
+2020,Greece,Ukraine,230,- - - -
+2020,Greece,Jordan,140,- - - -
+2020,Greece,Bulgaria,240,- - - -
+2020,Greece,Cyprus,13791,- - - -
+2020,Greece,Syria,167,- - - -
+2020,Greece,Albania,1316,- - - -
+2020,Greece,Georgia,197,- - - -
 2020,Hong Kong,China,39663,- - - -
 2020,Hong Kong,India,800,- - - -
 2020,Hong Kong,Indonesia,669,- - - -
@@ -19154,6 +19292,28 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Hong Kong,Kazakhstan,243,- - - -
 2020,Hong Kong,Pakistan,261,- - - -
 2020,Hong Kong,Macao,261,- - - -
+2020,Hungary,China,2776,- - - -
+2020,Hungary,Other countries,19285,- - - -
+2020,Hungary,Germany,3449,- - - -
+2020,Hungary,Nigeria,896,- - - -
+2020,Hungary,Iran,2024,- - - -
+2020,Hungary,Romania,2593,- - - -
+2020,Hungary,Serbia,2209,- - - -
+2020,Hungary,Slovakia,1765,- - - -
+2020,Hungary,Ukraine,1207,- - - -
+2020,Hungary,Jordan,981,- - - -
+2020,Hungary,Turkey,1086,- - - -
+2020,Iceland,United Kingdom,90,- - - -
+2020,Iceland,Other countries,715,- - - -
+2020,Iceland,Germany,117,- - - -
+2020,Iceland,France,92,- - - -
+2020,Iceland,United States,184,- - - -
+2020,Iceland,Russia,48,- - - -
+2020,Iceland,Denmark,68,- - - -
+2020,Iceland,Italy,53,- - - -
+2020,Iceland,Philippines,144,- - - -
+2020,Iceland,Canada,52,- - - -
+2020,Iceland,Poland,71,- - - -
 2020,India,Malaysia,1353,- - - -
 2020,India,Other countries,17781,- - - -
 2020,India,Nigeria,1525,- - - -
@@ -19176,6 +19336,39 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Iran,Syria,723,- - - -
 2020,Iran,Tajikistan,202,- - - -
 2020,Iran,Afghanistan,13130,- - - -
+2020,Ireland,China,3362,- - - -
+2020,Ireland,India,3867,- - - -
+2020,Ireland,Malaysia,1271,- - - -
+2020,Ireland,United Kingdom,1634,- - - -
+2020,Ireland,Other countries,7262,- - - -
+2020,Ireland,Germany,642,- - - -
+2020,Ireland,Nigeria,605,- - - -
+2020,Ireland,France,645,- - - -
+2020,Ireland,United States,2192,- - - -
+2020,Ireland,Canada,1634,- - - -
+2020,Ireland,Saudi Arabia,694,- - - -
+2020,Italy,China,12413,- - - -
+2020,Italy,India,3750,- - - -
+2020,Italy,Other countries,27048,- - - -
+2020,Italy,Germany,1731,- - - -
+2020,Italy,Switzerland,1511,- - - -
+2020,Italy,France,1659,- - - -
+2020,Italy,Iran,2965,- - - -
+2020,Italy,Russia,1554,- - - -
+2020,Italy,Greece,1162,- - - -
+2020,Italy,Turkey,2149,- - - -
+2020,Italy,Albania,1791,- - - -
+2020,Japan,Indonesia,5095,- - - -
+2020,Japan,Malaysia,2695,- - - -
+2020,Japan,Thailand,3145,- - - -
+2020,Japan,Other countries,17742,- - - -
+2020,Japan,Myanmar,3652,- - - -
+2020,Japan,Viet Nam,44128,- - - -
+2020,Japan,United States,2478,- - - -
+2020,Japan,Bangladesh,2802,- - - -
+2020,Japan,Mongolia,2052,- - - -
+2020,Japan,Nepal,18436,- - - -
+2020,Japan,Sri Lanka,5522,- - - -
 2020,Jordan,Malaysia,735,- - - -
 2020,Jordan,Other countries,5809,- - - -
 2020,Jordan,Israel,1419,- - - -
@@ -19221,6 +19414,50 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Laos,Turkmenistan,3,- - - -
 2020,Laos,Uzbekistan,1,- - - -
 2020,Laos,Cambodia,48,- - - -
+2020,Latvia,India,2719,- - - -
+2020,Latvia,Other countries,2107,- - - -
+2020,Latvia,Germany,1011,- - - -
+2020,Latvia,Sweden,456,- - - -
+2020,Latvia,Russia,548,- - - -
+2020,Latvia,Ukraine,557,- - - -
+2020,Latvia,Finland,317,- - - -
+2020,Latvia,Kazakhstan,186,- - - -
+2020,Latvia,Pakistan,234,- - - -
+2020,Latvia,Sri Lanka,295,- - - -
+2020,Latvia,Uzbekistan,1717,- - - -
+2020,Liechtenstein,India,7,- - - -
+2020,Liechtenstein,United Kingdom,5,- - - -
+2020,Liechtenstein,Other countries,65,- - - -
+2020,Liechtenstein,Germany,203,- - - -
+2020,Liechtenstein,Switzerland,158,- - - -
+2020,Liechtenstein,United States,4,- - - -
+2020,Liechtenstein,Russia,4,- - - -
+2020,Liechtenstein,Poland,4,- - - -
+2020,Liechtenstein,Turkey,4,- - - -
+2020,Liechtenstein,Albania,12,- - - -
+2020,Liechtenstein,Austria,334,- - - -
+2020,Lithuania,China,177,- - - -
+2020,Lithuania,India,780,- - - -
+2020,Lithuania,Other countries,2308,- - - -
+2020,Lithuania,Germany,412,- - - -
+2020,Lithuania,Sweden,260,- - - -
+2020,Lithuania,Russia,176,- - - -
+2020,Lithuania,Israel,372,- - - -
+2020,Lithuania,Ukraine,606,- - - -
+2020,Lithuania,Belarus,822,- - - -
+2020,Lithuania,Azerbaijan,163,- - - -
+2020,Lithuania,Turkey,171,- - - -
+2020,Luxembourg,China,88,- - - -
+2020,Luxembourg,India,103,- - - -
+2020,Luxembourg,Other countries,1238,- - - -
+2020,Luxembourg,Belgium,406,- - - -
+2020,Luxembourg,Germany,453,- - - -
+2020,Luxembourg,France,871,- - - -
+2020,Luxembourg,Iran,64,- - - -
+2020,Luxembourg,Greece,77,- - - -
+2020,Luxembourg,Spain,60,- - - -
+2020,Luxembourg,Italy,182,- - - -
+2020,Luxembourg,Portugal,58,- - - -
 2020,Macao,Brazil,39,- - - -
 2020,Macao,China,19007,- - - -
 2020,Macao,Hong Kong,481,- - - -
@@ -19232,9 +19469,10 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Macao,Philippines,32,- - - -
 2020,Macao,Portugal,85,- - - -
 2020,Macao,Cape Verde,101,- - - -
-2020,Madagascar,Africa: unknown countries,1307,- - - -
-2020,Madagascar,Europe: unknown countries,10,- - - -
-2020,Madagascar,Comoros,1560,- - - -
+2020,Madagascar,Asia: unknown countries,3,- - - -
+2020,Madagascar,Africa: unknown countries,129,- - - -
+2020,Madagascar,Europe: unknown countries,20,- - - -
+2020,Madagascar,Comoros,1176,- - - -
 2020,Malaysia,Asia: unknown countries,3386,- - - -
 2020,Malaysia,China,16974,- - - -
 2020,Malaysia,India,3171,- - - -
@@ -19246,6 +19484,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Malaysia,Yemen,4657,- - - -
 2020,Malaysia,Sri Lanka,2311,- - - -
 2020,Malaysia,Egypt,2393,- - - -
+2020,Malta,China,65,- - - -
+2020,Malta,India,454.0249938964844,- - - -
+2020,Malta,United Kingdom,240.27142333984378,- - - -
+2020,Malta,Other countries,1082.7692317962646,- - - -
+2020,Malta,Germany,74.5,- - - -
+2020,Malta,Nigeria,72,- - - -
+2020,Malta,United States,75,- - - -
+2020,Malta,Bangladesh,57,- - - -
+2020,Malta,Italy,176.30000305175778,- - - -
+2020,Malta,Libya,54,- - - -
+2020,Malta,Pakistan,62.96667098999023,- - - -
 2020,Mauritania,Other countries,34,- - - -
 2020,Mauritania,Morocco,58,- - - -
 2020,Mauritania,United Arab Emirates,7,- - - -
@@ -19269,6 +19518,12 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Mauritius,South Africa,165,- - - -
 2020,Mauritius,Seychelles,59,- - - -
 2020,Mauritius,Madagascar,282,- - - -
+2020,Mexico,Asia: unknown countries,493,- - - -
+2020,Mexico,United States,20045,- - - -
+2020,Mexico,Oceania: unknown countries,68,- - - -
+2020,Mexico,Africa: unknown countries,467,- - - -
+2020,Mexico,Canada,2184,- - - -
+2020,Mexico,Europe: unknown countries,1309,- - - -
 2020,Moldova,India,554,- - - -
 2020,Moldova,Other countries,167,- - - -
 2020,Moldova,Sweden,21,- - - -
@@ -19307,6 +19562,51 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Morocco,Côte d'Ivoire,1919,- - - -
 2020,Morocco,Niger,975,- - - -
 2020,Morocco,Mauritania,1367,- - - -
+2020,Namibia,Other countries,108,- - - -
+2020,Namibia,Nigeria,48,- - - -
+2020,Namibia,Botswana,25,- - - -
+2020,Namibia,Eswatini,29,- - - -
+2020,Namibia,Zambia,211,- - - -
+2020,Namibia,Zimbabwe,830,- - - -
+2020,Namibia,DR Congo,204,- - - -
+2020,Namibia,Angola,509,- - - -
+2020,Namibia,Kenya,25,- - - -
+2020,Namibia,Malawi,65,- - - -
+2020,Namibia,South Africa,108,- - - -
+2020,New Zealand,China,13815.010742187502,- - - -
+2020,New Zealand,India,11264.404296875002,- - - -
+2020,New Zealand,Malaysia,1184.5170898437502,- - - -
+2020,New Zealand,Other countries,8615.525508642197,- - - -
+2020,New Zealand,Republic of Korea,958.1112670898436,- - - -
+2020,New Zealand,Viet Nam,1197.3291015625,- - - -
+2020,New Zealand,United States,1587,- - - -
+2020,New Zealand,Philippines,832.687255859375,- - - -
+2020,New Zealand,Nepal,856.129150390625,- - - -
+2020,New Zealand,Sri Lanka,883.04876708984375,- - - -
+2020,New Zealand,Australia,2505.368896484375,- - - -
+2020,North Macedonia,India,43,- - - -
+2020,North Macedonia,Other countries,81,- - - -
+2020,North Macedonia,Germany,12,- - - -
+2020,North Macedonia,France,74,- - - -
+2020,North Macedonia,Serbia,296,- - - -
+2020,North Macedonia,Bosnia and Herzegovina,16,- - - -
+2020,North Macedonia,Europe: unknown countries,737,- - - -
+2020,North Macedonia,Bulgaria,12,- - - -
+2020,North Macedonia,Croatia,14,- - - -
+2020,North Macedonia,Turkey,1329,- - - -
+2020,North Macedonia,Albania,122,- - - -
+2020,North Macedonia,Montenegro,76,- - - -
+2020,Norway,China,881,- - - -
+2020,Norway,India,509,- - - -
+2020,Norway,Other countries,6872,- - - -
+2020,Norway,Germany,651,- - - -
+2020,Norway,Sweden,748,- - - -
+2020,Norway,United States,453,- - - -
+2020,Norway,Iran,488,- - - -
+2020,Norway,Denmark,601,- - - -
+2020,Norway,Nepal,510,- - - -
+2020,Norway,Pakistan,435,- - - -
+2020,Norway,Syria,456,- - - -
 2020,Oman,India,550,- - - -
 2020,Oman,Other countries,768,- - - -
 2020,Oman,Bangladesh,150,- - - -
@@ -19318,6 +19618,39 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Oman,Tanzania,155,- - - -
 2020,Oman,Egypt,512,- - - -
 2020,Oman,Sudan,167,- - - -
+2020,Panama,Peru,111,- - - -
+2020,Panama,Other countries,575,- - - -
+2020,Panama,Ecuador,76,- - - -
+2020,Panama,Venezuala,1321,- - - -
+2020,Panama,Dominican Republic,90,- - - -
+2020,Panama,Colombia,1522,- - - -
+2020,Panama,Nicaragua,312,- - - -
+2020,Panama,Spain,79,- - - -
+2020,Panama,Italy,77,- - - -
+2020,Panama,Jamaica,158,- - - -
+2020,Panama,El Salvador,118,- - - -
+2020,Poland,Asia: unknown countries,973,- - - -
+2020,Poland,China,1292,- - - -
+2020,Poland,India,2960,- - - -
+2020,Poland,Other countries,15800,- - - -
+2020,Poland,Germany,1505,- - - -
+2020,Poland,Norway,1346,- - - -
+2020,Poland,Russia,1038,- - - -
+2020,Poland,Ukraine,27068,- - - -
+2020,Poland,Belarus,7472,- - - -
+2020,Poland,Kazakhstan,1172,- - - -
+2020,Poland,Turkey,1317,- - - -
+2020,Portugal,Brazil,18081,- - - -
+2020,Portugal,China,777,- - - -
+2020,Portugal,Other countries,6824,- - - -
+2020,Portugal,France,2003,- - - -
+2020,Portugal,Spain,1024,- - - -
+2020,Portugal,Italy,1021,- - - -
+2020,Portugal,Angola,3600,- - - -
+2020,Portugal,Mozambique,1255,- - - -
+2020,Portugal,Sao Tome and Principe,1011,- - - -
+2020,Portugal,Cape Verde,4635,- - - -
+2020,Portugal,Guinea-Bissau,3751,- - - -
 2020,Qatar,India,887,- - - -
 2020,Qatar,Other countries,3881,- - - -
 2020,Qatar,Iran,535,- - - -
@@ -19329,6 +19662,50 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Qatar,Egypt,1785,- - - -
 2020,Qatar,Saudi Arabia,606,- - - -
 2020,Qatar,Sudan,988,- - - -
+2020,Republic of Korea,China,58746,- - - -
+2020,Republic of Korea,India,994,- - - -
+2020,Republic of Korea,Indonesia,1078,- - - -
+2020,Republic of Korea,Other countries,12357,- - - -
+2020,Republic of Korea,Viet Nam,19098,- - - -
+2020,Republic of Korea,Japan,1778,- - - -
+2020,Republic of Korea,Bangladesh,1176,- - - -
+2020,Republic of Korea,Mongolia,5214,- - - -
+2020,Republic of Korea,Nepal,2236,- - - -
+2020,Republic of Korea,Pakistan,1465,- - - -
+2020,Republic of Korea,Uzbekistan,7426,- - - -
+2020,Romania,Other countries,7535,- - - -
+2020,Romania,Germany,1605,- - - -
+2020,Romania,France,2737,- - - -
+2020,Romania,Morocco,1020,- - - -
+2020,Romania,Greece,906,- - - -
+2020,Romania,Israel,2728,- - - -
+2020,Romania,Serbia,744,- - - -
+2020,Romania,Italy,2135,- - - -
+2020,Romania,Hungary,628,- - - -
+2020,Romania,Moldova,11742,- - - -
+2020,Romania,Tunisia,771,- - - -
+2020,Russia,China,32033,- - - -
+2020,Russia,India,15910,- - - -
+2020,Russia,Other countries,74403,- - - -
+2020,Russia,Ukraine,11283,- - - -
+2020,Russia,Belarus,10073,- - - -
+2020,Russia,Kazakhstan,60931,- - - -
+2020,Russia,Kyrgyzstan,7785,- - - -
+2020,Russia,Turkmenistan,35720,- - - -
+2020,Russia,Tajikistan,20923,- - - -
+2020,Russia,Uzbekistan,38111,- - - -
+2020,Russia,Egypt,8869,- - - -
+2020,Rwanda,Other countries,200,- - - -
+2020,Rwanda,Nigeria,69,- - - -
+2020,Rwanda,Africa: unknown countries,870,- - - -
+2020,Rwanda,Cameroon,34,- - - -
+2020,Rwanda,DR Congo,1236,- - - -
+2020,Rwanda,Kenya,205,- - - -
+2020,Rwanda,Tanzania,115,- - - -
+2020,Rwanda,Uganda,222,- - - -
+2020,Rwanda,Chad,44,- - - -
+2020,Rwanda,Burundi,592,- - - -
+2020,Rwanda,Liberia,128,- - - -
 2020,Saint Lucia,India,206,- - - -
 2020,Saint Lucia,United Kingdom,1,- - - -
 2020,Saint Lucia,Nigeria,24,- - - -
@@ -19385,6 +19762,50 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Serbia,Slovenia,103,- - - -
 2020,Serbia,Saudi Arabia,167,- - - -
 2020,Serbia,Montenegro,2951,- - - -
+2020,Slovakia,India,332,- - - -
+2020,Slovakia,Other countries,2686,- - - -
+2020,Slovakia,Germany,856,- - - -
+2020,Slovakia,Norway,505,- - - -
+2020,Slovakia,Russia,370,- - - -
+2020,Slovakia,Serbia,865,- - - -
+2020,Slovakia,Ukraine,3949,- - - -
+2020,Slovakia,Spain,241,- - - -
+2020,Slovakia,Czechia,3251,- - - -
+2020,Slovakia,Hungary,735,- - - -
+2020,Slovakia,Poland,464,- - - -
+2020,Slovenia,Other countries,809,- - - -
+2020,Slovenia,Russia,192,- - - -
+2020,Slovenia,Serbia,919,- - - -
+2020,Slovenia,Ukraine,76,- - - -
+2020,Slovenia,Italy,344,- - - -
+2020,Slovenia,Bosnia and Herzegovina,1153,- - - -
+2020,Slovenia,Europe: unknown countries,132,- - - -
+2020,Slovenia,Croatia,986,- - - -
+2020,Slovenia,North Macedonia,1123,- - - -
+2020,Slovenia,Austria,60,- - - -
+2020,Slovenia,Montenegro,179,- - - -
+2020,South Africa,Other countries,8980,- - - -
+2020,South Africa,Nigeria,2661,- - - -
+2020,South Africa,Botswana,812,- - - -
+2020,South Africa,Eswatini,1621,- - - -
+2020,South Africa,Lesotho,2277,- - - -
+2020,South Africa,Namibia,2150,- - - -
+2020,South Africa,Zambia,979,- - - -
+2020,South Africa,Zimbabwe,9886,- - - -
+2020,South Africa,DR Congo,2901,- - - -
+2020,South Africa,Ghana,716,- - - -
+2020,South Africa,Kenya,898,- - - -
+2020,Spain,Chile,2704,- - - -
+2020,Spain,Peru,3106,- - - -
+2020,Spain,China,3289,- - - -
+2020,Spain,Other countries,32887,- - - -
+2020,Spain,Ecuador,7026,- - - -
+2020,Spain,Venezuala,2553,- - - -
+2020,Spain,France,9794,- - - -
+2020,Spain,Morocco,2719,- - - -
+2020,Spain,Colombia,7309,- - - -
+2020,Spain,Mexico,3511,- - - -
+2020,Spain,Italy,6738,- - - -
 2020,Sri Lanka,China,132,- - - -
 2020,Sri Lanka,India,27,- - - -
 2020,Sri Lanka,Other countries,128,- - - -
@@ -19396,6 +19817,28 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Sri Lanka,Australia,22,- - - -
 2020,Sri Lanka,Cambodia,16,- - - -
 2020,Sri Lanka,Bhutan,168,- - - -
+2020,Sweden,China,2669.5463867187495,- - - -
+2020,Sweden,India,2642.0690917968745,- - - -
+2020,Sweden,Other countries,10430.291486263275,- - - -
+2020,Sweden,Germany,2040.147094726563,- - - -
+2020,Sweden,Bangladesh,973.07293701171875,- - - -
+2020,Sweden,Iran,998.2847290039064,- - - -
+2020,Sweden,Greece,708.4806518554686,- - - -
+2020,Sweden,Finland,2221.667724609375,- - - -
+2020,Sweden,Spain,663.4393310546876,- - - -
+2020,Sweden,Italy,811.74462890625,- - - -
+2020,Sweden,Pakistan,1055.948120117188,- - - -
+2020,Switzerland,China,2401,- - - -
+2020,Switzerland,India,993,- - - -
+2020,Switzerland,Other countries,17450,- - - -
+2020,Switzerland,Germany,11185,- - - -
+2020,Switzerland,France,11397,- - - -
+2020,Switzerland,United States,1248,- - - -
+2020,Switzerland,Russia,979,- - - -
+2020,Switzerland,Spain,1122,- - - -
+2020,Switzerland,Italy,5997,- - - -
+2020,Switzerland,Austria,1564,- - - -
+2020,Switzerland,Liechtenstein,906,- - - -
 2020,Thailand,China,11800,- - - -
 2020,Thailand,India,374,- - - -
 2020,Thailand,Indonesia,410,- - - -
@@ -19420,6 +19863,17 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Tunisia,Côte d'Ivoire,421,- - - -
 2020,Tunisia,Niger,372,- - - -
 2020,Tunisia,Mauritania,723,- - - -
+2020,Turkey,Other countries,62686,- - - -
+2020,Turkey,Germany,4637,- - - -
+2020,Turkey,Iran,8776,- - - -
+2020,Turkey,Somalia,6104,- - - -
+2020,Turkey,Iraq,9752,- - - -
+2020,Turkey,Azerbaijan,21069,- - - -
+2020,Turkey,Turkmenistan,18016,- - - -
+2020,Turkey,Syria,37236,- - - -
+2020,Turkey,Yemen,4386,- - - -
+2020,Turkey,Afghanistan,7517,- - - -
+2020,Turkey,Egypt,4109,- - - -
 2020,Turkmenistan,China,5,- - - -
 2020,Turkmenistan,Russia,1,- - - -
 2020,Turkmenistan,Ukraine,1,- - - -
@@ -19442,6 +19896,28 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Ukraine,Turkmenistan,4304,- - - -
 2020,Ukraine,Turkey,2284,- - - -
 2020,Ukraine,Egypt,2849,- - - -
+2020,United Kingdom,China,143867,- - - -
+2020,United Kingdom,Hong Kong,16332,- - - -
+2020,United Kingdom,India,55232,- - - -
+2020,United Kingdom,Malaysia,13470,- - - -
+2020,United Kingdom,Other countries,236969,- - - -
+2020,United Kingdom,Germany,12445,- - - -
+2020,United Kingdom,Nigeria,12977,- - - -
+2020,United Kingdom,France,13912,- - - -
+2020,United Kingdom,United States,19762,- - - -
+2020,United Kingdom,Spain,11382,- - - -
+2020,United Kingdom,Italy,14479,- - - -
+2020,United States,Brazil,16086.3349609375,- - - -
+2020,United States,Asia: unknown countries,19956.445312500004,- - - -
+2020,United States,China,343761.03125,- - - -
+2020,United States,India,128578.04687499997,- - - -
+2020,United States,Other countries,290329.3683421612,- - - -
+2020,United States,Republic of Korea,46995.93359375,- - - -
+2020,United States,Viet Nam,25182.9375,- - - -
+2020,United States,Japan,14165.62109375,- - - -
+2020,United States,Mexico,14475.462890624998,- - - -
+2020,United States,Canada,26523.5546875,- - - -
+2020,United States,Saudi Arabia,30860.349609374993,- - - -
 2020,Viet Nam,China,63,- - - -
 2020,Viet Nam,Other countries,377,- - - -
 2020,Viet Nam,Republic of Korea,349,- - - -
@@ -19453,6 +19929,569 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2020,Viet Nam,Cambodia,683,- - - -
 2020,Viet Nam,Haiti,44,- - - -
 2020,Viet Nam,Timor-Leste,53,- - - -
+2021,Albania,Greece,173,- - - -
+2021,Albania,Serbia,162,- - - -
+2021,Albania,Italy,802,- - - -
+2021,Albania,Europe: unknown countries,529,- - - -
+2021,Albania,Bulgaria,1,- - - -
+2021,Albania,Turkey,54,- - - -
+2021,Albania,North Macedonia,87,- - - -
+2021,Albania,Montenegro,136,- - - -
+2021,Andorra,Bolivia,2,- - - -
+2021,Andorra,Brazil,5,- - - -
+2021,Andorra,Chile,3,- - - -
+2021,Andorra,Peru,4,- - - -
+2021,Andorra,Other countries,15,- - - -
+2021,Andorra,Argentina,7,- - - -
+2021,Andorra,France,2,- - - -
+2021,Andorra,Morocco,3,- - - -
+2021,Andorra,Colombia,3,- - - -
+2021,Andorra,Mexico,3,- - - -
+2021,Andorra,Spain,191,- - - -
+2021,Andorra,Portugal,44,- - - -
+2021,Argentina,Bolivia,11767,- - - -
+2021,Argentina,Brazil,22618,- - - -
+2021,Argentina,Chile,6934,- - - -
+2021,Argentina,Paraguay,11630,- - - -
+2021,Argentina,Peru,17256,- - - -
+2021,Argentina,Uruguay,3530,- - - -
+2021,Argentina,Other countries,9052,- - - -
+2021,Argentina,Ecuador,8927,- - - -
+2021,Argentina,Venezuala,9966,- - - -
+2021,Argentina,United States,1731,- - - -
+2021,Argentina,Colombia,14353,- - - -
+2021,Armenia,India,1566,- - - -
+2021,Armenia,Other countries,250,- - - -
+2021,Armenia,United States,39,- - - -
+2021,Armenia,Iran,251,- - - -
+2021,Armenia,Russia,1782,- - - -
+2021,Armenia,Ukraine,60,- - - -
+2021,Armenia,Iraq,241,- - - -
+2021,Armenia,Lebanon,94,- - - -
+2021,Armenia,Syria,271,- - - -
+2021,Armenia,Egypt,52,- - - -
+2021,Armenia,Georgia,849,- - - -
+2021,Australia,Brazil,8486,- - - -
+2021,Australia,China,93437,- - - -
+2021,Australia,India,68725,- - - -
+2021,Australia,Indonesia,11683,- - - -
+2021,Australia,Malaysia,11419,- - - -
+2021,Australia,Other countries,95915,- - - -
+2021,Australia,Viet Nam,14111,- - - -
+2021,Australia,Philippines,9588,- - - -
+2021,Australia,Nepal,32999,- - - -
+2021,Australia,Pakistan,9472,- - - -
+2021,Australia,Sri Lanka,9104,- - - -
+2021,Austria,Other countries,22313.0231924057,- - - -
+2021,Austria,Germany,34127.4375,- - - -
+2021,Austria,Iran,1347.8511962890627,- - - -
+2021,Austria,Russia,1674.37158203125,- - - -
+2021,Austria,Serbia,1461.6328124999998,- - - -
+2021,Austria,Ukraine,1555.591674804688,- - - -
+2021,Austria,Italy,9574.0849609375,- - - -
+2021,Austria,Bosnia and Herzegovina,2735.346435546875,- - - -
+2021,Austria,Bulgaria,1372.465942382813,- - - -
+2021,Austria,Hungary,2312.77490234375,- - - -
+2021,Austria,Turkey,1638.1343994140627,- - - -
+2021,Azerbaijan,China,59,- - - -
+2021,Azerbaijan,Other countries,445,- - - -
+2021,Azerbaijan,Nigeria,99,- - - -
+2021,Azerbaijan,Iran,1252,- - - -
+2021,Azerbaijan,Russia,428,- - - -
+2021,Azerbaijan,Iraq,61,- - - -
+2021,Azerbaijan,Kazakhstan,44,- - - -
+2021,Azerbaijan,Turkmenistan,132,- - - -
+2021,Azerbaijan,Turkey,2571,- - - -
+2021,Azerbaijan,Pakistan,90,- - - -
+2021,Azerbaijan,Georgia,488,- - - -
+2021,Bahrain,India,448,- - - -
+2021,Bahrain,Other countries,917,- - - -
+2021,Bahrain,Oman,136,- - - -
+2021,Bahrain,Kuwait,871,- - - -
+2021,Bahrain,Iraq,131,- - - -
+2021,Bahrain,Jordan,416,- - - -
+2021,Bahrain,Pakistan,411,- - - -
+2021,Bahrain,Syria,222,- - - -
+2021,Bahrain,Yemen,209,- - - -
+2021,Bahrain,Egypt,499,- - - -
+2021,Bahrain,Saudi Arabia,1714,- - - -
+2021,Belarus,China,3998,- - - -
+2021,Belarus,India,734,- - - -
+2021,Belarus,Other countries,2931,- - - -
+2021,Belarus,Iran,419,- - - -
+2021,Belarus,Russia,1902,- - - -
+2021,Belarus,Ukraine,339,- - - -
+2021,Belarus,Turkmenistan,8874,- - - -
+2021,Belarus,Lebanon,725,- - - -
+2021,Belarus,Sri Lanka,1040,- - - -
+2021,Belarus,Tajikistan,331,- - - -
+2021,Belarus,Uzbekistan,1070,- - - -
+2021,Belgium,China,1044,- - - -
+2021,Belgium,India,717,- - - -
+2021,Belgium,Other countries,13202,- - - -
+2021,Belgium,France,19063,- - - -
+2021,Belgium,Morocco,1300,- - - -
+2021,Belgium,Spain,714,- - - -
+2021,Belgium,Italy,1265,- - - -
+2021,Belgium,Cameroon,2685,- - - -
+2021,Belgium,DR Congo,767,- - - -
+2021,Belgium,Luxembourg,1999,- - - -
+2021,Belgium,Netherlands,4172,- - - -
+2021,Benin,Other countries,325,- - - -
+2021,Benin,Nigeria,994,- - - -
+2021,Benin,Cameroon,284,- - - -
+2021,Benin,DR Congo,408,- - - -
+2021,Benin,Ghana,152,- - - -
+2021,Benin,Central African Republic,102,- - - -
+2021,Benin,Chad,368,- - - -
+2021,Benin,Togo,332,- - - -
+2021,Benin,Gabon,191,- - - -
+2021,Benin,Côte d'Ivoire,98,- - - -
+2021,Benin,Niger,491,- - - -
+2021,Bhutan,India,2050,- - - -
+2021,Bhutan,Malaysia,24,- - - -
+2021,Bhutan,Thailand,340,- - - -
+2021,Bhutan,United Kingdom,19,- - - -
+2021,Bhutan,Other countries,55,- - - -
+2021,Bhutan,Japan,44,- - - -
+2021,Bhutan,United States,80,- - - -
+2021,Bhutan,Bangladesh,254,- - - -
+2021,Bhutan,Canada,111,- - - -
+2021,Bhutan,Sri Lanka,407,- - - -
+2021,Bhutan,Australia,1009,- - - -
+2021,Bosnia and Herzegovina,Other countries,197,- - - -
+2021,Bosnia and Herzegovina,Germany,59,- - - -
+2021,Bosnia and Herzegovina,Serbia,1619,- - - -
+2021,Bosnia and Herzegovina,Jordan,27,- - - -
+2021,Bosnia and Herzegovina,Croatia,2279,- - - -
+2021,Bosnia and Herzegovina,Turkey,505,- - - -
+2021,Bosnia and Herzegovina,Syria,16,- - - -
+2021,Bosnia and Herzegovina,Slovenia,16,- - - -
+2021,Bosnia and Herzegovina,Egypt,20,- - - -
+2021,Bosnia and Herzegovina,Saudi Arabia,18,- - - -
+2021,Bosnia and Herzegovina,Montenegro,703,- - - -
+2021,Bosnia and Herzegovina,Liberia,19,- - - -
+2021,Botswana,India,52,- - - -
+2021,Botswana,Other countries,164,- - - -
+2021,Botswana,Somalia,35,- - - -
+2021,Botswana,Zambia,81,- - - -
+2021,Botswana,Zimbabwe,447,- - - -
+2021,Botswana,Mozambique,49,- - - -
+2021,Botswana,Kenya,99,- - - -
+2021,Botswana,Niger,69,- - - -
+2021,Botswana,Guinea-Bissau,36,- - - -
+2021,Botswana,Madagascar,49,- - - -
+2021,Botswana,Sudan,184,- - - -
+2021,Brazil,Bolivia,1119,- - - -
+2021,Brazil,Paraguay,1147,- - - -
+2021,Brazil,Peru,1546,- - - -
+2021,Brazil,Other countries,9211,- - - -
+2021,Brazil,Argentina,1053,- - - -
+2021,Brazil,Venezuala,927,- - - -
+2021,Brazil,Japan,1328,- - - -
+2021,Brazil,Colombia,1740,- - - -
+2021,Brazil,Angola,1571,- - - -
+2021,Brazil,Haiti,1083,- - - -
+2021,Brazil,Guinea-Bissau,1240,- - - -
+2021,Bulgaria,India,347,- - - -
+2021,Bulgaria,United Kingdom,2788,- - - -
+2021,Bulgaria,Other countries,4179,- - - -
+2021,Bulgaria,Germany,1585,- - - -
+2021,Bulgaria,Greece,4185,- - - -
+2021,Bulgaria,Serbia,590,- - - -
+2021,Bulgaria,Ukraine,1345,- - - -
+2021,Bulgaria,Italy,765,- - - -
+2021,Bulgaria,Turkey,844,- - - -
+2021,Bulgaria,Moldova,374,- - - -
+2021,Bulgaria,North Macedonia,1123,- - - -
+2021,Burkina Faso,Africa: unknown countries,1013,- - - -
+2021,Burkina Faso,Senegal,46,- - - -
+2021,Burkina Faso,Benin,545,- - - -
+2021,Burkina Faso,Mali,221,- - - -
+2021,Burkina Faso,Togo,359,- - - -
+2021,Burkina Faso,Côte d'Ivoire,807,- - - -
+2021,Burkina Faso,Niger,530,- - - -
+2021,Burkina Faso,Guinea-Bissau,35,- - - -
+2021,Cambodia,China,16,- - - -
+2021,Cambodia,Viet Nam,85,- - - -
+2021,Cambodia,Laos,58,- - - -
+2021,Canada,Brazil,4473,- - - -
+2021,Canada,China,79728,- - - -
+2021,Canada,India,93834,- - - -
+2021,Canada,Other countries,73635,- - - -
+2021,Canada,Republic of Korea,6564,- - - -
+2021,Canada,Nigeria,8337,- - - -
+2021,Canada,Viet Nam,8943,- - - -
+2021,Canada,France,13155,- - - -
+2021,Canada,United States,8808,- - - -
+2021,Canada,Bangladesh,5835,- - - -
+2021,Canada,Iran,9075,- - - -
+2021,Chile,Bolivia,1188,- - - -
+2021,Chile,Brazil,391,- - - -
+2021,Chile,Peru,3524,- - - -
+2021,Chile,Other countries,1413,- - - -
+2021,Chile,Argentina,512,- - - -
+2021,Chile,Cuba,387,- - - -
+2021,Chile,Ecuador,1424,- - - -
+2021,Chile,Venezuala,3687,- - - -
+2021,Chile,Colombia,3314,- - - -
+2021,Chile,Mexico,244,- - - -
+2021,Chile,Haiti,552,- - - -
+2021,Colombia,Brazil,146,- - - -
+2021,Colombia,Chile,121,- - - -
+2021,Colombia,Peru,423,- - - -
+2021,Colombia,Other countries,911,- - - -
+2021,Colombia,Argentina,175,- - - -
+2021,Colombia,Ecuador,532,- - - -
+2021,Colombia,Venezuala,1934,- - - -
+2021,Colombia,United States,105,- - - -
+2021,Colombia,Mexico,329,- - - -
+2021,Colombia,Panama,163,- - - -
+2021,Colombia,Spain,93,- - - -
+2021,Croatia,Other countries,830,- - - -
+2021,Croatia,Germany,416,- - - -
+2021,Croatia,France,185,- - - -
+2021,Croatia,United States,86,- - - -
+2021,Croatia,Israel,112,- - - -
+2021,Croatia,Serbia,112,- - - -
+2021,Croatia,Spain,92,- - - -
+2021,Croatia,Italy,95,- - - -
+2021,Croatia,Bosnia and Herzegovina,2098,- - - -
+2021,Croatia,Poland,98,- - - -
+2021,Croatia,Slovenia,163,- - - -
+2021,Cuba,Other countries,1514,- - - -
+2021,Cuba,Colombia,503,- - - -
+2021,Cuba,Namibia,306,- - - -
+2021,Cuba,Congo,1767,- - - -
+2021,Cuba,Angola,976,- - - -
+2021,Cuba,Ghana,249,- - - -
+2021,Cuba,Chad,156,- - - -
+2021,Cuba,Palestine,154,- - - -
+2021,Cuba,South Africa,1919,- - - -
+2021,Cuba,Jamaica,118,- - - -
+2021,Cuba,Haiti,131,- - - -
+2021,Cyprus,India,2782,- - - -
+2021,Cyprus,United Kingdom,140,- - - -
+2021,Cyprus,Other countries,1677,- - - -
+2021,Cyprus,Germany,129,- - - -
+2021,Cyprus,Nigeria,358,- - - -
+2021,Cyprus,Bangladesh,269,- - - -
+2021,Cyprus,Russia,186,- - - -
+2021,Cyprus,Greece,4215,- - - -
+2021,Cyprus,Lebanon,126,- - - -
+2021,Cyprus,Nepal,1614,- - - -
+2021,Cyprus,Pakistan,185,- - - -
+2021,Czechia,China,767,- - - -
+2021,Czechia,India,1158,- - - -
+2021,Czechia,Other countries,9957,- - - -
+2021,Czechia,Germany,969,- - - -
+2021,Czechia,Viet Nam,465,- - - -
+2021,Czechia,Russia,7710,- - - -
+2021,Czechia,Slovakia,21907,- - - -
+2021,Czechia,Ukraine,4246,- - - -
+2021,Czechia,Italy,519,- - - -
+2021,Czechia,Belarus,949,- - - -
+2021,Czechia,Kazakhstan,2395,- - - -
+2021,Denmark,China,1484,- - - -
+2021,Denmark,Other countries,13723,- - - -
+2021,Denmark,Germany,3385,- - - -
+2021,Denmark,Norway,2951,- - - -
+2021,Denmark,Sweden,1536,- - - -
+2021,Denmark,Romania,1395,- - - -
+2021,Denmark,Slovakia,1334,- - - -
+2021,Denmark,Spain,1223,- - - -
+2021,Denmark,Italy,1237,- - - -
+2021,Denmark,Hungary,1144,- - - -
+2021,Denmark,Poland,1375,- - - -
+2021,Dominican Republic,Peru,66,- - - -
+2021,Dominican Republic,Other countries,383,- - - -
+2021,Dominican Republic,Cuba,172,- - - -
+2021,Dominican Republic,Venezuala,716,- - - -
+2021,Dominican Republic,United States,1048,- - - -
+2021,Dominican Republic,Colombia,156,- - - -
+2021,Dominican Republic,Honduras,34,- - - -
+2021,Dominican Republic,Mexico,65,- - - -
+2021,Dominican Republic,Spain,171,- - - -
+2021,Dominican Republic,Italy,80,- - - -
+2021,Dominican Republic,Haiti,5664,- - - -
+2021,Estonia,India,226,- - - -
+2021,Estonia,Other countries,1876,- - - -
+2021,Estonia,Nigeria,343,- - - -
+2021,Estonia,Bangladesh,239,- - - -
+2021,Estonia,Iran,133,- - - -
+2021,Estonia,Russia,485,- - - -
+2021,Estonia,Ukraine,278,- - - -
+2021,Estonia,Finland,1164,- - - -
+2021,Estonia,Azerbaijan,165,- - - -
+2021,Estonia,Turkey,154,- - - -
+2021,Estonia,Pakistan,154,- - - -
+2021,Finland,China,1956,- - - -
+2021,Finland,India,1021,- - - -
+2021,Finland,Other countries,9919,- - - -
+2021,Finland,Germany,766,- - - -
+2021,Finland,Viet Nam,2088,- - - -
+2021,Finland,United States,629,- - - -
+2021,Finland,Bangladesh,964,- - - -
+2021,Finland,Iran,701,- - - -
+2021,Finland,Russia,1996,- - - -
+2021,Finland,Nepal,893,- - - -
+2021,Finland,Pakistan,802,- - - -
+2021,France,China,23450,- - - -
+2021,France,India,4807,- - - -
+2021,France,Other countries,111478,- - - -
+2021,France,Morocco,34961,- - - -
+2021,France,Italy,8868,- - - -
+2021,France,Lebanon,6849,- - - -
+2021,France,Cameroon,5638,- - - -
+2021,France,Algeria,23177,- - - -
+2021,France,Senegal,12125,- - - -
+2021,France,Tunisia,10003,- - - -
+2021,France,Côte d'Ivoire,7813,- - - -
+2021,Georgia,India,7771,- - - -
+2021,Georgia,United Kingdom,325,- - - -
+2021,Georgia,Other countries,2002,- - - -
+2021,Georgia,Nigeria,656,- - - -
+2021,Georgia,Iran,575,- - - -
+2021,Georgia,Russia,367,- - - -
+2021,Georgia,Israel,732,- - - -
+2021,Georgia,Jordan,447,- - - -
+2021,Georgia,Azerbaijan,901,- - - -
+2021,Georgia,Lebanon,284,- - - -
+2021,Georgia,Egypt,545,- - - -
+2021,Germany,China,38386,- - - -
+2021,Germany,India,28773,- - - -
+2021,Germany,Other countries,186883,- - - -
+2021,Germany,France,9074,- - - -
+2021,Germany,Iran,10586,- - - -
+2021,Germany,Russia,11149,- - - -
+2021,Germany,Italy,10075,- - - -
+2021,Germany,Turkey,11588,- - - -
+2021,Germany,Syria,16653,- - - -
+2021,Germany,Cameroon,8275,- - - -
+2021,Germany,Austria,16231,- - - -
+2021,Ghana,Other countries,986,- - - -
+2021,Ghana,Nigeria,2652,- - - -
+2021,Ghana,Cameroon,266,- - - -
+2021,Ghana,Sierra Leone,132,- - - -
+2021,Ghana,Congo,193,- - - -
+2021,Ghana,Benin,173,- - - -
+2021,Ghana,Mali,132,- - - -
+2021,Ghana,Gabon,260,- - - -
+2021,Ghana,Burkina Faso,124,- - - -
+2021,Ghana,Côte d'Ivoire,266,- - - -
+2021,Ghana,Liberia,117,- - - -
+2021,Greece,Other countries,2485,- - - -
+2021,Greece,Germany,1265,- - - -
+2021,Greece,Russia,504,- - - -
+2021,Greece,Ukraine,285,- - - -
+2021,Greece,Jordan,156,- - - -
+2021,Greece,Bulgaria,299,- - - -
+2021,Greece,Cyprus,15066,- - - -
+2021,Greece,Syria,185,- - - -
+2021,Greece,Albania,1411,- - - -
+2021,Greece,Niger,142,- - - -
+2021,Greece,Georgia,189,- - - -
+2021,Hong Kong,Asia: unknown countries,564,- - - -
+2021,Hong Kong,China,39355,- - - -
+2021,Hong Kong,India,705,- - - -
+2021,Hong Kong,Indonesia,626,- - - -
+2021,Hong Kong,Malaysia,404,- - - -
+2021,Hong Kong,Other countries,1769,- - - -
+2021,Hong Kong,Republic of Korea,1588,- - - -
+2021,Hong Kong,Bangladesh,178,- - - -
+2021,Hong Kong,Kazakhstan,265,- - - -
+2021,Hong Kong,Pakistan,272,- - - -
+2021,Hong Kong,Macao,227,- - - -
+2021,Hungary,China,2723,- - - -
+2021,Hungary,India,932,- - - -
+2021,Hungary,Other countries,19161,- - - -
+2021,Hungary,Germany,3416,- - - -
+2021,Hungary,Nigeria,930,- - - -
+2021,Hungary,Iran,1871,- - - -
+2021,Hungary,Romania,2645,- - - -
+2021,Hungary,Serbia,2238,- - - -
+2021,Hungary,Slovakia,1693,- - - -
+2021,Hungary,Ukraine,1171,- - - -
+2021,Hungary,Jordan,1143,- - - -
+2021,Iceland,United Kingdom,113,- - - -
+2021,Iceland,Other countries,736,- - - -
+2021,Iceland,Germany,141,- - - -
+2021,Iceland,Norway,60,- - - -
+2021,Iceland,France,95,- - - -
+2021,Iceland,United States,201,- - - -
+2021,Iceland,Denmark,89,- - - -
+2021,Iceland,Spain,47,- - - -
+2021,Iceland,Italy,55,- - - -
+2021,Iceland,Philippines,123,- - - -
+2021,Iceland,Poland,78,- - - -
+2021,India,Other countries,15619,- - - -
+2021,India,Nigeria,1419,- - - -
+2021,India,United States,2458,- - - -
+2021,India,Bangladesh,2750,- - - -
+2021,India,United Arab Emirates,2307,- - - -
+2021,India,Nepal,13574,- - - -
+2021,India,Yemen,1095,- - - -
+2021,India,Tanzania,1306,- - - -
+2021,India,Afghanistan,4078,- - - -
+2021,India,Bhutan,1827,- - - -
+2021,India,Sudan,1600,- - - -
+2021,Ireland,China,3365,- - - -
+2021,Ireland,India,2589,- - - -
+2021,Ireland,Malaysia,1000,- - - -
+2021,Ireland,United Kingdom,1800,- - - -
+2021,Ireland,Other countries,7665,- - - -
+2021,Ireland,Germany,685,- - - -
+2021,Ireland,France,675,- - - -
+2021,Ireland,United States,2293,- - - -
+2021,Ireland,Kuwait,599,- - - -
+2021,Ireland,Canada,1662,- - - -
+2021,Ireland,Saudi Arabia,648,- - - -
+2021,Italy,China,5674,- - - -
+2021,Italy,India,3911,- - - -
+2021,Italy,Other countries,36276,- - - -
+2021,Italy,France,1789,- - - -
+2021,Italy,Iran,3953,- - - -
+2021,Italy,Russia,1908,- - - -
+2021,Italy,Greece,1505,- - - -
+2021,Italy,Turkey,2483,- - - -
+2021,Italy,Pakistan,1804,- - - -
+2021,Italy,Cameroon,2064,- - - -
+2021,Italy,Albania,3405,- - - -
+2021,Japan,Indonesia,5086,- - - -
+2021,Japan,Malaysia,2443,- - - -
+2021,Japan,Thailand,2682,- - - -
+2021,Japan,Other countries,15601,- - - -
+2021,Japan,Myanmar,3490,- - - -
+2021,Japan,Viet Nam,43275,- - - -
+2021,Japan,United States,1394,- - - -
+2021,Japan,Bangladesh,2836,- - - -
+2021,Japan,Mongolia,2048,- - - -
+2021,Japan,Nepal,18405,- - - -
+2021,Japan,Sri Lanka,4714,- - - -
+2021,Jordan,Malaysia,837,- - - -
+2021,Jordan,Other countries,5675,- - - -
+2021,Jordan,Oman,1147,- - - -
+2021,Jordan,Israel,1883,- - - -
+2021,Jordan,Kuwait,3981,- - - -
+2021,Jordan,Iraq,6403,- - - -
+2021,Jordan,Syria,7229,- - - -
+2021,Jordan,Yemen,784,- - - -
+2021,Jordan,Palestine,8843,- - - -
+2021,Jordan,Egypt,2620,- - - -
+2021,Jordan,Qatar,1407,- - - -
+2021,Kyrgyzstan,China,99,- - - -
+2021,Kyrgyzstan,India,12272,- - - -
+2021,Kyrgyzstan,Other countries,123,- - - -
+2021,Kyrgyzstan,Russia,2005,- - - -
+2021,Kyrgyzstan,Kazakhstan,2178,- - - -
+2021,Kyrgyzstan,Turkmenistan,146,- - - -
+2021,Kyrgyzstan,Turkey,509,- - - -
+2021,Kyrgyzstan,Pakistan,6003,- - - -
+2021,Kyrgyzstan,Tajikistan,1932,- - - -
+2021,Kyrgyzstan,Uzbekistan,35571,- - - -
+2021,Kyrgyzstan,Afghanistan,49,- - - -
+2021,Latvia,India,2152,- - - -
+2021,Latvia,Other countries,2168,- - - -
+2021,Latvia,Germany,1031,- - - -
+2021,Latvia,Norway,176,- - - -
+2021,Latvia,Sweden,527,- - - -
+2021,Latvia,Russia,531,- - - -
+2021,Latvia,Ukraine,791,- - - -
+2021,Latvia,Finland,402,- - - -
+2021,Latvia,Pakistan,188,- - - -
+2021,Latvia,Sri Lanka,349,- - - -
+2021,Latvia,Uzbekistan,1710,- - - -
+2021,Liechtenstein,China,6,- - - -
+2021,Liechtenstein,India,9,- - - -
+2021,Liechtenstein,Other countries,51,- - - -
+2021,Liechtenstein,Germany,220,- - - -
+2021,Liechtenstein,Switzerland,179,- - - -
+2021,Liechtenstein,United States,5,- - - -
+2021,Liechtenstein,Mexico,6,- - - -
+2021,Liechtenstein,Italy,5,- - - -
+2021,Liechtenstein,Czechia,5,- - - -
+2021,Liechtenstein,Turkey,5,- - - -
+2021,Liechtenstein,Albania,11,- - - -
+2021,Liechtenstein,Austria,329,- - - -
+2021,Lithuania,China,207,- - - -
+2021,Lithuania,India,673,- - - -
+2021,Lithuania,United Kingdom,302,- - - -
+2021,Lithuania,Other countries,3031,- - - -
+2021,Lithuania,Germany,495,- - - -
+2021,Lithuania,Sweden,328,- - - -
+2021,Lithuania,Nigeria,280,- - - -
+2021,Lithuania,Russia,265,- - - -
+2021,Lithuania,Israel,445,- - - -
+2021,Lithuania,Ukraine,732,- - - -
+2021,Lithuania,Belarus,920,- - - -
+2021,Luxembourg,China,85,- - - -
+2021,Luxembourg,India,104,- - - -
+2021,Luxembourg,Other countries,1309,- - - -
+2021,Luxembourg,Belgium,398,- - - -
+2021,Luxembourg,Germany,486,- - - -
+2021,Luxembourg,France,906,- - - -
+2021,Luxembourg,Iran,75,- - - -
+2021,Luxembourg,Greece,72,- - - -
+2021,Luxembourg,Romania,64,- - - -
+2021,Luxembourg,Spain,78,- - - -
+2021,Luxembourg,Italy,199,- - - -
+2021,Macao,Brazil,27,- - - -
+2021,Macao,China,22211,- - - -
+2021,Macao,Hong Kong,497,- - - -
+2021,Macao,Malaysia,81,- - - -
+2021,Macao,Other countries,176,- - - -
+2021,Macao,Republic of Korea,16,- - - -
+2021,Macao,Viet Nam,26,- - - -
+2021,Macao,Philippines,31,- - - -
+2021,Macao,Mozambique,16,- - - -
+2021,Macao,Sao Tome and Principe,15,- - - -
+2021,Macao,Cape Verde,67,- - - -
+2021,Malaysia,China,27893,- - - -
+2021,Malaysia,India,3342,- - - -
+2021,Malaysia,Indonesia,9874,- - - -
+2021,Malaysia,Other countries,26060,- - - -
+2021,Malaysia,Nigeria,4005,- - - -
+2021,Malaysia,Bangladesh,6180,- - - -
+2021,Malaysia,Iraq,2114,- - - -
+2021,Malaysia,Pakistan,4243,- - - -
+2021,Malaysia,Yemen,3752,- - - -
+2021,Malaysia,Sri Lanka,2366,- - - -
+2021,Malaysia,Egypt,2098,- - - -
+2021,Malta,China,61,- - - -
+2021,Malta,India,279,- - - -
+2021,Malta,United Kingdom,270,- - - -
+2021,Malta,Other countries,1224.2000007629395,- - - -
+2021,Malta,Germany,99,- - - -
+2021,Malta,Nigeria,111,- - - -
+2021,Malta,France,104,- - - -
+2021,Malta,United States,68,- - - -
+2021,Malta,Greece,57,- - - -
+2021,Malta,Italy,667,- - - -
+2021,Malta,Pakistan,79,- - - -
+2021,Mauritius,India,1041,- - - -
+2021,Mauritius,Other countries,416,- - - -
+2021,Mauritius,Nigeria,253,- - - -
+2021,Mauritius,France,136,- - - -
+2021,Mauritius,Zimbabwe,172,- - - -
+2021,Mauritius,Kenya,157,- - - -
+2021,Mauritius,Tanzania,132,- - - -
+2021,Mauritius,Uganda,58,- - - -
+2021,Mauritius,South Africa,138,- - - -
+2021,Mauritius,Seychelles,69,- - - -
+2021,Mauritius,Madagascar,282,- - - -
+2021,Mexico,United States,22007,- - - -
+2021,Mexico,Canada,883,- - - -
+2021,Moldova,India,605,- - - -
+2021,Moldova,Other countries,170,- - - -
+2021,Moldova,Nigeria,24,- - - -
+2021,Moldova,United States,70,- - - -
+2021,Moldova,Russia,60,- - - -
+2021,Moldova,Israel,1359,- - - -
+2021,Moldova,Romania,2675,- - - -
+2021,Moldova,Ukraine,111,- - - -
+2021,Moldova,Italy,28,- - - -
+2021,Moldova,Azerbaijan,39,- - - -
+2021,Moldova,Turkey,63,- - - -
 2021,Monaco,United Kingdom,6,- - - -
 2021,Monaco,Other countries,96,- - - -
 2021,Monaco,Germany,10,- - - -
@@ -19466,3 +20505,1039 @@ year,dest_country_name,origin_country_lumped,value_lumped,cond_all
 2021,Monaco,Italy,98,- - - -
 2021,Monaco,Bulgaria,6,- - - -
 2021,Monaco,Hungary,6,- - - -
+2021,Morocco,Other countries,9076,- - - -
+2021,Morocco,Congo,1123,- - - -
+2021,Morocco,Guinea,1289,- - - -
+2021,Morocco,Senegal,1251,- - - -
+2021,Morocco,Chad,712,- - - -
+2021,Morocco,Mali,2320,- - - -
+2021,Morocco,Gabon,2374,- - - -
+2021,Morocco,Burkina Faso,818,- - - -
+2021,Morocco,Côte d'Ivoire,1653,- - - -
+2021,Morocco,Niger,770,- - - -
+2021,Morocco,Mauritania,1111,- - - -
+2021,New Zealand,China,11443.2275390625,- - - -
+2021,New Zealand,India,5352.788085937499,- - - -
+2021,New Zealand,Indonesia,581.22015380859375,- - - -
+2021,New Zealand,Malaysia,776.5,- - - -
+2021,New Zealand,Other countries,6356.450264453888,- - - -
+2021,New Zealand,Republic of Korea,751.36370849609375,- - - -
+2021,New Zealand,Viet Nam,976.7547607421876,- - - -
+2021,New Zealand,United States,593,- - - -
+2021,New Zealand,Nepal,500.3043518066406,- - - -
+2021,New Zealand,Sri Lanka,624.7915039062501,- - - -
+2021,New Zealand,Australia,2692.0229492187495,- - - -
+2021,North Macedonia,Other countries,46,- - - -
+2021,North Macedonia,Germany,20,- - - -
+2021,North Macedonia,Serbia,255,- - - -
+2021,North Macedonia,Bosnia and Herzegovina,12,- - - -
+2021,North Macedonia,Europe: unknown countries,1581,- - - -
+2021,North Macedonia,Bulgaria,17,- - - -
+2021,North Macedonia,Croatia,14,- - - -
+2021,North Macedonia,Turkey,1925,- - - -
+2021,North Macedonia,Albania,150,- - - -
+2021,North Macedonia,Austria,10,- - - -
+2021,North Macedonia,Montenegro,73,- - - -
+2021,Norway,China,830,- - - -
+2021,Norway,India,519,- - - -
+2021,Norway,Other countries,6802,- - - -
+2021,Norway,Germany,641,- - - -
+2021,Norway,Sweden,691,- - - -
+2021,Norway,United States,437,- - - -
+2021,Norway,Iran,635,- - - -
+2021,Norway,Denmark,595,- - - -
+2021,Norway,Nepal,504,- - - -
+2021,Norway,Pakistan,523,- - - -
+2021,Norway,Syria,523,- - - -
+2021,Oman,India,483,- - - -
+2021,Oman,Other countries,965,- - - -
+2021,Oman,Bangladesh,139,- - - -
+2021,Oman,Iraq,284,- - - -
+2021,Oman,Jordan,234,- - - -
+2021,Oman,Pakistan,293,- - - -
+2021,Oman,Syria,152,- - - -
+2021,Oman,Yemen,137,- - - -
+2021,Oman,Egypt,474,- - - -
+2021,Oman,Sudan,147,- - - -
+2021,Oman,Qatar,194,- - - -
+2021,Panama,Peru,139,- - - -
+2021,Panama,Other countries,742,- - - -
+2021,Panama,Ecuador,108,- - - -
+2021,Panama,Venezuala,1190,- - - -
+2021,Panama,Dominican Republic,128,- - - -
+2021,Panama,Colombia,1281,- - - -
+2021,Panama,Costa Rica,124,- - - -
+2021,Panama,Honduras,105,- - - -
+2021,Panama,Nicaragua,369,- - - -
+2021,Panama,Jamaica,361,- - - -
+2021,Panama,El Salvador,191,- - - -
+2021,Poland,China,1474,- - - -
+2021,Poland,India,2665,- - - -
+2021,Poland,Other countries,19551,- - - -
+2021,Poland,Germany,1521,- - - -
+2021,Poland,Norway,1320,- - - -
+2021,Poland,Russia,1431,- - - -
+2021,Poland,Ukraine,30903,- - - -
+2021,Poland,Belarus,8994,- - - -
+2021,Poland,Kazakhstan,1468,- - - -
+2021,Poland,Turkey,1342,- - - -
+2021,Poland,Uzbekistan,1368,- - - -
+2021,Portugal,Brazil,17629,- - - -
+2021,Portugal,Other countries,7550,- - - -
+2021,Portugal,Germany,1069,- - - -
+2021,Portugal,France,2563,- - - -
+2021,Portugal,Spain,1014,- - - -
+2021,Portugal,Italy,1075,- - - -
+2021,Portugal,Angola,3552,- - - -
+2021,Portugal,Mozambique,1545,- - - -
+2021,Portugal,Sao Tome and Principe,980,- - - -
+2021,Portugal,Cape Verde,5349,- - - -
+2021,Portugal,Guinea-Bissau,4730,- - - -
+2021,Qatar,India,981,- - - -
+2021,Qatar,Other countries,4359,- - - -
+2021,Qatar,Iran,643,- - - -
+2021,Qatar,Jordan,1321,- - - -
+2021,Qatar,Pakistan,1039,- - - -
+2021,Qatar,Syria,916,- - - -
+2021,Qatar,Yemen,1383,- - - -
+2021,Qatar,Palestine,1259,- - - -
+2021,Qatar,Egypt,1684,- - - -
+2021,Qatar,Saudi Arabia,666,- - - -
+2021,Qatar,Sudan,1139,- - - -
+2021,Republic of Korea,China,59344,- - - -
+2021,Republic of Korea,India,979,- - - -
+2021,Republic of Korea,Indonesia,1185,- - - -
+2021,Republic of Korea,Other countries,12659,- - - -
+2021,Republic of Korea,Viet Nam,24928,- - - -
+2021,Republic of Korea,Japan,1855,- - - -
+2021,Republic of Korea,Bangladesh,1202,- - - -
+2021,Republic of Korea,Mongolia,4902,- - - -
+2021,Republic of Korea,Nepal,2611,- - - -
+2021,Republic of Korea,Pakistan,1222,- - - -
+2021,Republic of Korea,Uzbekistan,7641,- - - -
+2021,Romania,Other countries,7575,- - - -
+2021,Romania,Germany,1686,- - - -
+2021,Romania,France,2967,- - - -
+2021,Romania,Morocco,1155,- - - -
+2021,Romania,Greece,1016,- - - -
+2021,Romania,Israel,2577,- - - -
+2021,Romania,Serbia,713,- - - -
+2021,Romania,Italy,2390,- - - -
+2021,Romania,Syria,645,- - - -
+2021,Romania,Moldova,12346,- - - -
+2021,Romania,Tunisia,703,- - - -
+2021,Russia,China,35674,- - - -
+2021,Russia,India,16861,- - - -
+2021,Russia,Other countries,72943,- - - -
+2021,Russia,Ukraine,8621,- - - -
+2021,Russia,Belarus,9483,- - - -
+2021,Russia,Kazakhstan,59082,- - - -
+2021,Russia,Kyrgyzstan,8696,- - - -
+2021,Russia,Turkmenistan,29277,- - - -
+2021,Russia,Tajikistan,22339,- - - -
+2021,Russia,Uzbekistan,44135,- - - -
+2021,Russia,Egypt,12429,- - - -
+2021,Samoa,New Zealand,100,- - - -
+2021,Samoa,Fiji,4,- - - -
+2021,Samoa,Australia,28,- - - -
+2021,San Marino,Brazil,1,- - - -
+2021,San Marino,Germany,1,- - - -
+2021,San Marino,Italy,864,- - - -
+2021,San Marino,Malta,1,- - - -
+2021,Saudi Arabia,Asia: unknown countries,2040,- - - -
+2021,Saudi Arabia,India,1390,- - - -
+2021,Saudi Arabia,Indonesia,1934,- - - -
+2021,Saudi Arabia,Other countries,22745,- - - -
+2021,Saudi Arabia,Jordan,2202,- - - -
+2021,Saudi Arabia,Pakistan,1635,- - - -
+2021,Saudi Arabia,Syria,6523,- - - -
+2021,Saudi Arabia,Yemen,14588,- - - -
+2021,Saudi Arabia,Palestine,4614,- - - -
+2021,Saudi Arabia,Egypt,3344,- - - -
+2021,Saudi Arabia,Sudan,1848,- - - -
+2021,Senegal,Other countries,656,- - - -
+2021,Senegal,Morocco,1041,- - - -
+2021,Senegal,Africa: unknown countries,6470,- - - -
+2021,Senegal,Ghana,1210,- - - -
+2021,Senegal,Guinea,504,- - - -
+2021,Senegal,Benin,742,- - - -
+2021,Senegal,Mali,1019,- - - -
+2021,Senegal,Togo,770,- - - -
+2021,Senegal,Burkina Faso,700,- - - -
+2021,Senegal,Côte d'Ivoire,1477,- - - -
+2021,Senegal,Niger,603,- - - -
+2021,Serbia,Other countries,921,- - - -
+2021,Serbia,Iran,69,- - - -
+2021,Serbia,Russia,130,- - - -
+2021,Serbia,Greece,83,- - - -
+2021,Serbia,Libya,120,- - - -
+2021,Serbia,Bosnia and Herzegovina,6008,- - - -
+2021,Serbia,Croatia,366,- - - -
+2021,Serbia,North Macedonia,138,- - - -
+2021,Serbia,Slovenia,79,- - - -
+2021,Serbia,Saudi Arabia,243,- - - -
+2021,Serbia,Montenegro,2770,- - - -
+2021,Slovakia,India,269,- - - -
+2021,Slovakia,Other countries,2823,- - - -
+2021,Slovakia,Germany,909,- - - -
+2021,Slovakia,Norway,525,- - - -
+2021,Slovakia,Russia,580,- - - -
+2021,Slovakia,Serbia,831,- - - -
+2021,Slovakia,Ukraine,4916,- - - -
+2021,Slovakia,Czechia,3196,- - - -
+2021,Slovakia,Hungary,727,- - - -
+2021,Slovakia,Poland,424,- - - -
+2021,Slovakia,Austria,270,- - - -
+2021,Slovenia,India,89,- - - -
+2021,Slovenia,Other countries,854,- - - -
+2021,Slovenia,Russia,227,- - - -
+2021,Slovenia,Serbia,1356,- - - -
+2021,Slovenia,Ukraine,78,- - - -
+2021,Slovenia,Italy,365,- - - -
+2021,Slovenia,Bosnia and Herzegovina,1475,- - - -
+2021,Slovenia,Europe: unknown countries,147,- - - -
+2021,Slovenia,Croatia,1430,- - - -
+2021,Slovenia,North Macedonia,1333,- - - -
+2021,Slovenia,Montenegro,252,- - - -
+2021,South Africa,Other countries,8555,- - - -
+2021,South Africa,Nigeria,2521,- - - -
+2021,South Africa,Botswana,751,- - - -
+2021,South Africa,Eswatini,1501,- - - -
+2021,South Africa,Lesotho,2027,- - - -
+2021,South Africa,Namibia,1922,- - - -
+2021,South Africa,Zambia,920,- - - -
+2021,South Africa,Zimbabwe,9839,- - - -
+2021,South Africa,DR Congo,2770,- - - -
+2021,South Africa,Ghana,780,- - - -
+2021,South Africa,Kenya,869,- - - -
+2021,Spain,Chile,2720,- - - -
+2021,Spain,Peru,3058,- - - -
+2021,Spain,China,3222,- - - -
+2021,Spain,Other countries,32629,- - - -
+2021,Spain,Ecuador,6038,- - - -
+2021,Spain,Venezuala,2379,- - - -
+2021,Spain,France,10336,- - - -
+2021,Spain,Morocco,3205,- - - -
+2021,Spain,Colombia,7155,- - - -
+2021,Spain,Mexico,3158,- - - -
+2021,Spain,Italy,6585,- - - -
+2021,Sri Lanka,China,125,- - - -
+2021,Sri Lanka,India,25,- - - -
+2021,Sri Lanka,Other countries,104,- - - -
+2021,Sri Lanka,Maldives,346,- - - -
+2021,Sri Lanka,Myanmar,290,- - - -
+2021,Sri Lanka,Viet Nam,118,- - - -
+2021,Sri Lanka,Bangladesh,19,- - - -
+2021,Sri Lanka,United Arab Emirates,12,- - - -
+2021,Sri Lanka,Nepal,14,- - - -
+2021,Sri Lanka,Bhutan,178,- - - -
+2021,Sri Lanka,Saudi Arabia,15,- - - -
+2021,Sweden,China,2851.612060546875,- - - -
+2021,Sweden,India,2473.8552246093755,- - - -
+2021,Sweden,Other countries,10528.090106129646,- - - -
+2021,Sweden,Germany,2211.1545410156245,- - - -
+2021,Sweden,Bangladesh,660.1203613281251,- - - -
+2021,Sweden,Iran,957.57659912109375,- - - -
+2021,Sweden,Greece,705.544677734375,- - - -
+2021,Sweden,Finland,2097.171142578126,- - - -
+2021,Sweden,Spain,688.5607299804686,- - - -
+2021,Sweden,Italy,848.6961059570315,- - - -
+2021,Sweden,Pakistan,1003.8297729492191,- - - -
+2021,Switzerland,China,2820,- - - -
+2021,Switzerland,India,1034,- - - -
+2021,Switzerland,Other countries,18245,- - - -
+2021,Switzerland,Germany,11623,- - - -
+2021,Switzerland,France,12267,- - - -
+2021,Switzerland,United States,1319,- - - -
+2021,Switzerland,Russia,1026,- - - -
+2021,Switzerland,Spain,1204,- - - -
+2021,Switzerland,Italy,6380,- - - -
+2021,Switzerland,Austria,1614,- - - -
+2021,Switzerland,Liechtenstein,925,- - - -
+2021,Tanzania,Other countries,158,- - - -
+2021,Tanzania,Nigeria,22,- - - -
+2021,Tanzania,Congo,43,- - - -
+2021,Tanzania,Rwanda,62,- - - -
+2021,Tanzania,Kenya,186,- - - -
+2021,Tanzania,Uganda,140,- - - -
+2021,Tanzania,Comoros,22,- - - -
+2021,Tanzania,Malawi,55,- - - -
+2021,Tanzania,Afghanistan,125,- - - -
+2021,Tanzania,Burundi,89,- - - -
+2021,Tanzania,Sudan,24,- - - -
+2021,Togo,Other countries,394,- - - -
+2021,Togo,Africa: unknown countries,37160,- - - -
+2021,Togo,Cameroon,147,- - - -
+2021,Togo,Congo,280,- - - -
+2021,Togo,Benin,219,- - - -
+2021,Togo,Central African Republic,163,- - - -
+2021,Togo,Chad,542,- - - -
+2021,Togo,Gabon,183,- - - -
+2021,Togo,Burkina Faso,135,- - - -
+2021,Togo,Côte d'Ivoire,183,- - - -
+2021,Togo,Niger,1419,- - - -
+2021,Trinidad and Tobago,Other countries,264,- - - -
+2021,Trinidad and Tobago,Nigeria,51,- - - -
+2021,Trinidad and Tobago,United States,52,- - - -
+2021,Trinidad and Tobago,Saint Lucia,116,- - - -
+2021,Trinidad and Tobago,Antigua and Barbuda,41,- - - -
+2021,Trinidad and Tobago,Bahamas,102,- - - -
+2021,Trinidad and Tobago,Barbados,146,- - - -
+2021,Trinidad and Tobago,Guyana,214,- - - -
+2021,Trinidad and Tobago,St Vincent/Grenadines,133,- - - -
+2021,Trinidad and Tobago,Grenada,62,- - - -
+2021,Trinidad and Tobago,Jamaica,144,- - - -
+2021,Turkey,Other countries,73372,- - - -
+2021,Turkey,Iran,11223,- - - -
+2021,Turkey,Somalia,8142,- - - -
+2021,Turkey,Iraq,14809,- - - -
+2021,Turkey,Jordan,5317,- - - -
+2021,Turkey,Azerbaijan,23772,- - - -
+2021,Turkey,Turkmenistan,19384,- - - -
+2021,Turkey,Syria,47483,- - - -
+2021,Turkey,Yemen,5860,- - - -
+2021,Turkey,Afghanistan,8429,- - - -
+2021,Turkey,Egypt,5822,- - - -
+2021,Turkmenistan,China,1,- - - -
+2021,Turkmenistan,Russia,1,- - - -
+2021,Turkmenistan,Tajikistan,11,- - - -
+2021,Turkmenistan,Afghanistan,112,- - - -
+2021,Turks and Caicos Islands,United Kingdom,82,- - - -
+2021,Turks and Caicos Islands,Cuba,1,- - - -
+2021,Turks and Caicos Islands,United States,45,- - - -
+2021,Turks and Caicos Islands,Canada,5,- - - -
+2021,Turks and Caicos Islands,Bahamas,3,- - - -
+2021,Turks and Caicos Islands,Barbados,5,- - - -
+2021,Turks and Caicos Islands,Trinidad and Tobago,1,- - - -
+2021,Turks and Caicos Islands,Grenada,2,- - - -
+2021,Turks and Caicos Islands,Jamaica,21,- - - -
+2021,Turks and Caicos Islands,Cayman Islands,2,- - - -
+2021,Ukraine,China,3598,- - - -
+2021,Ukraine,India,16895,- - - -
+2021,Ukraine,Other countries,18102,- - - -
+2021,Ukraine,Nigeria,3842,- - - -
+2021,Ukraine,Morocco,7228,- - - -
+2021,Ukraine,Israel,2057,- - - -
+2021,Ukraine,Azerbaijan,4375,- - - -
+2021,Ukraine,Turkmenistan,5106,- - - -
+2021,Ukraine,Turkey,2977,- - - -
+2021,Ukraine,Uzbekistan,1503,- - - -
+2021,Ukraine,Egypt,2950,- - - -
+2021,United Kingdom,China,145779,- - - -
+2021,United Kingdom,Hong Kong,16577,- - - -
+2021,United Kingdom,India,83923,- - - -
+2021,United Kingdom,Other countries,247316,- - - -
+2021,United Kingdom,Nigeria,21241,- - - -
+2021,United Kingdom,France,14042,- - - -
+2021,United Kingdom,United States,19027,- - - -
+2021,United Kingdom,Romania,12822,- - - -
+2021,United Kingdom,Spain,12419,- - - -
+2021,United Kingdom,Italy,14452,- - - -
+2021,United Kingdom,Pakistan,12932,- - - -
+2021,United States,Brazil,13963.6201171875,- - - -
+2021,United States,Asia: unknown countries,16997.833984374996,- - - -
+2021,United States,China,295398.28125,- - - -
+2021,United States,India,109328.6328125,- - - -
+2021,United States,Other countries,260241.45976352695,- - - -
+2021,United States,Republic of Korea,38783.39453125001,- - - -
+2021,United States,Nigeria,12253.6083984375,- - - -
+2021,United States,Viet Nam,23155.39453125,- - - -
+2021,United States,Mexico,13573.648437500002,- - - -
+2021,United States,Canada,26055.693359374993,- - - -
+2021,United States,Saudi Arabia,23225.312499999996,- - - -
+2021,Uzbekistan,China,78,- - - -
+2021,Uzbekistan,India,88,- - - -
+2021,Uzbekistan,Other countries,91,- - - -
+2021,Uzbekistan,Republic of Korea,132,- - - -
+2021,Uzbekistan,Russia,442,- - - -
+2021,Uzbekistan,Kazakhstan,277,- - - -
+2021,Uzbekistan,Kyrgyzstan,154,- - - -
+2021,Uzbekistan,Turkmenistan,2307,- - - -
+2021,Uzbekistan,Pakistan,56,- - - -
+2021,Uzbekistan,Tajikistan,116,- - - -
+2021,Uzbekistan,Afghanistan,478,- - - -
+2021,Viet Nam,China,128,- - - -
+2021,Viet Nam,Other countries,496,- - - -
+2021,Viet Nam,Republic of Korea,491,- - - -
+2021,Viet Nam,Myanmar,46,- - - -
+2021,Viet Nam,Nigeria,43,- - - -
+2021,Viet Nam,Philippines,55,- - - -
+2021,Viet Nam,Laos,6227,- - - -
+2021,Viet Nam,Sri Lanka,46,- - - -
+2021,Viet Nam,Cambodia,695,- - - -
+2021,Viet Nam,Macao,59,- - - -
+2021,Viet Nam,Timor-Leste,84,- - - -
+2022,Albania,Greece,105,- - - -
+2022,Albania,Serbia,151,- - - -
+2022,Albania,Italy,856,- - - -
+2022,Albania,Europe: unknown countries,386,- - - -
+2022,Albania,Bulgaria,1,- - - -
+2022,Albania,Turkey,47,- - - -
+2022,Albania,North Macedonia,59,- - - -
+2022,Albania,Montenegro,126,- - - -
+2022,Andorra,Brazil,7,- - - -
+2022,Andorra,Chile,32,- - - -
+2022,Andorra,Peru,10,- - - -
+2022,Andorra,Other countries,62,- - - -
+2022,Andorra,Argentina,15,- - - -
+2022,Andorra,Ecuador,21,- - - -
+2022,Andorra,France,11,- - - -
+2022,Andorra,Colombia,24,- - - -
+2022,Andorra,Mexico,12,- - - -
+2022,Andorra,Spain,794,- - - -
+2022,Andorra,Portugal,47,- - - -
+2022,Armenia,India,2014,- - - -
+2022,Armenia,Other countries,434,- - - -
+2022,Armenia,Iran,332,- - - -
+2022,Armenia,Russia,2082,- - - -
+2022,Armenia,Ukraine,60,- - - -
+2022,Armenia,Iraq,196,- - - -
+2022,Armenia,Jordan,188,- - - -
+2022,Armenia,Turkmenistan,121,- - - -
+2022,Armenia,Lebanon,107,- - - -
+2022,Armenia,Syria,250,- - - -
+2022,Armenia,Georgia,851,- - - -
+2022,Australia,China,87899,- - - -
+2022,Australia,Hong Kong,9039,- - - -
+2022,Australia,India,69235,- - - -
+2022,Australia,Indonesia,11516,- - - -
+2022,Australia,Malaysia,10831,- - - -
+2022,Australia,Other countries,97674,- - - -
+2022,Australia,Viet Nam,15231,- - - -
+2022,Australia,Philippines,10024,- - - -
+2022,Australia,Nepal,38715,- - - -
+2022,Australia,Pakistan,10288,- - - -
+2022,Australia,Sri Lanka,9511,- - - -
+2022,Azerbaijan,China,103,- - - -
+2022,Azerbaijan,India,118,- - - -
+2022,Azerbaijan,Other countries,562,- - - -
+2022,Azerbaijan,Nigeria,94,- - - -
+2022,Azerbaijan,Iran,1160,- - - -
+2022,Azerbaijan,Russia,477,- - - -
+2022,Azerbaijan,Iraq,293,- - - -
+2022,Azerbaijan,Turkey,2870,- - - -
+2022,Azerbaijan,Pakistan,122,- - - -
+2022,Azerbaijan,Syria,138,- - - -
+2022,Azerbaijan,Georgia,440,- - - -
+2022,Bahrain,India,400,- - - -
+2022,Bahrain,Other countries,898,- - - -
+2022,Bahrain,Oman,167,- - - -
+2022,Bahrain,Kuwait,867,- - - -
+2022,Bahrain,Iraq,138,- - - -
+2022,Bahrain,Jordan,376,- - - -
+2022,Bahrain,Pakistan,342,- - - -
+2022,Bahrain,Syria,221,- - - -
+2022,Bahrain,Yemen,230,- - - -
+2022,Bahrain,Egypt,430,- - - -
+2022,Bahrain,Saudi Arabia,1650,- - - -
+2022,Belarus,China,8484,- - - -
+2022,Belarus,India,772,- - - -
+2022,Belarus,Other countries,2870,- - - -
+2022,Belarus,Nigeria,295,- - - -
+2022,Belarus,Iran,316,- - - -
+2022,Belarus,Russia,1756,- - - -
+2022,Belarus,Ukraine,304,- - - -
+2022,Belarus,Turkmenistan,6482,- - - -
+2022,Belarus,Lebanon,599,- - - -
+2022,Belarus,Sri Lanka,1442,- - - -
+2022,Belarus,Uzbekistan,2352,- - - -
+2022,Belize,India,3,- - - -
+2022,Belize,United Kingdom,8,- - - -
+2022,Belize,Other countries,19,- - - -
+2022,Belize,Nigeria,11,- - - -
+2022,Belize,United States,76,- - - -
+2022,Belize,Guatemala,23,- - - -
+2022,Belize,Honduras,16,- - - -
+2022,Belize,Mexico,5,- - - -
+2022,Belize,Afghanistan,5,- - - -
+2022,Belize,Jamaica,4,- - - -
+2022,Belize,El Salvador,18,- - - -
+2022,Bosnia and Herzegovina,Other countries,246,- - - -
+2022,Bosnia and Herzegovina,Germany,63,- - - -
+2022,Bosnia and Herzegovina,Serbia,1538,- - - -
+2022,Bosnia and Herzegovina,Croatia,2280,- - - -
+2022,Bosnia and Herzegovina,Turkey,660,- - - -
+2022,Bosnia and Herzegovina,Syria,25,- - - -
+2022,Bosnia and Herzegovina,North Macedonia,23,- - - -
+2022,Bosnia and Herzegovina,Slovenia,31,- - - -
+2022,Bosnia and Herzegovina,Egypt,36,- - - -
+2022,Bosnia and Herzegovina,Montenegro,751,- - - -
+2022,Bosnia and Herzegovina,Liberia,23,- - - -
+2022,Brazil,Bolivia,1181,- - - -
+2022,Brazil,Paraguay,1270,- - - -
+2022,Brazil,Peru,1491,- - - -
+2022,Brazil,Other countries,9738,- - - -
+2022,Brazil,Venezuala,1181,- - - -
+2022,Brazil,Japan,1428,- - - -
+2022,Brazil,United States,1820,- - - -
+2022,Brazil,Colombia,1707,- - - -
+2022,Brazil,Angola,1678,- - - -
+2022,Brazil,Haiti,1138,- - - -
+2022,Brazil,Guinea-Bissau,1225,- - - -
+2022,Burkina Faso,Africa: unknown countries,988,- - - -
+2022,Burkina Faso,Senegal,39,- - - -
+2022,Burkina Faso,Benin,547,- - - -
+2022,Burkina Faso,Mali,231,- - - -
+2022,Burkina Faso,Togo,352,- - - -
+2022,Burkina Faso,Côte d'Ivoire,894,- - - -
+2022,Burkina Faso,Niger,474,- - - -
+2022,Burkina Faso,Guinea-Bissau,23,- - - -
+2022,Chile,Bolivia,1343,- - - -
+2022,Chile,Brazil,299,- - - -
+2022,Chile,Peru,3766,- - - -
+2022,Chile,Other countries,1237,- - - -
+2022,Chile,Argentina,495,- - - -
+2022,Chile,Cuba,426,- - - -
+2022,Chile,Ecuador,1422,- - - -
+2022,Chile,Venezuala,4132,- - - -
+2022,Chile,Colombia,3074,- - - -
+2022,Chile,Mexico,226,- - - -
+2022,Chile,Haiti,550,- - - -
+2022,Colombia,Brazil,122,- - - -
+2022,Colombia,Peru,322,- - - -
+2022,Colombia,Other countries,916,- - - -
+2022,Colombia,Argentina,157,- - - -
+2022,Colombia,Ecuador,523,- - - -
+2022,Colombia,Venezuala,2467,- - - -
+2022,Colombia,France,125,- - - -
+2022,Colombia,United States,95,- - - -
+2022,Colombia,Mexico,326,- - - -
+2022,Colombia,Panama,248,- - - -
+2022,Colombia,Spain,99,- - - -
+2022,Denmark,China,1658,- - - -
+2022,Denmark,Other countries,13767,- - - -
+2022,Denmark,Germany,3352,- - - -
+2022,Denmark,Norway,2814,- - - -
+2022,Denmark,Sweden,1610,- - - -
+2022,Denmark,Romania,1274,- - - -
+2022,Denmark,Slovakia,1407,- - - -
+2022,Denmark,Spain,1499,- - - -
+2022,Denmark,Italy,1284,- - - -
+2022,Denmark,Hungary,1202,- - - -
+2022,Denmark,Poland,1507,- - - -
+2022,Estonia,India,207,- - - -
+2022,Estonia,Other countries,1927,- - - -
+2022,Estonia,Nigeria,321,- - - -
+2022,Estonia,Bangladesh,143,- - - -
+2022,Estonia,Russia,541,- - - -
+2022,Estonia,Ukraine,274,- - - -
+2022,Estonia,Finland,983,- - - -
+2022,Estonia,Azerbaijan,188,- - - -
+2022,Estonia,Turkey,143,- - - -
+2022,Estonia,Pakistan,181,- - - -
+2022,Estonia,Latvia,141,- - - -
+2022,Finland,China,2259,- - - -
+2022,Finland,India,1187,- - - -
+2022,Finland,Other countries,11309,- - - -
+2022,Finland,Germany,848,- - - -
+2022,Finland,Viet Nam,1824,- - - -
+2022,Finland,United States,722,- - - -
+2022,Finland,Bangladesh,1152,- - - -
+2022,Finland,Iran,874,- - - -
+2022,Finland,Russia,2039,- - - -
+2022,Finland,Nepal,937,- - - -
+2022,Finland,Pakistan,946,- - - -
+2022,France,China,23260.91015625,- - - -
+2022,France,India,5259.817871093751,- - - -
+2022,France,Other countries,116641.70337964594,- - - -
+2022,France,Morocco,35909.36718749999,- - - -
+2022,France,Italy,9715.34765625,- - - -
+2022,France,Lebanon,8953.822265625,- - - -
+2022,France,Cameroon,5915.761230468752,- - - -
+2022,France,Algeria,24315.109374999996,- - - -
+2022,France,Senegal,12406.558593749998,- - - -
+2022,France,Tunisia,10067.973632812502,- - - -
+2022,France,Côte d'Ivoire,7838.78857421875,- - - -
+2022,Georgia,India,8811,- - - -
+2022,Georgia,United Kingdom,500,- - - -
+2022,Georgia,Other countries,2850,- - - -
+2022,Georgia,Nigeria,813,- - - -
+2022,Georgia,Iran,538,- - - -
+2022,Georgia,Russia,323,- - - -
+2022,Georgia,Israel,989,- - - -
+2022,Georgia,Jordan,872,- - - -
+2022,Georgia,Azerbaijan,907,- - - -
+2022,Georgia,Egypt,601,- - - -
+2022,Georgia,Sudan,323,- - - -
+2022,Ghana,Other countries,1114,- - - -
+2022,Ghana,Nigeria,2530,- - - -
+2022,Ghana,Cameroon,291,- - - -
+2022,Ghana,Sierra Leone,148,- - - -
+2022,Ghana,Congo,185,- - - -
+2022,Ghana,Benin,189,- - - -
+2022,Ghana,Togo,140,- - - -
+2022,Ghana,Gabon,257,- - - -
+2022,Ghana,Burkina Faso,147,- - - -
+2022,Ghana,Côte d'Ivoire,264,- - - -
+2022,Ghana,Liberia,151,- - - -
+2022,Hong Kong,Asia: unknown countries,443,- - - -
+2022,Hong Kong,China,46662,- - - -
+2022,Hong Kong,India,638,- - - -
+2022,Hong Kong,Indonesia,679,- - - -
+2022,Hong Kong,Malaysia,347,- - - -
+2022,Hong Kong,Other countries,1833,- - - -
+2022,Hong Kong,Republic of Korea,1408,- - - -
+2022,Hong Kong,Bangladesh,196,- - - -
+2022,Hong Kong,Kazakhstan,285,- - - -
+2022,Hong Kong,Pakistan,252,- - - -
+2022,Hong Kong,Macao,231,- - - -
+2022,India,Other countries,16526,- - - -
+2022,India,Nigeria,1334,- - - -
+2022,India,United States,2893,- - - -
+2022,India,Bangladesh,2606,- - - -
+2022,India,United Arab Emirates,2288,- - - -
+2022,India,Zimbabwe,1057,- - - -
+2022,India,Nepal,13034,- - - -
+2022,India,Tanzania,1223,- - - -
+2022,India,Afghanistan,3150,- - - -
+2022,India,Bhutan,1562,- - - -
+2022,India,Sudan,981,- - - -
+2022,Jordan,Malaysia,1377,- - - -
+2022,Jordan,Other countries,4983,- - - -
+2022,Jordan,Oman,2503,- - - -
+2022,Jordan,Israel,1797,- - - -
+2022,Jordan,Kuwait,3738,- - - -
+2022,Jordan,Philippines,707,- - - -
+2022,Jordan,Iraq,4281,- - - -
+2022,Jordan,Syria,6480,- - - -
+2022,Jordan,Yemen,622,- - - -
+2022,Jordan,Palestine,8130,- - - -
+2022,Jordan,Egypt,4248,- - - -
+2022,Kyrgyzstan,China,216,- - - -
+2022,Kyrgyzstan,India,14377,- - - -
+2022,Kyrgyzstan,Other countries,72,- - - -
+2022,Kyrgyzstan,Russia,1672,- - - -
+2022,Kyrgyzstan,Kazakhstan,1985,- - - -
+2022,Kyrgyzstan,Turkmenistan,219,- - - -
+2022,Kyrgyzstan,Turkey,499,- - - -
+2022,Kyrgyzstan,Pakistan,7498,- - - -
+2022,Kyrgyzstan,Tajikistan,1595,- - - -
+2022,Kyrgyzstan,Uzbekistan,51605,- - - -
+2022,Kyrgyzstan,Afghanistan,274,- - - -
+2022,Latvia,India,1702,- - - -
+2022,Latvia,Other countries,2451,- - - -
+2022,Latvia,Germany,1001,- - - -
+2022,Latvia,Sweden,654,- - - -
+2022,Latvia,Russia,477,- - - -
+2022,Latvia,Ukraine,915,- - - -
+2022,Latvia,Finland,450,- - - -
+2022,Latvia,Pakistan,230,- - - -
+2022,Latvia,Cameroon,213,- - - -
+2022,Latvia,Sri Lanka,319,- - - -
+2022,Latvia,Uzbekistan,1397,- - - -
+2022,Macao,China,27219,- - - -
+2022,Macao,Hong Kong,496,- - - -
+2022,Macao,Malaysia,77,- - - -
+2022,Macao,Other countries,232,- - - -
+2022,Macao,Philippines,26,- - - -
+2022,Macao,Mozambique,24,- - - -
+2022,Macao,Portugal,40,- - - -
+2022,Macao,Belize,21,- - - -
+2022,Macao,Sao Tome and Principe,26,- - - -
+2022,Macao,Cape Verde,78,- - - -
+2022,Macao,Guinea-Bissau,24,- - - -
+2022,Madagascar,Asia: unknown countries,8,- - - -
+2022,Madagascar,Africa: unknown countries,119,- - - -
+2022,Madagascar,Europe: unknown countries,34,- - - -
+2022,Madagascar,Comoros,760,- - - -
+2022,Malaysia,China,38714,- - - -
+2022,Malaysia,India,3814,- - - -
+2022,Malaysia,Indonesia,9862,- - - -
+2022,Malaysia,Other countries,24523,- - - -
+2022,Malaysia,Nigeria,3564,- - - -
+2022,Malaysia,Bangladesh,5714,- - - -
+2022,Malaysia,Iraq,2132,- - - -
+2022,Malaysia,Pakistan,4137,- - - -
+2022,Malaysia,Yemen,2788,- - - -
+2022,Malaysia,Sri Lanka,2744,- - - -
+2022,Malaysia,Egypt,2041,- - - -
+2022,Malta,India,509,- - - -
+2022,Malta,United Kingdom,283.3999938964844,- - - -
+2022,Malta,Other countries,1540.7000000476837,- - - -
+2022,Malta,Germany,471,- - - -
+2022,Malta,France,101,- - - -
+2022,Malta,United States,107,- - - -
+2022,Malta,Greece,74,- - - -
+2022,Malta,Spain,88,- - - -
+2022,Malta,Italy,1192,- - - -
+2022,Malta,Pakistan,80,- - - -
+2022,Malta,Austria,85,- - - -
+2022,Marshall Islands,United States,11,- - - -
+2022,Marshall Islands,Mexico,1,- - - -
+2022,Marshall Islands,Fiji,7,- - - -
+2022,Marshall Islands,Kiribati,2,- - - -
+2022,Marshall Islands,Solomon Islands,3,- - - -
+2022,Marshall Islands,Micronesia,17,- - - -
+2022,Mauritius,India,1115,- - - -
+2022,Mauritius,Other countries,433,- - - -
+2022,Mauritius,Nigeria,352,- - - -
+2022,Mauritius,France,186,- - - -
+2022,Mauritius,Zimbabwe,181,- - - -
+2022,Mauritius,Kenya,159,- - - -
+2022,Mauritius,Tanzania,118,- - - -
+2022,Mauritius,Uganda,61,- - - -
+2022,Mauritius,South Africa,147,- - - -
+2022,Mauritius,Seychelles,66,- - - -
+2022,Mauritius,Madagascar,202,- - - -
+2022,Moldova,India,690,- - - -
+2022,Moldova,Other countries,146,- - - -
+2022,Moldova,Nigeria,35,- - - -
+2022,Moldova,United States,63,- - - -
+2022,Moldova,Russia,81,- - - -
+2022,Moldova,Israel,1022,- - - -
+2022,Moldova,Romania,3162,- - - -
+2022,Moldova,Ukraine,392,- - - -
+2022,Moldova,Italy,37,- - - -
+2022,Moldova,Azerbaijan,36,- - - -
+2022,Moldova,Turkey,42,- - - -
+2022,Monaco,United Kingdom,17,- - - -
+2022,Monaco,Other countries,117,- - - -
+2022,Monaco,Germany,14,- - - -
+2022,Monaco,Norway,8,- - - -
+2022,Monaco,Switzerland,7,- - - -
+2022,Monaco,France,570,- - - -
+2022,Monaco,United States,28,- - - -
+2022,Monaco,Russia,10,- - - -
+2022,Monaco,Romania,8,- - - -
+2022,Monaco,Spain,9,- - - -
+2022,Monaco,Italy,115,- - - -
+2022,Monaco,Canada,7,- - - -
+2022,Mongolia,China,1182,- - - -
+2022,Mongolia,Thailand,3,- - - -
+2022,Mongolia,Other countries,20,- - - -
+2022,Mongolia,Republic of Korea,80,- - - -
+2022,Mongolia,Japan,16,- - - -
+2022,Mongolia,United States,3,- - - -
+2022,Mongolia,Russia,183,- - - -
+2022,Mongolia,Kazakhstan,37,- - - -
+2022,Mongolia,Turkey,4,- - - -
+2022,Mongolia,Laos,14,- - - -
+2022,Mongolia,North Korea,5,- - - -
+2022,Morocco,Other countries,9157,- - - -
+2022,Morocco,Congo,836,- - - -
+2022,Morocco,Guinea,1091,- - - -
+2022,Morocco,Senegal,1283,- - - -
+2022,Morocco,Comoros,602,- - - -
+2022,Morocco,Mali,2184,- - - -
+2022,Morocco,Gabon,2575,- - - -
+2022,Morocco,Burkina Faso,863,- - - -
+2022,Morocco,Côte d'Ivoire,1508,- - - -
+2022,Morocco,Niger,1083,- - - -
+2022,Morocco,Mauritania,1105,- - - -
+2022,North Macedonia,Other countries,57,- - - -
+2022,North Macedonia,Germany,16,- - - -
+2022,North Macedonia,Serbia,245,- - - -
+2022,North Macedonia,Bosnia and Herzegovina,25,- - - -
+2022,North Macedonia,Europe: unknown countries,1794,- - - -
+2022,North Macedonia,Bulgaria,15,- - - -
+2022,North Macedonia,Turkey,2283,- - - -
+2022,North Macedonia,Pakistan,12,- - - -
+2022,North Macedonia,Albania,171,- - - -
+2022,North Macedonia,Tajikistan,16,- - - -
+2022,North Macedonia,Montenegro,73,- - - -
+2022,Poland,India,2338,- - - -
+2022,Poland,Other countries,22819,- - - -
+2022,Poland,Nigeria,1911,- - - -
+2022,Poland,Russia,1570,- - - -
+2022,Poland,Ukraine,33067,- - - -
+2022,Poland,Belarus,10738,- - - -
+2022,Poland,Kazakhstan,1735,- - - -
+2022,Poland,Zimbabwe,2340,- - - -
+2022,Poland,Azerbaijan,1621,- - - -
+2022,Poland,Turkey,2264,- - - -
+2022,Poland,Uzbekistan,2116,- - - -
+2022,Qatar,India,1191,- - - -
+2022,Qatar,Other countries,4765,- - - -
+2022,Qatar,Iran,721,- - - -
+2022,Qatar,Jordan,1507,- - - -
+2022,Qatar,Pakistan,1158,- - - -
+2022,Qatar,Syria,995,- - - -
+2022,Qatar,Yemen,1545,- - - -
+2022,Qatar,Palestine,1352,- - - -
+2022,Qatar,Egypt,1698,- - - -
+2022,Qatar,Saudi Arabia,813,- - - -
+2022,Qatar,Sudan,1272,- - - -
+2022,Republic of Korea,China,60087,- - - -
+2022,Republic of Korea,India,1110,- - - -
+2022,Republic of Korea,Indonesia,1417,- - - -
+2022,Republic of Korea,Other countries,13793,- - - -
+2022,Republic of Korea,Viet Nam,26839,- - - -
+2022,Republic of Korea,Japan,2244,- - - -
+2022,Republic of Korea,Bangladesh,1274,- - - -
+2022,Republic of Korea,Mongolia,4783,- - - -
+2022,Republic of Korea,Nepal,2281,- - - -
+2022,Republic of Korea,Pakistan,1229,- - - -
+2022,Republic of Korea,Uzbekistan,8222,- - - -
+2022,Russia,China,40797,- - - -
+2022,Russia,India,19734,- - - -
+2022,Russia,Other countries,73927,- - - -
+2022,Russia,Ukraine,9446,- - - -
+2022,Russia,Belarus,9821,- - - -
+2022,Russia,Kazakhstan,53935,- - - -
+2022,Russia,Kyrgyzstan,9345,- - - -
+2022,Russia,Turkmenistan,27095,- - - -
+2022,Russia,Tajikistan,27086,- - - -
+2022,Russia,Uzbekistan,48430,- - - -
+2022,Russia,Egypt,15616,- - - -
+2022,Rwanda,Other countries,549,- - - -
+2022,Rwanda,Nigeria,168,- - - -
+2022,Rwanda,Africa: unknown countries,451,- - - -
+2022,Rwanda,DR Congo,1083,- - - -
+2022,Rwanda,Kenya,403,- - - -
+2022,Rwanda,Uganda,145,- - - -
+2022,Rwanda,Chad,249,- - - -
+2022,Rwanda,Gabon,256,- - - -
+2022,Rwanda,Burundi,599,- - - -
+2022,Rwanda,Liberia,267,- - - -
+2022,Rwanda,South Sudan,175,- - - -
+2022,Saint Lucia,Asia: unknown countries,1,- - - -
+2022,Saint Lucia,Nigeria,3,- - - -
+2022,Saint Lucia,Dominica,32,- - - -
+2022,Saint Lucia,Antigua and Barbuda,20,- - - -
+2022,Saint Lucia,Bahamas,1,- - - -
+2022,Saint Lucia,Saint Kitts and Nevis,3,- - - -
+2022,Saint Lucia,St Vincent/Grenadines,19,- - - -
+2022,Saint Lucia,Niger,1,- - - -
+2022,Saint Lucia,Anguilla,1,- - - -
+2022,Samoa,New Zealand,63,- - - -
+2022,Samoa,Fiji,32,- - - -
+2022,Samoa,Solomon Islands,5,- - - -
+2022,Samoa,Tonga,8,- - - -
+2022,Samoa,Vanuatu,2,- - - -
+2022,Samoa,Papua New Guinea,3,- - - -
+2022,Samoa,Australia,46,- - - -
+2022,Samoa,Tokelau,3,- - - -
+2022,San Marino,Belgium,1,- - - -
+2022,San Marino,Germany,1,- - - -
+2022,San Marino,Norway,1,- - - -
+2022,San Marino,Ukraine,1,- - - -
+2022,San Marino,Italy,818,- - - -
+2022,San Marino,Lithuania,1,- - - -
+2022,San Marino,Australia,1,- - - -
+2022,Saudi Arabia,Asia: unknown countries,2246,- - - -
+2022,Saudi Arabia,India,1424,- - - -
+2022,Saudi Arabia,Indonesia,2001,- - - -
+2022,Saudi Arabia,Other countries,23795,- - - -
+2022,Saudi Arabia,Jordan,2186,- - - -
+2022,Saudi Arabia,Pakistan,1640,- - - -
+2022,Saudi Arabia,Syria,6558,- - - -
+2022,Saudi Arabia,Yemen,14620,- - - -
+2022,Saudi Arabia,Palestine,4628,- - - -
+2022,Saudi Arabia,Egypt,3369,- - - -
+2022,Saudi Arabia,Sudan,1853,- - - -
+2022,Senegal,Other countries,808,- - - -
+2022,Senegal,Morocco,1097,- - - -
+2022,Senegal,Africa: unknown countries,6863,- - - -
+2022,Senegal,Ghana,1235,- - - -
+2022,Senegal,Guinea,522,- - - -
+2022,Senegal,Benin,763,- - - -
+2022,Senegal,Mali,1055,- - - -
+2022,Senegal,Togo,803,- - - -
+2022,Senegal,Burkina Faso,730,- - - -
+2022,Senegal,Côte d'Ivoire,1538,- - - -
+2022,Senegal,Niger,639,- - - -
+2022,Serbia,Other countries,1104,- - - -
+2022,Serbia,Iran,75,- - - -
+2022,Serbia,Russia,131,- - - -
+2022,Serbia,Libya,135,- - - -
+2022,Serbia,Bosnia and Herzegovina,5968,- - - -
+2022,Serbia,Croatia,331,- - - -
+2022,Serbia,Hungary,112,- - - -
+2022,Serbia,North Macedonia,122,- - - -
+2022,Serbia,Slovenia,82,- - - -
+2022,Serbia,Saudi Arabia,249,- - - -
+2022,Serbia,Montenegro,2920,- - - -
+2022,Slovakia,Other countries,3034,- - - -
+2022,Slovakia,Germany,904,- - - -
+2022,Slovakia,Norway,526,- - - -
+2022,Slovakia,Russia,714,- - - -
+2022,Slovakia,Israel,267,- - - -
+2022,Slovakia,Serbia,712,- - - -
+2022,Slovakia,Ukraine,5760,- - - -
+2022,Slovakia,Czechia,3288,- - - -
+2022,Slovakia,Hungary,796,- - - -
+2022,Slovakia,Poland,367,- - - -
+2022,Slovakia,Austria,328,- - - -
+2022,Slovenia,India,142,- - - -
+2022,Slovenia,Other countries,865,- - - -
+2022,Slovenia,Russia,235,- - - -
+2022,Slovenia,Serbia,1370,- - - -
+2022,Slovenia,Italy,408,- - - -
+2022,Slovenia,Bosnia and Herzegovina,1393,- - - -
+2022,Slovenia,Europe: unknown countries,126,- - - -
+2022,Slovenia,Croatia,1423,- - - -
+2022,Slovenia,North Macedonia,1380,- - - -
+2022,Slovenia,Austria,93,- - - -
+2022,Slovenia,Montenegro,294,- - - -
+2022,Sri Lanka,China,244,- - - -
+2022,Sri Lanka,India,25,- - - -
+2022,Sri Lanka,Singapore,63,- - - -
+2022,Sri Lanka,Other countries,224,- - - -
+2022,Sri Lanka,Maldives,290,- - - -
+2022,Sri Lanka,Myanmar,345,- - - -
+2022,Sri Lanka,Viet Nam,64,- - - -
+2022,Sri Lanka,Bangladesh,29,- - - -
+2022,Sri Lanka,United Arab Emirates,57,- - - -
+2022,Sri Lanka,Pakistan,35,- - - -
+2022,Sri Lanka,Bhutan,195,- - - -
+2022,Sweden,China,2832.60302734375,- - - -
+2022,Sweden,India,2506.4599609375005,- - - -
+2022,Sweden,Other countries,11244.783885359764,- - - -
+2022,Sweden,Germany,2283.563720703125,- - - -
+2022,Sweden,United States,739.9263305664065,- - - -
+2022,Sweden,Iran,1071.6300048828127,- - - -
+2022,Sweden,Greece,720.3185424804686,- - - -
+2022,Sweden,Finland,1821.6125488281248,- - - -
+2022,Sweden,Spain,722.41375732421875,- - - -
+2022,Sweden,Italy,877.5455322265626,- - - -
+2022,Sweden,Pakistan,1411.704711914063,- - - -
+2022,Switzerland,China,3408,- - - -
+2022,Switzerland,India,1174,- - - -
+2022,Switzerland,United Kingdom,1016,- - - -
+2022,Switzerland,Other countries,19263,- - - -
+2022,Switzerland,Germany,12088,- - - -
+2022,Switzerland,France,12548,- - - -
+2022,Switzerland,United States,1490,- - - -
+2022,Switzerland,Russia,1003,- - - -
+2022,Switzerland,Spain,1363,- - - -
+2022,Switzerland,Italy,6894,- - - -
+2022,Switzerland,Austria,1679,- - - -
+2022,Tanzania,India,19,- - - -
+2022,Tanzania,Other countries,235,- - - -
+2022,Tanzania,Germany,19,- - - -
+2022,Tanzania,Nigeria,27,- - - -
+2022,Tanzania,DR Congo,42,- - - -
+2022,Tanzania,Rwanda,83,- - - -
+2022,Tanzania,Kenya,280,- - - -
+2022,Tanzania,Uganda,220,- - - -
+2022,Tanzania,Comoros,19,- - - -
+2022,Tanzania,Malawi,64,- - - -
+2022,Tanzania,Afghanistan,22,- - - -
+2022,Tanzania,Burundi,129,- - - -
+2022,Tanzania,South Sudan,46,- - - -
+2022,Thailand,China,15458,- - - -
+2022,Thailand,India,363,- - - -
+2022,Thailand,Indonesia,587,- - - -
+2022,Thailand,Other countries,3863,- - - -
+2022,Thailand,Myanmar,2134,- - - -
+2022,Thailand,Viet Nam,731,- - - -
+2022,Thailand,Philippines,442,- - - -
+2022,Thailand,Nepal,453,- - - -
+2022,Thailand,Laos,686,- - - -
+2022,Thailand,South Africa,341,- - - -
+2022,Thailand,Cambodia,1216,- - - -
+2022,Trinidad and Tobago,Other countries,183,- - - -
+2022,Trinidad and Tobago,Nigeria,49,- - - -
+2022,Trinidad and Tobago,United States,36,- - - -
+2022,Trinidad and Tobago,Dominica,41,- - - -
+2022,Trinidad and Tobago,Saint Lucia,106,- - - -
+2022,Trinidad and Tobago,Antigua and Barbuda,36,- - - -
+2022,Trinidad and Tobago,Bahamas,79,- - - -
+2022,Trinidad and Tobago,Barbados,169,- - - -
+2022,Trinidad and Tobago,Belize,36,- - - -
+2022,Trinidad and Tobago,Guyana,200,- - - -
+2022,Trinidad and Tobago,St Vincent/Grenadines,123,- - - -
+2022,Trinidad and Tobago,Grenada,43,- - - -
+2022,Trinidad and Tobago,Jamaica,137,- - - -
+2022,Tunisia,Other countries,2448,- - - -
+2022,Tunisia,Iraq,420,- - - -
+2022,Tunisia,Libya,677,- - - -
+2022,Tunisia,Cameroon,661,- - - -
+2022,Tunisia,DR Congo,853,- - - -
+2022,Tunisia,Algeria,377,- - - -
+2022,Tunisia,Mali,432,- - - -
+2022,Tunisia,Gabon,821,- - - -
+2022,Tunisia,Côte d'Ivoire,479,- - - -
+2022,Tunisia,Niger,488,- - - -
+2022,Tunisia,Mauritania,964,- - - -
+2022,Turkmenistan,China,1,- - - -
+2022,Turkmenistan,Tajikistan,7,- - - -
+2022,Turkmenistan,Afghanistan,69,- - - -
+2022,Turks and Caicos Islands,United Kingdom,85,- - - -
+2022,Turks and Caicos Islands,Cuba,1,- - - -
+2022,Turks and Caicos Islands,United States,67,- - - -
+2022,Turks and Caicos Islands,Canada,7,- - - -
+2022,Turks and Caicos Islands,Netherlands,1,- - - -
+2022,Turks and Caicos Islands,Antigua and Barbuda,1,- - - -
+2022,Turks and Caicos Islands,Bahamas,3,- - - -
+2022,Turks and Caicos Islands,Barbados,2,- - - -
+2022,Turks and Caicos Islands,Grenada,2,- - - -
+2022,Turks and Caicos Islands,Jamaica,14,- - - -
+2022,United Kingdom,China,154630,- - - -
+2022,United Kingdom,Hong Kong,17366,- - - -
+2022,United Kingdom,India,126090,- - - -
+2022,United Kingdom,Malaysia,12106,- - - -
+2022,United Kingdom,Other countries,239958,- - - -
+2022,United Kingdom,Nigeria,44076,- - - -
+2022,United Kingdom,France,11726,- - - -
+2022,United Kingdom,United States,22031,- - - -
+2022,United Kingdom,Bangladesh,12649,- - - -
+2022,United Kingdom,Italy,11217,- - - -
+2022,United Kingdom,Pakistan,23016,- - - -
+2022,Uzbekistan,China,83,- - - -
+2022,Uzbekistan,India,159,- - - -
+2022,Uzbekistan,Other countries,135,- - - -
+2022,Uzbekistan,Republic of Korea,137,- - - -
+2022,Uzbekistan,Russia,572,- - - -
+2022,Uzbekistan,Kazakhstan,526,- - - -
+2022,Uzbekistan,Kyrgyzstan,333,- - - -
+2022,Uzbekistan,Turkmenistan,2233,- - - -
+2022,Uzbekistan,Pakistan,763,- - - -
+2022,Uzbekistan,Tajikistan,225,- - - -
+2022,Uzbekistan,Afghanistan,337,- - - -
+2022,Viet Nam,China,187,- - - -
+2022,Viet Nam,Other countries,451,- - - -
+2022,Viet Nam,Republic of Korea,492,- - - -
+2022,Viet Nam,Myanmar,46,- - - -
+2022,Viet Nam,Nigeria,42,- - - -
+2022,Viet Nam,Philippines,51,- - - -
+2022,Viet Nam,Laos,5626,- - - -
+2022,Viet Nam,Sri Lanka,46,- - - -
+2022,Viet Nam,Cambodia,694,- - - -
+2022,Viet Nam,Haiti,41,- - - -
+2022,Viet Nam,Timor-Leste,84,- - - -
+2023,Bermuda,Brazil,1,- - - -
+2023,Bermuda,Peru,1,- - - -
+2023,Bermuda,India,1,- - - -
+2023,Bermuda,Dominican Republic,1,- - - -
+2023,Bermuda,United States,4,- - - -
+2023,Bermuda,Philippines,2,- - - -
+2023,Bermuda,Saint Lucia,1,- - - -
+2023,Bermuda,Portugal,4,- - - -
+2023,Bermuda,Australia,1,- - - -
+2023,Bermuda,Jamaica,7,- - - -
+2023,Monaco,United Kingdom,17,- - - -
+2023,Monaco,Other countries,158,- - - -
+2023,Monaco,Belgium,10,- - - -
+2023,Monaco,Germany,14,- - - -
+2023,Monaco,Norway,10,- - - -
+2023,Monaco,France,577,- - - -
+2023,Monaco,United States,28,- - - -
+2023,Monaco,Mexico,17,- - - -
+2023,Monaco,Russia,10,- - - -
+2023,Monaco,Italy,127,- - - -
+2023,Monaco,Bulgaria,11,- - - -
+2023,Monaco,Austria,11,- - - -
+2023,Mongolia,China,3150,- - - -
+2023,Mongolia,Thailand,3,- - - -
+2023,Mongolia,Other countries,15,- - - -
+2023,Mongolia,Republic of Korea,39,- - - -
+2023,Mongolia,Viet Nam,3,- - - -
+2023,Mongolia,Japan,17,- - - -
+2023,Mongolia,United States,5,- - - -
+2023,Mongolia,Russia,278,- - - -
+2023,Mongolia,Kazakhstan,30,- - - -
+2023,Mongolia,Turkey,6,- - - -
+2023,Mongolia,Laos,13,- - - -
+2023,Mongolia,North Korea,34,- - - -
+2023,Thailand,China,18771,- - - -
+2023,Thailand,India,362,- - - -
+2023,Thailand,Indonesia,325,- - - -
+2023,Thailand,Other countries,3293,- - - -
+2023,Thailand,Myanmar,3310,- - - -
+2023,Thailand,Viet Nam,547,- - - -
+2023,Thailand,Philippines,468,- - - -
+2023,Thailand,Nepal,625,- - - -
+2023,Thailand,Laos,541,- - - -
+2023,Thailand,South Africa,273,- - - -
+2023,Thailand,Cambodia,1338,- - - -

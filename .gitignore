@@ -14,8 +14,8 @@ Thumbs.db
 # quarto
 /.quarto/
 
-data/.cache
-*_cache/
+# unprocessed opri data
+/data/raw
 
 # .gpkg files are exported by the analysis but too big to commit
 data/*.gpkg
