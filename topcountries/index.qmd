@@ -3,7 +3,7 @@
 title: Student immigration
 subtitle: A thing here
 # for social previews
-pagetitle: Untitled
+pagetitle: Student immigration
 description: A description for social previews
 twitter-card:
   site: "@360info_global"
@@ -50,7 +50,7 @@ viewof yearSelect = Inputs.range([1998, 2023],
   {
     step: 1,
     label: "Year",
-    value: 2013
+    value: 2023
   });
 ```
 

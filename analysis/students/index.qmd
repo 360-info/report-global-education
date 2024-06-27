@@ -528,11 +528,12 @@ flows_hdigroups
 ```{r}
 #| label: vishdigroups
 flows_hdigroups %>%
-  filter(between(year, 2008, 2017)) %>%
+  filter(between(year, 2008, 2021)) %>%
   # get annual average
   group_by(origin_hdi_bin, dest_hdi_bin) %>%
   summarise(avg_students = mean(students, na.rm = TRUE)) %>%
   ungroup() %>%
+  write_csv(here("data", "hdi-flows.csv")) |>
   mutate(
     origin_hdi_bin = recode(origin_hdi_bin,
       "Low" = "Low\nHDI less than 70%",
@@ -573,7 +574,7 @@ flows_hdigroups %>%
       ) +
       labs(
         x = NULL, y = "Average number of visiting students per year",
-        title = toupper("Student flows 2008–2017"),
+        title = toupper("Student flows 2008–2021"),
         subtitle = paste(
           "Although students come from economies across the development spectrum,",
           "they tend to visit **highly developed economies** to study.",
