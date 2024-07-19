@@ -109,93 +109,101 @@
   margin-block-start: 0
 }
 
-.modal__container a {
-  font-weight: bold;
-}
-
 .modalpanel {
-  padding: 13px;
-  
-  float: right;
-  position: absolute;
-  top: 0;
-  right: 0;
   display: flex;
-  flex-flow: column;
-  align-items: end;
-  gap: 0.25rem;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  padding-top: 0.5em;
 
-  font-size: smaller;
+  font-size: 80%;
+  border-top: 1px solid #00000088;
+  color: #00000088;
 
   /* to maintain readability over a map */
   z-index: 1000;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  font-weight: bold;
 }
 
 .modalpanelitems {
-  font-size: medium;
+  font-size: 125%;
   display: flex;
   flex-flow: row;
   justify-content: end;
   gap: 0.75rem;
+  margin-block: 0;
 }
 
-.modalpanel p {
-  margin: 0;
-  display: flex;
-  flex-flow: row;
-  gap: 1rem;
-  text-align: end;
-  hyphens: manual;
-  color: black;
+.modalpanelcredits {
+  font-weight: normal;
+}
+
+.modalpanelcredits p {
+  margin-block: 0;
 }
 
 .modalpanel a {
   text-decoration: none;
   text-transform: uppercase;
-  color: #36a7e9;
+  color: #00000088;
   font-weight: bold;
 }
 
 /* editor share banner */
 #edshare {
-  position: absolute;
-  top: 25%;
-  right: 0;
   z-index: 1000;
   visibility: hidden;
   opacity: 1;
+  flex-grow: 1;
+  padding: 0.2em 0.4em;
+  border-radius: 8px;
+  
+  justify-content: center;
+  align-items: center;
+  gap: 0.15em;
   
   transition: background 0.25s, color 0.5s, opacity 2s;
-  
-  width: 250px;
-  padding: 10px;
-  border-radius: 8px 0 0 8px;
   color: black;
   cursor: pointer;
-
-  align-items: center;
-  gap: 10px;
 }
 
+@media (max-width: 475px) {
+  #edshare {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  #edshare {
+    font-size: 80%;
+  }
+}
+
+
 #edshare-title {
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin-block: 0;
   pointer-events: none;
+  text-transform: uppercase;
+}
+
+/* hide the anchor links that quarto ususally creates on headers */
+#edshare-title a.anchorjs-link {
+  display: none;
 }
 
 #edshare-description {
-  margin-block-start: 0.5em;
-  margin-block-end: 0;
+  margin-block: 0;
   pointer-events: none;
   text-transform: uppercase;
-  /* de-emphasise a bit */
   font-size: smaller;
   opacity: 0.8;
   letter-spacing: 0.0125rem;
 }
 
 #edshare-icon {
-  font-size: 2.5rem;
+  font-size: 2em;
 }
 
 #edshare.ready {

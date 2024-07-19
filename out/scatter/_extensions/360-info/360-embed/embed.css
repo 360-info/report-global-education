@@ -56,6 +56,7 @@ header#title-block-header p {
   header#title-block-header p 
   {
     font-size: 100%;
+    font-weight: bold;
   }
 
   .inputForm {
@@ -74,6 +75,7 @@ header#title-block-header p {
   header#title-block-header p 
   {
     font-size: 80%;
+    font-weight: bold;
   }
 }
 
@@ -99,52 +101,7 @@ header#title-block-header p {
   white-space: pre-wrap;
 }
 
-/* control panel */
+.embedcode pre .code-copy-button {
 
-#controls {
-  background-color: #edf6f9;
-  border-radius: 1rem;
-  padding: 0.6rem;
-  margin-bottom: 0.6rem;
-  font-weight: bold;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
-/* search box styling */
-
-#controls .cell-output:has(#controls-2) {
-  flex-grow: 1;
-}
-
-#controls-2 {
-  width: 100%;
-  padding: 0;
-  min-width: 200px;
-}
-
-#controls-2 input[type="search"] {
-  font-weight: normal;
-  border: none;
-  border-bottom: 1px solid black;
-  background-color: transparent;
-}
-
-#controls .observablehq,
-#controls form
-{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-block: 0.125em;
-}
-
-.textcenter {
-  text-align: center;
-}
-
-.faded {
-  color: grey;
-  font-weight: 300;
-}

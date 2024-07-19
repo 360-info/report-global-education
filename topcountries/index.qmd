@@ -1,15 +1,15 @@
 ---
 # omit title and subtitle if you're doing a custom title block
 title: Student immigration
-subtitle: A thing here
+subtitle: "Select a country in the interactive below to see the countries that send the most students, as well as the countries that that country’s students visit the most."
 # for social previews
 pagetitle: Student immigration
-description: A description for social previews
+description: See which countries send the most students, and where your country's students visit the most.
 twitter-card:
   site: "@360info_global"
-  image: "/folder/example.png"
+  # image: "/folder/example.png"
 open-graph:
-  image: "/folder/example.png"
+  # image: "/folder/example.png"
 resources:
   - /data/country-list.csv
   - /data/popular-origins-by-destination.csv
@@ -20,37 +20,49 @@ format:
 360embed:
   byline: James Goldie, 360info
   data-source: Unesco Institute for Statistics
-  type: map
-  aspect-ratio: 20 / 19
-  min-height: 500px
-  max-height: 893px
+  type: chart
+  aspect-ratio: 2 / 1
+  min-height: 920px
+  max-height: 925px
   bg-colour: white
-  title: "Interactive: title"
+  title: "Interactive: Student immigration"
   repo: report-example
-  domain: https://example.360visuals.org
-  path: /map/  
-  fragments: state, month
+  domain: https://globaleducation.360visuals.org
+  path: /topcountries/
   about: |
-    Here's a place to **tell people** and [link to things](https://example.com)!
+    Data for this chart comes from the [UNESCO Institute for Statistics (UIS)](http://data.uis.unesco.org). The "Number and rates of international mobile students (inbound and outbound)" indicators give us an idea of the number of students visiting different countries and where they come from.
+
+    This visual shows only the most popular "origin" countries (countries that send students) and "destination" countries (countries that receive students) from any selected country.
+
+    More comprehensive data is available for further analysis on the [360info GitHub repository](https://github.com/360-info/report-global-education/tree/jul2024/data).
+
+    Although a few countries have reported data for 2023, we have limited this chart to 2022 for consistency.
 ---
 
+
 ```{ojs}
-//| label: load-countries
+//| label: controls
 countryList =
   await FileAttachment("/data/country-list.csv")
   .csv({ typed: true });
 
-viewof basisSelect = Inputs.select(countryList.map(d => d.name), {
+viewof basisSelect = Inputs.search(countryList.map(d => d.name), {
   label: "Country",
-  value: "Australia",
+  query: "Australia",
+  datalist: countryList.map(d => d.name),
   sort: true,
-  unqiue: true
+  unique: true,
+  format: n => ""
 });
-viewof yearSelect = Inputs.range([1998, 2023],
+
+selectedCountry = basisSelect.length == 1 ?
+  basisSelect[0] : null
+
+viewof yearSelect = Inputs.range([1998, 2022],
   {
     step: 1,
     label: "Year",
-    value: 2023
+    value: 2022
   });
 ```
 
@@ -67,10 +79,10 @@ popDestinations =
 ```{ojs}
 //| label: filter-data
 originByCountry = popOrigins.filter(function(row) {
-  return row.dest_country_name == basisSelect
+  return row.dest_country_name == selectedCountry
 })
 destinationByCountry = popDestinations.filter(function(row) {
-  return row.origin_country_name == basisSelect
+  return row.origin_country_name == selectedCountry
 })
 
 // compute a fixed x range for a given country across all years, in and out
@@ -90,120 +102,132 @@ filteredPopularDestinations = destinationByCountry.filter(function(row) {
 commaFormat = d3.format(",.0f")
 ```
 
-#### Where do ${basisSelect}'s foreign students come from? {.textcenter}
+```{ojs}
+//| label: noselection-message
+selectedCountry == null ?
+  html`<h4 class="textcenter faded">Search for a country</h4>` : html``
+```
+
+```{ojs}
+//| label: inbound-title
+//| classes: textcenter
+selectedCountry != null ?
+  html`<h4 class="textcenter">Where do ${selectedCountry}'s foreign students come from?</h4>` : html``
+```
 
 ```{ojs}
 //| label: plot-popular-origins
 popOriginPlot =
-  filteredPopularOrigins.length == 0 ?
-  html`<div style="width:100%;height:280px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>into ${basisSelect}</strong> in <strong>${yearSelect}</strong>.</p><div>` :
-  Plot.plot({
-    marks: [
-      Plot.barX(filteredPopularOrigins, {
-        y: "origin_country_lumped",
-        x: "value_lumped",
-        fill: "value_lumped",
-        sort: {y: "x", reverse: true},
-        ariaLabel: "origin_country_lumped",
-        ariaDescription: d => `${d.origin_country_lumped} sent ${d.value_lumped} students.`,
-        title: d => `${d.origin_country_lumped}: ${d.value_lumped} students`
-      }),
-      // label for value on left
-      // Plot.text(filteredPopularOrigins, {
-      //   y: "origin_country_lumped",
-      //   x: "value_lumped",
-      //   // add conditions to value label if required
-      //   text: d => {
-      //     if (d.cond_all == "----") { 
-      //       commaFormat(d.value_lumped)
-      //     } else {
-      //       commaFormat(d.value_lumped) + " (" + d.cond_all + ")"
-      //     }
-      //   },
-      //   dx: -25
-      // }),
-    ],
-    x: {
-      label: "Number of incoming students →",
-      tickFormat: ".1s",
-      ariaLabel: "X axis",
-      ariaDescription: "Horizontal axis: number of incoming students, increasing to the right`",
-      labelOffset: 45,
-      domain: [0, countryMax]
-    },
-    y: {
-      label: "",
-      ariaLabel: "Y axis",
-      ariaDescription: `Vertical axis: top 10 origin countries, ordered by popularity. All other origin countries sending students to ${basisSelect} are lumped together as 'other countries'`
-    },
-    color: { scheme: "ylgnbu", type: "sqrt" },
-    width: 450,
-    marginLeft: 175,
-    marginRight: 65,
-    marginBottom: 45,
-    style: {
-      fontFamily: "Roboto Condensed",
-      fontSize: "16px"
-    }
-  });
+  selectedCountry == null ? html`` :
+    filteredPopularOrigins.length == 0 ?
+    html`<div style="width:100%;height:280px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>into ${selectedCountry}</strong> in <strong>${yearSelect}</strong>.</p><div>` :
+    Plot.plot({
+      marks: [
+        Plot.barX(filteredPopularOrigins, {
+          y: "origin_country_lumped",
+          x: "value_lumped",
+          fill: "value_lumped",
+          sort: {y: "x", reverse: true},
+          ariaLabel: "origin_country_lumped",
+          ariaDescription: d => `${d.origin_country_lumped} sent ${d.value_lumped} students.`,
+          title: d => `${d.origin_country_lumped}: ${d.value_lumped} students`
+        }),
+        Plot.text(filteredPopularOrigins, {
+          y: "origin_country_lumped",
+          x: "value_lumped",
+          text: d => d3.format(".3~s")(d.value_lumped),
+          fill: "grey",
+          fontSize: 12,
+          textAnchor: "start",
+          dx: 4,
+          ariaHidden: true
+        })
+      ],
+      x: {
+        label: "Number of incoming students →",
+        tickFormat: ".3~s",
+        ariaLabel: "X axis",
+        ariaDescription: "Horizontal axis: number of incoming students, increasing to the right`",
+        labelOffset: 45,
+        domain: [0, countryMax],
+        axis: "top"
+      },
+      y: {
+        label: "",
+        ariaLabel: "Y axis",
+        ariaDescription: `Vertical axis: top 10 origin countries, ordered by popularity. All other origin countries sending students to ${selectedCountry} are lumped together as 'other countries'`
+      },
+      color: { scheme: "ylgnbu", type: "sqrt" },
+      width: 450,
+      marginLeft: 175,
+      marginRight: 65,
+      marginBottom: 15,
+      style: {
+        fontFamily: "Roboto Condensed",
+        fontSize: "16px"
+      }
+    });
 ```
 
-#### Where do ${basisSelect}'s students go? {.textcenter}
+```{ojs}
+//| label: outbound-title
+//| classes: textcenter
+selectedCountry != null ?
+  html`<h4 class="textcenter">Where do ${selectedCountry}'s students go?</h4>` : html``
+```
 
 ```{ojs}
 //| label: plot-popular-destinations
-popDestinationPlot = 
-  filteredPopularDestinations.length == 0 ?
-  html`<div style="width:100%;height:280px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>out of ${basisSelect}</strong> in <strong>${yearSelect}</strong>.</p><div>` :
-  Plot.plot({
-    marks: [
-      Plot.barX(filteredPopularDestinations, {
-        y: "dest_country_lumped",
-        x: "value_lumped",
-        fill: "value_lumped",
-        sort: {y: "x", reverse: true},
-        ariaLabel: "dest_country_lumped",
-        ariaDescription: d => `${d.origin_country_lumped} received ${d.value_lumped} students.`,
-        title: d => `${d.origin_country_lumped}: ${d.value_lumped} students`
-      }),
-      // label for value on right
-      // Plot.text(filteredPopularDestinations, {
-      //   y: "dest_country_lumped",
-      //   x: "value_lumped",
-      //   // add conditions to value label if required
-      //   text: d => {
-      //     if (d.cond_all == "----") { 
-      //       commaFormat(d.value_lumped)
-      //     } else {
-      //       commaFormat(d.value_lumped) + " (" + d.cond_all + ")"
-      //     }
-      //   },
-      //   dx: 25
-      // })
-    ],
-    x: {
-      label: "Number of outgoing students →",
-      tickFormat: ".1s",
-      ariaLabel: "X axis",
-      ariaDescription: "Horizontal axis: number of outgoing students, increasing to the right",
-      labelOffset: 45,
-      domain: [0, countryMax]
-    },
-    y: {
-      label: "",
-      ariaLabel: "Y axis",
-      ariaDescription: `Vertical axis: top 10 destination countries, ordered by popularity. All other destination countries receiving students from ${basisSelect} are lumped together as 'other countries'`
-    },
-    color: { scheme: "ylorrd", type: "sqrt" },
-    width: 450,
-    marginLeft: 175,
-    marginRight: 65,
-    marginBottom: 45,
-    style: {
-      fontFamily: "Roboto Condensed",
-      fontSize: "16px"
-    }
-  });
+popDestinationPlot =
+  selectedCountry == null ? html`` :
+    filteredPopularDestinations.length == 0 ?
+    html`<div style="width:100%;height:280px;padding-top:25px;display:flex;"><p style="margin:auto;">No data for student flows <strong>out of ${selectedCountry}</strong> in <strong>${yearSelect}</strong>.</p><div>` :
+    Plot.plot({
+      marks: [
+        Plot.barX(filteredPopularDestinations, {
+          y: "dest_country_lumped",
+          x: "value_lumped",
+          fill: "value_lumped",
+          sort: {y: "x", reverse: true},
+          ariaLabel: "dest_country_lumped",
+          ariaDescription: d => `${d.origin_country_lumped} received ${d.value_lumped} students.`,
+          title: d => `${d.origin_country_lumped}: ${d.value_lumped} students`
+        }),
+        Plot.text(filteredPopularDestinations, {
+          y: "dest_country_lumped",
+          x: "value_lumped",
+          text: d => d3.format(".3~s")(d.value_lumped),
+          fill: "grey",
+          fontSize: 12,
+          textAnchor: "start",
+          dx: 4,
+          ariaHidden: true
+        })
+      ],
+      x: {
+        label: "Number of outgoing students →",
+        tickFormat: ".3~s",
+        ariaLabel: "X axis",
+        ariaDescription: "Horizontal axis: number of outgoing students, increasing to the right",
+        labelOffset: 45,
+        domain: [0, countryMax],
+        axis: "top"
+      },
+      y: {
+        label: "",
+        ariaLabel: "Y axis",
+        ariaDescription: `Vertical axis: top 10 destination countries, ordered by popularity. All other destination countries receiving students from ${selectedCountry} are lumped together as 'other countries'`
+      },
+      color: { scheme: "ylorrd", type: "sqrt" },
+      width: 450,
+      marginLeft: 175,
+      marginRight: 65,
+      marginBottom: 15,
+      style: {
+        fontFamily: "Roboto Condensed",
+        fontSize: "16px"
+      }
+    });
 ```
 
 

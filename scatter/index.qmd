@@ -89,7 +89,7 @@ netflowScatterChart = Plot.plot({
       title: d => `Country: ${d.country_name}`,
       ariaDescription: d => `${d.country_name} had a Human Development Index of ${d.hdi} and a net student flow ratio of ${d.flow_ratio} percent.`,
       tip: true
-    })
+    }),
   ],
   x: {
     label: "Human Development Index →",

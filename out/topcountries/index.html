@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A description for social previews">
+<meta name="description" content="See which countries send the most students, and where your country’s students visit the most.">
 
 <title>Student immigration</title>
 <style>
@@ -75,14 +75,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="_extensions/360-info/360-embed/embed.css">
 <link rel="stylesheet" href="_extensions/360-info/360-embed/modal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-<meta property="og:title" content="Student immigration">
-<meta property="og:description" content="A description for social previews">
-<meta property="og:image" content="/folder/example.png">
 <meta name="twitter:title" content="Student immigration">
-<meta name="twitter:description" content="A description for social previews">
-<meta name="twitter:image" content="/folder/example.png">
+<meta name="twitter:description" content="See which countries send the most students, and where your country’s students visit the most.">
 <meta name="twitter:site" content="@360info_global">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body>
@@ -90,57 +86,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header">
 <h1 class="title">Student immigration</h1>
-<p class="subtitle">A thing here</p>
+<p class="subtitle">Select a country in the interactive below to see the countries that send the most students, as well as the countries that that country’s students visit the most.</p>
 
 </header>
 
 
-<div id="load-countries" class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="39" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 38;"><span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>countryList <span class="op">=</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"/data/country-list.csv"</span>)</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">;</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>viewof basisSelect <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(countryList<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">name</span>)<span class="op">,</span> {</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Country"</span><span class="op">,</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="st">"Australia"</span><span class="op">,</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="dt">unqiue</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>viewof yearSelect <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1998</span><span class="op">,</span> <span class="dv">2023</span>]<span class="op">,</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  {</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Year"</span><span class="op">,</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="dt">value</span><span class="op">:</span> <span class="dv">2023</span></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="controls" class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="45" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 44;"><span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>countryList <span class="op">=</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"/data/country-list.csv"</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">;</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>viewof basisSelect <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">search</span>(countryList<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">name</span>)<span class="op">,</span> {</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Country"</span><span class="op">,</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="dt">query</span><span class="op">:</span> <span class="st">"Australia"</span><span class="op">,</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  <span class="dt">datalist</span><span class="op">:</span> countryList<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">name</span>)<span class="op">,</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  <span class="dt">sort</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  <span class="dt">unique</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  <span class="dt">format</span><span class="op">:</span> n <span class="kw">=&gt;</span> <span class="st">""</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>selectedCountry <span class="op">=</span> basisSelect<span class="op">.</span><span class="at">length</span> <span class="op">==</span> <span class="dv">1</span> <span class="op">?</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  basisSelect[<span class="dv">0</span>] <span class="op">:</span> <span class="kw">null</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>viewof yearSelect <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1998</span><span class="op">,</span> <span class="dv">2022</span>]<span class="op">,</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>    <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Year"</span><span class="op">,</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>    <span class="dt">value</span><span class="op">:</span> <span class="dv">2022</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="load-countries-1">
+<div id="controls-1">
 <div id="ojs-cell-1-1" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 <div class="cell-output cell-output-display">
-<div id="load-countries-2">
+<div id="controls-2">
 <div id="ojs-cell-1-2" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 <div class="cell-output cell-output-display">
-<div id="load-countries-3">
+<div id="controls-3">
 <div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div id="controls-4">
+<div id="ojs-cell-1-4" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 </div>
 <div id="load-data" class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="59" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 58;"><span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>popOrigins <span class="op">=</span></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"/data/popular-origins-by-destination.csv"</span>)</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>popDestinations <span class="op">=</span></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"/data/popular-destinations-by-origin.csv"</span>)</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="71" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 70;"><span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>popOrigins <span class="op">=</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"/data/popular-origins-by-destination.csv"</span>)</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>popDestinations <span class="op">=</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"/data/popular-destinations-by-origin.csv"</span>)</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="load-data-1">
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -157,28 +166,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div id="filter-data" class="cell">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="69" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 68;"><span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>originByCountry <span class="op">=</span> popOrigins<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(row) {</span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> row<span class="op">.</span><span class="at">dest_country_name</span> <span class="op">==</span> basisSelect</span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>destinationByCountry <span class="op">=</span> popDestinations<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(row) {</span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> row<span class="op">.</span><span class="at">origin_country_name</span> <span class="op">==</span> basisSelect</span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a><span class="co">// compute a fixed x range for a given country across all years, in and out</span></span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>countryMax <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>([</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">max</span>(originByCountry<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value_lumped</span>)<span class="op">,</span></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">max</span>(destinationByCountry<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value_lumped</span>)</span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>])<span class="op">;</span></span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a><span class="co">// further filter data by selected year</span></span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>filteredPopularOrigins <span class="op">=</span> originByCountry<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(row) {</span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> row<span class="op">.</span><span class="at">year</span> <span class="op">==</span> yearSelect</span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>filteredPopularDestinations <span class="op">=</span> destinationByCountry<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(row) {</span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> row<span class="op">.</span><span class="at">year</span> <span class="op">==</span> yearSelect</span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>commaFormat <span class="op">=</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">",.0f"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="81" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 80;"><span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>originByCountry <span class="op">=</span> popOrigins<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(row) {</span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> row<span class="op">.</span><span class="at">dest_country_name</span> <span class="op">==</span> selectedCountry</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>destinationByCountry <span class="op">=</span> popDestinations<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(row) {</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> row<span class="op">.</span><span class="at">origin_country_name</span> <span class="op">==</span> selectedCountry</span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="co">// compute a fixed x range for a given country across all years, in and out</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>countryMax <span class="op">=</span> d3<span class="op">.</span><span class="fu">max</span>([</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">max</span>(originByCountry<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value_lumped</span>)<span class="op">,</span></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>  d3<span class="op">.</span><span class="fu">max</span>(destinationByCountry<span class="op">,</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">value_lumped</span>)</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>])<span class="op">;</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a><span class="co">// further filter data by selected year</span></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>filteredPopularOrigins <span class="op">=</span> originByCountry<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(row) {</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> row<span class="op">.</span><span class="at">year</span> <span class="op">==</span> yearSelect</span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>filteredPopularDestinations <span class="op">=</span> destinationByCountry<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(row) {</span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> row<span class="op">.</span><span class="at">year</span> <span class="op">==</span> yearSelect</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>commaFormat <span class="op">=</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">",.0f"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="filter-data-1">
 <div id="ojs-cell-3-1" data-nodetype="declaration">
@@ -222,122 +231,143 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<h4 class="textcenter anchored" id="where-do-basisselects-foreign-students-come-from">Where do <span><span id="ojs-element-id-1"></span>’s</span> foreign students come from?</h4>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="96" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 95;"><span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>popOriginPlot <span class="op">=</span></span>
-<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>  filteredPopularOrigins<span class="op">.</span><span class="at">length</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">?</span></span>
-<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html</span><span class="vs">`&lt;div style="width:100%;height:280px;padding-top:25px;display:flex;"&gt;&lt;p style="margin:auto;"&gt;No data for student flows &lt;strong&gt;into </span><span class="sc">${</span>basisSelect<span class="sc">}</span><span class="vs">&lt;/strong&gt; in &lt;strong&gt;</span><span class="sc">${</span>yearSelect<span class="sc">}</span><span class="vs">&lt;/strong&gt;.&lt;/p&gt;&lt;div&gt;`</span> <span class="op">:</span></span>
-<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">barX</span>(filteredPopularOrigins<span class="op">,</span> {</span>
-<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"origin_country_lumped"</span><span class="op">,</span></span>
-<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"value_lumped"</span><span class="op">,</span></span>
-<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fill</span><span class="op">:</span> <span class="st">"value_lumped"</span><span class="op">,</span></span>
-<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>        <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
-<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"origin_country_lumped"</span><span class="op">,</span></span>
-<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ariaDescription</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">origin_country_lumped</span><span class="sc">}</span><span class="vs"> sent </span><span class="sc">${</span>d<span class="op">.</span><span class="at">value_lumped</span><span class="sc">}</span><span class="vs"> students.`</span><span class="op">,</span></span>
-<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>        <span class="dt">title</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">origin_country_lumped</span><span class="sc">}</span><span class="vs">: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">value_lumped</span><span class="sc">}</span><span class="vs"> students`</span></span>
-<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a>      })<span class="op">,</span></span>
-<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a>      <span class="co">// label for value on left</span></span>
-<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>      <span class="co">// Plot.text(filteredPopularOrigins, {</span></span>
-<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a>      <span class="co">//   y: "origin_country_lumped",</span></span>
-<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a>      <span class="co">//   x: "value_lumped",</span></span>
-<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a>      <span class="co">//   // add conditions to value label if required</span></span>
-<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>      <span class="co">//   text: d =&gt; {</span></span>
-<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>      <span class="co">//     if (d.cond_all == "----") { </span></span>
-<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a>      <span class="co">//       commaFormat(d.value_lumped)</span></span>
-<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a>      <span class="co">//     } else {</span></span>
-<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a>      <span class="co">//       commaFormat(d.value_lumped) + " (" + d.cond_all + ")"</span></span>
-<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a>      <span class="co">//     }</span></span>
-<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>      <span class="co">//   },</span></span>
-<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>      <span class="co">//   dx: -25</span></span>
-<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a>      <span class="co">// }),</span></span>
-<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
-<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
-<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a>      <span class="dt">label</span><span class="op">:</span> <span class="st">"Number of incoming students →"</span><span class="op">,</span></span>
-<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tickFormat</span><span class="op">:</span> <span class="st">".1s"</span><span class="op">,</span></span>
-<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a>      <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"X axis"</span><span class="op">,</span></span>
-<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a>      <span class="dt">ariaDescription</span><span class="op">:</span> <span class="st">"Horizontal axis: number of incoming students, increasing to the right`"</span><span class="op">,</span></span>
-<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a>      <span class="dt">labelOffset</span><span class="op">:</span> <span class="dv">45</span><span class="op">,</span></span>
-<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a>      <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> countryMax]</span>
-<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> {</span>
-<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a>      <span class="dt">label</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span></span>
-<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a>      <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"Y axis"</span><span class="op">,</span></span>
-<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a>      <span class="dt">ariaDescription</span><span class="op">:</span> <span class="vs">`Vertical axis: top 10 origin countries, ordered by popularity. All other origin countries sending students to </span><span class="sc">${</span>basisSelect<span class="sc">}</span><span class="vs"> are lumped together as 'other countries'`</span></span>
-<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb4-138"><a href="#cb4-138" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> { <span class="dt">scheme</span><span class="op">:</span> <span class="st">"ylgnbu"</span><span class="op">,</span> <span class="dt">type</span><span class="op">:</span> <span class="st">"sqrt"</span> }<span class="op">,</span></span>
-<span id="cb4-139"><a href="#cb4-139" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">450</span><span class="op">,</span></span>
-<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">175</span><span class="op">,</span></span>
-<span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">65</span><span class="op">,</span></span>
-<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">45</span><span class="op">,</span></span>
-<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> {</span>
-<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fontFamily</span><span class="op">:</span> <span class="st">"Roboto Condensed"</span><span class="op">,</span></span>
-<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fontSize</span><span class="op">:</span> <span class="st">"16px"</span></span>
-<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="plot-popular-origins" class="cell-output cell-output-display">
-<div id="ojs-cell-4" data-nodetype="declaration">
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="106" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 105;"><span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>selectedCountry <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span></span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html</span><span class="vs">`&lt;h4 class="textcenter faded"&gt;Search for a country&lt;/h4&gt;`</span> <span class="op">:</span> <span class="fu">html</span><span class="vs">``</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="noselection-message" class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="expression">
 
 </div>
 </div>
 </div>
-<h4 class="textcenter anchored" id="where-do-basisselects-students-go">Where do <span><span id="ojs-element-id-2"></span>’s</span> students go?</h4>
+<div class="cell textcenter">
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="113" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 112;"><span id="cb5-113"><a href="#cb5-113" aria-hidden="true" tabindex="-1"></a>selectedCountry <span class="op">!=</span> <span class="kw">null</span> <span class="op">?</span></span>
+<span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html</span><span class="vs">`&lt;h4 class="textcenter"&gt;Where do </span><span class="sc">${</span>selectedCountry<span class="sc">}</span><span class="vs">'s foreign students come from?&lt;/h4&gt;`</span> <span class="op">:</span> <span class="fu">html</span><span class="vs">``</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="inbound-title" class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="expression">
+
+</div>
+</div>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="154" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 153;"><span id="cb5-154"><a href="#cb5-154" aria-hidden="true" tabindex="-1"></a>popDestinationPlot <span class="op">=</span> </span>
-<span id="cb5-155"><a href="#cb5-155" aria-hidden="true" tabindex="-1"></a>  filteredPopularDestinations<span class="op">.</span><span class="at">length</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">?</span></span>
-<span id="cb5-156"><a href="#cb5-156" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html</span><span class="vs">`&lt;div style="width:100%;height:280px;padding-top:25px;display:flex;"&gt;&lt;p style="margin:auto;"&gt;No data for student flows &lt;strong&gt;out of </span><span class="sc">${</span>basisSelect<span class="sc">}</span><span class="vs">&lt;/strong&gt; in &lt;strong&gt;</span><span class="sc">${</span>yearSelect<span class="sc">}</span><span class="vs">&lt;/strong&gt;.&lt;/p&gt;&lt;div&gt;`</span> <span class="op">:</span></span>
-<span id="cb5-157"><a href="#cb5-157" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb5-158"><a href="#cb5-158" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb5-159"><a href="#cb5-159" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">barX</span>(filteredPopularDestinations<span class="op">,</span> {</span>
-<span id="cb5-160"><a href="#cb5-160" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="st">"dest_country_lumped"</span><span class="op">,</span></span>
-<span id="cb5-161"><a href="#cb5-161" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="st">"value_lumped"</span><span class="op">,</span></span>
-<span id="cb5-162"><a href="#cb5-162" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fill</span><span class="op">:</span> <span class="st">"value_lumped"</span><span class="op">,</span></span>
-<span id="cb5-163"><a href="#cb5-163" aria-hidden="true" tabindex="-1"></a>        <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
-<span id="cb5-164"><a href="#cb5-164" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"dest_country_lumped"</span><span class="op">,</span></span>
-<span id="cb5-165"><a href="#cb5-165" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ariaDescription</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">origin_country_lumped</span><span class="sc">}</span><span class="vs"> received </span><span class="sc">${</span>d<span class="op">.</span><span class="at">value_lumped</span><span class="sc">}</span><span class="vs"> students.`</span><span class="op">,</span></span>
-<span id="cb5-166"><a href="#cb5-166" aria-hidden="true" tabindex="-1"></a>        <span class="dt">title</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">origin_country_lumped</span><span class="sc">}</span><span class="vs">: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">value_lumped</span><span class="sc">}</span><span class="vs"> students`</span></span>
-<span id="cb5-167"><a href="#cb5-167" aria-hidden="true" tabindex="-1"></a>      })<span class="op">,</span></span>
-<span id="cb5-168"><a href="#cb5-168" aria-hidden="true" tabindex="-1"></a>      <span class="co">// label for value on right</span></span>
-<span id="cb5-169"><a href="#cb5-169" aria-hidden="true" tabindex="-1"></a>      <span class="co">// Plot.text(filteredPopularDestinations, {</span></span>
-<span id="cb5-170"><a href="#cb5-170" aria-hidden="true" tabindex="-1"></a>      <span class="co">//   y: "dest_country_lumped",</span></span>
-<span id="cb5-171"><a href="#cb5-171" aria-hidden="true" tabindex="-1"></a>      <span class="co">//   x: "value_lumped",</span></span>
-<span id="cb5-172"><a href="#cb5-172" aria-hidden="true" tabindex="-1"></a>      <span class="co">//   // add conditions to value label if required</span></span>
-<span id="cb5-173"><a href="#cb5-173" aria-hidden="true" tabindex="-1"></a>      <span class="co">//   text: d =&gt; {</span></span>
-<span id="cb5-174"><a href="#cb5-174" aria-hidden="true" tabindex="-1"></a>      <span class="co">//     if (d.cond_all == "----") { </span></span>
-<span id="cb5-175"><a href="#cb5-175" aria-hidden="true" tabindex="-1"></a>      <span class="co">//       commaFormat(d.value_lumped)</span></span>
-<span id="cb5-176"><a href="#cb5-176" aria-hidden="true" tabindex="-1"></a>      <span class="co">//     } else {</span></span>
-<span id="cb5-177"><a href="#cb5-177" aria-hidden="true" tabindex="-1"></a>      <span class="co">//       commaFormat(d.value_lumped) + " (" + d.cond_all + ")"</span></span>
-<span id="cb5-178"><a href="#cb5-178" aria-hidden="true" tabindex="-1"></a>      <span class="co">//     }</span></span>
-<span id="cb5-179"><a href="#cb5-179" aria-hidden="true" tabindex="-1"></a>      <span class="co">//   },</span></span>
-<span id="cb5-180"><a href="#cb5-180" aria-hidden="true" tabindex="-1"></a>      <span class="co">//   dx: 25</span></span>
-<span id="cb5-181"><a href="#cb5-181" aria-hidden="true" tabindex="-1"></a>      <span class="co">// })</span></span>
-<span id="cb5-182"><a href="#cb5-182" aria-hidden="true" tabindex="-1"></a>    ]<span class="op">,</span></span>
-<span id="cb5-183"><a href="#cb5-183" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {</span>
-<span id="cb5-184"><a href="#cb5-184" aria-hidden="true" tabindex="-1"></a>      <span class="dt">label</span><span class="op">:</span> <span class="st">"Number of outgoing students →"</span><span class="op">,</span></span>
-<span id="cb5-185"><a href="#cb5-185" aria-hidden="true" tabindex="-1"></a>      <span class="dt">tickFormat</span><span class="op">:</span> <span class="st">".1s"</span><span class="op">,</span></span>
-<span id="cb5-186"><a href="#cb5-186" aria-hidden="true" tabindex="-1"></a>      <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"X axis"</span><span class="op">,</span></span>
-<span id="cb5-187"><a href="#cb5-187" aria-hidden="true" tabindex="-1"></a>      <span class="dt">ariaDescription</span><span class="op">:</span> <span class="st">"Horizontal axis: number of outgoing students, increasing to the right"</span><span class="op">,</span></span>
-<span id="cb5-188"><a href="#cb5-188" aria-hidden="true" tabindex="-1"></a>      <span class="dt">labelOffset</span><span class="op">:</span> <span class="dv">45</span><span class="op">,</span></span>
-<span id="cb5-189"><a href="#cb5-189" aria-hidden="true" tabindex="-1"></a>      <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> countryMax]</span>
-<span id="cb5-190"><a href="#cb5-190" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb5-191"><a href="#cb5-191" aria-hidden="true" tabindex="-1"></a>    <span class="dt">y</span><span class="op">:</span> {</span>
-<span id="cb5-192"><a href="#cb5-192" aria-hidden="true" tabindex="-1"></a>      <span class="dt">label</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span></span>
-<span id="cb5-193"><a href="#cb5-193" aria-hidden="true" tabindex="-1"></a>      <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"Y axis"</span><span class="op">,</span></span>
-<span id="cb5-194"><a href="#cb5-194" aria-hidden="true" tabindex="-1"></a>      <span class="dt">ariaDescription</span><span class="op">:</span> <span class="vs">`Vertical axis: top 10 destination countries, ordered by popularity. All other destination countries receiving students from </span><span class="sc">${</span>basisSelect<span class="sc">}</span><span class="vs"> are lumped together as 'other countries'`</span></span>
-<span id="cb5-195"><a href="#cb5-195" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb5-196"><a href="#cb5-196" aria-hidden="true" tabindex="-1"></a>    <span class="dt">color</span><span class="op">:</span> { <span class="dt">scheme</span><span class="op">:</span> <span class="st">"ylorrd"</span><span class="op">,</span> <span class="dt">type</span><span class="op">:</span> <span class="st">"sqrt"</span> }<span class="op">,</span></span>
-<span id="cb5-197"><a href="#cb5-197" aria-hidden="true" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">450</span><span class="op">,</span></span>
-<span id="cb5-198"><a href="#cb5-198" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">175</span><span class="op">,</span></span>
-<span id="cb5-199"><a href="#cb5-199" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">65</span><span class="op">,</span></span>
-<span id="cb5-200"><a href="#cb5-200" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">45</span><span class="op">,</span></span>
-<span id="cb5-201"><a href="#cb5-201" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> {</span>
-<span id="cb5-202"><a href="#cb5-202" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fontFamily</span><span class="op">:</span> <span class="st">"Roboto Condensed"</span><span class="op">,</span></span>
-<span id="cb5-203"><a href="#cb5-203" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fontSize</span><span class="op">:</span> <span class="st">"16px"</span></span>
-<span id="cb5-204"><a href="#cb5-204" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb5-205"><a href="#cb5-205" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="119" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 118;"><span id="cb6-119"><a href="#cb6-119" aria-hidden="true" tabindex="-1"></a>popOriginPlot <span class="op">=</span></span>
+<span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a>  selectedCountry <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">``</span> <span class="op">:</span></span>
+<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a>    filteredPopularOrigins<span class="op">.</span><span class="at">length</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">?</span></span>
+<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>    <span class="fu">html</span><span class="vs">`&lt;div style="width:100%;height:280px;padding-top:25px;display:flex;"&gt;&lt;p style="margin:auto;"&gt;No data for student flows &lt;strong&gt;into </span><span class="sc">${</span>selectedCountry<span class="sc">}</span><span class="vs">&lt;/strong&gt; in &lt;strong&gt;</span><span class="sc">${</span>yearSelect<span class="sc">}</span><span class="vs">&lt;/strong&gt;.&lt;/p&gt;&lt;div&gt;`</span> <span class="op">:</span></span>
+<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(filteredPopularOrigins<span class="op">,</span> {</span>
+<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a>          <span class="dt">y</span><span class="op">:</span> <span class="st">"origin_country_lumped"</span><span class="op">,</span></span>
+<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a>          <span class="dt">x</span><span class="op">:</span> <span class="st">"value_lumped"</span><span class="op">,</span></span>
+<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a>          <span class="dt">fill</span><span class="op">:</span> <span class="st">"value_lumped"</span><span class="op">,</span></span>
+<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a>          <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a>          <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"origin_country_lumped"</span><span class="op">,</span></span>
+<span id="cb6-131"><a href="#cb6-131" aria-hidden="true" tabindex="-1"></a>          <span class="dt">ariaDescription</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">origin_country_lumped</span><span class="sc">}</span><span class="vs"> sent </span><span class="sc">${</span>d<span class="op">.</span><span class="at">value_lumped</span><span class="sc">}</span><span class="vs"> students.`</span><span class="op">,</span></span>
+<span id="cb6-132"><a href="#cb6-132" aria-hidden="true" tabindex="-1"></a>          <span class="dt">title</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">origin_country_lumped</span><span class="sc">}</span><span class="vs">: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">value_lumped</span><span class="sc">}</span><span class="vs"> students`</span></span>
+<span id="cb6-133"><a href="#cb6-133" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb6-134"><a href="#cb6-134" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(filteredPopularOrigins<span class="op">,</span> {</span>
+<span id="cb6-135"><a href="#cb6-135" aria-hidden="true" tabindex="-1"></a>          <span class="dt">y</span><span class="op">:</span> <span class="st">"origin_country_lumped"</span><span class="op">,</span></span>
+<span id="cb6-136"><a href="#cb6-136" aria-hidden="true" tabindex="-1"></a>          <span class="dt">x</span><span class="op">:</span> <span class="st">"value_lumped"</span><span class="op">,</span></span>
+<span id="cb6-137"><a href="#cb6-137" aria-hidden="true" tabindex="-1"></a>          <span class="dt">text</span><span class="op">:</span> d <span class="kw">=&gt;</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".3~s"</span>)(d<span class="op">.</span><span class="at">value_lumped</span>)<span class="op">,</span></span>
+<span id="cb6-138"><a href="#cb6-138" aria-hidden="true" tabindex="-1"></a>          <span class="dt">fill</span><span class="op">:</span> <span class="st">"grey"</span><span class="op">,</span></span>
+<span id="cb6-139"><a href="#cb6-139" aria-hidden="true" tabindex="-1"></a>          <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span></span>
+<span id="cb6-140"><a href="#cb6-140" aria-hidden="true" tabindex="-1"></a>          <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb6-141"><a href="#cb6-141" aria-hidden="true" tabindex="-1"></a>          <span class="dt">dx</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
+<span id="cb6-142"><a href="#cb6-142" aria-hidden="true" tabindex="-1"></a>          <span class="dt">ariaHidden</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb6-143"><a href="#cb6-143" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb6-144"><a href="#cb6-144" aria-hidden="true" tabindex="-1"></a>      ]<span class="op">,</span></span>
+<span id="cb6-145"><a href="#cb6-145" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb6-146"><a href="#cb6-146" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Number of incoming students →"</span><span class="op">,</span></span>
+<span id="cb6-147"><a href="#cb6-147" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tickFormat</span><span class="op">:</span> <span class="st">".3~s"</span><span class="op">,</span></span>
+<span id="cb6-148"><a href="#cb6-148" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"X axis"</span><span class="op">,</span></span>
+<span id="cb6-149"><a href="#cb6-149" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ariaDescription</span><span class="op">:</span> <span class="st">"Horizontal axis: number of incoming students, increasing to the right`"</span><span class="op">,</span></span>
+<span id="cb6-150"><a href="#cb6-150" aria-hidden="true" tabindex="-1"></a>        <span class="dt">labelOffset</span><span class="op">:</span> <span class="dv">45</span><span class="op">,</span></span>
+<span id="cb6-151"><a href="#cb6-151" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> countryMax]<span class="op">,</span></span>
+<span id="cb6-152"><a href="#cb6-152" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span></span>
+<span id="cb6-153"><a href="#cb6-153" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb6-154"><a href="#cb6-154" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb6-155"><a href="#cb6-155" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span></span>
+<span id="cb6-156"><a href="#cb6-156" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"Y axis"</span><span class="op">,</span></span>
+<span id="cb6-157"><a href="#cb6-157" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ariaDescription</span><span class="op">:</span> <span class="vs">`Vertical axis: top 10 origin countries, ordered by popularity. All other origin countries sending students to </span><span class="sc">${</span>selectedCountry<span class="sc">}</span><span class="vs"> are lumped together as 'other countries'`</span></span>
+<span id="cb6-158"><a href="#cb6-158" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb6-159"><a href="#cb6-159" aria-hidden="true" tabindex="-1"></a>      <span class="dt">color</span><span class="op">:</span> { <span class="dt">scheme</span><span class="op">:</span> <span class="st">"ylgnbu"</span><span class="op">,</span> <span class="dt">type</span><span class="op">:</span> <span class="st">"sqrt"</span> }<span class="op">,</span></span>
+<span id="cb6-160"><a href="#cb6-160" aria-hidden="true" tabindex="-1"></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">450</span><span class="op">,</span></span>
+<span id="cb6-161"><a href="#cb6-161" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">175</span><span class="op">,</span></span>
+<span id="cb6-162"><a href="#cb6-162" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">65</span><span class="op">,</span></span>
+<span id="cb6-163"><a href="#cb6-163" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
+<span id="cb6-164"><a href="#cb6-164" aria-hidden="true" tabindex="-1"></a>      <span class="dt">style</span><span class="op">:</span> {</span>
+<span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontFamily</span><span class="op">:</span> <span class="st">"Roboto Condensed"</span><span class="op">,</span></span>
+<span id="cb6-166"><a href="#cb6-166" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontSize</span><span class="op">:</span> <span class="st">"16px"</span></span>
+<span id="cb6-167"><a href="#cb6-167" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb6-168"><a href="#cb6-168" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="plot-popular-origins" class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell textcenter">
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="174" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 173;"><span id="cb7-174"><a href="#cb7-174" aria-hidden="true" tabindex="-1"></a>selectedCountry <span class="op">!=</span> <span class="kw">null</span> <span class="op">?</span></span>
+<span id="cb7-175"><a href="#cb7-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html</span><span class="vs">`&lt;h4 class="textcenter"&gt;Where do </span><span class="sc">${</span>selectedCountry<span class="sc">}</span><span class="vs">'s students go?&lt;/h4&gt;`</span> <span class="op">:</span> <span class="fu">html</span><span class="vs">``</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="outbound-title" class="cell-output cell-output-display">
+<div id="ojs-cell-7" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="180" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 179;"><span id="cb8-180"><a href="#cb8-180" aria-hidden="true" tabindex="-1"></a>popDestinationPlot <span class="op">=</span></span>
+<span id="cb8-181"><a href="#cb8-181" aria-hidden="true" tabindex="-1"></a>  selectedCountry <span class="op">==</span> <span class="kw">null</span> <span class="op">?</span> <span class="fu">html</span><span class="vs">``</span> <span class="op">:</span></span>
+<span id="cb8-182"><a href="#cb8-182" aria-hidden="true" tabindex="-1"></a>    filteredPopularDestinations<span class="op">.</span><span class="at">length</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">?</span></span>
+<span id="cb8-183"><a href="#cb8-183" aria-hidden="true" tabindex="-1"></a>    <span class="fu">html</span><span class="vs">`&lt;div style="width:100%;height:280px;padding-top:25px;display:flex;"&gt;&lt;p style="margin:auto;"&gt;No data for student flows &lt;strong&gt;out of </span><span class="sc">${</span>selectedCountry<span class="sc">}</span><span class="vs">&lt;/strong&gt; in &lt;strong&gt;</span><span class="sc">${</span>yearSelect<span class="sc">}</span><span class="vs">&lt;/strong&gt;.&lt;/p&gt;&lt;div&gt;`</span> <span class="op">:</span></span>
+<span id="cb8-184"><a href="#cb8-184" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb8-185"><a href="#cb8-185" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb8-186"><a href="#cb8-186" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">barX</span>(filteredPopularDestinations<span class="op">,</span> {</span>
+<span id="cb8-187"><a href="#cb8-187" aria-hidden="true" tabindex="-1"></a>          <span class="dt">y</span><span class="op">:</span> <span class="st">"dest_country_lumped"</span><span class="op">,</span></span>
+<span id="cb8-188"><a href="#cb8-188" aria-hidden="true" tabindex="-1"></a>          <span class="dt">x</span><span class="op">:</span> <span class="st">"value_lumped"</span><span class="op">,</span></span>
+<span id="cb8-189"><a href="#cb8-189" aria-hidden="true" tabindex="-1"></a>          <span class="dt">fill</span><span class="op">:</span> <span class="st">"value_lumped"</span><span class="op">,</span></span>
+<span id="cb8-190"><a href="#cb8-190" aria-hidden="true" tabindex="-1"></a>          <span class="dt">sort</span><span class="op">:</span> {<span class="dt">y</span><span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb8-191"><a href="#cb8-191" aria-hidden="true" tabindex="-1"></a>          <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"dest_country_lumped"</span><span class="op">,</span></span>
+<span id="cb8-192"><a href="#cb8-192" aria-hidden="true" tabindex="-1"></a>          <span class="dt">ariaDescription</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">origin_country_lumped</span><span class="sc">}</span><span class="vs"> received </span><span class="sc">${</span>d<span class="op">.</span><span class="at">value_lumped</span><span class="sc">}</span><span class="vs"> students.`</span><span class="op">,</span></span>
+<span id="cb8-193"><a href="#cb8-193" aria-hidden="true" tabindex="-1"></a>          <span class="dt">title</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">origin_country_lumped</span><span class="sc">}</span><span class="vs">: </span><span class="sc">${</span>d<span class="op">.</span><span class="at">value_lumped</span><span class="sc">}</span><span class="vs"> students`</span></span>
+<span id="cb8-194"><a href="#cb8-194" aria-hidden="true" tabindex="-1"></a>        })<span class="op">,</span></span>
+<span id="cb8-195"><a href="#cb8-195" aria-hidden="true" tabindex="-1"></a>        Plot<span class="op">.</span><span class="fu">text</span>(filteredPopularDestinations<span class="op">,</span> {</span>
+<span id="cb8-196"><a href="#cb8-196" aria-hidden="true" tabindex="-1"></a>          <span class="dt">y</span><span class="op">:</span> <span class="st">"dest_country_lumped"</span><span class="op">,</span></span>
+<span id="cb8-197"><a href="#cb8-197" aria-hidden="true" tabindex="-1"></a>          <span class="dt">x</span><span class="op">:</span> <span class="st">"value_lumped"</span><span class="op">,</span></span>
+<span id="cb8-198"><a href="#cb8-198" aria-hidden="true" tabindex="-1"></a>          <span class="dt">text</span><span class="op">:</span> d <span class="kw">=&gt;</span> d3<span class="op">.</span><span class="fu">format</span>(<span class="st">".3~s"</span>)(d<span class="op">.</span><span class="at">value_lumped</span>)<span class="op">,</span></span>
+<span id="cb8-199"><a href="#cb8-199" aria-hidden="true" tabindex="-1"></a>          <span class="dt">fill</span><span class="op">:</span> <span class="st">"grey"</span><span class="op">,</span></span>
+<span id="cb8-200"><a href="#cb8-200" aria-hidden="true" tabindex="-1"></a>          <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span></span>
+<span id="cb8-201"><a href="#cb8-201" aria-hidden="true" tabindex="-1"></a>          <span class="dt">textAnchor</span><span class="op">:</span> <span class="st">"start"</span><span class="op">,</span></span>
+<span id="cb8-202"><a href="#cb8-202" aria-hidden="true" tabindex="-1"></a>          <span class="dt">dx</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
+<span id="cb8-203"><a href="#cb8-203" aria-hidden="true" tabindex="-1"></a>          <span class="dt">ariaHidden</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb8-204"><a href="#cb8-204" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb8-205"><a href="#cb8-205" aria-hidden="true" tabindex="-1"></a>      ]<span class="op">,</span></span>
+<span id="cb8-206"><a href="#cb8-206" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb8-207"><a href="#cb8-207" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">"Number of outgoing students →"</span><span class="op">,</span></span>
+<span id="cb8-208"><a href="#cb8-208" aria-hidden="true" tabindex="-1"></a>        <span class="dt">tickFormat</span><span class="op">:</span> <span class="st">".3~s"</span><span class="op">,</span></span>
+<span id="cb8-209"><a href="#cb8-209" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"X axis"</span><span class="op">,</span></span>
+<span id="cb8-210"><a href="#cb8-210" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ariaDescription</span><span class="op">:</span> <span class="st">"Horizontal axis: number of outgoing students, increasing to the right"</span><span class="op">,</span></span>
+<span id="cb8-211"><a href="#cb8-211" aria-hidden="true" tabindex="-1"></a>        <span class="dt">labelOffset</span><span class="op">:</span> <span class="dv">45</span><span class="op">,</span></span>
+<span id="cb8-212"><a href="#cb8-212" aria-hidden="true" tabindex="-1"></a>        <span class="dt">domain</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> countryMax]<span class="op">,</span></span>
+<span id="cb8-213"><a href="#cb8-213" aria-hidden="true" tabindex="-1"></a>        <span class="dt">axis</span><span class="op">:</span> <span class="st">"top"</span></span>
+<span id="cb8-214"><a href="#cb8-214" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb8-215"><a href="#cb8-215" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb8-216"><a href="#cb8-216" aria-hidden="true" tabindex="-1"></a>        <span class="dt">label</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span></span>
+<span id="cb8-217"><a href="#cb8-217" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ariaLabel</span><span class="op">:</span> <span class="st">"Y axis"</span><span class="op">,</span></span>
+<span id="cb8-218"><a href="#cb8-218" aria-hidden="true" tabindex="-1"></a>        <span class="dt">ariaDescription</span><span class="op">:</span> <span class="vs">`Vertical axis: top 10 destination countries, ordered by popularity. All other destination countries receiving students from </span><span class="sc">${</span>selectedCountry<span class="sc">}</span><span class="vs"> are lumped together as 'other countries'`</span></span>
+<span id="cb8-219"><a href="#cb8-219" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb8-220"><a href="#cb8-220" aria-hidden="true" tabindex="-1"></a>      <span class="dt">color</span><span class="op">:</span> { <span class="dt">scheme</span><span class="op">:</span> <span class="st">"ylorrd"</span><span class="op">,</span> <span class="dt">type</span><span class="op">:</span> <span class="st">"sqrt"</span> }<span class="op">,</span></span>
+<span id="cb8-221"><a href="#cb8-221" aria-hidden="true" tabindex="-1"></a>      <span class="dt">width</span><span class="op">:</span> <span class="dv">450</span><span class="op">,</span></span>
+<span id="cb8-222"><a href="#cb8-222" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">175</span><span class="op">,</span></span>
+<span id="cb8-223"><a href="#cb8-223" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">65</span><span class="op">,</span></span>
+<span id="cb8-224"><a href="#cb8-224" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
+<span id="cb8-225"><a href="#cb8-225" aria-hidden="true" tabindex="-1"></a>      <span class="dt">style</span><span class="op">:</span> {</span>
+<span id="cb8-226"><a href="#cb8-226" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontFamily</span><span class="op">:</span> <span class="st">"Roboto Condensed"</span><span class="op">,</span></span>
+<span id="cb8-227"><a href="#cb8-227" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fontSize</span><span class="op">:</span> <span class="st">"16px"</span></span>
+<span id="cb8-228"><a href="#cb8-228" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb8-229"><a href="#cb8-229" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div id="plot-popular-destinations" class="cell-output cell-output-display">
-<div id="ojs-cell-5" data-nodetype="declaration">
+<div id="ojs-cell-8" data-nodetype="declaration">
 
 </div>
 </div>
@@ -356,7 +386,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="edshare">
   <i id="edshare-icon" class="bi bi-clipboard2-plus-fill"></i>
   <div>
-    <h4 id="edshare-title" class="anchored">Get this map</h4>
+    <h4 id="edshare-title" class="anchored">Get this chart</h4>
     <p id="edshare-description">Click to copy</p>
   </div>
 </div>
@@ -430,7 +460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         // get potential url fragments to add to embed code
         const pageURL = new URL(window.location.href)
         const potentialFragments =
-          `state, month`.split(/,\s?/)
+          `?meta:360embed.fragments`.split(/,\s?/)
         let fragments = []
         if (potentialFragments == null) {
           return ""
@@ -446,7 +476,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
         // copy the embed code to the clipboard
         navigator.clipboard.writeText(
-          `<div style="aspect-ratio: 20 / 19; width: 100%; min-height: 500px; max-height: 893px;"><iframe  allow="fullscreen; clipboard-write self https://example.360visuals.org" allowfullscreen="true" src="https://example.360visuals.org/map/${fragmentString}" title="Interactive: title"  style="width:100%; height:100%; position: relative; top: 0; left: 0; border:none; background-color: white;" scrolling="no"></iframe></div>`);
+          `<div style="aspect-ratio: 2 / 1; width: 100%; min-height: 920px; max-height: 925px;"><iframe  allow="fullscreen; clipboard-write self https://globaleducation.360visuals.org" allowfullscreen="true" src="https://globaleducation.360visuals.org/topcountries/${fragmentString}" title="Interactive: Student immigration"  style="width:100%; height:100%; position: relative; top: 0; left: 0; border:none; background-color: white;" scrolling="no"></iframe></div>`);
 
         // update button styles and content
         edshareBtn.classList.remove("ready");
@@ -473,21 +503,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </script>
 <!-- initialise miromodal.js -->
 <div class="cell" data-include="false">
-<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="1" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>micro <span class="op">=</span> <span class="pp">require</span>(<span class="st">"micromodal@0.4.10"</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>micro<span class="op">.</span><span class="fu">init</span>({</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">awaitOpenAnimation</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">awaitCloseAnimation</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="1" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>micro <span class="op">=</span> <span class="pp">require</span>(<span class="st">"micromodal@0.4.10"</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>micro<span class="op">.</span><span class="fu">init</span>({</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">awaitOpenAnimation</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">awaitCloseAnimation</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display hidden">
 <div>
-<div id="ojs-cell-6-1" data-nodetype="declaration">
+<div id="ojs-cell-9-1" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 <div class="cell-output cell-output-display hidden">
 <div>
-<div id="ojs-cell-6-2" data-nodetype="expression">
+<div id="ojs-cell-9-2" data-nodetype="expression">
 
 </div>
 </div>
@@ -500,19 +530,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </button>
 <div id="modal-useremix-content">
 <h2 id="use-remix" class="anchored">Use + Remix</h2>
-<p>This map, as well as the analysis that underpins it, is available under a <a href="https://creativecommons.org/licenses/by/4.0"><strong>Creative Commons Attribution 4.0 licence</strong></a>.</p>
+<p>This chart, as well as the analysis that underpins it, is available under a <a href="https://creativecommons.org/licenses/by/4.0"><strong>Creative Commons Attribution 4.0 licence</strong></a>.</p>
 <p>Please acknowledge <a href="https://360info.org">360info</a> and our data sources when you use them.</p>
 <h4 id="embed-this-chart-in-your-article" class="anchored">Embed this chart in your article</h4>
 <p>Copy and paste the following code:</p>
 <div class="embedcode">
-<div class="sourceCode" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"aspect-ratio: 20 / 19; width: 100%; min-height: 500px; max-height: 893px"</span><span class="dt">&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">iframe</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ot">    allow</span><span class="op">=</span><span class="st">"fullscreen; clipboard-write self https://example.360visuals.org"</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ot">    allowfullscreen</span><span class="op">=</span><span class="st">"true"</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ot">    src</span><span class="op">=</span><span class="st">"https://example.360visuals.org/map/"</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ot">    title</span><span class="op">=</span><span class="st">"Interactive: title"</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ot">    style</span><span class="op">=</span><span class="st">"width:100%; height:100%; position: relative; top: 0; left: 0; border:none; background-color: white;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"aspect-ratio: 2 / 1; width: 100%; min-height: 920px; max-height: 925px"</span><span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">iframe</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="ot">    allow</span><span class="op">=</span><span class="st">"fullscreen; clipboard-write self https://globaleducation.360visuals.org"</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="ot">    allowfullscreen</span><span class="op">=</span><span class="st">"true"</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="ot">    src</span><span class="op">=</span><span class="st">"https://globaleducation.360visuals.org/topcountries/"</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="ot">    title</span><span class="op">=</span><span class="st">"Interactive: Student immigration"</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="ot">    style</span><span class="op">=</span><span class="st">"width:100%; height:100%; position: relative; top: 0; left: 0; border:none; background-color: white;"</span><span class="ot"> scrolling</span><span class="op">=</span><span class="st">"no"</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This content is subject to <a href="https://newshub.360info.org/page/terms">360info’s Terms of Use</a>.</p>
 <h4 id="get-the-data-and-code" class="anchored">Get the data and code</h4>
@@ -535,20 +565,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 id="modal-about-title" class="anchored">About</h2>
 </header>
 <div id="modal-about-content">
-<p>Here’s a place to <strong>tell people</strong> and <a href="https://example.com">link to things</a>!</p>
+<p>Data for this chart comes from the <a href="http://data.uis.unesco.org">UNESCO Institute for Statistics (UIS)</a>. The “Number and rates of international mobile students (inbound and outbound)” indicators give us an idea of the number of students visiting different countries and where they come from.<br>
+This visual shows only the most popular “origin” countries (countries that send students) and “destination” countries (countries that receive students) from any selected country.<br>
+More comprehensive data is available for further analysis on the <a href="https://github.com/360-info/report-global-education/tree/jul2024/data">360info GitHub repository</a>.<br>
+Although a few countries have reported data for 2023, we have limited this chart to 2022 for consistency.</p>
 </div>
 </div>
 </div>
 </div>
 
-<div class="ojs-auto-generated hidden">
-<script type="ojs-module-contents">
-eyJjb250ZW50cyI6WyAgeyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiaW5saW5lIjoidHJ1ZSIsInNvdXJjZSI6Imh0bC5odG1sYDxzcGFuPiR7YmFzaXNTZWxlY3R9PC9zcGFuPmAiLCAiY2VsbE5hbWUiOiJvanMtZWxlbWVudC1pZC0xIn0sICB7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJpbmxpbmUiOiJ0cnVlIiwic291cmNlIjoiaHRsLmh0bWxgPHNwYW4+JHtiYXNpc1NlbGVjdH08L3NwYW4+YCIsICJjZWxsTmFtZSI6Im9qcy1lbGVtZW50LWlkLTIifV19
-</script>
-</div>
 
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImNvdW50cnlMaXN0ID1cbiAgYXdhaXQgRmlsZUF0dGFjaG1lbnQoXCIvZGF0YS9jb3VudHJ5LWxpc3QuY3N2XCIpXG4gIC5jc3YoeyB0eXBlZDogdHJ1ZSB9KTtcblxudmlld29mIGJhc2lzU2VsZWN0ID0gSW5wdXRzLnNlbGVjdChjb3VudHJ5TGlzdC5tYXAoZCA9PiBkLm5hbWUpLCB7XG4gIGxhYmVsOiBcIkNvdW50cnlcIixcbiAgdmFsdWU6IFwiQXVzdHJhbGlhXCIsXG4gIHNvcnQ6IHRydWUsXG4gIHVucWl1ZTogdHJ1ZVxufSk7XG52aWV3b2YgeWVhclNlbGVjdCA9IElucHV0cy5yYW5nZShbMTk5OCwgMjAyM10sXG4gIHtcbiAgICBzdGVwOiAxLFxuICAgIGxhYmVsOiBcIlllYXJcIixcbiAgICB2YWx1ZTogMjAyM1xuICB9KTtcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InBvcE9yaWdpbnMgPVxuICBhd2FpdCBGaWxlQXR0YWNobWVudChcIi9kYXRhL3BvcHVsYXItb3JpZ2lucy1ieS1kZXN0aW5hdGlvbi5jc3ZcIilcbiAgLmNzdih7IHR5cGVkOiB0cnVlIH0pXG5wb3BEZXN0aW5hdGlvbnMgPVxuICBhd2FpdCBGaWxlQXR0YWNobWVudChcIi9kYXRhL3BvcHVsYXItZGVzdGluYXRpb25zLWJ5LW9yaWdpbi5jc3ZcIilcbiAgLmNzdih7IHR5cGVkOiB0cnVlIH0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJvcmlnaW5CeUNvdW50cnkgPSBwb3BPcmlnaW5zLmZpbHRlcihmdW5jdGlvbihyb3cpIHtcbiAgcmV0dXJuIHJvdy5kZXN0X2NvdW50cnlfbmFtZSA9PSBiYXNpc1NlbGVjdFxufSlcbmRlc3RpbmF0aW9uQnlDb3VudHJ5ID0gcG9wRGVzdGluYXRpb25zLmZpbHRlcihmdW5jdGlvbihyb3cpIHtcbiAgcmV0dXJuIHJvdy5vcmlnaW5fY291bnRyeV9uYW1lID09IGJhc2lzU2VsZWN0XG59KVxuXG4vLyBjb21wdXRlIGEgZml4ZWQgeCByYW5nZSBmb3IgYSBnaXZlbiBjb3VudHJ5IGFjcm9zcyBhbGwgeWVhcnMsIGluIGFuZCBvdXRcbmNvdW50cnlNYXggPSBkMy5tYXgoW1xuICBkMy5tYXgob3JpZ2luQnlDb3VudHJ5LCBkID0+IGQudmFsdWVfbHVtcGVkKSxcbiAgZDMubWF4KGRlc3RpbmF0aW9uQnlDb3VudHJ5LCBkID0+IGQudmFsdWVfbHVtcGVkKVxuXSk7XG5cbi8vIGZ1cnRoZXIgZmlsdGVyIGRhdGEgYnkgc2VsZWN0ZWQgeWVhclxuZmlsdGVyZWRQb3B1bGFyT3JpZ2lucyA9IG9yaWdpbkJ5Q291bnRyeS5maWx0ZXIoZnVuY3Rpb24ocm93KSB7XG4gIHJldHVybiByb3cueWVhciA9PSB5ZWFyU2VsZWN0XG59KVxuZmlsdGVyZWRQb3B1bGFyRGVzdGluYXRpb25zID0gZGVzdGluYXRpb25CeUNvdW50cnkuZmlsdGVyKGZ1bmN0aW9uKHJvdykge1xuICByZXR1cm4gcm93LnllYXIgPT0geWVhclNlbGVjdFxufSlcblxuY29tbWFGb3JtYXQgPSBkMy5mb3JtYXQoXCIsLjBmXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJwb3BPcmlnaW5QbG90ID1cbiAgZmlsdGVyZWRQb3B1bGFyT3JpZ2lucy5sZW5ndGggPT0gMCA/XG4gIGh0bWxgPGRpdiBzdHlsZT1cIndpZHRoOjEwMCU7aGVpZ2h0OjI4MHB4O3BhZGRpbmctdG9wOjI1cHg7ZGlzcGxheTpmbGV4O1wiPjxwIHN0eWxlPVwibWFyZ2luOmF1dG87XCI+Tm8gZGF0YSBmb3Igc3R1ZGVudCBmbG93cyA8c3Ryb25nPmludG8gJHtiYXNpc1NlbGVjdH08L3N0cm9uZz4gaW4gPHN0cm9uZz4ke3llYXJTZWxlY3R9PC9zdHJvbmc+LjwvcD48ZGl2PmAgOlxuICBQbG90LnBsb3Qoe1xuICAgIG1hcmtzOiBbXG4gICAgICBQbG90LmJhclgoZmlsdGVyZWRQb3B1bGFyT3JpZ2lucywge1xuICAgICAgICB5OiBcIm9yaWdpbl9jb3VudHJ5X2x1bXBlZFwiLFxuICAgICAgICB4OiBcInZhbHVlX2x1bXBlZFwiLFxuICAgICAgICBmaWxsOiBcInZhbHVlX2x1bXBlZFwiLFxuICAgICAgICBzb3J0OiB7eTogXCJ4XCIsIHJldmVyc2U6IHRydWV9LFxuICAgICAgICBhcmlhTGFiZWw6IFwib3JpZ2luX2NvdW50cnlfbHVtcGVkXCIsXG4gICAgICAgIGFyaWFEZXNjcmlwdGlvbjogZCA9PiBgJHtkLm9yaWdpbl9jb3VudHJ5X2x1bXBlZH0gc2VudCAke2QudmFsdWVfbHVtcGVkfSBzdHVkZW50cy5gLFxuICAgICAgICB0aXRsZTogZCA9PiBgJHtkLm9yaWdpbl9jb3VudHJ5X2x1bXBlZH06ICR7ZC52YWx1ZV9sdW1wZWR9IHN0dWRlbnRzYFxuICAgICAgfSksXG4gICAgICAvLyBsYWJlbCBmb3IgdmFsdWUgb24gbGVmdFxuICAgICAgLy8gUGxvdC50ZXh0KGZpbHRlcmVkUG9wdWxhck9yaWdpbnMsIHtcbiAgICAgIC8vICAgeTogXCJvcmlnaW5fY291bnRyeV9sdW1wZWRcIixcbiAgICAgIC8vICAgeDogXCJ2YWx1ZV9sdW1wZWRcIixcbiAgICAgIC8vICAgLy8gYWRkIGNvbmRpdGlvbnMgdG8gdmFsdWUgbGFiZWwgaWYgcmVxdWlyZWRcbiAgICAgIC8vICAgdGV4dDogZCA9PiB7XG4gICAgICAvLyAgICAgaWYgKGQuY29uZF9hbGwgPT0gXCItLS0tXCIpIHsgXG4gICAgICAvLyAgICAgICBjb21tYUZvcm1hdChkLnZhbHVlX2x1bXBlZClcbiAgICAgIC8vICAgICB9IGVsc2Uge1xuICAgICAgLy8gICAgICAgY29tbWFGb3JtYXQoZC52YWx1ZV9sdW1wZWQpICsgXCIgKFwiICsgZC5jb25kX2FsbCArIFwiKVwiXG4gICAgICAvLyAgICAgfVxuICAgICAgLy8gICB9LFxuICAgICAgLy8gICBkeDogLTI1XG4gICAgICAvLyB9KSxcbiAgICBdLFxuICAgIHg6IHtcbiAgICAgIGxhYmVsOiBcIk51bWJlciBvZiBpbmNvbWluZyBzdHVkZW50cyDihpJcIixcbiAgICAgIHRpY2tGb3JtYXQ6IFwiLjFzXCIsXG4gICAgICBhcmlhTGFiZWw6IFwiWCBheGlzXCIsXG4gICAgICBhcmlhRGVzY3JpcHRpb246IFwiSG9yaXpvbnRhbCBheGlzOiBudW1iZXIgb2YgaW5jb21pbmcgc3R1ZGVudHMsIGluY3JlYXNpbmcgdG8gdGhlIHJpZ2h0YFwiLFxuICAgICAgbGFiZWxPZmZzZXQ6IDQ1LFxuICAgICAgZG9tYWluOiBbMCwgY291bnRyeU1heF1cbiAgICB9LFxuICAgIHk6IHtcbiAgICAgIGxhYmVsOiBcIlwiLFxuICAgICAgYXJpYUxhYmVsOiBcIlkgYXhpc1wiLFxuICAgICAgYXJpYURlc2NyaXB0aW9uOiBgVmVydGljYWwgYXhpczogdG9wIDEwIG9yaWdpbiBjb3VudHJpZXMsIG9yZGVyZWQgYnkgcG9wdWxhcml0eS4gQWxsIG90aGVyIG9yaWdpbiBjb3VudHJpZXMgc2VuZGluZyBzdHVkZW50cyB0byAke2Jhc2lzU2VsZWN0fSBhcmUgbHVtcGVkIHRvZ2V0aGVyIGFzICdvdGhlciBjb3VudHJpZXMnYFxuICAgIH0sXG4gICAgY29sb3I6IHsgc2NoZW1lOiBcInlsZ25idVwiLCB0eXBlOiBcInNxcnRcIiB9LFxuICAgIHdpZHRoOiA0NTAsXG4gICAgbWFyZ2luTGVmdDogMTc1LFxuICAgIG1hcmdpblJpZ2h0OiA2NSxcbiAgICBtYXJnaW5Cb3R0b206IDQ1LFxuICAgIHN0eWxlOiB7XG4gICAgICBmb250RmFtaWx5OiBcIlJvYm90byBDb25kZW5zZWRcIixcbiAgICAgIGZvbnRTaXplOiBcIjE2cHhcIlxuICAgIH1cbiAgfSk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJwb3BEZXN0aW5hdGlvblBsb3QgPSBcbiAgZmlsdGVyZWRQb3B1bGFyRGVzdGluYXRpb25zLmxlbmd0aCA9PSAwID9cbiAgaHRtbGA8ZGl2IHN0eWxlPVwid2lkdGg6MTAwJTtoZWlnaHQ6MjgwcHg7cGFkZGluZy10b3A6MjVweDtkaXNwbGF5OmZsZXg7XCI+PHAgc3R5bGU9XCJtYXJnaW46YXV0bztcIj5ObyBkYXRhIGZvciBzdHVkZW50IGZsb3dzIDxzdHJvbmc+b3V0IG9mICR7YmFzaXNTZWxlY3R9PC9zdHJvbmc+IGluIDxzdHJvbmc+JHt5ZWFyU2VsZWN0fTwvc3Ryb25nPi48L3A+PGRpdj5gIDpcbiAgUGxvdC5wbG90KHtcbiAgICBtYXJrczogW1xuICAgICAgUGxvdC5iYXJYKGZpbHRlcmVkUG9wdWxhckRlc3RpbmF0aW9ucywge1xuICAgICAgICB5OiBcImRlc3RfY291bnRyeV9sdW1wZWRcIixcbiAgICAgICAgeDogXCJ2YWx1ZV9sdW1wZWRcIixcbiAgICAgICAgZmlsbDogXCJ2YWx1ZV9sdW1wZWRcIixcbiAgICAgICAgc29ydDoge3k6IFwieFwiLCByZXZlcnNlOiB0cnVlfSxcbiAgICAgICAgYXJpYUxhYmVsOiBcImRlc3RfY291bnRyeV9sdW1wZWRcIixcbiAgICAgICAgYXJpYURlc2NyaXB0aW9uOiBkID0+IGAke2Qub3JpZ2luX2NvdW50cnlfbHVtcGVkfSByZWNlaXZlZCAke2QudmFsdWVfbHVtcGVkfSBzdHVkZW50cy5gLFxuICAgICAgICB0aXRsZTogZCA9PiBgJHtkLm9yaWdpbl9jb3VudHJ5X2x1bXBlZH06ICR7ZC52YWx1ZV9sdW1wZWR9IHN0dWRlbnRzYFxuICAgICAgfSksXG4gICAgICAvLyBsYWJlbCBmb3IgdmFsdWUgb24gcmlnaHRcbiAgICAgIC8vIFBsb3QudGV4dChmaWx0ZXJlZFBvcHVsYXJEZXN0aW5hdGlvbnMsIHtcbiAgICAgIC8vICAgeTogXCJkZXN0X2NvdW50cnlfbHVtcGVkXCIsXG4gICAgICAvLyAgIHg6IFwidmFsdWVfbHVtcGVkXCIsXG4gICAgICAvLyAgIC8vIGFkZCBjb25kaXRpb25zIHRvIHZhbHVlIGxhYmVsIGlmIHJlcXVpcmVkXG4gICAgICAvLyAgIHRleHQ6IGQgPT4ge1xuICAgICAgLy8gICAgIGlmIChkLmNvbmRfYWxsID09IFwiLS0tLVwiKSB7IFxuICAgICAgLy8gICAgICAgY29tbWFGb3JtYXQoZC52YWx1ZV9sdW1wZWQpXG4gICAgICAvLyAgICAgfSBlbHNlIHtcbiAgICAgIC8vICAgICAgIGNvbW1hRm9ybWF0KGQudmFsdWVfbHVtcGVkKSArIFwiIChcIiArIGQuY29uZF9hbGwgKyBcIilcIlxuICAgICAgLy8gICAgIH1cbiAgICAgIC8vICAgfSxcbiAgICAgIC8vICAgZHg6IDI1XG4gICAgICAvLyB9KVxuICAgIF0sXG4gICAgeDoge1xuICAgICAgbGFiZWw6IFwiTnVtYmVyIG9mIG91dGdvaW5nIHN0dWRlbnRzIOKGklwiLFxuICAgICAgdGlja0Zvcm1hdDogXCIuMXNcIixcbiAgICAgIGFyaWFMYWJlbDogXCJYIGF4aXNcIixcbiAgICAgIGFyaWFEZXNjcmlwdGlvbjogXCJIb3Jpem9udGFsIGF4aXM6IG51bWJlciBvZiBvdXRnb2luZyBzdHVkZW50cywgaW5jcmVhc2luZyB0byB0aGUgcmlnaHRcIixcbiAgICAgIGxhYmVsT2Zmc2V0OiA0NSxcbiAgICAgIGRvbWFpbjogWzAsIGNvdW50cnlNYXhdXG4gICAgfSxcbiAgICB5OiB7XG4gICAgICBsYWJlbDogXCJcIixcbiAgICAgIGFyaWFMYWJlbDogXCJZIGF4aXNcIixcbiAgICAgIGFyaWFEZXNjcmlwdGlvbjogYFZlcnRpY2FsIGF4aXM6IHRvcCAxMCBkZXN0aW5hdGlvbiBjb3VudHJpZXMsIG9yZGVyZWQgYnkgcG9wdWxhcml0eS4gQWxsIG90aGVyIGRlc3RpbmF0aW9uIGNvdW50cmllcyByZWNlaXZpbmcgc3R1ZGVudHMgZnJvbSAke2Jhc2lzU2VsZWN0fSBhcmUgbHVtcGVkIHRvZ2V0aGVyIGFzICdvdGhlciBjb3VudHJpZXMnYFxuICAgIH0sXG4gICAgY29sb3I6IHsgc2NoZW1lOiBcInlsb3JyZFwiLCB0eXBlOiBcInNxcnRcIiB9LFxuICAgIHdpZHRoOiA0NTAsXG4gICAgbWFyZ2luTGVmdDogMTc1LFxuICAgIG1hcmdpblJpZ2h0OiA2NSxcbiAgICBtYXJnaW5Cb3R0b206IDQ1LFxuICAgIHN0eWxlOiB7XG4gICAgICBmb250RmFtaWx5OiBcIlJvYm90byBDb25kZW5zZWRcIixcbiAgICAgIGZvbnRTaXplOiBcIjE2cHhcIlxuICAgIH1cbiAgfSk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJtaWNybyA9IHJlcXVpcmUoXCJtaWNyb21vZGFsQDAuNC4xMFwiKVxubWljcm8uaW5pdCh7XG4gIGF3YWl0T3BlbkFuaW1hdGlvbjogdHJ1ZSxcbiAgYXdhaXRDbG9zZUFuaW1hdGlvbjogdHJ1ZVxufSk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2Jhc2lzU2VsZWN0JykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3llYXJTZWxlY3QnKSJ9XX0=
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImNvdW50cnlMaXN0ID1cbiAgYXdhaXQgRmlsZUF0dGFjaG1lbnQoXCIvZGF0YS9jb3VudHJ5LWxpc3QuY3N2XCIpXG4gIC5jc3YoeyB0eXBlZDogdHJ1ZSB9KTtcblxudmlld29mIGJhc2lzU2VsZWN0ID0gSW5wdXRzLnNlYXJjaChjb3VudHJ5TGlzdC5tYXAoZCA9PiBkLm5hbWUpLCB7XG4gIGxhYmVsOiBcIkNvdW50cnlcIixcbiAgcXVlcnk6IFwiQXVzdHJhbGlhXCIsXG4gIGRhdGFsaXN0OiBjb3VudHJ5TGlzdC5tYXAoZCA9PiBkLm5hbWUpLFxuICBzb3J0OiB0cnVlLFxuICB1bmlxdWU6IHRydWUsXG4gIGZvcm1hdDogbiA9PiBcIlwiXG59KTtcblxuc2VsZWN0ZWRDb3VudHJ5ID0gYmFzaXNTZWxlY3QubGVuZ3RoID09IDEgP1xuICBiYXNpc1NlbGVjdFswXSA6IG51bGxcblxudmlld29mIHllYXJTZWxlY3QgPSBJbnB1dHMucmFuZ2UoWzE5OTgsIDIwMjJdLFxuICB7XG4gICAgc3RlcDogMSxcbiAgICBsYWJlbDogXCJZZWFyXCIsXG4gICAgdmFsdWU6IDIwMjJcbiAgfSk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJwb3BPcmlnaW5zID1cbiAgYXdhaXQgRmlsZUF0dGFjaG1lbnQoXCIvZGF0YS9wb3B1bGFyLW9yaWdpbnMtYnktZGVzdGluYXRpb24uY3N2XCIpXG4gIC5jc3YoeyB0eXBlZDogdHJ1ZSB9KVxucG9wRGVzdGluYXRpb25zID1cbiAgYXdhaXQgRmlsZUF0dGFjaG1lbnQoXCIvZGF0YS9wb3B1bGFyLWRlc3RpbmF0aW9ucy1ieS1vcmlnaW4uY3N2XCIpXG4gIC5jc3YoeyB0eXBlZDogdHJ1ZSB9KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoib3JpZ2luQnlDb3VudHJ5ID0gcG9wT3JpZ2lucy5maWx0ZXIoZnVuY3Rpb24ocm93KSB7XG4gIHJldHVybiByb3cuZGVzdF9jb3VudHJ5X25hbWUgPT0gc2VsZWN0ZWRDb3VudHJ5XG59KVxuZGVzdGluYXRpb25CeUNvdW50cnkgPSBwb3BEZXN0aW5hdGlvbnMuZmlsdGVyKGZ1bmN0aW9uKHJvdykge1xuICByZXR1cm4gcm93Lm9yaWdpbl9jb3VudHJ5X25hbWUgPT0gc2VsZWN0ZWRDb3VudHJ5XG59KVxuXG4vLyBjb21wdXRlIGEgZml4ZWQgeCByYW5nZSBmb3IgYSBnaXZlbiBjb3VudHJ5IGFjcm9zcyBhbGwgeWVhcnMsIGluIGFuZCBvdXRcbmNvdW50cnlNYXggPSBkMy5tYXgoW1xuICBkMy5tYXgob3JpZ2luQnlDb3VudHJ5LCBkID0+IGQudmFsdWVfbHVtcGVkKSxcbiAgZDMubWF4KGRlc3RpbmF0aW9uQnlDb3VudHJ5LCBkID0+IGQudmFsdWVfbHVtcGVkKVxuXSk7XG5cbi8vIGZ1cnRoZXIgZmlsdGVyIGRhdGEgYnkgc2VsZWN0ZWQgeWVhclxuZmlsdGVyZWRQb3B1bGFyT3JpZ2lucyA9IG9yaWdpbkJ5Q291bnRyeS5maWx0ZXIoZnVuY3Rpb24ocm93KSB7XG4gIHJldHVybiByb3cueWVhciA9PSB5ZWFyU2VsZWN0XG59KVxuZmlsdGVyZWRQb3B1bGFyRGVzdGluYXRpb25zID0gZGVzdGluYXRpb25CeUNvdW50cnkuZmlsdGVyKGZ1bmN0aW9uKHJvdykge1xuICByZXR1cm4gcm93LnllYXIgPT0geWVhclNlbGVjdFxufSlcblxuY29tbWFGb3JtYXQgPSBkMy5mb3JtYXQoXCIsLjBmXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJzZWxlY3RlZENvdW50cnkgPT0gbnVsbCA/XG4gIGh0bWxgPGg0IGNsYXNzPVwidGV4dGNlbnRlciBmYWRlZFwiPlNlYXJjaCBmb3IgYSBjb3VudHJ5PC9oND5gIDogaHRtbGBgXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJzZWxlY3RlZENvdW50cnkgIT0gbnVsbCA/XG4gIGh0bWxgPGg0IGNsYXNzPVwidGV4dGNlbnRlclwiPldoZXJlIGRvICR7c2VsZWN0ZWRDb3VudHJ5fSdzIGZvcmVpZ24gc3R1ZGVudHMgY29tZSBmcm9tPzwvaDQ+YCA6IGh0bWxgYFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoicG9wT3JpZ2luUGxvdCA9XG4gIHNlbGVjdGVkQ291bnRyeSA9PSBudWxsID8gaHRtbGBgIDpcbiAgICBmaWx0ZXJlZFBvcHVsYXJPcmlnaW5zLmxlbmd0aCA9PSAwID9cbiAgICBodG1sYDxkaXYgc3R5bGU9XCJ3aWR0aDoxMDAlO2hlaWdodDoyODBweDtwYWRkaW5nLXRvcDoyNXB4O2Rpc3BsYXk6ZmxleDtcIj48cCBzdHlsZT1cIm1hcmdpbjphdXRvO1wiPk5vIGRhdGEgZm9yIHN0dWRlbnQgZmxvd3MgPHN0cm9uZz5pbnRvICR7c2VsZWN0ZWRDb3VudHJ5fTwvc3Ryb25nPiBpbiA8c3Ryb25nPiR7eWVhclNlbGVjdH08L3N0cm9uZz4uPC9wPjxkaXY+YCA6XG4gICAgUGxvdC5wbG90KHtcbiAgICAgIG1hcmtzOiBbXG4gICAgICAgIFBsb3QuYmFyWChmaWx0ZXJlZFBvcHVsYXJPcmlnaW5zLCB7XG4gICAgICAgICAgeTogXCJvcmlnaW5fY291bnRyeV9sdW1wZWRcIixcbiAgICAgICAgICB4OiBcInZhbHVlX2x1bXBlZFwiLFxuICAgICAgICAgIGZpbGw6IFwidmFsdWVfbHVtcGVkXCIsXG4gICAgICAgICAgc29ydDoge3k6IFwieFwiLCByZXZlcnNlOiB0cnVlfSxcbiAgICAgICAgICBhcmlhTGFiZWw6IFwib3JpZ2luX2NvdW50cnlfbHVtcGVkXCIsXG4gICAgICAgICAgYXJpYURlc2NyaXB0aW9uOiBkID0+IGAke2Qub3JpZ2luX2NvdW50cnlfbHVtcGVkfSBzZW50ICR7ZC52YWx1ZV9sdW1wZWR9IHN0dWRlbnRzLmAsXG4gICAgICAgICAgdGl0bGU6IGQgPT4gYCR7ZC5vcmlnaW5fY291bnRyeV9sdW1wZWR9OiAke2QudmFsdWVfbHVtcGVkfSBzdHVkZW50c2BcbiAgICAgICAgfSksXG4gICAgICAgIFBsb3QudGV4dChmaWx0ZXJlZFBvcHVsYXJPcmlnaW5zLCB7XG4gICAgICAgICAgeTogXCJvcmlnaW5fY291bnRyeV9sdW1wZWRcIixcbiAgICAgICAgICB4OiBcInZhbHVlX2x1bXBlZFwiLFxuICAgICAgICAgIHRleHQ6IGQgPT4gZDMuZm9ybWF0KFwiLjN+c1wiKShkLnZhbHVlX2x1bXBlZCksXG4gICAgICAgICAgZmlsbDogXCJncmV5XCIsXG4gICAgICAgICAgZm9udFNpemU6IDEyLFxuICAgICAgICAgIHRleHRBbmNob3I6IFwic3RhcnRcIixcbiAgICAgICAgICBkeDogNCxcbiAgICAgICAgICBhcmlhSGlkZGVuOiB0cnVlXG4gICAgICAgIH0pXG4gICAgICBdLFxuICAgICAgeDoge1xuICAgICAgICBsYWJlbDogXCJOdW1iZXIgb2YgaW5jb21pbmcgc3R1ZGVudHMg4oaSXCIsXG4gICAgICAgIHRpY2tGb3JtYXQ6IFwiLjN+c1wiLFxuICAgICAgICBhcmlhTGFiZWw6IFwiWCBheGlzXCIsXG4gICAgICAgIGFyaWFEZXNjcmlwdGlvbjogXCJIb3Jpem9udGFsIGF4aXM6IG51bWJlciBvZiBpbmNvbWluZyBzdHVkZW50cywgaW5jcmVhc2luZyB0byB0aGUgcmlnaHRgXCIsXG4gICAgICAgIGxhYmVsT2Zmc2V0OiA0NSxcbiAgICAgICAgZG9tYWluOiBbMCwgY291bnRyeU1heF0sXG4gICAgICAgIGF4aXM6IFwidG9wXCJcbiAgICAgIH0sXG4gICAgICB5OiB7XG4gICAgICAgIGxhYmVsOiBcIlwiLFxuICAgICAgICBhcmlhTGFiZWw6IFwiWSBheGlzXCIsXG4gICAgICAgIGFyaWFEZXNjcmlwdGlvbjogYFZlcnRpY2FsIGF4aXM6IHRvcCAxMCBvcmlnaW4gY291bnRyaWVzLCBvcmRlcmVkIGJ5IHBvcHVsYXJpdHkuIEFsbCBvdGhlciBvcmlnaW4gY291bnRyaWVzIHNlbmRpbmcgc3R1ZGVudHMgdG8gJHtzZWxlY3RlZENvdW50cnl9IGFyZSBsdW1wZWQgdG9nZXRoZXIgYXMgJ290aGVyIGNvdW50cmllcydgXG4gICAgICB9LFxuICAgICAgY29sb3I6IHsgc2NoZW1lOiBcInlsZ25idVwiLCB0eXBlOiBcInNxcnRcIiB9LFxuICAgICAgd2lkdGg6IDQ1MCxcbiAgICAgIG1hcmdpbkxlZnQ6IDE3NSxcbiAgICAgIG1hcmdpblJpZ2h0OiA2NSxcbiAgICAgIG1hcmdpbkJvdHRvbTogMTUsXG4gICAgICBzdHlsZToge1xuICAgICAgICBmb250RmFtaWx5OiBcIlJvYm90byBDb25kZW5zZWRcIixcbiAgICAgICAgZm9udFNpemU6IFwiMTZweFwiXG4gICAgICB9XG4gICAgfSk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTciLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJzZWxlY3RlZENvdW50cnkgIT0gbnVsbCA/XG4gIGh0bWxgPGg0IGNsYXNzPVwidGV4dGNlbnRlclwiPldoZXJlIGRvICR7c2VsZWN0ZWRDb3VudHJ5fSdzIHN0dWRlbnRzIGdvPzwvaDQ+YCA6IGh0bWxgYFxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoicG9wRGVzdGluYXRpb25QbG90ID1cbiAgc2VsZWN0ZWRDb3VudHJ5ID09IG51bGwgPyBodG1sYGAgOlxuICAgIGZpbHRlcmVkUG9wdWxhckRlc3RpbmF0aW9ucy5sZW5ndGggPT0gMCA/XG4gICAgaHRtbGA8ZGl2IHN0eWxlPVwid2lkdGg6MTAwJTtoZWlnaHQ6MjgwcHg7cGFkZGluZy10b3A6MjVweDtkaXNwbGF5OmZsZXg7XCI+PHAgc3R5bGU9XCJtYXJnaW46YXV0bztcIj5ObyBkYXRhIGZvciBzdHVkZW50IGZsb3dzIDxzdHJvbmc+b3V0IG9mICR7c2VsZWN0ZWRDb3VudHJ5fTwvc3Ryb25nPiBpbiA8c3Ryb25nPiR7eWVhclNlbGVjdH08L3N0cm9uZz4uPC9wPjxkaXY+YCA6XG4gICAgUGxvdC5wbG90KHtcbiAgICAgIG1hcmtzOiBbXG4gICAgICAgIFBsb3QuYmFyWChmaWx0ZXJlZFBvcHVsYXJEZXN0aW5hdGlvbnMsIHtcbiAgICAgICAgICB5OiBcImRlc3RfY291bnRyeV9sdW1wZWRcIixcbiAgICAgICAgICB4OiBcInZhbHVlX2x1bXBlZFwiLFxuICAgICAgICAgIGZpbGw6IFwidmFsdWVfbHVtcGVkXCIsXG4gICAgICAgICAgc29ydDoge3k6IFwieFwiLCByZXZlcnNlOiB0cnVlfSxcbiAgICAgICAgICBhcmlhTGFiZWw6IFwiZGVzdF9jb3VudHJ5X2x1bXBlZFwiLFxuICAgICAgICAgIGFyaWFEZXNjcmlwdGlvbjogZCA9PiBgJHtkLm9yaWdpbl9jb3VudHJ5X2x1bXBlZH0gcmVjZWl2ZWQgJHtkLnZhbHVlX2x1bXBlZH0gc3R1ZGVudHMuYCxcbiAgICAgICAgICB0aXRsZTogZCA9PiBgJHtkLm9yaWdpbl9jb3VudHJ5X2x1bXBlZH06ICR7ZC52YWx1ZV9sdW1wZWR9IHN0dWRlbnRzYFxuICAgICAgICB9KSxcbiAgICAgICAgUGxvdC50ZXh0KGZpbHRlcmVkUG9wdWxhckRlc3RpbmF0aW9ucywge1xuICAgICAgICAgIHk6IFwiZGVzdF9jb3VudHJ5X2x1bXBlZFwiLFxuICAgICAgICAgIHg6IFwidmFsdWVfbHVtcGVkXCIsXG4gICAgICAgICAgdGV4dDogZCA9PiBkMy5mb3JtYXQoXCIuM35zXCIpKGQudmFsdWVfbHVtcGVkKSxcbiAgICAgICAgICBmaWxsOiBcImdyZXlcIixcbiAgICAgICAgICBmb250U2l6ZTogMTIsXG4gICAgICAgICAgdGV4dEFuY2hvcjogXCJzdGFydFwiLFxuICAgICAgICAgIGR4OiA0LFxuICAgICAgICAgIGFyaWFIaWRkZW46IHRydWVcbiAgICAgICAgfSlcbiAgICAgIF0sXG4gICAgICB4OiB7XG4gICAgICAgIGxhYmVsOiBcIk51bWJlciBvZiBvdXRnb2luZyBzdHVkZW50cyDihpJcIixcbiAgICAgICAgdGlja0Zvcm1hdDogXCIuM35zXCIsXG4gICAgICAgIGFyaWFMYWJlbDogXCJYIGF4aXNcIixcbiAgICAgICAgYXJpYURlc2NyaXB0aW9uOiBcIkhvcml6b250YWwgYXhpczogbnVtYmVyIG9mIG91dGdvaW5nIHN0dWRlbnRzLCBpbmNyZWFzaW5nIHRvIHRoZSByaWdodFwiLFxuICAgICAgICBsYWJlbE9mZnNldDogNDUsXG4gICAgICAgIGRvbWFpbjogWzAsIGNvdW50cnlNYXhdLFxuICAgICAgICBheGlzOiBcInRvcFwiXG4gICAgICB9LFxuICAgICAgeToge1xuICAgICAgICBsYWJlbDogXCJcIixcbiAgICAgICAgYXJpYUxhYmVsOiBcIlkgYXhpc1wiLFxuICAgICAgICBhcmlhRGVzY3JpcHRpb246IGBWZXJ0aWNhbCBheGlzOiB0b3AgMTAgZGVzdGluYXRpb24gY291bnRyaWVzLCBvcmRlcmVkIGJ5IHBvcHVsYXJpdHkuIEFsbCBvdGhlciBkZXN0aW5hdGlvbiBjb3VudHJpZXMgcmVjZWl2aW5nIHN0dWRlbnRzIGZyb20gJHtzZWxlY3RlZENvdW50cnl9IGFyZSBsdW1wZWQgdG9nZXRoZXIgYXMgJ290aGVyIGNvdW50cmllcydgXG4gICAgICB9LFxuICAgICAgY29sb3I6IHsgc2NoZW1lOiBcInlsb3JyZFwiLCB0eXBlOiBcInNxcnRcIiB9LFxuICAgICAgd2lkdGg6IDQ1MCxcbiAgICAgIG1hcmdpbkxlZnQ6IDE3NSxcbiAgICAgIG1hcmdpblJpZ2h0OiA2NSxcbiAgICAgIG1hcmdpbkJvdHRvbTogMTUsXG4gICAgICBzdHlsZToge1xuICAgICAgICBmb250RmFtaWx5OiBcIlJvYm90byBDb25kZW5zZWRcIixcbiAgICAgICAgZm9udFNpemU6IFwiMTZweFwiXG4gICAgICB9XG4gICAgfSk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTkiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJtaWNybyA9IHJlcXVpcmUoXCJtaWNyb21vZGFsQDAuNC4xMFwiKVxubWljcm8uaW5pdCh7XG4gIGF3YWl0T3BlbkFuaW1hdGlvbjogdHJ1ZSxcbiAgYXdhaXRDbG9zZUFuaW1hdGlvbjogdHJ1ZVxufSk7XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2Jhc2lzU2VsZWN0JykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ3llYXJTZWxlY3QnKSJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
