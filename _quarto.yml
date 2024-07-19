@@ -4,8 +4,7 @@ project:
   render:
     - topcountries/index.qmd
     - scatter/index.qmd
-    # - embed-bycountry.qmd
-    # - embed-netflow-scatter.qmd
+    - README.qmd
   resources:
     - /data/country-list.csv
     - /data/popular-origins-by-destination.csv
