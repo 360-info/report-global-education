@@ -47,19 +47,6 @@ one of your own!), including [R](https://r-project.org) and
 [![Open in GitHub
 Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/360-info/report-global-education?quickstart=1)
 
-::::{.callout-important} In order to reproduce this analysis, you will
-need an account with the [Copernicus Climate Data
-Store](https://cds.climate.copernicus.eu), as the ECMWF API requires
-authentication.
-
-Ensure a `.Renviron` file is present with the credentials. The variable
-name should be the numerical CDS username prefixed with `ecmwfr_cds:`,
-and the value should be the key:
-
-``` env
-ecmwfr_cds:[user]=[key]
-```
-
 If you have Docker installed, you can build and run the container
 locally:
 
